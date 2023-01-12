@@ -1,0 +1,43 @@
+
+:root {
+	--base-color: #232324;
+	--text-color:gainsboro;
+	--primary-color: rgb(101, 184, 235);
+	--secondy-color: palevioletred;
+}
+
+body{
+	background: var(--base-color);
+	color: var(--text-color);
+
+	font-family:'-apple-system',
+	BlinkMacSystemFont,
+	'Segoe UI',
+	Roboto,
+	Oxygen,
+	Ubuntu,
+	'Cantarell',
+	'Open Sans',
+	'Helvetica Neue',
+	sans-serif;
+}
+
+a{
+	color:var(--primary-color);
+}
+
+a:visited{
+	color:var(--secondy-color);
+}
+
+/*
+ * tailwind like class
+ */
+
+.flex{
+	display: flex;
+}
+.flex-auto{
+	flex: auto;
+}
+

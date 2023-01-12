@@ -1,0 +1,2764 @@
+{
+    "^": {
+        "char": "^",
+        "nexts": {
+            "_a": 28,
+            "_e": 28,
+            "_ad": 1,
+            "_ag": 1,
+            "_al": 2,
+            "_a-": 5,
+            "_an": 8,
+            "_and": 1,
+            "_ant": 1,
+            "_aS": 1,
+            "_o-": 4,
+            "_av": 1,
+            "ba-": 2,
+            "be": 6,
+            "bi": 3,
+            "be~": 1,
+            "bla": 1,
+            "bo": 1,
+            "blen": 1,
+            "bli": 3,
+            "blit": 1,
+            "ka": 7,
+            "Ka": 8,
+            "ke": 7,
+            "ka-": 2,
+            "Kas": 2,
+            "se": 8,
+            "ca-": 1,
+            "Sa-": 2,
+            "cel": 1,
+            "Se": 2,
+            "ce": 1,
+            "klo-": 2,
+            "klis": 5,
+            "Sin": 2,
+            "kle": 3,
+            "kla-": 1,
+            "kla": 3,
+            "ko": 3,
+            "kons": 1,
+            "ko-": 3,
+            "da": 4,
+            "de": 7,
+            "de-": 1,
+            "da-": 4,
+            "daf": 1,
+            "di": 3,
+            "deb": 1,
+            "dli-": 1,
+            "dlo-": 1,
+            "dna": 1,
+            "d-": 2,
+            "dli-n": 1,
+            "dlis": 1,
+            "dlo": 2,
+            "dal": 1,
+            "_i-": 3,
+            "_i": 9,
+            "_el": 1,
+            "_es": 3,
+            "yu-": 3,
+            "_iv": 2,
+            "fa": 1,
+            "fe": 1,
+            "fi": 3,
+            "flo-": 2,
+            "flan": 1,
+            "fle": 1,
+            "Gab": 1,
+            "ge": 1,
+            "ge-l": 1,
+            "je": 12,
+            "jo-": 6,
+            "ga-": 1,
+            "ji": 1,
+            "jin": 1,
+            "gla": 1,
+            "glen": 1,
+            "glo-": 1,
+            "glo": 2,
+            "gle-s": 1,
+            "gle": 2,
+            "gwi": 1,
+            "ha": 2,
+            "han": 1,
+            "he-": 1,
+            "he": 5,
+            "hen": 1,
+            "ha-": 1,
+            "hes": 1,
+            "hi": 1,
+            "hil": 1,
+            "ho": 1,
+            "ja~": 1,
+            "jak": 1,
+            "je-n": 1,
+            "ja": 2,
+            "jas": 3,
+            "ji-n": 1,
+            "ji-": 1,
+            "jo-n": 1,
+            "jo": 9,
+            "jos": 1,
+            "jdis": 1,
+            "jdi": 1,
+            "jli": 4,
+            "jli-": 1,
+            "j-n": 1,
+            "kat": 1,
+            "ki-": 1,
+            "kim": 1,
+            "kin": 1,
+            "ki": 1,
+            "le": 6,
+            "la": 4,
+            "lo-": 9,
+            "li": 9,
+            "les": 1,
+            "lez": 1,
+            "lin": 2,
+            "lo": 5,
+            "lo~": 1,
+            "l_i": 2,
+            "l_i-z": 1,
+            "lSi": 1,
+            "l-": 2,
+            "lSi-l": 1,
+            "lSin": 1,
+            "me": 10,
+            "me-": 2,
+            "mad": 3,
+            "ma": 10,
+            "mal": 1,
+            "ma-": 12,
+            "mo-": 2,
+            "mak": 1,
+            "mi": 6,
+            "mi~": 1,
+            "mild": 1,
+            "mo": 4,
+            "Mu": 1,
+            "na": 5,
+            "nan": 1,
+            "nel": 1,
+            "ne": 1,
+            "ni": 2,
+            "ni-": 1,
+            "no": 1,
+            "no-": 3,
+            "_o": 4,
+            "pa": 2,
+            "pan": 1,
+            "pa~t": 1,
+            "pat": 2,
+            "pa~": 1,
+            "po-": 3,
+            "pa-l": 1,
+            "pe": 1,
+            "fi-": 1,
+            "po": 1,
+            "pli": 1,
+            "lo-z": 1,
+            "lbi-": 1,
+            "l-s": 1,
+            "sab": 1,
+            "sa": 5,
+            "sam": 1,
+            "sand": 1,
+            "san": 1,
+            "ska-": 1,
+            "sel": 1,
+            "Sa": 2,
+            "So-": 1,
+            "Si-": 1,
+            "Si": 2,
+            "Sid": 1,
+            "so": 3,
+            "ste": 3,
+            "s-": 2,
+            "szan": 1,
+            "Sil": 1,
+            "ta": 4,
+            "ta-": 1,
+            "te": 2,
+            "ti": 2,
+            "tle": 1,
+            "tle-": 1,
+            "va": 2,
+            "ve": 3,
+            "vikt": 1,
+            "vi": 2,
+            "va-": 1,
+            "wan": 1,
+            "wen": 1,
+            "wi": 1,
+            "yo": 1,
+            "za": 1,
+            "zo-": 1
+        },
+        "total": 498
+    },
+    "_a": {
+        "char": "_a",
+        "nexts": {
+            "bi-": 1,
+            "bi": 1,
+            "de": 2,
+            "del": 1,
+            "ga": 1,
+            "_i": 3,
+            "la-": 1,
+            "leg": 1,
+            "lek": 1,
+            "$": 45,
+            "lis": 1,
+            "li": 4,
+            "man": 1,
+            "mi-": 1,
+            "me-": 1,
+            "na": 10,
+            "nas": 1,
+            "ni": 1,
+            "ni-": 2,
+            "la": 2,
+            "li-": 2
+        },
+        "total": 83
+    },
+    "bi-": {
+        "char": "bi-",
+        "nexts": {
+            "$": 4
+        },
+        "total": 4
+    },
+    "bi": {
+        "char": "bi",
+        "nexts": {
+            "ge": 1,
+            "_at": 2,
+            "va": 1,
+            "sa": 1
+        },
+        "total": 5
+    },
+    "ge": {
+        "char": "ge",
+        "nexts": {
+            "_il": 2
+        },
+        "total": 2
+    },
+    "_il": {
+        "char": "_il",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "_e": {
+        "char": "_e",
+        "nexts": {
+            "_i": 3,
+            "_ip": 1,
+            "li": 6,
+            "_iv": 1,
+            "dis": 1,
+            "le": 2,
+            "la": 3,
+            "len": 1,
+            "li-": 1,
+            "lo": 1,
+            "mi": 2,
+            "ma": 1,
+            "me": 2,
+            "mi-": 1,
+            "no-": 1,
+            "lin": 1,
+            "sel": 1,
+            "va": 1
+        },
+        "total": 30
+    },
+    "_i": {
+        "char": "_i",
+        "nexts": {
+            "da": 1,
+            "li-n": 2,
+            "mi-": 2,
+            "na": 4,
+            "Si-": 3,
+            "$": 4,
+            "ji-": 2,
+            "_a": 2,
+            "_an": 1,
+            "le": 1,
+            "la": 6,
+            "za": 3,
+            "van": 1,
+            "zel": 1,
+            "_o": 2,
+            "lis": 1,
+            "zad": 1,
+            "vi-": 1,
+            "ni-": 1,
+            "ti": 1,
+            "li-": 1,
+            "bel": 1,
+            "vis": 1,
+            "diz": 1,
+            "cel": 1,
+            "di": 1,
+            "ve~t": 1,
+            "von": 1,
+            "vo-n": 1
+        },
+        "total": 49
+    },
+    "da": {
+        "char": "da",
+        "nexts": {
+            "$": 14,
+            "li": 1,
+            "ni": 1,
+            "_i": 2
+        },
+        "total": 18
+    },
+    "de": {
+        "char": "de",
+        "nexts": {
+            "la": 2,
+            "li": 2,
+            "_i": 2,
+            "bi-": 1,
+            "bo": 1,
+            "ni-s": 1,
+            "ni-z": 1,
+            "li-": 1,
+            "lin": 1
+        },
+        "total": 12
+    },
+    "la": {
+        "char": "la",
+        "nexts": {
+            "$": 52,
+            "_in": 5,
+            "be": 1,
+            "_i": 5,
+            "li-": 1,
+            "na": 1,
+            "la": 1,
+            "ni-": 1,
+            "bel": 1,
+            "mo-": 1,
+            "fi-": 1
+        },
+        "total": 70
+    },
+    "_ad": {
+        "char": "_ad",
+        "nexts": {
+            "le": 1,
+            "la": 1,
+            "li-": 1
+        },
+        "total": 3
+    },
+    "le": {
+        "char": "le",
+        "nexts": {
+            "_id": 1,
+            "_a": 2,
+            "li": 1,
+            "st": 1,
+            "_in": 2,
+            "no-": 1,
+            "ns": 1,
+            "na": 1,
+            "_i": 2,
+            "_o": 1,
+            "dis": 1,
+            "be~": 1,
+            "ji-": 1,
+            "li-": 1,
+            "mi": 1
+        },
+        "total": 18
+    },
+    "_id": {
+        "char": "_id",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "del": {
+        "char": "del",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "_in": {
+        "char": "_in",
+        "nexts": {
+            "$": 8
+        },
+        "total": 8
+    },
+    "ga": {
+        "char": "ga",
+        "nexts": {
+            "sa": 1,
+            "le~t": 1
+        },
+        "total": 2
+    },
+    "sa": {
+        "char": "sa",
+        "nexts": {
+            "$": 12,
+            "ni-": 1,
+            "lin": 1,
+            "li-": 1,
+            "man": 1,
+            "la": 2,
+            "va": 1,
+            "van": 1
+        },
+        "total": 20
+    },
+    "_ag": {
+        "char": "_ag",
+        "nexts": {
+            "nes": 1
+        },
+        "total": 1
+    },
+    "nes": {
+        "char": "nes",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "li-n": {
+        "char": "li-n",
+        "nexts": {
+            "$": 14
+        },
+        "total": 14
+    },
+    "mi-": {
+        "char": "mi-",
+        "nexts": {
+            "$": 5,
+            "li": 1
+        },
+        "total": 6
+    },
+    "la-": {
+        "char": "la-",
+        "nexts": {
+            "na": 1
+        },
+        "total": 1
+    },
+    "na": {
+        "char": "na",
+        "nexts": {
+            "$": 50,
+            "bel": 1,
+            "be": 1,
+            "di": 1,
+            "di-n": 1,
+            "_o": 1,
+            "ta": 2
+        },
+        "total": 57
+    },
+    "_al": {
+        "char": "_al",
+        "nexts": {
+            "ba-": 1,
+            "ma": 1,
+            "$": 1
+        },
+        "total": 3
+    },
+    "ba-": {
+        "char": "ba-",
+        "nexts": {
+            "ta": 2,
+            "$": 1,
+            "ba": 1,
+            "sa": 1
+        },
+        "total": 5
+    },
+    "ta": {
+        "char": "ta",
+        "nexts": {
+            "$": 11,
+            "ni-": 1,
+            "_in": 1,
+            "ns": 1,
+            "li": 1,
+            "li-": 1,
+            "ba": 1,
+            "bi": 1,
+            "ma-": 1,
+            "mi-": 1
+        },
+        "total": 20
+    },
+    "leg": {
+        "char": "leg",
+        "nexts": {
+            "zand": 1
+        },
+        "total": 1
+    },
+    "zand": {
+        "char": "zand",
+        "nexts": {
+            "la": 1
+        },
+        "total": 1
+    },
+    "lek": {
+        "char": "lek",
+        "nexts": {
+            "Si": 1
+        },
+        "total": 1
+    },
+    "Si": {
+        "char": "Si",
+        "nexts": {
+            "_a": 7,
+            "li": 1,
+            "li-": 1,
+            "ka": 1,
+            "la": 1,
+            "bil": 1,
+            "_o": 1
+        },
+        "total": 13
+    },
+    "lis": {
+        "char": "lis",
+        "nexts": {
+            "$": 7,
+            "ta": 1
+        },
+        "total": 8
+    },
+    "li": {
+        "char": "li",
+        "nexts": {
+            "Si": 3,
+            "sn": 1,
+            "son": 1,
+            "_a": 17,
+            "ka": 2,
+            "_el": 2,
+            "_al": 1,
+            "ks": 2,
+            "na-": 1,
+            "no": 1,
+            "no-": 1,
+            "za": 1,
+            "_e": 1,
+            "_an": 3,
+            "_a-": 2,
+            "_e~t": 1,
+            "_e~": 1,
+            "_o": 1,
+            "bi-": 1,
+            "li": 1,
+            "li-": 1,
+            "sa": 1,
+            "di": 1,
+            "ne~t": 1,
+            "lin": 1,
+            "_on": 1,
+            "_am": 1,
+            "vi": 1,
+            "ta": 1
+        },
+        "total": 53
+    },
+    "sn": {
+        "char": "sn",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "son": {
+        "char": "son",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "_a-": {
+        "char": "_a-",
+        "nexts": {
+            "lin": 1,
+            "li-n": 1,
+            "v": 1,
+            "na": 3,
+            "S": 1,
+            "sa": 1
+        },
+        "total": 8
+    },
+    "lin": {
+        "char": "lin",
+        "nexts": {
+            "$": 11,
+            "da": 3,
+            "na": 1,
+            "ji-": 1
+        },
+        "total": 16
+    },
+    "ma": {
+        "char": "ma",
+        "nexts": {
+            "$": 5,
+            "_i": 3,
+            "de": 1,
+            "li": 4,
+            "la": 1,
+            "li-": 2,
+            "til": 1
+        },
+        "total": 17
+    },
+    "man": {
+        "char": "man",
+        "nexts": {
+            "da": 1,
+            "sa": 1
+        },
+        "total": 2
+    },
+    "_an": {
+        "char": "_an",
+        "nexts": {
+            "ba-": 1,
+            "je": 4,
+            "$": 8,
+            "na": 2,
+            "so": 1
+        },
+        "total": 16
+    },
+    "me-": {
+        "char": "me-",
+        "nexts": {
+            "li": 1,
+            "bel": 1,
+            "vis": 1
+        },
+        "total": 3
+    },
+    "nas": {
+        "char": "nas",
+        "nexts": {
+            "ta-": 1
+        },
+        "total": 1
+    },
+    "ta-": {
+        "char": "ta-",
+        "nexts": {
+            "ji": 1,
+            "$": 2,
+            "la": 1
+        },
+        "total": 4
+    },
+    "ji": {
+        "char": "ji",
+        "nexts": {
+            "_a": 3,
+            "_a-": 1,
+            "na": 1,
+            "li": 1,
+            "ni": 1
+        },
+        "total": 7
+    },
+    "_and": {
+        "char": "_and",
+        "nexts": {
+            "le": 1
+        },
+        "total": 1
+    },
+    "je": {
+        "char": "je",
+        "nexts": {
+            "la": 1,
+            "li": 2,
+            "li-": 3,
+            "ni-": 2,
+            "lin": 1,
+            "ma": 1,
+            "ne": 1,
+            "lal": 1,
+            "_id": 1,
+            "_i": 2,
+            "na": 1,
+            "ni": 1,
+            "Si": 1,
+            "Si-": 1
+        },
+        "total": 19
+    },
+    "ka": {
+        "char": "ka",
+        "nexts": {
+            "$": 7,
+            "lis": 1,
+            "me": 1,
+            "mi": 1,
+            "lo": 2,
+            "len": 1,
+            "_i": 1
+        },
+        "total": 14
+    },
+    "li-": {
+        "char": "li-",
+        "nexts": {
+            "na": 5,
+            "$": 38,
+            "ka": 1,
+            "sa": 1
+        },
+        "total": 45
+    },
+    "ni": {
+        "char": "ni",
+        "nexts": {
+            "ta": 1,
+            "_a": 4,
+            "_el": 1,
+            "fa-": 1,
+            "ka": 2,
+            "ko": 1,
+            "ko-l": 1
+        },
+        "total": 11
+    },
+    "ni-": {
+        "char": "ni-",
+        "nexts": {
+            "ta": 1,
+            "$": 19,
+            "na": 1
+        },
+        "total": 21
+    },
+    "bel": {
+        "char": "bel",
+        "nexts": {
+            "$": 5
+        },
+        "total": 5
+    },
+    "be": {
+        "char": "be",
+        "nexts": {
+            "la": 3,
+            "_at": 2,
+            "lin": 1,
+            "sa": 1,
+            "ti": 1
+        },
+        "total": 8
+    },
+    "_ant": {
+        "char": "_ant",
+        "nexts": {
+            "ni": 1
+        },
+        "total": 1
+    },
+    "so": {
+        "char": "so",
+        "nexts": {
+            "ni": 2,
+            "fi": 1,
+            "fi-": 1
+        },
+        "total": 4
+    },
+    "_ip": {
+        "char": "_ip",
+        "nexts": {
+            "lil": 1
+        },
+        "total": 1
+    },
+    "lil": {
+        "char": "lil",
+        "nexts": {
+            "$": 5
+        },
+        "total": 5
+    },
+    "_el": {
+        "char": "_el",
+        "nexts": {
+            "$": 4,
+            "Si-": 1
+        },
+        "total": 5
+    },
+    "_aS": {
+        "char": "_aS",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "_o-": {
+        "char": "_o-",
+        "nexts": {
+            "d": 1,
+            "gas": 1,
+            "le": 1,
+            "fe": 1
+        },
+        "total": 4
+    },
+    "d": {
+        "char": "d",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "gas": {
+        "char": "gas",
+        "nexts": {
+            "ta": 1
+        },
+        "total": 1
+    },
+    "_iv": {
+        "char": "_iv",
+        "nexts": {
+            "lil": 1,
+            "$": 1,
+            "lin": 1
+        },
+        "total": 3
+    },
+    "_av": {
+        "char": "_av",
+        "nexts": {
+            "lil": 1
+        },
+        "total": 1
+    },
+    "v": {
+        "char": "v",
+        "nexts": {
+            "lil": 1
+        },
+        "total": 1
+    },
+    "ba": {
+        "char": "ba",
+        "nexts": {
+            "la": 1,
+            "li-": 1,
+            "sa": 1
+        },
+        "total": 3
+    },
+    "_at": {
+        "char": "_at",
+        "nexts": {
+            "lis": 2,
+            "li": 2
+        },
+        "total": 4
+    },
+    "ks": {
+        "char": "ks",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "be~": {
+        "char": "be~",
+        "nexts": {
+            "ki-": 1,
+            "ka": 1
+        },
+        "total": 2
+    },
+    "ki-": {
+        "char": "ki-",
+        "nexts": {
+            "$": 2,
+            "li-": 1
+        },
+        "total": 3
+    },
+    "ti": {
+        "char": "ti",
+        "nexts": {
+            "$": 5,
+            "_a": 1,
+            "na": 2,
+            "fa": 1
+        },
+        "total": 9
+    },
+    "va": {
+        "char": "va",
+        "nexts": {
+            "li-": 1,
+            "$": 1,
+            "na": 1,
+            "le": 1,
+            "_i": 1
+        },
+        "total": 5
+    },
+    "bla": {
+        "char": "bla",
+        "nexts": {
+            "_iz": 1
+        },
+        "total": 1
+    },
+    "_iz": {
+        "char": "_iz",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "bo": {
+        "char": "bo",
+        "nexts": {
+            "ni-": 1,
+            "la": 1
+        },
+        "total": 2
+    },
+    "blen": {
+        "char": "blen",
+        "nexts": {
+            "da": 1
+        },
+        "total": 1
+    },
+    "bli": {
+        "char": "bli",
+        "nexts": {
+            "_a": 1,
+            "ji~t": 1,
+            "ta": 1
+        },
+        "total": 3
+    },
+    "ji~t": {
+        "char": "ji~t",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "blit": {
+        "char": "blit",
+        "nexts": {
+            "ni-": 1
+        },
+        "total": 1
+    },
+    "Ka": {
+        "char": "Ka",
+        "nexts": {
+            "me": 1,
+            "li-": 1,
+            "lol": 1,
+            "lo": 3,
+            "Si-": 1,
+            "sa": 1,
+            "_e": 1
+        },
+        "total": 9
+    },
+    "me": {
+        "char": "me",
+        "nexts": {
+            "lon": 2,
+            "la": 3,
+            "li-n": 1,
+            "lal": 1,
+            "_i": 4,
+            "_a": 1,
+            "lin": 1,
+            "li~": 1,
+            "lo": 1,
+            "le": 1
+        },
+        "total": 16
+    },
+    "lon": {
+        "char": "lon",
+        "nexts": {
+            "$": 3
+        },
+        "total": 3
+    },
+    "mi": {
+        "char": "mi",
+        "nexts": {
+            "la": 2,
+            "li": 2,
+            "li-": 1,
+            "_a": 2,
+            "Ka": 1,
+            "ni-": 1,
+            "lan": 1,
+            "$": 1,
+            "na": 1
+        },
+        "total": 12
+    },
+    "ke": {
+        "char": "ke",
+        "nexts": {
+            "_a": 1,
+            "_i": 4,
+            "_it": 1,
+            "li-": 1
+        },
+        "total": 7
+    },
+    "ka-": {
+        "char": "ka-",
+        "nexts": {
+            "la": 1,
+            "li-": 1
+        },
+        "total": 2
+    },
+    "lol": {
+        "char": "lol",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "lo": {
+        "char": "lo",
+        "nexts": {
+            "la": 4,
+            "lin": 1,
+            "_i-z": 2,
+            "le~": 1,
+            "di": 1,
+            "pi": 1,
+            "ba-": 1,
+            "bin": 1,
+            "mi-": 1,
+            "za-n": 1,
+            "ni": 1
+        },
+        "total": 15
+    },
+    "Si-": {
+        "char": "Si-",
+        "nexts": {
+            "$": 14,
+            "la": 1
+        },
+        "total": 15
+    },
+    "Kas": {
+        "char": "Kas",
+        "nexts": {
+            "lin": 1,
+            "li-n": 1
+        },
+        "total": 2
+    },
+    "se": {
+        "char": "se",
+        "nexts": {
+            "Si": 2,
+            "le": 1,
+            "fin": 1,
+            "_i": 2,
+            "_a": 1,
+            "li-": 1,
+            "la": 1,
+            "_o": 1
+        },
+        "total": 10
+    },
+    "st": {
+        "char": "st",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ca-": {
+        "char": "ca-",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "Sa-": {
+        "char": "Sa-",
+        "nexts": {
+            "lo~t": 1,
+            "li-": 1
+        },
+        "total": 2
+    },
+    "lo~t": {
+        "char": "lo~t",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "cel": {
+        "char": "cel",
+        "nexts": {
+            "Si-": 1,
+            "$": 1
+        },
+        "total": 2
+    },
+    "Se": {
+        "char": "Se",
+        "nexts": {
+            "li-": 1,
+            "lil": 1
+        },
+        "total": 2
+    },
+    "ce": {
+        "char": "ce",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "klo-": {
+        "char": "klo-",
+        "nexts": {
+            "_i": 1,
+            "di": 1
+        },
+        "total": 2
+    },
+    "klis": {
+        "char": "klis",
+        "nexts": {
+            "ti": 1,
+            "ti-": 1,
+            "ti-n": 1,
+            "tin": 1,
+            "tal": 1
+        },
+        "total": 5
+    },
+    "ti-": {
+        "char": "ti-",
+        "nexts": {
+            "na": 2
+        },
+        "total": 2
+    },
+    "ti-n": {
+        "char": "ti-n",
+        "nexts": {
+            "$": 3
+        },
+        "total": 3
+    },
+    "tin": {
+        "char": "tin",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "Sin": {
+        "char": "Sin",
+        "nexts": {
+            "di-": 1,
+            "Si": 1
+        },
+        "total": 2
+    },
+    "di-": {
+        "char": "di-",
+        "nexts": {
+            "$": 3
+        },
+        "total": 3
+    },
+    "kle": {
+        "char": "kle",
+        "nexts": {
+            "_a": 1,
+            "men": 2
+        },
+        "total": 3
+    },
+    "kla-": {
+        "char": "kla-",
+        "nexts": {
+            "la": 1
+        },
+        "total": 1
+    },
+    "kla": {
+        "char": "kla",
+        "nexts": {
+            "lis": 1,
+            "li-s": 1,
+            "li~": 1
+        },
+        "total": 3
+    },
+    "li-s": {
+        "char": "li-s",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "li~": {
+        "char": "li~",
+        "nexts": {
+            "sa": 2,
+            "pa": 1
+        },
+        "total": 3
+    },
+    "di": {
+        "char": "di",
+        "nexts": {
+            "_a": 4,
+            "_ad": 2,
+            "$": 3
+        },
+        "total": 9
+    },
+    "men": {
+        "char": "men",
+        "nexts": {
+            "ta": 1,
+            "ti-n": 1
+        },
+        "total": 2
+    },
+    "ko": {
+        "char": "ko",
+        "nexts": {
+            "li-n": 1,
+            "ni-": 1,
+            "lin": 1,
+            "la": 1
+        },
+        "total": 4
+    },
+    "kons": {
+        "char": "kons",
+        "nexts": {
+            "ta": 1
+        },
+        "total": 1
+    },
+    "ns": {
+        "char": "ns",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "ko-": {
+        "char": "ko-",
+        "nexts": {
+            "de": 1,
+            "li-": 1,
+            "t": 1
+        },
+        "total": 3
+    },
+    "t": {
+        "char": "t",
+        "nexts": {
+            "ni-": 1,
+            "l-d": 1
+        },
+        "total": 2
+    },
+    "tal": {
+        "char": "tal",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ji-": {
+        "char": "ji-",
+        "nexts": {
+            "$": 7,
+            "na": 2,
+            "ni-": 1
+        },
+        "total": 10
+    },
+    "de-": {
+        "char": "de-",
+        "nexts": {
+            "ji-": 1
+        },
+        "total": 1
+    },
+    "da-": {
+        "char": "da-",
+        "nexts": {
+            "na": 1,
+            "Si-": 1,
+            "la": 1,
+            "li-n": 1
+        },
+        "total": 4
+    },
+    "daf": {
+        "char": "daf",
+        "nexts": {
+            "ni-": 1
+        },
+        "total": 1
+    },
+    "deb": {
+        "char": "deb",
+        "nexts": {
+            "la": 1
+        },
+        "total": 1
+    },
+    "ni-s": {
+        "char": "ni-s",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ni-z": {
+        "char": "ni-z",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "dli-": {
+        "char": "dli-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "dlo-": {
+        "char": "dlo-",
+        "nexts": {
+            "les": 1
+        },
+        "total": 1
+    },
+    "les": {
+        "char": "les",
+        "nexts": {
+            "$": 1,
+            "li-": 1
+        },
+        "total": 2
+    },
+    "dna": {
+        "char": "dna",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "d-": {
+        "char": "d-",
+        "nexts": {
+            "la": 4,
+            "li-n": 1
+        },
+        "total": 5
+    },
+    "dli-n": {
+        "char": "dli-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "dlis": {
+        "char": "dlis",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "dlo": {
+        "char": "dlo",
+        "nexts": {
+            "Si": 1,
+            "Si-": 1
+        },
+        "total": 2
+    },
+    "dal": {
+        "char": "dal",
+        "nexts": {
+            "Si-": 1
+        },
+        "total": 1
+    },
+    "_i-": {
+        "char": "_i-",
+        "nexts": {
+            "den": 1,
+            "dis": 1,
+            "vi-": 1
+        },
+        "total": 3
+    },
+    "den": {
+        "char": "den",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "dis": {
+        "char": "dis",
+        "nexts": {
+            "$": 4
+        },
+        "total": 4
+    },
+    "na-": {
+        "char": "na-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "no": {
+        "char": "no",
+        "nexts": {
+            "_a": 1,
+            "_el": 1
+        },
+        "total": 2
+    },
+    "no-": {
+        "char": "no-",
+        "nexts": {
+            "la": 6,
+            "li-n": 1,
+            "ma": 1
+        },
+        "total": 8
+    },
+    "za": {
+        "char": "za",
+        "nexts": {
+            "bes": 1,
+            "$": 3,
+            "bel": 1,
+            "d-": 1,
+            "la": 1
+        },
+        "total": 7
+    },
+    "bes": {
+        "char": "bes",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "len": {
+        "char": "len",
+        "nexts": {
+            "$": 4
+        },
+        "total": 4
+    },
+    "_i-z": {
+        "char": "_i-z",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "_es": {
+        "char": "_es",
+        "nexts": {
+            "me": 1,
+            "tel": 1,
+            "ta-": 1
+        },
+        "total": 3
+    },
+    "lal": {
+        "char": "lal",
+        "nexts": {
+            "da": 1,
+            "di-n": 1
+        },
+        "total": 2
+    },
+    "tel": {
+        "char": "tel",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "sel": {
+        "char": "sel",
+        "nexts": {
+            "$": 1,
+            "ma": 1
+        },
+        "total": 2
+    },
+    "yu-": {
+        "char": "yu-",
+        "nexts": {
+            "je": 1,
+            "nis": 1,
+            "fe": 1
+        },
+        "total": 3
+    },
+    "nis": {
+        "char": "nis",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "fe": {
+        "char": "fe",
+        "nexts": {
+            "mi": 1,
+            "li": 2
+        },
+        "total": 3
+    },
+    "van": {
+        "char": "van",
+        "nexts": {
+            "je": 1,
+            "na": 1
+        },
+        "total": 2
+    },
+    "vi-": {
+        "char": "vi-",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "fa": {
+        "char": "fa",
+        "nexts": {
+            "ni-": 3
+        },
+        "total": 3
+    },
+    "fi": {
+        "char": "fi",
+        "nexts": {
+            "_o": 1,
+            "li~": 1,
+            "lis": 1,
+            "_a": 1
+        },
+        "total": 4
+    },
+    "_o": {
+        "char": "_o",
+        "nexts": {
+            "na": 1,
+            "ni-": 1,
+            "no-": 2,
+            "mi": 1,
+            "li-v": 1,
+            "li": 2,
+            "fi-": 1,
+            "d-": 2,
+            "la": 1,
+            "le~t": 1
+        },
+        "total": 13
+    },
+    "flo-": {
+        "char": "flo-",
+        "nexts": {
+            "la": 1,
+            "le": 1
+        },
+        "total": 2
+    },
+    "flan": {
+        "char": "flan",
+        "nexts": {
+            "Sis": 1
+        },
+        "total": 1
+    },
+    "Sis": {
+        "char": "Sis",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "fle": {
+        "char": "fle",
+        "nexts": {
+            "de": 1
+        },
+        "total": 1
+    },
+    "Gab": {
+        "char": "Gab",
+        "nexts": {
+            "li": 1
+        },
+        "total": 1
+    },
+    "ge-l": {
+        "char": "ge-l",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ne": {
+        "char": "ne",
+        "nexts": {
+            "vi-v": 1,
+            "li-": 1,
+            "lo": 1
+        },
+        "total": 3
+    },
+    "vi-v": {
+        "char": "vi-v",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "jo-": {
+        "char": "jo-",
+        "nexts": {
+            "ji": 4,
+            "ji-": 1,
+            "dan": 1
+        },
+        "total": 6
+    },
+    "di-n": {
+        "char": "di-n",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "ga-": {
+        "char": "ga-",
+        "nexts": {
+            "t": 1
+        },
+        "total": 1
+    },
+    "l-d": {
+        "char": "l-d",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "jin": {
+        "char": "jin",
+        "nexts": {
+            "ja-": 1
+        },
+        "total": 1
+    },
+    "ja-": {
+        "char": "ja-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "gla": {
+        "char": "gla",
+        "nexts": {
+            "dis": 1
+        },
+        "total": 1
+    },
+    "glen": {
+        "char": "glen",
+        "nexts": {
+            "da": 1
+        },
+        "total": 1
+    },
+    "glo-": {
+        "char": "glo-",
+        "nexts": {
+            "li": 1
+        },
+        "total": 1
+    },
+    "glo": {
+        "char": "glo",
+        "nexts": {
+            "li": 2
+        },
+        "total": 2
+    },
+    "gle-s": {
+        "char": "gle-s",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "gle": {
+        "char": "gle",
+        "nexts": {
+            "_is": 1,
+            "ta": 1
+        },
+        "total": 2
+    },
+    "_is": {
+        "char": "_is",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "gwi": {
+        "char": "gwi",
+        "nexts": {
+            "nes": 1
+        },
+        "total": 1
+    },
+    "ha": {
+        "char": "ha",
+        "nexts": {
+            "na": 2,
+            "li": 1
+        },
+        "total": 3
+    },
+    "han": {
+        "char": "han",
+        "nexts": {
+            "na": 2
+        },
+        "total": 2
+    },
+    "_e~t": {
+        "char": "_e~t",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "he-": {
+        "char": "he-",
+        "nexts": {
+            "zel": 1
+        },
+        "total": 1
+    },
+    "zel": {
+        "char": "zel",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "he": {
+        "char": "he",
+        "nexts": {
+            "_i": 1,
+            "za-": 1,
+            "len": 1,
+            "le": 1,
+            "lo": 1
+        },
+        "total": 5
+    },
+    "za-": {
+        "char": "za-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "hen": {
+        "char": "hen",
+        "nexts": {
+            "li": 1
+        },
+        "total": 1
+    },
+    "_e~": {
+        "char": "_e~",
+        "nexts": {
+            "ta": 1
+        },
+        "total": 1
+    },
+    "ha-": {
+        "char": "ha-",
+        "nexts": {
+            "ma": 1
+        },
+        "total": 1
+    },
+    "hes": {
+        "char": "hes",
+        "nexts": {
+            "ta-": 1
+        },
+        "total": 1
+    },
+    "hi": {
+        "char": "hi",
+        "nexts": {
+            "la": 1
+        },
+        "total": 1
+    },
+    "hil": {
+        "char": "hil",
+        "nexts": {
+            "da": 1
+        },
+        "total": 1
+    },
+    "ho": {
+        "char": "ho",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "zad": {
+        "char": "zad",
+        "nexts": {
+            "la": 1
+        },
+        "total": 1
+    },
+    "ja~": {
+        "char": "ja~",
+        "nexts": {
+            "ki-": 1
+        },
+        "total": 1
+    },
+    "jak": {
+        "char": "jak",
+        "nexts": {
+            "li-n": 1
+        },
+        "total": 1
+    },
+    "je-n": {
+        "char": "je-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ja": {
+        "char": "ja",
+        "nexts": {
+            "ne~t": 1,
+            "nis": 1
+        },
+        "total": 2
+    },
+    "ne~t": {
+        "char": "ne~t",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "jas": {
+        "char": "jas",
+        "nexts": {
+            "min": 1,
+            "ti-": 1,
+            "ti-n": 1
+        },
+        "total": 3
+    },
+    "min": {
+        "char": "min",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ji-n": {
+        "char": "ji-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "fa-": {
+        "char": "fa-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "jo-n": {
+        "char": "jo-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "jo": {
+        "char": "jo",
+        "nexts": {
+            "_an": 2,
+            "_a": 1,
+            "di-": 1,
+            "han": 1,
+            "ha": 1,
+            "ze": 1,
+            "se": 1,
+            "_is": 1,
+            "li-": 1
+        },
+        "total": 10
+    },
+    "jos": {
+        "char": "jos",
+        "nexts": {
+            "lin": 1
+        },
+        "total": 1
+    },
+    "dan": {
+        "char": "dan",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ze": {
+        "char": "ze",
+        "nexts": {
+            "fin": 1
+        },
+        "total": 1
+    },
+    "fin": {
+        "char": "fin",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "jdis": {
+        "char": "jdis",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "jdi": {
+        "char": "jdi",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "jli": {
+        "char": "jli",
+        "nexts": {
+            "_a": 2,
+            "_an": 1,
+            "_e~t": 1
+        },
+        "total": 4
+    },
+    "jli-": {
+        "char": "jli-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "j-n": {
+        "char": "j-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "_it": {
+        "char": "_it",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "kat": {
+        "char": "kat",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "kim": {
+        "char": "kim",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "kin": {
+        "char": "kin",
+        "nexts": {
+            "ba": 1
+        },
+        "total": 1
+    },
+    "ki": {
+        "char": "ki",
+        "nexts": {
+            "ti": 1
+        },
+        "total": 1
+    },
+    "lo-": {
+        "char": "lo-",
+        "nexts": {
+            "la": 1,
+            "lel": 1,
+            "len": 1,
+            "li-": 1,
+            "le~": 1,
+            "na": 1,
+            "za": 1,
+            "z": 1,
+            "ji-": 1
+        },
+        "total": 9
+    },
+    "lel": {
+        "char": "lel",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "lez": {
+        "char": "lez",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "le~": {
+        "char": "le~",
+        "nexts": {
+            "ta": 2
+        },
+        "total": 2
+    },
+    "lo~": {
+        "char": "lo~",
+        "nexts": {
+            "ti": 1
+        },
+        "total": 1
+    },
+    "l_i": {
+        "char": "l_i",
+        "nexts": {
+            "za": 1,
+            "sa": 1
+        },
+        "total": 2
+    },
+    "l_i-z": {
+        "char": "l_i-z",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "lSi": {
+        "char": "lSi",
+        "nexts": {
+            "_a": 1
+        },
+        "total": 1
+    },
+    "l-": {
+        "char": "l-",
+        "nexts": {
+            "Sa": 1,
+            "Si-": 1
+        },
+        "total": 2
+    },
+    "Sa": {
+        "char": "Sa",
+        "nexts": {
+            "$": 2,
+            "non": 1,
+            "lon": 1
+        },
+        "total": 4
+    },
+    "lSi-l": {
+        "char": "lSi-l",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "lSin": {
+        "char": "lSin",
+        "nexts": {
+            "da": 1
+        },
+        "total": 1
+    },
+    "mad": {
+        "char": "mad",
+        "nexts": {
+            "li-n": 1,
+            "lin": 1,
+            "la": 1
+        },
+        "total": 3
+    },
+    "mal": {
+        "char": "mal",
+        "nexts": {
+            "vi": 1
+        },
+        "total": 1
+    },
+    "vi": {
+        "char": "vi",
+        "nexts": {
+            "na": 1,
+            "_a": 2,
+            "_o": 1,
+            "vi": 1,
+            "_an": 1
+        },
+        "total": 6
+    },
+    "ma-": {
+        "char": "ma-",
+        "nexts": {
+            "Si": 1,
+            "Sa": 1,
+            "ga": 1,
+            "je": 1,
+            "go": 1,
+            "go~t": 1,
+            "jo": 1,
+            "li-n": 1,
+            "sa": 1,
+            "ti": 1,
+            "se": 1,
+            "Si-": 1,
+            "la": 1
+        },
+        "total": 13
+    },
+    "le~t": {
+        "char": "le~t",
+        "nexts": {
+            "$": 3
+        },
+        "total": 3
+    },
+    "go": {
+        "char": "go",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "go~t": {
+        "char": "go~t",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "_on": {
+        "char": "_on",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "til": {
+        "char": "til",
+        "nexts": {
+            "da": 1
+        },
+        "total": 1
+    },
+    "mo-": {
+        "char": "mo-",
+        "nexts": {
+            "li-n": 1,
+            "gan": 1,
+            "na": 1
+        },
+        "total": 3
+    },
+    "vis": {
+        "char": "vis",
+        "nexts": {
+            "$": 2
+        },
+        "total": 2
+    },
+    "mak": {
+        "char": "mak",
+        "nexts": {
+            "Si-n": 1
+        },
+        "total": 1
+    },
+    "Si-n": {
+        "char": "Si-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "diz": {
+        "char": "diz",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "mi~": {
+        "char": "mi~",
+        "nexts": {
+            "Sel": 1
+        },
+        "total": 1
+    },
+    "Sel": {
+        "char": "Sel",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "mild": {
+        "char": "mild",
+        "nexts": {
+            "le~d": 1
+        },
+        "total": 1
+    },
+    "le~d": {
+        "char": "le~d",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "lan": {
+        "char": "lan",
+        "nexts": {
+            "da": 2
+        },
+        "total": 2
+    },
+    "_am": {
+        "char": "_am",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "mo": {
+        "char": "mo",
+        "nexts": {
+            "_i": 1,
+            "li-": 1,
+            "ni": 1,
+            "ni-k": 1
+        },
+        "total": 4
+    },
+    "ni-k": {
+        "char": "ni-k",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "gan": {
+        "char": "gan",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "Mu": {
+        "char": "Mu",
+        "nexts": {
+            "li": 1
+        },
+        "total": 1
+    },
+    "nan": {
+        "char": "nan",
+        "nexts": {
+            "Si-": 1
+        },
+        "total": 1
+    },
+    "nel": {
+        "char": "nel",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "ko-l": {
+        "char": "ko-l",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "li-v": {
+        "char": "li-v",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "fi-": {
+        "char": "fi-",
+        "nexts": {
+            "li": 1,
+            "bi-": 1,
+            "na": 1,
+            "$": 1
+        },
+        "total": 4
+    },
+    "pa": {
+        "char": "pa",
+        "nexts": {
+            "me": 1,
+            "ti": 1,
+            "$": 1
+        },
+        "total": 3
+    },
+    "pan": {
+        "char": "pan",
+        "nexts": {
+            "ji-": 1
+        },
+        "total": 1
+    },
+    "pa~t": {
+        "char": "pa~t",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "pat": {
+        "char": "pat",
+        "nexts": {
+            "lis": 1,
+            "li": 1
+        },
+        "total": 2
+    },
+    "pa~": {
+        "char": "pa~",
+        "nexts": {
+            "xi-": 1
+        },
+        "total": 1
+    },
+    "xi-": {
+        "char": "xi-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "po-": {
+        "char": "po-",
+        "nexts": {
+            "la": 1,
+            "li-": 1,
+            "li-n": 1
+        },
+        "total": 3
+    },
+    "pa-l": {
+        "char": "pa-l",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "pe": {
+        "char": "pe",
+        "nexts": {
+            "ne": 1
+        },
+        "total": 1
+    },
+    "pi": {
+        "char": "pi",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "po": {
+        "char": "po",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "pli": {
+        "char": "pli",
+        "nexts": {
+            "Si": 1
+        },
+        "total": 1
+    },
+    "bin": {
+        "char": "bin",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "za-n": {
+        "char": "za-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "lo-z": {
+        "char": "lo-z",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "z": {
+        "char": "z",
+        "nexts": {
+            "ma": 1
+        },
+        "total": 1
+    },
+    "lbi-": {
+        "char": "lbi-",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "l-s": {
+        "char": "l-s",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "sab": {
+        "char": "sab",
+        "nexts": {
+            "li-": 1
+        },
+        "total": 1
+    },
+    "sam": {
+        "char": "sam",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "sand": {
+        "char": "sand",
+        "nexts": {
+            "la": 1
+        },
+        "total": 1
+    },
+    "san": {
+        "char": "san",
+        "nexts": {
+            "di-": 1
+        },
+        "total": 1
+    },
+    "ska-": {
+        "char": "ska-",
+        "nexts": {
+            "le~t": 1
+        },
+        "total": 1
+    },
+    "non": {
+        "char": "non",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "So-": {
+        "char": "So-",
+        "nexts": {
+            "na": 1
+        },
+        "total": 1
+    },
+    "bil": {
+        "char": "bil",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "Sid": {
+        "char": "Sid",
+        "nexts": {
+            "ni-": 1
+        },
+        "total": 1
+    },
+    "ste": {
+        "char": "ste",
+        "nexts": {
+            "_i": 1,
+            "la": 1,
+            "fa": 1
+        },
+        "total": 3
+    },
+    "s-": {
+        "char": "s-",
+        "nexts": {
+            "zan": 1,
+            "ji-": 1
+        },
+        "total": 2
+    },
+    "zan": {
+        "char": "zan",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "szan": {
+        "char": "szan",
+        "nexts": {
+            "na": 1
+        },
+        "total": 1
+    },
+    "Sil": {
+        "char": "Sil",
+        "nexts": {
+            "vi": 1
+        },
+        "total": 1
+    },
+    "te": {
+        "char": "te",
+        "nexts": {
+            "li-": 2
+        },
+        "total": 2
+    },
+    "tle": {
+        "char": "tle",
+        "nexts": {
+            "_i": 1
+        },
+        "total": 1
+    },
+    "tle-": {
+        "char": "tle-",
+        "nexts": {
+            "Si-": 1
+        },
+        "total": 1
+    },
+    "S": {
+        "char": "S",
+        "nexts": {
+            "la": 1
+        },
+        "total": 1
+    },
+    "ve": {
+        "char": "ve",
+        "nexts": {
+            "ne~": 1,
+            "la": 1,
+            "lo": 1
+        },
+        "total": 3
+    },
+    "ne~": {
+        "char": "ne~",
+        "nexts": {
+            "sa": 1
+        },
+        "total": 1
+    },
+    "vikt": {
+        "char": "vikt",
+        "nexts": {
+            "li": 1
+        },
+        "total": 1
+    },
+    "va-": {
+        "char": "va-",
+        "nexts": {
+            "ji": 1
+        },
+        "total": 1
+    },
+    "wan": {
+        "char": "wan",
+        "nexts": {
+            "da": 1
+        },
+        "total": 1
+    },
+    "wen": {
+        "char": "wen",
+        "nexts": {
+            "di": 1
+        },
+        "total": 1
+    },
+    "wi": {
+        "char": "wi",
+        "nexts": {
+            "le": 1
+        },
+        "total": 1
+    },
+    "yo": {
+        "char": "yo",
+        "nexts": {
+            "lan": 1
+        },
+        "total": 1
+    },
+    "ve~t": {
+        "char": "ve~t",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "von": {
+        "char": "von",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "vo-n": {
+        "char": "vo-n",
+        "nexts": {
+            "$": 1
+        },
+        "total": 1
+    },
+    "zo-": {
+        "char": "zo-",
+        "nexts": {
+            "_i": 1
+        },
+        "total": 1
+    }
+}

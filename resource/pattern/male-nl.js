@@ -1,0 +1,12 @@
+export default {
+	"lo[dn]": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"l": 1,
+			"b": 1
+		}
+	}
+}

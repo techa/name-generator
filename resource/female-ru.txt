@@ -1,0 +1,254 @@
+Авдотья
+Avdotya	アヴドーチヤ
+Агафья
+Agafya	アガーフィヤ
+Агриппина
+Agrippina	アグリッピーナ
+Аделина
+Adelina	アデリーナ
+Адриана
+Adriana	アドリアーナ
+Аксана
+Aksana	アクサナ
+Акулина
+Akulina	アクリーナ
+Алевтина
+Alevtina	アレフチナ、アレフチーナ
+Александра
+Aleksandra	アレクサンドラ
+Алёна
+Alyona	アリョーナ
+Алина
+Alina	アリーナ
+Алиса
+Alisa	アリーサ
+Алла
+Alla	アーラ
+Алтынай
+Altynay	アルテナイ
+Альбина
+Albina	アリビーナ
+Анастасия
+Anastasiya	アナスタシヤ、アナスタシーヤ
+Ангелина
+Angelina	アンゲリーナ
+Анжела
+Anzhela	アンジェラ
+Анжелика
+Anzhelika	アンジェリーカ
+Анна
+Anna	アンナ
+Антонина
+Antonina	アントニーナ
+Анфиса
+Anfisa	アンフィーサ
+Аполлинария
+Apollinariya	アポリナーリヤ
+Арина
+Arina	アリーナ、アリナ
+Богдана
+Bogdana	ボグダーナ
+Валентина
+Valentina	ヴァレンチナ
+Валерия
+Valeriya	ヴァレーリヤ
+Варвара
+Varvara	ヴァルヴァラ
+Василиса
+Vasilisa	ヴァシリーサ
+Вера
+Vera	ヴェーラ、ヴェラ
+Вероника
+Veronika	ヴェロニーカ
+Виктория
+Viktoriya	ヴィクトーリヤ
+Галина
+Galina	ガリーナ
+Глафира
+Glafira	グラフィーラ
+Дарья
+Darya	ダーリヤ
+Диана
+Diana	ジアーナ
+Дина
+Dina	ジーナ
+Доминика
+Dominika	ドミニーカ
+Ева
+Yeva	イエヴァ
+Евгения
+Yevgeniya	エヴゲーニヤ
+Евдокия
+Yevdokiya	エヴドキヤ、エヴドキーヤ
+Евпраксия
+Yevpraksiya	エヴプラクシヤ
+Евфросиния
+Yevfrosiniya	エフフロシーニヤ
+Екатерина
+Yekaterina	エカチェリーナ（エカテリーナ）
+Елена
+Yelena	エレーナ、イェレナ
+Елизавета
+Yelizaveta	エリザヴェータ
+Жанна
+Zhanna	ジャンナ
+Зинаида
+Zinaida	ジナイーダ
+Злата
+Zlata	ズラータ
+Зоя
+Zoya	ゾーヤ
+Иванна
+Ivanna	イヴァンナ
+Изольда
+Izolda	イゾールダ
+Инга
+Inga	インガ
+Инесса
+Inessa	イネッサ
+Инна
+Inna	インナ
+Ираида
+Iraida	イライーダ
+Ирина
+Irina	イリーナ
+Ия
+Iya	イーヤ
+Капитолина
+Kapitolina	カピトリナ
+Карина
+Karina	カリーナ
+Катерина
+Katerina	カチェリーナ
+Кира
+Kira	キーラ
+Клавдия
+Klavdiya	クラーヴジヤ
+Клара
+Klara	クラーラ
+Клементина
+Klementina	クレメンチーナ
+Кристина
+Kristina	クリスチーナ
+Ксения
+Kseniya	クセーニヤ
+Лариса
+Larisa	ラリサ
+Лейла
+Leyla	レイラ
+Леонида
+Leonida	レオニーダ
+Лидия
+Lidiya	リージヤ
+Лилия
+Liliya	リーリヤ
+Любовь
+Lyubov	リュボフ
+Людмила
+Lyudmila	リュドミーラ
+Майя
+Maya	マイヤ
+Маргарита
+Margarita	マルガリータ
+Марина
+Marina	マリーナ
+Мария
+Mariya	マリーヤ
+Марта
+Marta	マルタ
+Марфа
+Marfa	マルファ
+Марья
+Marya	マリヤ
+Матрёна
+Matryona	マトリョーナ
+Матрона
+Matrona	マトローナ
+Милана
+Milana	ミラナ
+Мирослава
+Miroslava	ミロスラーヴァ
+Надежда
+Nadezhda	ナジェズダ、ナジェーズダ
+Наина
+Naina	ナイナ、ナイーナ
+Наталия
+Nataliya	ナターリヤ
+Наталья
+Natalya	ナターリヤ
+Ника
+Nika	ニーカ
+Нина
+Nina	ニーナ
+Нонна
+Nonna	ノンナ
+Оксана
+Oksana	オクサーナ、アクサーナ
+Октябрина
+Oktyabrina	オクチャブリーナ
+Олеся
+Olesya	オレーシャ、アレーシャ
+Ольга
+Olga	オリガ、オーリガ
+Пелагея
+Pelageya	ペラゲーヤ
+Полина
+Polina	ポリーナ
+Прасковья
+Praskovya	プラスコーヴィヤ
+Пульхерия
+Pulkheriya	プリヘーリヤ
+Раиса
+Raisa	ライサ、ライーサ
+Регина
+Regina	レギーナ
+Рената
+Renata	レナータ
+Римма
+Rimma	リンマ
+Руфина
+Rufina	ルフィナ
+Светлана
+Svetlana	スヴェトラーナ
+Серафима
+Serafima	セラフィマ
+Снежана
+Snezhana	スネジャーナ
+София
+Sofiya	ソフィヤ、ソフィーヤ
+Софья
+Sofya	ソフィヤ、ソーフィヤ
+Сусанна
+Susanna	スサンナ
+Таисия
+Taisiya	タイーシヤ
+Тамара
+Tamara	タマーラ
+Татьяна
+Tatyana	タチヤーナ
+Ульяна
+Ulyana	ウリヤーナ
+Фаина
+Faina	ファイーナ
+Феврония
+Fevroniya	フェヴローニヤ
+Фёкла
+Fyokla	フョークラ
+Феодора
+Feodora	フェオドラ
+Цецилия
+Tsetsiliya	ツェツィーリヤ
+Элеонора
+Eleonora	エレオノーラ
+Эльвира
+Elvira	エリヴィラ、エルヴィラ
+Эмилия
+Emiliya	エミーリヤ
+Юлия
+Yuliya	ユーリヤ
+Яна
+Yana	ヤーナ、ヤナ
+Янина
+Yanina	ヤニーナ
+Ярослава
+Yaroslava	ヤロスラーヴァ

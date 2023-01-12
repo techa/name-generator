@@ -1,0 +1,144 @@
+export default {
+	"n[iou]be": {
+		"count": 4,
+		"prevs": {
+			"^": 4
+		},
+		"nexts": {
+			"-": 1,
+			"m": 1,
+			"n": 1,
+			"t": 1
+		}
+	},
+	"hed[ei]": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"-": 2
+		}
+	},
+	"y[ou]ha": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"n": 1,
+			"s": 1
+		}
+	},
+	"[fl]o~S": {
+		"count": 2,
+		"prevs": {
+			"e": 1,
+			"^": 1
+		},
+		"nexts": {
+			"$": 1,
+			"-": 1
+		}
+	},
+	"[dl]elo": {
+		"count": 2,
+		"prevs": {
+			"n": 1,
+			"^": 1
+		},
+		"nexts": {
+			"-": 1,
+			"k": 1
+		}
+	},
+	"me[_l]i": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"y": 1,
+			"-": 1
+		}
+	},
+	"[Sn]old": {
+		"count": 2,
+		"prevs": {
+			"n": 1,
+			"^": 1
+		},
+		"nexts": {
+			"$": 1,
+			"_": 1
+		}
+	},
+	"nil[ai]": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"n": 1,
+			"_": 1
+		}
+	},
+	"l[ae]_i": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"n": 1,
+			"l": 1
+		}
+	},
+	"l[io]ka": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"l": 1,
+			"b": 1
+		}
+	},
+	"l[eo]di": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"-": 2
+		}
+	},
+	"sed[ei]": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"-": 2
+		}
+	},
+	"t[iu]-n": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"b": 1,
+			"s": 1
+		}
+	},
+	"v[ae]~s": {
+		"count": 2,
+		"prevs": {
+			"^": 2
+		},
+		"nexts": {
+			"b": 1,
+			"n": 1
+		}
+	}
+}
