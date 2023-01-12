@@ -28,10 +28,9 @@ jobs:
 
       - run: pnpm run build
 
-      - uses: crazy-max/ghaction-github-pages@v3
-        if: success()
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
