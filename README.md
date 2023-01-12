@@ -74,35 +74,5 @@ tag: first,suffix
 ロッティ
 
 
-
-エルヴァ
-ダーグルライト
-ダールベルグ
-アルフリード
-フリードリヒ
-
-
 ## Credit
 * [欧羅巴人名録](https://www.worldsys.org/europe/)
-
-
-
-
-
-
-
-コード・プログレッション
-（1-3-5-4）ACE-CEG-EGB-DF#A
-https://learningmusic.ableton.com/ja/make-basslines/around-the-world.html
-
-（1-5-6-4）DF#A-AC#E-BDF#-GBD
-https://learningmusic.ableton.com/ja/chords/1-5-6-4.html
-
-https://ja.wikipedia.org/wiki/音階
-
-leva
-Sticks
-Metor Guns
-nova
-
-
