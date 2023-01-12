@@ -10,7 +10,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: '200.html',
+		}),
 		// https://github.com/sveltejs/kit/tree/master/packages/adapter-static#github-pages
 		paths: {
 			base: dev ? '' : '/name-generator',
@@ -18,6 +20,7 @@ const config = {
 		// If you are not using a .nojekyll file, change your appDir to something not starting with an underscore.
 		// For example, instead of '_app', use 'app_', 'internal', etc.
 		appDir: 'internal',
+		prerender: { entries: [] },
 	},
 };
 
