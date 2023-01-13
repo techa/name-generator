@@ -102,6 +102,8 @@
 
 		if (doReload) {
 			reload();
+		} else {
+			result = [];
 		}
 	}
 	function copy(str = '') {
