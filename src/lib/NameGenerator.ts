@@ -110,20 +110,18 @@ export class NameGenerator {
 
 		while (count--) {
 			const data = this.data[prev];
-			// const keys = Object.keys(data.nexts);
-			// const $index = keys.indexOf('$');
-			// const values = Object.values(data.nexts);
-
-			// if (syllables < 2 && $index > -1) {
-			// 	keys.splice($index, 1);
-			// 	values.splice($index, 1);
-			// }
 
 			const total =
 				data.total -
 				((syllables < this.minSyllable && data.nexts.$) || 0);
 			const rate = total * this.random.floating(0, 1);
 			let border = 0;
+
+			// 長くなりすぎないように切りの良いところで切る
+			// Cut at the cut-off point so that it is not too long.
+			if (data.nexts.$ && syllables > 4) {
+				break;
+			}
 
 			for (const key in data.nexts) {
 				if (
@@ -138,8 +136,6 @@ export class NameGenerator {
 					break;
 				}
 			}
-
-			// prev = keys[this.random.indexByOdds(values)];
 
 			if (!prev || prev === '$') {
 				break;
