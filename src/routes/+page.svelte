@@ -105,7 +105,7 @@
 		}
 	}
 	function copy(str = '') {
-		str ||= result.reduce((s, v) => s + '\n' + v.kana, '');
+		str ||= result.reduce((s, v) => s + v.kana + '\n', '');
 		navigator.clipboard.writeText(str);
 	}
 </script>
