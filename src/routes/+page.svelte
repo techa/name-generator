@@ -137,6 +137,15 @@
 
 <main class="flex">
 	<div class="left">
+		<div class="about">
+			<a
+				href="https://www.worldsys.org/europe"
+				target="_blank"
+				rel="noopener noreferrer">欧羅巴人名録</a
+			>様のデータを分解して再構成することで、それっぽい名前を生成する。<span
+				>青字</span
+			>は元データにも存在する名前。
+		</div>
 		<h2>Source controller</h2>
 		<form class="w-1/2 select-none" on:change={change}>
 			{#each types as type, i}
@@ -160,17 +169,6 @@
 				<hr />
 			{/each}
 		</form>
-
-		<h2>About</h2>
-		<div class="about">
-			<a
-				href="https://www.worldsys.org/europe"
-				target="_blank"
-				rel="noopener noreferrer">欧羅巴人名録</a
-			>様のデータを分解して再構成することで、それっぽい名前を生成する。<span
-				>青字</span
-			>は元データにも存在する名前。
-		</div>
 	</div>
 	<div class="right w-1/2">
 		<div class="tool flex">
