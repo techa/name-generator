@@ -20,7 +20,7 @@ module.exports = {
 			'error',
 			{ ignoreDeclarationMerge: true },
 		],
-		'no-mixed-spaces-and-tabs': false,
+		'no-mixed-spaces-and-tabs': ['off'],
 	},
 	settings: {
 		'svelte3/typescript': () => require('typescript'),
