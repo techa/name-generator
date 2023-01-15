@@ -11,6 +11,14 @@ export function syllable(word: string): string[] {
 		const char = word[i];
 
 		current += char;
+
+		if (char === ' ') {
+			syllables.push(current);
+			current = '';
+			lastVowelIndex = -1;
+			continue;
+		}
+
 		if (isVowel(char) || char === '-') {
 			if (lastVowelIndex >= 0) {
 				const len = current.length;
@@ -38,7 +46,7 @@ export function syllable(word: string): string[] {
 			syllables.push(current.substring(0, len - 2));
 			syllables.push(current.substring(len - 2, len));
 		} else {
-			syllables.push(current);
+			syllables.push(current.trim());
 		}
 	}
 	return syllables;

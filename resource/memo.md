@@ -16,6 +16,11 @@
 スウェーデンの国別コードはSE
 
 
+## `・`と`＝`の処理について
+* `・`は空白` `に置き換え。syllableでのsplitに利用
+* `＝`は
+
+
 ## ロシア姓は男性形と女性形で語尾変化する
 https://www.worldsys.org/europe/tips-russian-names/
 フ→ヴァ

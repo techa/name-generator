@@ -896,8 +896,8 @@ dald~Si
 dale~sandlo
 da~lali-yo
 da~lalji-ne
-ki_e-za
-li~xa
+da~la ki_e-za
+da~la li~xa
 da~lapi~kola
 dameli-ni
 dami_a-ni
@@ -907,49 +907,51 @@ dani_eli
 da_o-li_o
 da~po-lt
 davi_a
-benediktis
-ce~ko
-kola-t
-fabi_a-ni
-fe_o
-gaspeli
-jovanni
-la_ulenti-s
-la_ulentis
-lolenxi
-lka
-l~ki
-ma~ki
-mike-li
-nanni
-palma
-pa_oli
-piskopo
-ponti
-li-zo
-lobelt
-lo~Si
-sabata
-sanktis
-santis
-se-ta
-Si-ka
-vi-ta
+de benediktis
+de bo-no
+de ce~ko
+de kiliko
+de kola-t
+de fabi_a-ni
+de fe_o
+de gaspeli
+de jovanni
+de la_ulenti-s
+de la_ulentis
+de lolenxi
+de lka
+de l~ki
+de ma~ki
+de mike-li
+de nanni
+de palma
+de pa_oli
+de piskopo
+de ponti
+de li-zo
+de lobelt
+de lo~Si
+de sabata
+de sanktis
+de santis
+de se-ta
+de Si-ka
+de vi-ta
 de_anjelis
 dega-ni
-kolvo
-dnno
-mastlo
-monako
-pe~xo
-testa
-ve~ki_o
+del kolvo
+del dnno
+del mastlo
+del monako
+del pe~xo
+del testa
+del ve~ki_o
 dele~da
 dela~kwa
 de~lolefice
-ka-za
+de~la ka-za
 de~lase-ga
-pi_a-ne
+de~le pi_a-ne
 delmi-ni_o
 delne-li
 delli_o
@@ -968,19 +970,25 @@ delo~Si
 desantis
 dezde-li
 de~Si
-bi_a-jo
-b_ono
-ka-ni_o
-centa
-co~co
-flanceskantni_o
-jakomo
-jo_i_a
-joljo
-monte
-pint
-ste-fano
-va_i_o
+di be~lo
+di bi_a-jo
+di b_ono
+di ka-ni_o
+di centa
+di c~ko
+di co~co
+di flanceskantni_o
+di jakomo
+di jo_i_a
+di joljo
+di monte
+di nanni
+di palma
+di pint
+di li-zo
+di lobelt
+di ste-fano
+di va_i_o
 di_a-ko
 dibe~la
 dibenede~t
@@ -1027,6 +1035,7 @@ _evanjelista
 _evanjelisti
 _ezeki_e-le
 fa~bli
+fabi_a-ni
 fa~ke~ti
 fa~kine~ti
 fa~ki-ni
@@ -1160,6 +1169,7 @@ flakastlo
 flakast-lo
 flankaldi
 flanceska
+flanceskantni_o
 flanceska~ti
 flanceski
 flanceski-ni
@@ -1315,6 +1325,7 @@ ji~li
 jinastela
 jine~li
 jofle
+jo_i_a
 jolda-na
 jolda-ni
 jolda-no
@@ -1429,14 +1440,14 @@ _izola
 _itali_a-no
 _i~xo
 ya~ki_a
-ka-mela
-felli-ta
-ma-lka
-penna
-lo~ka
-lote~la
-tlle
-va~le
+la ka-mela
+la felli-ta
+la ma-lka
+la penna
+la lo~ka
+la lote~la
+la tlle
+la va~le
 labi_a
 labli_o-la
 lako-ni
@@ -1521,6 +1532,7 @@ lonba-ld
 longi
 longo
 lolenxe~ti
+lolenxi
 lolenxin
 lolenxi-ni
 lolenxo-ni
@@ -1555,6 +1567,7 @@ mabe~li-ni
 maka-li_o
 ma~ka-ni
 ma~kali-ni
+ma~ki
 ma~ki_e~ti
 ma~canti
 ma~co~ki
@@ -1769,6 +1782,7 @@ me~zaka-po
 me~zape-sa
 me~xe-na
 mikelanjeli
+mike-li
 mikeli-no
 mike~ti
 miki_e~li
@@ -1822,6 +1836,7 @@ montald
 monta-le
 montana-li
 montane~li
+monte
 monte~la
 monteme~xi
 monteli-zo
@@ -1963,6 +1978,7 @@ palestli-na
 pa~la
 pa~la-di_o
 pallavic-no
+palma
 palmi_eli
 palonbi-ni
 paltlini_eli
@@ -1988,6 +2004,7 @@ panta-ni
 panu~c
 panxe~ta
 pa_ole~ti
+pa_oli
 pa_oli-ni
 pa_olo-ni
 papa-li_a
@@ -2138,6 +2155,7 @@ pi-ni
 pinna
 pino~ti
 pins-ti
+pint
 pinxa
 pinxi
 pi_ova~ka-li
@@ -2149,6 +2167,7 @@ pi-llo
 pilo-vano
 piza-no
 piza-nu
+piskopo
 pistali-no
 piste~li
 pist~ki
@@ -2183,6 +2202,7 @@ ponpi-li_o
 ponpili_o
 ponp~c
 ponki_e~li
+ponti
 ponxa
 polka-li
 polpola
@@ -2296,6 +2316,7 @@ li_oldi
 lipamonti
 lisali-ti
 li-Si
+li-zo
 li-va
 livalta
 live~li
@@ -2307,6 +2328,7 @@ li~xo
 li~xo-li
 lo~bi_a-ti
 lobelti
+lo~ka
 lo~ki
 lo~ko
 lodiga-li
@@ -2332,6 +2354,7 @@ lo-Si
 lo~seli-ni
 lo~se~ti
 lo~se~t
+lo~Si
 lo~Si-ni
 lo~Si~t
 lo~so
@@ -2499,6 +2522,7 @@ seveli-no
 zganba-ti
 zga-li_o
 Si_a-no
+Si-ka
 Si_epi
 Si~fle-di
 Si-gele
@@ -2640,6 +2664,7 @@ telxa-ni
 teska-li
 te~sa-li
 te~sali-ni
+testa
 testi-no
 tetlaxi-ni
 tibaldi
@@ -2749,6 +2774,7 @@ valeli_a-no
 vali_a-ni
 valiNa-no
 valila
+va~le
 va~le~ti
 va~li
 va~li-no
@@ -2769,6 +2795,7 @@ vatila-na
 va~timo
 vava~so-li
 ve~ki
+ve~ki_o
 vece~li_o
 ve~la
 ve-na

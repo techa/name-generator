@@ -32,11 +32,11 @@ _adna-n
 _adham
 _adli-
 _anas
-_ab-bakl
+_ab- bakl
 _afi-f
 _abd
-_abd_ali-
-_abdla~bihi
+_abd _ali-
+_abd la~bihi
 _abdu-l
 _abduf
 _afmad
@@ -196,7 +196,7 @@ S_a_ib
 Skli-
 Sja-_u
 jm_a
-zi-yazan
+zi- yazan
 si~di-k
 sina-n
 ziya-d

@@ -1,4 +1,4 @@
-export const types = ['family', 'female', 'male'] as const;
+export const types = ["family","female","male"] as const;
 export const langs = ["en","de","fr","it","es","sv","fi","ru","cs","nl","ar"] as const;
 export const family_en = `_a-lon
 _abi-
@@ -4657,7 +4657,7 @@ xelna-
 x~kma_iya-
 xnpe
 xmSte-k
-Mu-len
+x_a Mu-len
 xvanxiga-
 xva_ik
 xva_ikle`.split('\n');
@@ -5156,10 +5156,10 @@ d-velNu
 david
 dav-
 dayan
-blo_i
-jennu
-li-l
-vilpan
+d blo_i
+d jennu
+d li-l
+d vilpan
 dbali-
 dubo-
 duble-
@@ -5262,11 +5262,11 @@ dwa_iyan
 dlapo-
 dlole
 dl_iyu
-bele-
-bowa
-bo_a
-kolowa
-geklan
+D bele-
+D bowa
+D bo_a
+D kolowa
+D geklan
 Dbe
 Dbowa
 Dbo_a
@@ -5628,12 +5628,14 @@ jpe
 j~pe
 kalanb-
 keklan
-bRSolli
-fa_i_e~t
-_al
-sal
-sa-l
-tu-l
+la bRSolli
+la fa_i_e~t
+la fonte-nu
+la folj
+la _al
+la sal
+la sa-l
+la tu-l
 laba-l
 labe-
 lablaSli
@@ -5699,27 +5701,35 @@ lavilni-
 lavis
 lavowa
 lavo_aji_e
-be-g
-bon
-bli
-Sapli_e
-Satli_e
-kleji_o
-flem
-gof
-jnu
-nan
-no-tl
-pen
-ple-
-li~S
-l-
-lowa
-lo_a
-Su-l
-teli_e
-vo-
-veli_e
+l be-g
+l bel
+l bon
+l bltn
+l bli
+l blan
+l kali_e
+l Sapli_e
+l Satli_e
+l kleji_o
+l kont
+l flem
+l fo-l
+l Gal
+l Gali_ennu
+l gof
+l jnu
+l nan
+l no-tl
+l pen
+l ple-
+l li~S
+l l-
+l lowa
+l lo_a
+l Su-l
+l teli_e
+l vo-
+l veli_e
 le_andl
 le_ot-
 lbalbe
@@ -6213,6 +6223,9 @@ lso-
 lsel
 l-sel
 lse
+l-
+lowa
+lo_a
 lowa_i_e
 Rfi_e
 sabac_e
@@ -6305,6 +6318,7 @@ tanvi_e
 take
 talD-
 tasan
+teli_e
 telal
 tela~s
 temowan
@@ -7318,8 +7332,8 @@ dald~Si
 dale~sandlo
 da~lali-yo
 da~lalji-ne
-ki_e-za
-li~xa
+da~la ki_e-za
+da~la li~xa
 da~lapi~kola
 dameli-ni
 dami_a-ni
@@ -7329,49 +7343,51 @@ dani_eli
 da_o-li_o
 da~po-lt
 davi_a
-benediktis
-ce~ko
-kola-t
-fabi_a-ni
-fe_o
-gaspeli
-jovanni
-la_ulenti-s
-la_ulentis
-lolenxi
-lka
-l~ki
-ma~ki
-mike-li
-nanni
-palma
-pa_oli
-piskopo
-ponti
-li-zo
-lobelt
-lo~Si
-sabata
-sanktis
-santis
-se-ta
-Si-ka
-vi-ta
+de benediktis
+de bo-no
+de ce~ko
+de kiliko
+de kola-t
+de fabi_a-ni
+de fe_o
+de gaspeli
+de jovanni
+de la_ulenti-s
+de la_ulentis
+de lolenxi
+de lka
+de l~ki
+de ma~ki
+de mike-li
+de nanni
+de palma
+de pa_oli
+de piskopo
+de ponti
+de li-zo
+de lobelt
+de lo~Si
+de sabata
+de sanktis
+de santis
+de se-ta
+de Si-ka
+de vi-ta
 de_anjelis
 dega-ni
-kolvo
-dnno
-mastlo
-monako
-pe~xo
-testa
-ve~ki_o
+del kolvo
+del dnno
+del mastlo
+del monako
+del pe~xo
+del testa
+del ve~ki_o
 dele~da
 dela~kwa
 de~lolefice
-ka-za
+de~la ka-za
 de~lase-ga
-pi_a-ne
+de~le pi_a-ne
 delmi-ni_o
 delne-li
 delli_o
@@ -7390,19 +7406,25 @@ delo~Si
 desantis
 dezde-li
 de~Si
-bi_a-jo
-b_ono
-ka-ni_o
-centa
-co~co
-flanceskantni_o
-jakomo
-jo_i_a
-joljo
-monte
-pint
-ste-fano
-va_i_o
+di be~lo
+di bi_a-jo
+di b_ono
+di ka-ni_o
+di centa
+di c~ko
+di co~co
+di flanceskantni_o
+di jakomo
+di jo_i_a
+di joljo
+di monte
+di nanni
+di palma
+di pint
+di li-zo
+di lobelt
+di ste-fano
+di va_i_o
 di_a-ko
 dibe~la
 dibenede~t
@@ -7449,6 +7471,7 @@ _evanjelista
 _evanjelisti
 _ezeki_e-le
 fa~bli
+fabi_a-ni
 fa~ke~ti
 fa~kine~ti
 fa~ki-ni
@@ -7582,6 +7605,7 @@ flakastlo
 flakast-lo
 flankaldi
 flanceska
+flanceskantni_o
 flanceska~ti
 flanceski
 flanceski-ni
@@ -7737,6 +7761,7 @@ ji~li
 jinastela
 jine~li
 jofle
+jo_i_a
 jolda-na
 jolda-ni
 jolda-no
@@ -7851,14 +7876,14 @@ _izola
 _itali_a-no
 _i~xo
 ya~ki_a
-ka-mela
-felli-ta
-ma-lka
-penna
-lo~ka
-lote~la
-tlle
-va~le
+la ka-mela
+la felli-ta
+la ma-lka
+la penna
+la lo~ka
+la lote~la
+la tlle
+la va~le
 labi_a
 labli_o-la
 lako-ni
@@ -7943,6 +7968,7 @@ lonba-ld
 longi
 longo
 lolenxe~ti
+lolenxi
 lolenxin
 lolenxi-ni
 lolenxo-ni
@@ -7977,6 +8003,7 @@ mabe~li-ni
 maka-li_o
 ma~ka-ni
 ma~kali-ni
+ma~ki
 ma~ki_e~ti
 ma~canti
 ma~co~ki
@@ -8191,6 +8218,7 @@ me~zaka-po
 me~zape-sa
 me~xe-na
 mikelanjeli
+mike-li
 mikeli-no
 mike~ti
 miki_e~li
@@ -8244,6 +8272,7 @@ montald
 monta-le
 montana-li
 montane~li
+monte
 monte~la
 monteme~xi
 monteli-zo
@@ -8385,6 +8414,7 @@ palestli-na
 pa~la
 pa~la-di_o
 pallavic-no
+palma
 palmi_eli
 palonbi-ni
 paltlini_eli
@@ -8410,6 +8440,7 @@ panta-ni
 panu~c
 panxe~ta
 pa_ole~ti
+pa_oli
 pa_oli-ni
 pa_olo-ni
 papa-li_a
@@ -8560,6 +8591,7 @@ pi-ni
 pinna
 pino~ti
 pins-ti
+pint
 pinxa
 pinxi
 pi_ova~ka-li
@@ -8571,6 +8603,7 @@ pi-llo
 pilo-vano
 piza-no
 piza-nu
+piskopo
 pistali-no
 piste~li
 pist~ki
@@ -8605,6 +8638,7 @@ ponpi-li_o
 ponpili_o
 ponp~c
 ponki_e~li
+ponti
 ponxa
 polka-li
 polpola
@@ -8718,6 +8752,7 @@ li_oldi
 lipamonti
 lisali-ti
 li-Si
+li-zo
 li-va
 livalta
 live~li
@@ -8729,6 +8764,7 @@ li~xo
 li~xo-li
 lo~bi_a-ti
 lobelti
+lo~ka
 lo~ki
 lo~ko
 lodiga-li
@@ -8754,6 +8790,7 @@ lo-Si
 lo~seli-ni
 lo~se~ti
 lo~se~t
+lo~Si
 lo~Si-ni
 lo~Si~t
 lo~so
@@ -8921,6 +8958,7 @@ seveli-no
 zganba-ti
 zga-li_o
 Si_a-no
+Si-ka
 Si_epi
 Si~fle-di
 Si-gele
@@ -9062,6 +9100,7 @@ telxa-ni
 teska-li
 te~sa-li
 te~sali-ni
+testa
 testi-no
 tetlaxi-ni
 tibaldi
@@ -9171,6 +9210,7 @@ valeli_a-no
 vali_a-ni
 valiNa-no
 valila
+va~le
 va~le~ti
 va~li
 va~li-no
@@ -9191,6 +9231,7 @@ vatila-na
 va~timo
 vava~so-li
 ve~ki
+ve~ki_o
 vece~li_o
 ve~la
 ve-na
@@ -9678,15 +9719,16 @@ dabila
 dabi-no
 dabo
 dasa
-_anda
-hess
-kamala
-li_os
-pedlo
+de _anda
+de hess
+de la kamala
+de los li_os
+de pedlo
 defijo
-_olmo
-le_i
-li_o
+del kanpo
+del _olmo
+del le_i
+del li_o
 dela
 delakls
 delaf_ente
@@ -10220,7 +10262,9 @@ liko
 li_ela
 li_esgo
 linkon
+li_o
 li_ohas
+li_os
 libadene_ila
 libas
 libejes
@@ -17172,80 +17216,83 @@ klonmelin
 kla_if
 ka_upels
 danmels
-ble-kele
-b-l
-blabandel
-bla-n
-bla_un
-bRune
-fle-tes
-he-l
-holtel
-fla-f
-fle-f
-flo-t
-ha-n
-hont
-ya-hel
-yong
-yonge
-kenpena-l
-klelk
-ko~k
-ko-k
-koning
-ko-ning
-kolt
-la-t
-lange
-langen
-le-_u
-lo-s
-man
-me-stel
-me_i
-Munk
-Muldel
-ni-t
-no-yel
-kva_i
-la-f
-le-del
-li-del
-lidel
-le_ik
-le_ike
-lo-
-lo-de
-lo-_i
-la_utel
-layutel
-Rutel
-la_ike
-sme~t
-fe-l
-fente
-fi~sel
-fli-hel
-f-st
-fos
-fle-se
-fli-s
-fle_i
-va-l
-va-lt
-vilt
-vintel
-vi~t
-Vulf
-ze-_u
-zva-n
+de ba~kel
+de be-l
+de ble-kele
+de bo~k
+de b-l
+de blabandel
+de bla-n
+de bla_un
+de bRune
+de fle-tes
+de he-l
+de holtel
+de fla-f
+de fle-f
+de flo-t
+de ha-n
+de hont
+de ya-hel
+de yong
+de yonge
+de kenpena-l
+de klelk
+de ko~k
+de ko-k
+de koning
+de ko-ning
+de kolt
+de la-t
+de lange
+de langen
+de le-_u
+de lo-s
+de man
+de me-stel
+de me_i
+de Munk
+de Muldel
+de ni-t
+de no-yel
+de kva_i
+de la-f
+de le-del
+de li-del
+de lidel
+de le_ik
+de le_ike
+de lo-
+de lo-de
+de lo-_i
+de la_utel
+de layutel
+de Rutel
+de la_ike
+de sme~t
+de fe-l
+de fente
+de fi~sel
+de fli-hel
+de f-st
+de fos
+de fle-se
+de fli-s
+de fle_i
+de va-l
+de va-lt
+de vilt
+de vintel
+de vi~t
+de Vulf
+de ze-_u
+de zva-n
 de-nen
 de~kel
 de~kels
-heldel
-_a_uden
-_ayul
+den heldel
+den _a_uden
+den _ayul
 dentenel
 delks
 delksen
@@ -17291,11 +17338,13 @@ helixen
 he-fels
 fdhedla-f
 ho-cumeding
+holtel
 ha_utsmi~t
 fla-t
 fln
 flnende_ik
 fl-nefelt
+flo-t
 flo-ten
 flo-thof
 fl~pen
@@ -17394,7 +17443,9 @@ klo~p
 kla_ufelt
 klnpenha_u_el
 knoflo-k
+ko-k
 kolf
+koning
 ko-nings
 ko-_i
 ko-_iman
@@ -17473,6 +17524,7 @@ mons
 mo-ls
 m-le_in
 ma_u_en
+Muldel
 Muldels
 Munneke
 nafteha-l
@@ -17538,6 +17590,7 @@ leno-_i
 lensenblink
 li-tbelf
 li-tfelt
+le_ik
 le_ika-lt
 le_iken
 le_ikel
@@ -17557,6 +17610,7 @@ l-bens
 la_uha
 la_uten
 la_ucen
+la_utel
 l~te
 l~ten
 samson
@@ -17598,11 +17652,11 @@ sta_ufen
 sva-p
 svinkels
 telehen
-boske
-holt
+ten boske
+ten holt
 tent
-ha-l
-holst
+tel ha-l
+tel holst
 te-nisen
 te_isen
 ta_isen
@@ -17620,258 +17674,287 @@ tlo-st
 _u-lenbe~k
 _a_uteha-he
 falha-len
-ho~f
-_a-l
-_a-lten
-_a-lsen
-_ahat
-_a-ken
-_a-melongen
-_amstel
-_as
-_aspelen
-ba-len
-balnevelt
-basten
-be-k
-be-ls
-belhen
-be-he
-be-ningen
-be_i_elen
-bonmel
-bo~se
-bo-ven
-bo-fen
-ble-
-ble_i
-ble-kelen
-blkho-fen
-blkha_uzen
-blonkholst
-Bu-len
-Bulk
-Bul
-ba_uten
-bayuten
-kanpen
-da-n
-da-len
-dalsen
-dam
-danme
-belf
-blink
-kanp
-pol
-Pu~te
-fe-n
-felde
-felden
-fen
-val
-ve-lt
-de-len
-de_ilen
-delden
-delft
-ble-ken
-bo-ha-lt
-bl~k
-blk
-_ende
-f-vel
-f~k
-ho-henbant
-ho-na-lt
-fondel
-bl~hen
-Bulf
-denen
-_elsken
-_ent
-ha-f
-he-st
-flas
-f-s
-flinten
-ha-hen
-he_iden
-helst
-f-fe
-f-fen
-ho-fen
-Hlst
-klo-stel
-kla-n
-la-n
-le-
-le-den
-linden
-lof
-ma-ten
-me-l
-me-len
-mo-len
-ne-t
-pla-t
-pla-s
-p-l
-Pu~t
-sa-l
-sla_us
-spe~k
-ste-n
-stel
-fa-lt
-fle-ten
-folst
-va-ls
-velf
-vestha_uzen
-vilihen
-ze-
-de-dekom
-de-lsen
-de-lzen
-di-len
-de_ik
-de_iken
-dilen
-dnblf
-dngen
-d-ln
-dlt
-dli-l
-dl-nen
-dR-nen
-da_un
-de~k
-_e-stelen
-_e~fen
-_efmont
-_e_ik
-_emden
-_engel
-_elven
-_es
-_e~sen
-ha-len
-he-melt
-helfen
-hestel
-go~ho
-ho-l
-ho-len
-flinsfen
-fl-ningen
-ha-llem
-ham
-ha-pelen
-he-mstla
-he-mel
-helk
-helpen
-he-ften
-he-men
-he_ifte
-fhalden
-ho-hendlp
-ho-f
-ho-lne
-ha_ut
-ha_uten
-ha_u_elingen
-ha_us
-ha_uzen
-_inmelse-l
-kanmen
-kenpen
-ke~sel
-ke-len
-kilsdnk
-kla-felen
-ko-ten
-kle-felt
-kli-ken
-la-l
-le-l
-le-st
-le-ven
-le_iven
-le-venf~k
-lenne~p
-le_iden
-li-l
-li-sha_ut
-liftenbelf
-le_insho-ten
-l-nen
-lo_u
-lo-n
-lnsen
-ma-lsefe-n
-mali_on
-malve_ik
-mehelen
-me-fel
-mil
-mo-k
-na~sa_u
-nes
-ni-kelk
-no-lt
-_o_ilsho~t
-_o-lsho~t
-_onna
-_o-_i
-_o-ltmel~sen
-_o-sten
-_o-stelze-
-_o-stelze_i
-_o-s
-_o~tello-
-pa-sen
-panha_us
-Pu~ten
-p~ten
-lamsela-l
-le-s
-lennes
-li-t
-le_in
-lo-_i_en
-lo_i
-shendel
-Se_indel
-slingelant
-s-st
-so-melen
-ste-nbelhen
-stla-ten
-stli-n
-te-lingen
-ti-nho-ven
-tnhelen
-falkenf~t
-fe-nen
-fe-nenda-l
-felsen
-feltho-fen
-flelken
-fli-t
-Fft
-va-heningen
-vanlo-_i
-va~senho-fe
-velkho-fen
-velkho-ven
-ve-zel
-ve_ik
-ve_ingha-den
-zve-den
-zvi-ten
+fant ho~f
+fan _a-l
+fan _a-lten
+fan _a-lsen
+fan _ahat
+fan _a-ken
+fan _a-melongen
+fan _amstel
+fan _as
+fan _aspelen
+fan ba-len
+fan balnevelt
+fan basten
+fan be-k
+fan be-ls
+fan belhen
+fan be-he
+fan be-ningen
+fan be_i_elen
+fan bonmel
+fan bo~se
+fan bo-ven
+fan bo-fen
+fan ble-
+fan ble_i
+fan ble-kelen
+fan blkho-fen
+fan blkha_uzen
+fan blonkholst
+fan Bu-len
+fan Bulk
+fan Bul
+fan ba_uten
+fan bayuten
+fan kanpen
+fan da-n
+fan da-len
+fan dalsen
+fan dam
+fan danme
+fan de belf
+fan de blink
+fan de kanp
+fan de pol
+fan de Pu~te
+fan de fe-n
+fan de felde
+fan de felden
+fan de fen
+fan de val
+fan de ve-lt
+fan de-len
+fan de_ilen
+fan delden
+fan delft
+fan den belf
+fan den ble-ken
+fan den bo-ha-lt
+fan den bos
+fan den blink
+fan den bl~k
+fan den blk
+fan den _ende
+fan den f-vel
+fan den f~k
+fan den ho-henbant
+fan den ho-na-lt
+fan den pol
+fan den felde
+fan den felden
+fan den fondel
+fan del be_il
+fan del bl~hen
+fan del Bulf
+fan del denen
+fan del _elsken
+fan del _ent
+fan del ha-f
+fan del he-st
+fan del flas
+fan del f-s
+fan del fla-f
+fan del flinten
+fan del fln
+fan del ha-hen
+fan del he_iden
+fan del helst
+fan del f-fe
+fan del f-fen
+fan del holst
+fan del ho-fen
+fan del Hlst
+fan del klo-stel
+fan del kla-n
+fan del la-n
+fan del le-
+fan del le-den
+fan del le-_u
+fan del linden
+fan del lof
+fan del ma-ten
+fan del me-l
+fan del me-len
+fan del mo-len
+fan del ne-t
+fan del pla-t
+fan del pla-s
+fan del p-l
+fan del pol
+fan del Pu~t
+fan del sa-l
+fan del sla_us
+fan del spe~k
+fan del ste-n
+fan del stel
+fan del fa-lt
+fan del fe-n
+fan del felde
+fan del felden
+fan del fen
+fan del fle-ten
+fan del folst
+fan del va-ls
+fan del val
+fan del velf
+fan del vestha_uzen
+fan del vilihen
+fan del ze-
+fan de-dekom
+fan de-lsen
+fan de-lzen
+fan di-len
+fan de_ik
+fan de_iken
+fan dilen
+fan dnblf
+fan dngen
+fan d-ln
+fan dlt
+fan dli-l
+fan dl-nen
+fan dR-nen
+fan da_un
+fan de~k
+fan _e-stelen
+fan _e~fen
+fan _efmont
+fan _e_ik
+fan _emden
+fan _engel
+fan _engelen
+fan _elven
+fan _es
+fan _e~sen
+fan ha-len
+fan heldel
+fan he-melt
+fan helfen
+fan hestel
+fan go~ho
+fan ho-l
+fan ho-len
+fan flinsfen
+fan fl-ningen
+fan ha-llem
+fan ha-l
+fan ham
+fan ha-pelen
+fan he-mskelk
+fan he-mstla
+fan he-mel
+fan helk
+fan helpen
+fan he-ften
+fan he-men
+fan he_ifte
+fan fhalden
+fan f~k
+fan ho-hendlp
+fan ho-f
+fan ho-lne
+fan ha_ut
+fan ha_uten
+fan ha_u_elingen
+fan ha_us
+fan ha_uzen
+fan Hlst
+fan _inmelse-l
+fan kanmen
+fan kenpen
+fan ke~sel
+fan ke-len
+fan kilsdnk
+fan kla-felen
+fan ko-ten
+fan kle-felt
+fan kli-ken
+fan la-l
+fan le-l
+fan le-st
+fan le-ven
+fan le_iven
+fan le-venf~k
+fan lenne~p
+fan le_iden
+fan li-l
+fan li-sha_ut
+fan liftenbelf
+fan le_insho-ten
+fan l-nen
+fan lo-
+fan lo_u
+fan lo-n
+fan lo-_i
+fan lnsen
+fan linden
+fan ma-lsefe-n
+fan mali_on
+fan malve_ik
+fan mehelen
+fan me-fel
+fan mil
+fan mo-k
+fan na~sa_u
+fan nes
+fan ni-kelk
+fan no-lt
+fan _o_ilsho~t
+fan _o-lsho~t
+fan _onna
+fan _o-_i
+fan _o-lt
+fan _o-ltmel~sen
+fan _o-sten
+fan _o-stelze-
+fan _o-stelze_i
+fan _o-s
+fan _o~tello-
+fan pa-sen
+fan panha_us
+fan Pu~ten
+fan p~ten
+fan lamsela-l
+fan le-s
+fan lennes
+fan li-t
+fan le_in
+fan lo-_i_en
+fan lo_i
+fan shendel
+fan Se_indel
+fan slingelant
+fan s-st
+fan so-melen
+fan ste-nbelhen
+fan stla-ten
+fan stli-n
+fan te-lingen
+fan ti-nho-ven
+fan tnhelen
+fan falkenf~t
+fan fe-n
+fan fe-nen
+fan fe-nenda-l
+fan felsen
+fan feltho-fen
+fan flelken
+fan fli-t
+fan Fft
+fan va-heningen
+fan vanlo-_i
+fan va~senho-fe
+fan velkho-fen
+fan velkho-ven
+fan ve-zel
+fan ve_ik
+fan ve_ingha-den
+fan zve-den
+fan zvi-ten
 fanendelt
+fe-nenda-l
 fe-nstla
 feltman
 fening
@@ -17906,12 +17989,15 @@ fe-helen
 fink
 finke
 fi~Sel
+fi~sel
 fla-ndelen
 f~t
 fonk
 foldelman
+fos
 fle-sve_ik
 flins
+flinten
 flo-lek
 vahena-l
 vahatmans
@@ -17954,10 +18040,10 @@ export const family_ar = `
 _askali-
 _adawi-
 _adi-b
-_ab-laban
+_ab- laban
 _anma-l
-_u-taba-Si-
-_u-daba-Si-
+_u-ta ba-Si-
+_u-da ba-Si-
 _uta_ibi-
 ga-midi-
 ka~ba-ni-
@@ -21607,7 +21693,7 @@ _uma-ma
 _uma_ima
 _ul-d
 _ulfa
-_unmkls-m
+_unm kls-m
 ga-da
 ka_ukab
 ka_usal
@@ -21709,7 +21795,7 @@ nabi-la
 naljis
 nisli-n
 nilmi-n
-nu-l_a-ya
+nu-l _a-ya
 nu-lha-n
 nuj-m
 ha-jal
@@ -25460,11 +25546,11 @@ _adna-n
 _adham
 _adli-
 _anas
-_ab-bakl
+_ab- bakl
 _afi-f
 _abd
-_abd_ali-
-_abdla~bihi
+_abd _ali-
+_abd la~bihi
 _abdu-l
 _abduf
 _afmad
@@ -25624,7 +25710,7 @@ S_a_ib
 Skli-
 Sja-_u
 jm_a
-zi-yazan
+zi- yazan
 si~di-k
 sina-n
 ziya-d

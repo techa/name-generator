@@ -493,10 +493,10 @@ d-velNu
 david
 dav-
 dayan
-blo_i
-jennu
-li-l
-vilpan
+d blo_i
+d jennu
+d li-l
+d vilpan
 dbali-
 dubo-
 duble-
@@ -599,11 +599,11 @@ dwa_iyan
 dlapo-
 dlole
 dl_iyu
-bele-
-bowa
-bo_a
-kolowa
-geklan
+D bele-
+D bowa
+D bo_a
+D kolowa
+D geklan
 Dbe
 Dbowa
 Dbo_a
@@ -965,12 +965,14 @@ jpe
 j~pe
 kalanb-
 keklan
-bRSolli
-fa_i_e~t
-_al
-sal
-sa-l
-tu-l
+la bRSolli
+la fa_i_e~t
+la fonte-nu
+la folj
+la _al
+la sal
+la sa-l
+la tu-l
 laba-l
 labe-
 lablaSli
@@ -1036,27 +1038,35 @@ lavilni-
 lavis
 lavowa
 lavo_aji_e
-be-g
-bon
-bli
-Sapli_e
-Satli_e
-kleji_o
-flem
-gof
-jnu
-nan
-no-tl
-pen
-ple-
-li~S
-l-
-lowa
-lo_a
-Su-l
-teli_e
-vo-
-veli_e
+l be-g
+l bel
+l bon
+l bltn
+l bli
+l blan
+l kali_e
+l Sapli_e
+l Satli_e
+l kleji_o
+l kont
+l flem
+l fo-l
+l Gal
+l Gali_ennu
+l gof
+l jnu
+l nan
+l no-tl
+l pen
+l ple-
+l li~S
+l l-
+l lowa
+l lo_a
+l Su-l
+l teli_e
+l vo-
+l veli_e
 le_andl
 le_ot-
 lbalbe
@@ -1550,6 +1560,9 @@ lso-
 lsel
 l-sel
 lse
+l-
+lowa
+lo_a
 lowa_i_e
 Rfi_e
 sabac_e
@@ -1642,6 +1655,7 @@ tanvi_e
 take
 talD-
 tasan
+teli_e
 telal
 tela~s
 temowan

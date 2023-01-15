@@ -140,6 +140,10 @@ export class NameGenerator {
 			if (!prev || prev === '$') {
 				break;
 			}
+			if (prev.endsWith(' ')) {
+				count++;
+			}
+
 			// 繰り返し防止
 			// je-n,kimなどがje-nje-n,kimkimになる
 			// 繰り返しが起きる原因は

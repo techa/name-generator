@@ -93,6 +93,9 @@ export class Translator implements TranslatorOptions {
 						kana += next ? 'ッ' : toKana[prev];
 						break;
 
+					case ' ':
+						kana += '・';
+						break;
 					default:
 						break;
 				}
@@ -141,6 +144,8 @@ export class Translator implements TranslatorOptions {
 					result += result.slice(-1);
 				}
 				continue;
+			} else if (char === '・') {
+				result += ' ';
 			}
 
 			if (fromKana[char]) {

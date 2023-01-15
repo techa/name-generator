@@ -8,4 +8,11 @@ test(`syllable`, (t) => {
 	t.deepEqual(syllable('nidl'), ['ni', 'dl']);
 
 	t.deepEqual(syllable('zo-_i'), ['zo-', '_i']);
+
+	t.deepEqual(syllable('_u-ta ba-Si-'), ['_u-', 'ta ', 'ba-', 'Si-']);
+
+	t.deepEqual(syllable('anbli~t'), ['anb', 'li~t']);
+	t.deepEqual(syllable('an bli~t'), ['an ', 'bli~t']);
+
+	t.deepEqual(syllable('de layutel'), ['de ', 'la', 'yu', 'tel']);
 });

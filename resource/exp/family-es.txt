@@ -357,15 +357,16 @@ dabila
 dabi-no
 dabo
 dasa
-_anda
-hess
-kamala
-li_os
-pedlo
+de _anda
+de hess
+de la kamala
+de los li_os
+de pedlo
 defijo
-_olmo
-le_i
-li_o
+del kanpo
+del _olmo
+del le_i
+del li_o
 dela
 delakls
 delaf_ente
@@ -899,7 +900,9 @@ liko
 li_ela
 li_esgo
 linkon
+li_o
 li_ohas
+li_os
 libadene_ila
 libas
 libejes

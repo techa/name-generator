@@ -30,7 +30,7 @@ test(`fromKana`, (t) => {
 	t.is(trans1.fromKana('アィス'), '_ais');
 
 	t.is(trans1.fromKana('コトロゥタディンギャ'), 'kotlowtadinGa');
-	t.is(trans1.fromKana('ウータ・バーシー'), '_u-taba-Si-');
+	t.is(trans1.fromKana('ウータ・バーシー'), '_u-ta ba-Si-');
 
 	const trans2 = new Translator({
 		longVowel: 'repeat',

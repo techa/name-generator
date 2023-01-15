@@ -1,3 +1,4 @@
+// tsc | node ./.build/scripts/originToKana | node ./.build/scripts/kanaToExp
 import { readFileSync, writeFileSync } from 'fs';
 import { types, langs } from './constants.js';
 
@@ -6,9 +7,7 @@ for (const type of types) {
 		const kanas = new Set();
 
 		const names = (str: string) => {
-			if (/・/.test(str)) {
-				return str.split(/・/).at(-1);
-			} else if (/＝/.test(str)) {
+			if (/＝/.test(str)) {
 				return str
 					.split(/[＝]/g)
 					.map((v) => {
