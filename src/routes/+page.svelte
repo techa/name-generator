@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { NameGenerator, type NameResult } from '$lib/NameGenerator.js';
 	import '../global/string/capitalize.js';
 	import { all, types, langs } from '../constants/sources.js';
@@ -17,21 +18,30 @@
 		'アラビア',
 	];
 
-	const setting: boolean[][] = [
+	let setting: boolean[][] = [
 		Array(langs.length).fill(false), // family
 		Array(langs.length).fill(false), // female
 		Array(langs.length).fill(false), // male
+		[], // userResource
 	];
+	setting[0][0] = true;
 
 	let result: NameResult[] = [];
 	let filter = true;
 	const ng = new NameGenerator();
-	change();
 
 	$: {
 		filter;
 		reload();
 	}
+
+	onMount(() => {
+		const _setting = JSON.parse(localStorage.getItem('setting'));
+		if (_setting) {
+			setting = _setting;
+		}
+		change();
+	});
 
 	function checkAll(e, index: number) {
 		setting[index] = Array(langs.length).fill(e.target.checked);
@@ -56,6 +66,8 @@
 		}
 	}
 	function change() {
+		localStorage?.setItem('setting', JSON.stringify(setting));
+
 		ng.clear();
 		let doReload = false;
 
