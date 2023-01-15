@@ -1,5 +1,6 @@
 import { readFileSync, writeFile } from 'fs';
 import { NameExp } from '../src/lib/NameExp.js';
+import { types, langs } from './constants.js';
 
 function save(data: Record<string, Pattern>, filename: string) {
 	writeFile(
@@ -17,21 +18,6 @@ function save(data: Record<string, Pattern>, filename: string) {
 	// 	},
 	// );
 }
-
-const types = ['family', 'female', 'male'];
-const langs = [
-	'en',
-	'de',
-	'fr',
-	'es',
-	'it',
-	'fi',
-	'sv',
-	'ru',
-	'cs',
-	'nl',
-	'ar',
-];
 
 interface Pattern {
 	count: number;

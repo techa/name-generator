@@ -1,19 +1,5 @@
 import { readFileSync, writeFileSync } from 'fs';
-
-const types = ['family', 'female', 'male'];
-const langs = [
-	'en',
-	'de',
-	'fr',
-	'es',
-	'it',
-	'fi',
-	'sv',
-	'ru',
-	'cs',
-	'nl',
-	'ar',
-];
+import { types, langs } from './constants.js';
 
 for (const type of types) {
 	for (const lang of langs) {
