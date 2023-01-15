@@ -1,10 +1,11 @@
 // node ./scripts/expToJs.js
 import { readFileSync, writeFileSync } from 'fs';
-import { types, langs } from './constants.js';
+import { types, langs, lango } from './constants.js';
 
 let t =
 	`export const types = ${JSON.stringify(types)} as const;\n` +
-	`export const langs = ${JSON.stringify(langs)} as const;\n`;
+	`export const langs = ${JSON.stringify(langs)} as const;\n` +
+	`export const lango = ${JSON.stringify(lango)} as const;\n`;
 let obj = `\nexport const all = {`;
 
 for (const type of types) {

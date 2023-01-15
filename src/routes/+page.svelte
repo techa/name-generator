@@ -2,21 +2,7 @@
 	import { onMount } from 'svelte';
 	import { NameGenerator, type NameResult } from '$lib/NameGenerator.js';
 	import '../global/string/capitalize.js';
-	import { all, types, langs } from '../constants/sources.js';
-
-	const LANGS = [
-		'英',
-		'ドイツ',
-		'フランス',
-		'イタリア',
-		'スペイン',
-		'スウェーデン',
-		'フィンランド',
-		'ロシア',
-		'チェコ',
-		'オランダ',
-		'アラビア',
-	];
+	import { all, types, langs, lango } from '../constants/sources.js';
 
 	let setting: boolean[][] = [
 		Array(langs.length).fill(false), // family
@@ -123,7 +109,7 @@
 				</label>
 				<div class="langs flex">
 					{#each setting[i] as bool, j}
-						<label class="lang" title="{LANGS[j]}語">
+						<label class="lang" title="{lango[j]}語">
 							<input type="checkbox" bind:checked={bool} />
 							{langs[j].toUpperCase()}
 						</label>

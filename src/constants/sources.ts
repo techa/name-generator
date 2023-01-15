@@ -1,5 +1,6 @@
 export const types = ["family","female","male"] as const;
 export const langs = ["en","de","fr","it","es","sv","fi","ru","cs","nl","ar"] as const;
+export const lango = ["英","ドイツ","フランス","イタリア","スペイン","スウェーデン","フィンランド","ロシア","チェコ","オランダ","アラビア"] as const;
 export const family_en = `_a-lon
 _abi-
 _abintn

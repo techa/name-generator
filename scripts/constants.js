@@ -1,16 +1,18 @@
 // city
 // other
 export const types = ['family', 'female', 'male'];
-export const langs = [
-	'en',
-	'de',
-	'fr',
-	'it',
-	'es',
-	'sv',
-	'fi',
-	'ru',
-	'cs',
-	'nl',
-	'ar',
-];
+const lang = {
+	en: '英',
+	de: 'ドイツ',
+	fr: 'フランス',
+	it: 'イタリア',
+	es: 'スペイン',
+	sv: 'スウェーデン',
+	fi: 'フィンランド',
+	ru: 'ロシア',
+	cs: 'チェコ',
+	nl: 'オランダ',
+	ar: 'アラビア',
+};
+export const langs = Object.keys(lang);
+export const lango = Object.values(lang);
