@@ -1,4 +1,5 @@
-var zl=Object.defineProperty;var yl=(e,a,l)=>a in e?zl(e,a,{enumerable:!0,configurable:!0,writable:!0,value:l}):e[a]=l;var T=(e,a,l)=>(yl(e,typeof a!="symbol"?a+"":a,l),l),Pa=(e,a,l)=>{if(!a.has(e))throw TypeError("Cannot "+l)};var x=(e,a,l)=>(Pa(e,a,"read from private field"),l?l.call(e):a.get(e)),_a=(e,a,l)=>{if(a.has(e))throw TypeError("Cannot add the same private member more than once");a instanceof WeakSet?a.add(e):a.set(e,l)},ka=(e,a,l,i)=>(Pa(e,a,"write to private field"),i?i.call(e,l):a.set(e,l),l),kl=(e,a,l,i)=>({set _(n){ka(e,a,n,l)},get _(){return x(e,a,i)}}),Va=(e,a,l)=>(Pa(e,a,"access private method"),l);import{S as xl,i as wl,s as rl,a as N,k as S,q as M,I as Fa,J as Rl,h as f,c as D,l as c,m as j,r as G,K as Ca,n as h,b as P,G as k,L as X,B as tl,M as Ua,N as Nl,O as sl,u as Dl}from"../../chunks/index-b737164e.js";function Kl(e,a){return Math.floor((a-e+1)*Math.random()+e)}function Bl(e){return e[Math.floor(e.length*Math.random())]}function da(e,a){const l=[];for(const i of e)for(const n of a)l.push(i+n);return l}const gl=da("tdspfkbvg","rl"),Sl=da("tscp","h");[...da("s","bvgtcpfk"),...gl,...Sl];[...da("szftlp","szftlp"),...gl,...Sl,...da("n","dzjvgtscfkrl")];const Ia=4294967295,Oa=2147483647,La=2147483648,Hl=32,C=624,ua=397,ml=1812433253;var ba,w,Q,Sa,cl,ca,jl;class ga{constructor(a){_a(this,Sa);_a(this,ca);_a(this,ba,void 0);_a(this,w,void 0);_a(this,Q,void 0);ka(this,ba,a||(a=Date.now())),typeof a=="string"&&(a=Va(this,Sa,cl).call(this,a)),ka(this,w,new Array(C)),x(this,w)[0]=a>>>0;for(let l=1;l<C;l++){const i=x(this,w)[l-1]^x(this,w)[l-1]>>>Hl-2;x(this,w)[l]=(ml*((i&4294901760)>>>16)<<16)+ml*(i&65535)+l>>>0}ka(this,Q,C)}get seed(){return x(this,ba)}nextInt(){x(this,Q)>=C&&Va(this,ca,jl).call(this);let a=x(this,w)[kl(this,Q)._++];return a^=a>>>11,a^=a<<7&2636928640,a^=a<<15&4022730752,a^=a>>>18,a>>>0}next(){return this.nextInt()*(1/4294967296)}floating(a,l){return(l-a)*this.next()+a}static floating(a,l){return(l-a)*Math.random()+a}integer(a,l){return Math.floor((l-a+1)*this.next()+a)}bool(a=.5){return this.next()<=a}static bool(a=.5){return Math.random()<=a}pickOne(a){return a[this.integer(0,a.length-1)]}pickSet(a,l,i=!1){return i?this._pickSetWithDuplicates(a,l):this._pickSetWithoutDuplicates(a,l)}_pickSetWithoutDuplicates(a,l){if(l>a.length||l<0)throw new Error("Invalid number of elements to pick, must pick a value 0 < n <= length");if(l===a.length)return a;const i=new Array(l);let n=0;const o=a.slice(0);for(;n<l;){const _=this.integer(0,o.length-1);i[n++]=o[_],o.splice(_,1)}return i}_pickSetWithDuplicates(a,l){if(l<0)throw new Error("Invalid number of elements to pick, must pick a value 0 <= n < MAX_INT");const i=new Array(l);for(let n=0;n<l;n++)i[n]=this.pickOne(a);return i}shuffle(a){const l=a.slice(0);let i=null;for(let n=0;n<l.length-2;n++){const o=this.integer(n,l.length-1);i=l[n],l[n]=l[o],l[o]=i}return l}range(a,l,i){const n=new Array(a);for(let o=0;o<a;o++)n[o]=this.integer(l,i);return n}dice(a,l=1){if(a<2||l<1)throw new Error("Invalid number, must sided a value 2 <= n, must times a value 1 <= n.");let i=0;for(;l--;)i+=this.integer(1,a);return i}rpg(a){const[l,i]=a.split(/d/i).map(n=>+n||1);return this.dice(i,l)}indexByOdds(a){const i=a.reduce((o,_)=>o+_,0)*this.floating(0,1);let n=0;for(let o=0;o<a.length;o++)if(n+=a[o],i<n)return o}}ba=new WeakMap,w=new WeakMap,Q=new WeakMap,Sa=new WeakSet,cl=function(a){let l=0;for(let i=0;i<a.length;i++)l=a.charCodeAt(i)+(l<<6)+(l<<16)-l;return l},ca=new WeakSet,jl=function(){const a=[0,2567483615];let l=0,i=0;for(;i<C-ua;i++)l=x(this,w)[i]&La|x(this,w)[i+1]&Oa,x(this,w)[i]=x(this,w)[i+ua]^l>>>1^a[l&1]&Ia;for(;i<C-1;i++)l=x(this,w)[i]&La|x(this,w)[i+1]&Oa,x(this,w)[i]=x(this,w)[i+(ua-C)]^l>>>1^a[l&1]&Ia;l=x(this,w)[C-1]&La|x(this,w)[0]&Oa,x(this,w)[C-1]=x(this,w)[ua-1]^l>>>1^a[l&1]&Ia,ka(this,Q,0)},T(ga,"integer",Kl),T(ga,"pickOne",Bl);const Ml="aiueo",Gl="_ywkstpfgzdbvKcSTPFGZjDBVhHxnNmMrlR";function $a(e){return Ml.includes(e)}function ma(e){return Gl.includes(e)}function Tl(e){let a="";for(const l of e)a+=ma(l)?"C":$a(l)?"V":l;return a}function El(e){const a=[];let l=-1,i="";for(let n=0;n<e.length;n++){const o=e[n];if(i+=o,$a(o)||o==="-"){if(l>=0){const _=i.length;if(n-l===1){const d=_;a.push(i.substring(0,d)),i=i.substring(d,_)}else{const d=i.substring(0,_-2);d&&a.push(d),i=i.substring(_-2,_)}}l=n}}if(i.length>0){const n=Tl(i);if(n==="C")a[a.length-1]+=i;else if(/.CC$/.test(n)){const o=i.length;a.push(i.substring(0,o-2)),a.push(i.substring(o-2,o))}else a.push(i)}return a}const W={"":"",_:"",a:"ァ",i:"ィ",u:"ュ",e:"ェ",o:"ォ",_a:"ア",_i:"イ",_u:"ウ",_e:"エ",_o:"オ",y:"ィ",ya:"ヤ",yi:"ユィ",yu:"ユ",ye:"イェ",yo:"ヨ",w:"ゥ",wa:"ワ",wi:"ウィ",wu:"ウ",we:"ウェ",wo:"ウォ",k:"ク",ka:"カ",ki:"キ",ku:"ク",ke:"ケ",ko:"コ",s:"ス",sa:"サ",si:"スィ",su:"ス",se:"セ",so:"ソ",t:"ト",ta:"タ",ti:"ティ",tu:"トゥ",te:"テ",to:"ト",p:"プ",pa:"パ",pi:"ピ",pu:"プ",pe:"ペ",po:"ポ",f:"フ",fa:"ファ",fi:"フィ",fu:"フ",fe:"フェ",fo:"フォ",g:"グ",ga:"ガ",gi:"ギ",gu:"グ",ge:"ゲ",go:"ゴ",z:"ズ",za:"ザ",zi:"ズィ",zu:"ズ",ze:"ゼ",zo:"ゾ",d:"ド",da:"ダ",di:"ディ",du:"ドゥ",de:"デ",do:"ド",b:"ブ",ba:"バ",bi:"ビ",bu:"ブ",be:"ベ",bo:"ボ",v:"ヴ",va:"ヴァ",vi:"ヴィ",vu:"ヴ",ve:"ヴェ",vo:"ヴォ",K:"クィ",Ka:"キャ",Ki:"クィ",Ku:"キュ",Ke:"キェ",Ko:"キョ",c:"チ",ca:"チャ",ci:"チ",cu:"チュ",ce:"チェ",co:"チョ",S:"シュ",Sa:"シャ",Si:"シ",Su:"スュ",Se:"シェ",So:"ショ",T:"トィ",Ta:"テャ",Ti:"トィ",Tu:"テュ",Te:"テェ",To:"テョ",P:"プィ",Pa:"ピャ",Pi:"プィ",Pu:"ピュ",Pe:"ピェ",Po:"ピョ",F:"フュ",Fa:"フャ",Fi:"フィ",Fu:"フュ",Fe:"フェ",Fo:"フョ",G:"グィ",Ga:"ギャ",Gi:"グィ",Gu:"ギュ",Ge:"ギェ",Go:"ギョ",j:"ジュ",ja:"ジャ",ji:"ジ",ju:"ジュ",je:"ジェ",jo:"ジョ",Z:"ジュ",Za:"ジャ",Zi:"ジ",Zu:"ジュ",Ze:"ジェ",Zo:"ジョ",D:"デュ",Da:"デャ",Di:"ディ",Du:"デュ",De:"デェ",Do:"デョ",B:"ブィ",Ba:"ビャ",Bi:"ブィ",Bu:"ビュ",Be:"ビェ",Bo:"ビョ",V:"ヴィ",Va:"ヴャ",Vi:"ヴィ",Vu:"ヴュ",Ve:"ヴェ",Vo:"ヴョ",h:"フ",ha:"ハ",hi:"ヒ",hu:"フ",he:"ヘ",ho:"ホ",H:"ヒュ",Ha:"ヒャ",Hi:"ヒィ",Hu:"ヒュ",He:"ヒェ",Ho:"ヒョ",x:"ツ",xa:"ツァ",xi:"ツィ",xu:"ツ",xe:"ツェ",xo:"ツォ",n:"ン",na:"ナ",ni:"ニ",nu:"ヌ",ne:"ネ",no:"ノ",N:"ヌィ",Na:"ニャ",Ni:"ヌィ",Nu:"ニュ",Ne:"ニェ",No:"ニョ",m:"ム",ma:"マ",mi:"ミ",mu:"ム",me:"メ",mo:"モ",M:"ムィ",Ma:"ミャ",Mi:"ムィ",Mu:"ミュ",Me:"ミェ",Mo:"ミョ",l:"ル",la:"ラ",li:"リ",lu:"ル",le:"レ",lo:"ロ",r:"ル",ra:"ラ",ri:"リ",ru:"ル",re:"レ",ro:"ロ",R:"リュ",Ra:"リャ",Ri:"ルィ",Ru:"リュ",Re:"リェ",Ro:"リョ"},ha=Object.entries(W).reduce((e,a)=>{const[l,i]=a;return e[i]??(e[i]=l),e},{ヮ:"a",ドィ:"Di",ラュ:"Ru",マュ:"Mu",ダュ:"Du",ブュ:"Bu"}),dl={longVowel:"-",longConsonant:"~",longConsonantPosition:"before"};function Al(e,a={}){for(const l in dl)e[l]=a[l]??dl[l];return e}class Pl{constructor(a){T(this,"longVowel","-");T(this,"longConsonant","~");T(this,"longConsonantPosition","before");T(this,"fromKanaMissings",new Set);Al(this,a)}toKana(a){let l="",i="";for(let n=0;n<a.length;n++){const o=a[n],_=a[n+1];if($a(o))i&&W[i+o]?l+=W[i+o]:o===i?l+="ー":i==="~"&&a[n-2]?l+=W[a[n-2]+o]:l+=W["_"+o];else if(ma(o))_?o!=="n"&&_===o?l+="ッ":(ma(_)||_==="-"||_==="~"&&a[n+2]&&ma(a[n+2]))&&(l+=W[o]):l+=W[o];else switch(o){case"-":l+="ー";break;case"~":!_&&i&&ma(i)&&(l+="ッ"),l+=_?"ッ":W[i];break}i=o}return l}fromKana(a){let l="";for(let i=0;i<a.length;i++){let n=a[i];const o=a[i+1];if(/[ャュョァィゥェォヮ]/.test(o))ha[n+o]?(n+=o,i++):this.fromKanaMissings.add(n+o);else if(n==="ッ"){if(this.longConsonant==="~")if(this.longConsonantPosition==="after"){const _=ha[o];l+=_[0]+"~"+(_[1]||""),i++}else l+="~";else n=o,l+=ha[n][0];continue}else if(n==="ー"){this.longVowel==="-"?l+="-":l+=l.slice(-1);continue}l+=ha[n]}return l}}class Vl{constructor(){T(this,"minSyllable",2);T(this,"maxSyllable",8);T(this,"data",{});T(this,"names",new Set);T(this,"translator",new Pl);T(this,"random",new ga)}clear(){this.data={},this.names=new Set}add(a){for(let l=0;l<a.length;l++){const i=a[l];if(!i)continue;this.names.add(i);const n=El(i);this.set("^",n[0]);for(let o=0;o<n.length;o+=1){const _=n[o],d=n[o+1]||"$";_&&d&&this.set(_,d)}}}set(a,l){var n;const i=this.data[a]||{char:a,nexts:{},total:0};(n=i.nexts)[l]||(n[l]=0),i.total+=1,i.nexts[l]+=1,this.data[a]=i}create(a={}){a.seed!=null&&(this.random=new ga(a.seed));let l=typeof a.count=="number"?a.count:this.random.integer(...a.count||[this.minSyllable,this.maxSyllable]),i=0,n="",o="^";for(;l--;){const _=this.data[o],v=(_.total-(i<this.minSyllable&&_.nexts.$||0))*this.random.floating(0,1);let g=0;for(const z in _.nexts)if(!(z==="$"&&i<this.minSyllable&&_.nexts.$)&&v<=(g+=_.nexts[z])){o=z;break}if(!o||o==="$")break;n!==o&&(n+=o,i++)}return{exp:n,kana:this.translator.toKana(n),syllables:i,exist:this.names.has(n)}}parseRule(a){}creaty(a){}}function Fl(){if(!this||this.length===0)return"";const e=this.toLowerCase();return e[0].toUpperCase()+e.substring(1,e.length)}String.prototype.capitalize=Fl;const Za=["family","female","male"],Wa=["en","de","fr","it","es","sv","fi","ru","cs","nl"],Cl=`_a-lon
+var Gl=Object.defineProperty;var El=(e,a,l)=>a in e?Gl(e,a,{enumerable:!0,configurable:!0,writable:!0,value:l}):e[a]=l;var U=(e,a,l)=>(El(e,typeof a!="symbol"?a+"":a,l),l),Va=(e,a,l)=>{if(!a.has(e))throw TypeError("Cannot "+l)};var H=(e,a,l)=>(Va(e,a,"read from private field"),l?l.call(e):a.get(e)),oa=(e,a,l)=>{if(a.has(e))throw TypeError("Cannot add the same private member more than once");a instanceof WeakSet?a.add(e):a.set(e,l)},_a=(e,a,l,i)=>(Va(e,a,"write to private field"),i?i.call(e,l):a.set(e,l),l),el=(e,a,l,i)=>({set _(n){_a(e,a,n,l)},get _(){return H(e,a,i)}}),Ia=(e,a,l)=>(Va(e,a,"access private method"),l);import{S as Ua,i as qa,s as La,C as nl,k as j,a as K,l as z,m as w,h as p,c as B,n as S,K as ol,L as za,b as T,F as d,M as P,G as _l,H as kl,I as tl,f as ya,t as xa,N as Wa,O as sl,P as ml,Q as Pl,q as G,r as E,u as ha,w as Rl,x as Nl,y as Dl,R as ra,z as Kl,T as Vl,e as dl,U as Il,V as Al,W as Ol,X as wa,o as Fl}from"../../chunks/index-c87ce3fe.js";const Cl=e=>({close:e&1}),fl=e=>({close:e[8]}),Ul=e=>({close:e&1}),bl=e=>({close:e[8]});function ql(e){let a,l;return{c(){a=j("button"),l=G(e[1])},l(i){a=z(i,"BUTTON",{});var n=w(a);l=E(n,e[1]),n.forEach(p)},m(i,n){T(i,a,n),d(a,l)},p(i,n){n&2&&ha(l,i[1])},d(i){i&&p(a)}}}function Ll(e){let a,l,i,n,o,_,t,m,u;const f=e[7].trigger,s=nl(f,e,e[6],bl),v=s||ql(e),g=e[7].default,b=nl(g,e,e[6],fl);return{c(){a=j("div"),l=j("div"),v&&v.c(),i=K(),n=j("div"),b&&b.c(),this.h()},l(k){a=z(k,"DIV",{class:!0});var h=w(a);l=z(h,"DIV",{class:!0});var x=w(l);v&&v.l(x),x.forEach(p),i=B(h),n=z(h,"DIV",{class:!0,style:!0,role:!0});var D=w(n);b&&b.l(D),D.forEach(p),h.forEach(p),this.h()},h(){S(l,"class","label-wapper svelte-9y2yqk"),S(n,"class",o=ol("dropdown "+(e[5].class||""))+" svelte-9y2yqk"),S(n,"style",_=e[5].style),S(n,"role","tooltip"),za(n,"hidden",!e[0]),S(a,"class","dropdown-wapper svelte-9y2yqk")},m(k,h){T(k,a,h),d(a,l),v&&v.m(l,null),d(a,i),d(a,n),b&&b.m(n,null),e[9](n),t=!0,m||(u=[P(l,"focusin",e[3]),P(l,"focusout",e[4]),P(n,"focusin",e[3]),P(n,"focusout",e[4])],m=!0)},p(k,[h]){s?s.p&&(!t||h&65)&&_l(s,f,k,k[6],t?tl(f,k[6],h,Ul):kl(k[6]),bl):v&&v.p&&(!t||h&2)&&v.p(k,t?h:-1),b&&b.p&&(!t||h&65)&&_l(b,g,k,k[6],t?tl(g,k[6],h,Cl):kl(k[6]),fl),(!t||h&32&&o!==(o=ol("dropdown "+(k[5].class||""))+" svelte-9y2yqk"))&&S(n,"class",o),(!t||h&32&&_!==(_=k[5].style))&&S(n,"style",_),(!t||h&33)&&za(n,"hidden",!k[0])},i(k){t||(ya(v,k),ya(b,k),t=!0)},o(k){xa(v,k),xa(b,k),t=!1},d(k){k&&p(a),v&&v.d(k),b&&b.d(k),e[9](null),m=!1,Wa(u)}}}function Wl(e,a,l){let{$$slots:i={},$$scope:n}=a,o,{label:_=""}=a,{open:t=!1}=a,m=!1;const u=()=>(m=!0,setTimeout(()=>m=!1,500)),f=b=>{b.type==="focusin"&&!t&&u(),l(0,t=b.type==="click"&&!m?!t:!0)},s=()=>{setTimeout(()=>o.contains(document.activeElement)||l(0,t=!1),100)},v=()=>l(0,t=!1);function g(b){Pl[b?"unshift":"push"](()=>{o=b,l(2,o)})}return e.$$set=b=>{l(5,a=sl(sl({},a),ml(b))),"label"in b&&l(1,_=b.label),"open"in b&&l(0,t=b.open),"$$scope"in b&&l(6,n=b.$$scope)},a=ml(a),[t,_,o,f,s,a,n,i,v,g]}class Zl extends Ua{constructor(a){super(),qa(this,a,Wl,Ll,La,{label:1,open:0})}}function ul(e,a,l){const i=e.slice();return i[10]=a[l],i}function pl(e,a){let l,i=a[10]+"",n,o,_;function t(){return a[5](a[10],a[9])}return{key:e,first:null,c(){l=j("button"),n=G(i),this.h()},l(m){l=z(m,"BUTTON",{class:!0});var u=w(l);n=E(u,i),u.forEach(p),this.h()},h(){S(l,"class","name svelte-15bcmi6"),this.first=l},m(m,u){T(m,l,u),d(l,n),o||(_=P(l,"click",t),o=!0)},p(m,u){a=m,u&1&&i!==(i=a[10]+"")&&ha(n,i)},d(m){m&&p(l),o=!1,_()}}}function Jl(e){let a=[],l=new Map,i,n=Object.keys(e[0]);const o=_=>_[10];for(let _=0;_<n.length;_+=1){let t=ul(e,n,_),m=o(t);l.set(m,a[_]=pl(m,t))}return{c(){for(let _=0;_<a.length;_+=1)a[_].c();i=dl()},l(_){for(let t=0;t<a.length;t+=1)a[t].l(_);i=dl()},m(_,t){for(let m=0;m<a.length;m+=1)a[m].m(_,t);T(_,i,t)},p(_,t){t&519&&(n=Object.keys(_[0]),a=Il(a,t,o,1,_,n,l,i.parentNode,Al,pl,i,ul))},d(_){for(let t=0;t<a.length;t+=1)a[t].d(_);_&&p(i)}}}function Xl(e){let a,l,i,n,o,_,t;return{c(){a=j("div"),l=j("input"),i=K(),n=j("button"),o=G("↓"),this.h()},l(m){a=z(m,"DIV",{slot:!0,class:!0});var u=w(a);l=z(u,"INPUT",{placeholder:!0,class:!0}),i=B(u),n=z(u,"BUTTON",{class:!0});var f=w(n);o=E(f,"↓"),f.forEach(p),u.forEach(p),this.h()},h(){S(l,"placeholder","DataTitle"),l.required=!0,S(l,"class","svelte-15bcmi6"),S(n,"class","svelte-15bcmi6"),S(a,"slot","trigger"),S(a,"class","btn-set flex svelte-15bcmi6")},m(m,u){T(m,a,u),d(a,l),ra(l,e[1]),d(a,i),d(a,n),d(n,o),_||(t=P(l,"input",e[4]),_=!0)},p(m,u){u&2&&l.value!==m[1]&&ra(l,m[1])},d(m){m&&p(a),_=!1,t()}}}function Ql(e){let a,l,i,n,o=e[2]?e[0][e[1]]?"Save":"+ Add":"- Remove",_,t,m,u,f,s,v,g,b;return l=new Zl({props:{class:"user-list",$$slots:{trigger:[Xl,({close:k})=>({9:k}),({close:k})=>k?512:0],default:[Jl,({close:k})=>({9:k}),({close:k})=>k?512:0]},$$scope:{ctx:e}}}),{c(){a=j("div"),Rl(l.$$.fragment),i=K(),n=j("button"),_=G(o),t=K(),m=j("button"),u=G("Clear"),f=K(),s=j("textarea"),this.h()},l(k){a=z(k,"DIV",{class:!0});var h=w(a);Nl(l.$$.fragment,h),i=B(h),n=z(h,"BUTTON",{});var x=w(n);_=E(x,o),x.forEach(p),t=B(h),m=z(h,"BUTTON",{});var D=w(m);u=E(D,"Clear"),D.forEach(p),h.forEach(p),f=B(k),s=z(k,"TEXTAREA",{placeholder:!0,class:!0}),w(s).forEach(p),this.h()},h(){S(a,"class","add_source flex svelte-15bcmi6"),S(s,"placeholder","カタカナを抽出してリスト化する"),S(s,"class","svelte-15bcmi6")},m(k,h){T(k,a,h),Dl(l,a,null),d(a,i),d(a,n),d(n,_),d(a,t),d(a,m),d(m,u),T(k,f,h),T(k,s,h),ra(s,e[2]),v=!0,g||(b=[P(n,"click",e[3]),P(m,"click",e[6]),P(s,"input",e[7])],g=!0)},p(k,[h]){const x={};h&8711&&(x.$$scope={dirty:h,ctx:k}),l.$set(x),(!v||h&7)&&o!==(o=k[2]?k[0][k[1]]?"Save":"+ Add":"- Remove")&&ha(_,o),h&4&&ra(s,k[2])},i(k){v||(ya(l.$$.fragment,k),v=!0)},o(k){xa(l.$$.fragment,k),v=!1},d(k){k&&p(a),Kl(l),k&&p(f),k&&p(s),g=!1,Wa(b)}}}function Yl(e,a,l){const i=Vl();let n="Title",o="",{userResource:_={}}=a;function t(){if(n){const v=o.split(/[^ァ-ー・＝]+/).filter(g=>g);v.length?l(0,_[n]=v,_):delete _[n],i("save",{title:n,data:v,text:o})}}function m(){n=this.value,l(1,n)}const u=(v,g)=>{l(1,n=v),l(2,o=_[n].join(`
+`)),g()},f=()=>l(2,o="");function s(){o=this.value,l(2,o)}return e.$$set=v=>{"userResource"in v&&l(0,_=v.userResource)},[_,n,o,t,m,u,f,s]}class $l extends Ua{constructor(a){super(),qa(this,a,Yl,Ql,La,{userResource:0})}}function ai(e,a){return Math.floor((a-e+1)*Math.random()+e)}function li(e){return e[Math.floor(e.length*Math.random())]}function ua(e,a){const l=[];for(const i of e)for(const n of a)l.push(i+n);return l}const Bl=ua("tdspfkbvg","rl"),Hl=ua("tscp","h");[...ua("s","bvgtcpfk"),...Bl,...Hl];[...ua("szftlp","szftlp"),...Bl,...Hl,...ua("n","dzjvgtscfkrl")];const Aa=4294967295,Oa=2147483647,Fa=2147483648,ii=32,W=624,ja=397,hl=1812433253;var pa,M,$,Na,Ml,Da,Tl;class Ra{constructor(a){oa(this,Na);oa(this,Da);oa(this,pa,void 0);oa(this,M,void 0);oa(this,$,void 0);_a(this,pa,a||(a=Date.now())),typeof a=="string"&&(a=Ia(this,Na,Ml).call(this,a)),_a(this,M,new Array(W)),H(this,M)[0]=a>>>0;for(let l=1;l<W;l++){const i=H(this,M)[l-1]^H(this,M)[l-1]>>>ii-2;H(this,M)[l]=(hl*((i&4294901760)>>>16)<<16)+hl*(i&65535)+l>>>0}_a(this,$,W)}get seed(){return H(this,pa)}nextInt(){H(this,$)>=W&&Ia(this,Da,Tl).call(this);let a=H(this,M)[el(this,$)._++];return a^=a>>>11,a^=a<<7&2636928640,a^=a<<15&4022730752,a^=a>>>18,a>>>0}next(){return this.nextInt()*(1/4294967296)}floating(a,l){return(l-a)*this.next()+a}static floating(a,l){return(l-a)*Math.random()+a}integer(a,l){return Math.floor((l-a+1)*this.next()+a)}bool(a=.5){return this.next()<=a}static bool(a=.5){return Math.random()<=a}pickOne(a){return a[this.integer(0,a.length-1)]}pickSet(a,l,i=!1){return i?this._pickSetWithDuplicates(a,l):this._pickSetWithoutDuplicates(a,l)}_pickSetWithoutDuplicates(a,l){if(l>a.length||l<0)throw new Error("Invalid number of elements to pick, must pick a value 0 < n <= length");if(l===a.length)return a;const i=new Array(l);let n=0;const o=a.slice(0);for(;n<l;){const _=this.integer(0,o.length-1);i[n++]=o[_],o.splice(_,1)}return i}_pickSetWithDuplicates(a,l){if(l<0)throw new Error("Invalid number of elements to pick, must pick a value 0 <= n < MAX_INT");const i=new Array(l);for(let n=0;n<l;n++)i[n]=this.pickOne(a);return i}shuffle(a){const l=a.slice(0);let i=null;for(let n=0;n<l.length-2;n++){const o=this.integer(n,l.length-1);i=l[n],l[n]=l[o],l[o]=i}return l}range(a,l,i){const n=new Array(a);for(let o=0;o<a;o++)n[o]=this.integer(l,i);return n}dice(a,l=1){if(a<2||l<1)throw new Error("Invalid number, must sided a value 2 <= n, must times a value 1 <= n.");let i=0;for(;l--;)i+=this.integer(1,a);return i}rpg(a){const[l,i]=a.split(/d/i).map(n=>+n||1);return this.dice(i,l)}indexByOdds(a){const i=a.reduce((o,_)=>o+_,0)*this.floating(0,1);let n=0;for(let o=0;o<a.length;o++)if(n+=a[o],i<n)return o}}pa=new WeakMap,M=new WeakMap,$=new WeakMap,Na=new WeakSet,Ml=function(a){let l=0;for(let i=0;i<a.length;i++)l=a.charCodeAt(i)+(l<<6)+(l<<16)-l;return l},Da=new WeakSet,Tl=function(){const a=[0,2567483615];let l=0,i=0;for(;i<W-ja;i++)l=H(this,M)[i]&Fa|H(this,M)[i+1]&Oa,H(this,M)[i]=H(this,M)[i+ja]^l>>>1^a[l&1]&Aa;for(;i<W-1;i++)l=H(this,M)[i]&Fa|H(this,M)[i+1]&Oa,H(this,M)[i]=H(this,M)[i+(ja-W)]^l>>>1^a[l&1]&Aa;l=H(this,M)[W-1]&Fa|H(this,M)[0]&Oa,H(this,M)[W-1]=H(this,M)[ja-1]^l>>>1^a[l&1]&Aa,_a(this,$,0)},U(Ra,"integer",ai),U(Ra,"pickOne",li);const ei="aiueo",ni="_ywkstpfgzdbvKcSTPFGZjDBVhHxnNmMrlR";function Za(e,a=""){return(ei+a).includes(e)}function ba(e,a=""){return(ni+a).includes(e)}function oi(e){let a="";for(const l of e)a+=ba(l)?"C":Za(l)?"V":l;return a}function _i(e){const a=[];let l=-1,i="";for(let n=0;n<e.length;n++){const o=e[n];if(i+=o,o===" "){a.push(i),i="",l=-1;continue}if(Za(o,"-")){if(l>=0){const _=i.length;if(n-l===1){const t=_;a.push(i.substring(0,t)),i=i.substring(t,_)}else{const t=i.substring(0,_-2);t&&a.push(t),i=i.substring(_-2,_)}}l=n}}if(i.length>0){const n=oi(i);if(n==="C")a[a.length-1]+=i;else if(/.CC$/.test(n)){const o=i.length;a.push(i.substring(0,o-2)),a.push(i.substring(o-2,o))}else a.push(i.trim())}return a}const J={"":"",_:"",a:"ァ",i:"ィ",u:"ュ",e:"ェ",o:"ォ",_a:"ア",_i:"イ",_u:"ウ",_e:"エ",_o:"オ",y:"ィ",ya:"ヤ",yi:"ユィ",yu:"ユ",ye:"イェ",yo:"ヨ",w:"ゥ",wa:"ワ",wi:"ウィ",wu:"ウ",we:"ウェ",wo:"ウォ",k:"ク",ka:"カ",ki:"キ",ku:"ク",ke:"ケ",ko:"コ",s:"ス",sa:"サ",si:"スィ",su:"ス",se:"セ",so:"ソ",t:"ト",ta:"タ",ti:"ティ",tu:"トゥ",te:"テ",to:"ト",p:"プ",pa:"パ",pi:"ピ",pu:"プ",pe:"ペ",po:"ポ",f:"フ",fa:"ファ",fi:"フィ",fu:"フ",fe:"フェ",fo:"フォ",g:"グ",ga:"ガ",gi:"ギ",gu:"グ",ge:"ゲ",go:"ゴ",z:"ズ",za:"ザ",zi:"ズィ",zu:"ズ",ze:"ゼ",zo:"ゾ",d:"ド",da:"ダ",di:"ディ",du:"ドゥ",de:"デ",do:"ド",b:"ブ",ba:"バ",bi:"ビ",bu:"ブ",be:"ベ",bo:"ボ",v:"ヴ",va:"ヴァ",vi:"ヴィ",vu:"ヴ",ve:"ヴェ",vo:"ヴォ",K:"クィ",Ka:"キャ",Ki:"クィ",Ku:"キュ",Ke:"キェ",Ko:"キョ",c:"チ",ca:"チャ",ci:"チ",cu:"チュ",ce:"チェ",co:"チョ",S:"シュ",Sa:"シャ",Si:"シ",Su:"スュ",Se:"シェ",So:"ショ",T:"トィ",Ta:"テャ",Ti:"トィ",Tu:"テュ",Te:"テェ",To:"テョ",P:"プィ",Pa:"ピャ",Pi:"プィ",Pu:"ピュ",Pe:"ピェ",Po:"ピョ",F:"フュ",Fa:"フャ",Fi:"フィ",Fu:"フュ",Fe:"フェ",Fo:"フョ",G:"グィ",Ga:"ギャ",Gi:"グィ",Gu:"ギュ",Ge:"ギェ",Go:"ギョ",j:"ジュ",ja:"ジャ",ji:"ジ",ju:"ジュ",je:"ジェ",jo:"ジョ",Z:"ジュ",Za:"ジャ",Zi:"ジ",Zu:"ジュ",Ze:"ジェ",Zo:"ジョ",D:"デュ",Da:"デャ",Di:"ディ",Du:"デュ",De:"デェ",Do:"デョ",B:"ブィ",Ba:"ビャ",Bi:"ブィ",Bu:"ビュ",Be:"ビェ",Bo:"ビョ",V:"ヴィ",Va:"ヴャ",Vi:"ヴィ",Vu:"ヴュ",Ve:"ヴェ",Vo:"ヴョ",h:"フ",ha:"ハ",hi:"ヒ",hu:"フ",he:"ヘ",ho:"ホ",H:"ヒュ",Ha:"ヒャ",Hi:"ヒィ",Hu:"ヒュ",He:"ヒェ",Ho:"ヒョ",x:"ツ",xa:"ツァ",xi:"ツィ",xu:"ツ",xe:"ツェ",xo:"ツォ",n:"ン",na:"ナ",ni:"ニ",nu:"ヌ",ne:"ネ",no:"ノ",N:"ヌィ",Na:"ニャ",Ni:"ヌィ",Nu:"ニュ",Ne:"ニェ",No:"ニョ",m:"ム",ma:"マ",mi:"ミ",mu:"ム",me:"メ",mo:"モ",M:"ムィ",Ma:"ミャ",Mi:"ムィ",Mu:"ミュ",Me:"ミェ",Mo:"ミョ",l:"ル",la:"ラ",li:"リ",lu:"ル",le:"レ",lo:"ロ",r:"ル",ra:"ラ",ri:"リ",ru:"ル",re:"レ",ro:"ロ",R:"リュ",Ra:"リャ",Ri:"ルィ",Ru:"リュ",Re:"リェ",Ro:"リョ"},fa=Object.entries(J).reduce((e,a)=>{const[l,i]=a;return e[i]??(e[i]=l),e},{ヮ:"a",ドィ:"Di",ラュ:"Ru",マュ:"Mu",ダュ:"Du",ブュ:"Bu"}),vl={longVowel:"-",longConsonant:"~",longConsonantPosition:"before"};function ki(e,a={}){for(const l in vl)e[l]=a[l]??vl[l];return e}class ti{constructor(a){U(this,"longVowel","-");U(this,"longConsonant","~");U(this,"longConsonantPosition","before");U(this,"fromKanaMissings",new Set);ki(this,a)}toKana(a){let l="",i="";for(let n=0;n<a.length;n++){const o=a[n],_=a[n+1];if(Za(o))i&&J[i+o]?l+=J[i+o]:o===i?l+="ー":i==="~"&&a[n-2]?l+=J[a[n-2]+o]:l+=J["_"+o];else if(ba(o))_?o!=="n"&&_===o?l+="ッ":(ba(_)||_==="-"||_==="~"&&a[n+2]&&ba(a[n+2]))&&(l+=J[o]):l+=J[o];else switch(o){case"-":l+="ー";break;case"~":!_&&i&&ba(i)&&(l+="ッ"),l+=_?"ッ":J[i];break;case" ":l+="・";break}i=o}return l}fromKana(a){let l="";for(let i=0;i<a.length;i++){let n=a[i];const o=a[i+1];if(/[ャュョァィゥェォヮ]/.test(o))fa[n+o]?(n+=o,i++):this.fromKanaMissings.add(n+o);else if(n==="ッ"){if(this.longConsonant==="~")if(this.longConsonantPosition==="after"){const _=fa[o];l+=_[0]+"~"+(_[1]||""),i++}else l+="~";else n=o,l+=fa[n][0];continue}else if(n==="ー"){this.longVowel==="-"?l+="-":l+=l.slice(-1);continue}else n==="・"&&(l+=" ");fa[n]?l+=fa[n]:console.error(`${a}: "${n}" is invalid`)}return l}}class si{constructor(){U(this,"minSyllable",2);U(this,"maxSyllable",8);U(this,"data",{});U(this,"names",new Set);U(this,"translator",new ti);U(this,"random",new Ra)}clear(){this.data={},this.names=new Set}add(a,l=!1){for(let i=0;i<a.length;i++){const n=l?this.translator.fromKana(a[i]):a[i];if(!n)continue;this.names.add(n);const o=_i(n);this.set("^",o[0]);for(let _=0;_<o.length;_+=1){const t=o[_],m=o[_+1]||"$";t&&m&&this.set(t,m)}}}set(a,l){var n;const i=this.data[a]||{char:a,nexts:{},total:0};(n=i.nexts)[l]||(n[l]=0),i.total+=1,i.nexts[l]+=1,this.data[a]=i}create(a={}){a.seed!=null&&(this.random=new Ra(a.seed));let l=typeof a.count=="number"?a.count:this.random.integer(...a.count||[this.minSyllable,this.maxSyllable]),i=0,n="",o="^";for(;l--;){const _=this.data[o],m=(_.total-(i<this.minSyllable&&_.nexts.$||0))*this.random.floating(0,1);let u=0;if(_.nexts.$&&i>4)break;for(const f in _.nexts)if(!(f==="$"&&i<this.minSyllable&&_.nexts.$)&&m<=(u+=_.nexts[f])){o=f;break}if(!o||o==="$")break;o.endsWith(" ")&&l++,n!==o&&(n+=o,i++)}return{exp:n,kana:this.translator.toKana(n),syllables:i,exist:this.names.has(n)}}parseRule(a){}creaty(a){}}function mi(){if(!this||this.length===0)return"";const e=this.toLowerCase();return e[0].toUpperCase()+e.substring(1,e.length)}String.prototype.capitalize=mi;const ta=["family","female","male"],ka=["en","de","fr","it","es","sv","fi","ru","cs","nl","ar"],di=["英","ドイツ","フランス","イタリア","スペイン","スウェーデン","フィンランド","ロシア","チェコ","オランダ","アラビア"],fi=`_a-lon
 _abi-
 _abintn
 _abo~t
@@ -2472,7 +2473,7 @@ yo-k
 yang
 yanghazband
 jindel`.split(`
-`),Il=`_a-bel
+`),bi=`_a-bel
 _a-bele
 _a-bela_in
 _a-bentlo-t
@@ -4655,11 +4656,11 @@ xelna-
 x~kma_iya-
 xnpe
 xmSte-k
-Mu-len
+x_a Mu-len
 xvanxiga-
 xva_ik
 xva_ikle`.split(`
-`),Ol=`_abela-l
+`),ui=`_abela-l
 _abla-m
 _aSa-l
 _aKa-l
@@ -5154,10 +5155,10 @@ d-velNu
 david
 dav-
 dayan
-blo_i
-jennu
-li-l
-vilpan
+d blo_i
+d jennu
+d li-l
+d vilpan
 dbali-
 dubo-
 duble-
@@ -5260,11 +5261,11 @@ dwa_iyan
 dlapo-
 dlole
 dl_iyu
-bele-
-bowa
-bo_a
-kolowa
-geklan
+D bele-
+D bowa
+D bo_a
+D kolowa
+D geklan
 Dbe
 Dbowa
 Dbo_a
@@ -5626,12 +5627,14 @@ jpe
 j~pe
 kalanb-
 keklan
-bRSolli
-fa_i_e~t
-_al
-sal
-sa-l
-tu-l
+la bRSolli
+la fa_i_e~t
+la fonte-nu
+la folj
+la _al
+la sal
+la sa-l
+la tu-l
 laba-l
 labe-
 lablaSli
@@ -5697,27 +5700,35 @@ lavilni-
 lavis
 lavowa
 lavo_aji_e
-be-g
-bon
-bli
-Sapli_e
-Satli_e
-kleji_o
-flem
-gof
-jnu
-nan
-no-tl
-pen
-ple-
-li~S
-l-
-lowa
-lo_a
-Su-l
-teli_e
-vo-
-veli_e
+l be-g
+l bel
+l bon
+l bltn
+l bli
+l blan
+l kali_e
+l Sapli_e
+l Satli_e
+l kleji_o
+l kont
+l flem
+l fo-l
+l Gal
+l Gali_ennu
+l gof
+l jnu
+l nan
+l no-tl
+l pen
+l ple-
+l li~S
+l l-
+l lowa
+l lo_a
+l Su-l
+l teli_e
+l vo-
+l veli_e
 le_andl
 le_ot-
 lbalbe
@@ -6211,6 +6222,9 @@ lso-
 lsel
 l-sel
 lse
+l-
+lowa
+lo_a
 lowa_i_e
 Rfi_e
 sabac_e
@@ -6303,6 +6317,7 @@ tanvi_e
 take
 talD-
 tasan
+teli_e
 telal
 tela~s
 temowan
@@ -6418,7 +6433,7 @@ Vu_iya-l
 vitn
 waloki_e
 wat-`.split(`
-`),Ll=`_aba-te
+`),pi=`_aba-te
 _abati-no
 _a~bati-ni
 _a~bi_a-ti
@@ -7316,8 +7331,8 @@ dald~Si
 dale~sandlo
 da~lali-yo
 da~lalji-ne
-ki_e-za
-li~xa
+da~la ki_e-za
+da~la li~xa
 da~lapi~kola
 dameli-ni
 dami_a-ni
@@ -7327,49 +7342,51 @@ dani_eli
 da_o-li_o
 da~po-lt
 davi_a
-benediktis
-ce~ko
-kola-t
-fabi_a-ni
-fe_o
-gaspeli
-jovanni
-la_ulenti-s
-la_ulentis
-lolenxi
-lka
-l~ki
-ma~ki
-mike-li
-nanni
-palma
-pa_oli
-piskopo
-ponti
-li-zo
-lobelt
-lo~Si
-sabata
-sanktis
-santis
-se-ta
-Si-ka
-vi-ta
+de benediktis
+de bo-no
+de ce~ko
+de kiliko
+de kola-t
+de fabi_a-ni
+de fe_o
+de gaspeli
+de jovanni
+de la_ulenti-s
+de la_ulentis
+de lolenxi
+de lka
+de l~ki
+de ma~ki
+de mike-li
+de nanni
+de palma
+de pa_oli
+de piskopo
+de ponti
+de li-zo
+de lobelt
+de lo~Si
+de sabata
+de sanktis
+de santis
+de se-ta
+de Si-ka
+de vi-ta
 de_anjelis
 dega-ni
-kolvo
-dnno
-mastlo
-monako
-pe~xo
-testa
-ve~ki_o
+del kolvo
+del dnno
+del mastlo
+del monako
+del pe~xo
+del testa
+del ve~ki_o
 dele~da
 dela~kwa
 de~lolefice
-ka-za
+de~la ka-za
 de~lase-ga
-pi_a-ne
+de~le pi_a-ne
 delmi-ni_o
 delne-li
 delli_o
@@ -7388,19 +7405,25 @@ delo~Si
 desantis
 dezde-li
 de~Si
-bi_a-jo
-b_ono
-ka-ni_o
-centa
-co~co
-flanceskantni_o
-jakomo
-jo_i_a
-joljo
-monte
-pint
-ste-fano
-va_i_o
+di be~lo
+di bi_a-jo
+di b_ono
+di ka-ni_o
+di centa
+di c~ko
+di co~co
+di flanceskantni_o
+di jakomo
+di jo_i_a
+di joljo
+di monte
+di nanni
+di palma
+di pint
+di li-zo
+di lobelt
+di ste-fano
+di va_i_o
 di_a-ko
 dibe~la
 dibenede~t
@@ -7447,6 +7470,7 @@ _evanjelista
 _evanjelisti
 _ezeki_e-le
 fa~bli
+fabi_a-ni
 fa~ke~ti
 fa~kine~ti
 fa~ki-ni
@@ -7580,6 +7604,7 @@ flakastlo
 flakast-lo
 flankaldi
 flanceska
+flanceskantni_o
 flanceska~ti
 flanceski
 flanceski-ni
@@ -7735,6 +7760,7 @@ ji~li
 jinastela
 jine~li
 jofle
+jo_i_a
 jolda-na
 jolda-ni
 jolda-no
@@ -7849,14 +7875,14 @@ _izola
 _itali_a-no
 _i~xo
 ya~ki_a
-ka-mela
-felli-ta
-ma-lka
-penna
-lo~ka
-lote~la
-tlle
-va~le
+la ka-mela
+la felli-ta
+la ma-lka
+la penna
+la lo~ka
+la lote~la
+la tlle
+la va~le
 labi_a
 labli_o-la
 lako-ni
@@ -7941,6 +7967,7 @@ lonba-ld
 longi
 longo
 lolenxe~ti
+lolenxi
 lolenxin
 lolenxi-ni
 lolenxo-ni
@@ -7975,6 +8002,7 @@ mabe~li-ni
 maka-li_o
 ma~ka-ni
 ma~kali-ni
+ma~ki
 ma~ki_e~ti
 ma~canti
 ma~co~ki
@@ -8189,6 +8217,7 @@ me~zaka-po
 me~zape-sa
 me~xe-na
 mikelanjeli
+mike-li
 mikeli-no
 mike~ti
 miki_e~li
@@ -8242,6 +8271,7 @@ montald
 monta-le
 montana-li
 montane~li
+monte
 monte~la
 monteme~xi
 monteli-zo
@@ -8383,6 +8413,7 @@ palestli-na
 pa~la
 pa~la-di_o
 pallavic-no
+palma
 palmi_eli
 palonbi-ni
 paltlini_eli
@@ -8408,6 +8439,7 @@ panta-ni
 panu~c
 panxe~ta
 pa_ole~ti
+pa_oli
 pa_oli-ni
 pa_olo-ni
 papa-li_a
@@ -8558,6 +8590,7 @@ pi-ni
 pinna
 pino~ti
 pins-ti
+pint
 pinxa
 pinxi
 pi_ova~ka-li
@@ -8569,6 +8602,7 @@ pi-llo
 pilo-vano
 piza-no
 piza-nu
+piskopo
 pistali-no
 piste~li
 pist~ki
@@ -8603,6 +8637,7 @@ ponpi-li_o
 ponpili_o
 ponp~c
 ponki_e~li
+ponti
 ponxa
 polka-li
 polpola
@@ -8716,6 +8751,7 @@ li_oldi
 lipamonti
 lisali-ti
 li-Si
+li-zo
 li-va
 livalta
 live~li
@@ -8727,6 +8763,7 @@ li~xo
 li~xo-li
 lo~bi_a-ti
 lobelti
+lo~ka
 lo~ki
 lo~ko
 lodiga-li
@@ -8752,6 +8789,7 @@ lo-Si
 lo~seli-ni
 lo~se~ti
 lo~se~t
+lo~Si
 lo~Si-ni
 lo~Si~t
 lo~so
@@ -8919,6 +8957,7 @@ seveli-no
 zganba-ti
 zga-li_o
 Si_a-no
+Si-ka
 Si_epi
 Si~fle-di
 Si-gele
@@ -9060,6 +9099,7 @@ telxa-ni
 teska-li
 te~sa-li
 te~sali-ni
+testa
 testi-no
 tetlaxi-ni
 tibaldi
@@ -9169,6 +9209,7 @@ valeli_a-no
 vali_a-ni
 valiNa-no
 valila
+va~le
 va~le~ti
 va~li
 va~li-no
@@ -9189,6 +9230,7 @@ vatila-na
 va~timo
 vava~so-li
 ve~ki
+ve~ki_o
 vece~li_o
 ve~la
 ve-na
@@ -9317,7 +9359,7 @@ z~ke~li
 z~ke-li
 z~ki
 z~ko-ni`.split(`
-`),Ul=`_abaskal
+`),hi=`_abaskal
 _abelald
 _abe_ita
 _ablego
@@ -9676,15 +9718,16 @@ dabila
 dabi-no
 dabo
 dasa
-_anda
-hess
-kamala
-li_os
-pedlo
+de _anda
+de hess
+de la kamala
+de los li_os
+de pedlo
 defijo
-_olmo
-le_i
-li_o
+del kanpo
+del _olmo
+del le_i
+del li_o
 dela
 delakls
 delaf_ente
@@ -10218,7 +10261,9 @@ liko
 li_ela
 li_esgo
 linkon
+li_o
 li_ohas
+li_os
 libadene_ila
 libas
 libejes
@@ -10481,7 +10526,7 @@ s_aso
 sbisaleta
 sniga
 slbalan`.split(`
-`),Zl=`_abeni_us
+`),vi=`_abeni_us
 _o-bali
 _o-belison
 _ablahamson
@@ -11447,7 +11492,7 @@ se~telbali
 se~telholm
 se~tellnd
 Si-de-n`.split(`
-`),Wl=`_a-kla
+`),gi=`_a-kla
 _a-lt
 _a-ltnen
 _a-lila
@@ -13094,7 +13139,7 @@ yulili_est
 yo-nen
 yulostalo
 yulyana`.split(`
-`),$l=`_aba-_ef
+`),Si=`_aba-_ef
 _abakalof
 _abalkin
 _abduvali_ef
@@ -14995,7 +15040,7 @@ yaloSenko
 yasknof
 yastljemski-
 ya-Sin`.split(`
-`),ql=`_abeska
+`),ci=`_abeska
 _abi-k
 _ablaha-m
 _ablahamc-k
@@ -17079,7 +17124,7 @@ zvejina
 zvola-nek
 zvonek
 zvoni-cek`.split(`
-`),Jl=`_etho-ft
+`),ji=`_etho-ft
 _a-ldels
 _a-nst-t
 _a~kelman
@@ -17170,80 +17215,83 @@ klonmelin
 kla_if
 ka_upels
 danmels
-ble-kele
-b-l
-blabandel
-bla-n
-bla_un
-bRune
-fle-tes
-he-l
-holtel
-fla-f
-fle-f
-flo-t
-ha-n
-hont
-ya-hel
-yong
-yonge
-kenpena-l
-klelk
-ko~k
-ko-k
-koning
-ko-ning
-kolt
-la-t
-lange
-langen
-le-_u
-lo-s
-man
-me-stel
-me_i
-Munk
-Muldel
-ni-t
-no-yel
-kva_i
-la-f
-le-del
-li-del
-lidel
-le_ik
-le_ike
-lo-
-lo-de
-lo-_i
-la_utel
-layutel
-Rutel
-la_ike
-sme~t
-fe-l
-fente
-fi~sel
-fli-hel
-f-st
-fos
-fle-se
-fli-s
-fle_i
-va-l
-va-lt
-vilt
-vintel
-vi~t
-Vulf
-ze-_u
-zva-n
+de ba~kel
+de be-l
+de ble-kele
+de bo~k
+de b-l
+de blabandel
+de bla-n
+de bla_un
+de bRune
+de fle-tes
+de he-l
+de holtel
+de fla-f
+de fle-f
+de flo-t
+de ha-n
+de hont
+de ya-hel
+de yong
+de yonge
+de kenpena-l
+de klelk
+de ko~k
+de ko-k
+de koning
+de ko-ning
+de kolt
+de la-t
+de lange
+de langen
+de le-_u
+de lo-s
+de man
+de me-stel
+de me_i
+de Munk
+de Muldel
+de ni-t
+de no-yel
+de kva_i
+de la-f
+de le-del
+de li-del
+de lidel
+de le_ik
+de le_ike
+de lo-
+de lo-de
+de lo-_i
+de la_utel
+de layutel
+de Rutel
+de la_ike
+de sme~t
+de fe-l
+de fente
+de fi~sel
+de fli-hel
+de f-st
+de fos
+de fle-se
+de fli-s
+de fle_i
+de va-l
+de va-lt
+de vilt
+de vintel
+de vi~t
+de Vulf
+de ze-_u
+de zva-n
 de-nen
 de~kel
 de~kels
-heldel
-_a_uden
-_ayul
+den heldel
+den _a_uden
+den _ayul
 dentenel
 delks
 delksen
@@ -17289,11 +17337,13 @@ helixen
 he-fels
 fdhedla-f
 ho-cumeding
+holtel
 ha_utsmi~t
 fla-t
 fln
 flnende_ik
 fl-nefelt
+flo-t
 flo-ten
 flo-thof
 fl~pen
@@ -17392,7 +17442,9 @@ klo~p
 kla_ufelt
 klnpenha_u_el
 knoflo-k
+ko-k
 kolf
+koning
 ko-nings
 ko-_i
 ko-_iman
@@ -17471,6 +17523,7 @@ mons
 mo-ls
 m-le_in
 ma_u_en
+Muldel
 Muldels
 Munneke
 nafteha-l
@@ -17536,6 +17589,7 @@ leno-_i
 lensenblink
 li-tbelf
 li-tfelt
+le_ik
 le_ika-lt
 le_iken
 le_ikel
@@ -17555,6 +17609,7 @@ l-bens
 la_uha
 la_uten
 la_ucen
+la_utel
 l~te
 l~ten
 samson
@@ -17596,11 +17651,11 @@ sta_ufen
 sva-p
 svinkels
 telehen
-boske
-holt
+ten boske
+ten holt
 tent
-ha-l
-holst
+tel ha-l
+tel holst
 te-nisen
 te_isen
 ta_isen
@@ -17618,258 +17673,287 @@ tlo-st
 _u-lenbe~k
 _a_uteha-he
 falha-len
-ho~f
-_a-l
-_a-lten
-_a-lsen
-_ahat
-_a-ken
-_a-melongen
-_amstel
-_as
-_aspelen
-ba-len
-balnevelt
-basten
-be-k
-be-ls
-belhen
-be-he
-be-ningen
-be_i_elen
-bonmel
-bo~se
-bo-ven
-bo-fen
-ble-
-ble_i
-ble-kelen
-blkho-fen
-blkha_uzen
-blonkholst
-Bu-len
-Bulk
-Bul
-ba_uten
-bayuten
-kanpen
-da-n
-da-len
-dalsen
-dam
-danme
-belf
-blink
-kanp
-pol
-Pu~te
-fe-n
-felde
-felden
-fen
-val
-ve-lt
-de-len
-de_ilen
-delden
-delft
-ble-ken
-bo-ha-lt
-bl~k
-blk
-_ende
-f-vel
-f~k
-ho-henbant
-ho-na-lt
-fondel
-bl~hen
-Bulf
-denen
-_elsken
-_ent
-ha-f
-he-st
-flas
-f-s
-flinten
-ha-hen
-he_iden
-helst
-f-fe
-f-fen
-ho-fen
-Hlst
-klo-stel
-kla-n
-la-n
-le-
-le-den
-linden
-lof
-ma-ten
-me-l
-me-len
-mo-len
-ne-t
-pla-t
-pla-s
-p-l
-Pu~t
-sa-l
-sla_us
-spe~k
-ste-n
-stel
-fa-lt
-fle-ten
-folst
-va-ls
-velf
-vestha_uzen
-vilihen
-ze-
-de-dekom
-de-lsen
-de-lzen
-di-len
-de_ik
-de_iken
-dilen
-dnblf
-dngen
-d-ln
-dlt
-dli-l
-dl-nen
-dR-nen
-da_un
-de~k
-_e-stelen
-_e~fen
-_efmont
-_e_ik
-_emden
-_engel
-_elven
-_es
-_e~sen
-ha-len
-he-melt
-helfen
-hestel
-go~ho
-ho-l
-ho-len
-flinsfen
-fl-ningen
-ha-llem
-ham
-ha-pelen
-he-mstla
-he-mel
-helk
-helpen
-he-ften
-he-men
-he_ifte
-fhalden
-ho-hendlp
-ho-f
-ho-lne
-ha_ut
-ha_uten
-ha_u_elingen
-ha_us
-ha_uzen
-_inmelse-l
-kanmen
-kenpen
-ke~sel
-ke-len
-kilsdnk
-kla-felen
-ko-ten
-kle-felt
-kli-ken
-la-l
-le-l
-le-st
-le-ven
-le_iven
-le-venf~k
-lenne~p
-le_iden
-li-l
-li-sha_ut
-liftenbelf
-le_insho-ten
-l-nen
-lo_u
-lo-n
-lnsen
-ma-lsefe-n
-mali_on
-malve_ik
-mehelen
-me-fel
-mil
-mo-k
-na~sa_u
-nes
-ni-kelk
-no-lt
-_o_ilsho~t
-_o-lsho~t
-_onna
-_o-_i
-_o-ltmel~sen
-_o-sten
-_o-stelze-
-_o-stelze_i
-_o-s
-_o~tello-
-pa-sen
-panha_us
-Pu~ten
-p~ten
-lamsela-l
-le-s
-lennes
-li-t
-le_in
-lo-_i_en
-lo_i
-shendel
-Se_indel
-slingelant
-s-st
-so-melen
-ste-nbelhen
-stla-ten
-stli-n
-te-lingen
-ti-nho-ven
-tnhelen
-falkenf~t
-fe-nen
-fe-nenda-l
-felsen
-feltho-fen
-flelken
-fli-t
-Fft
-va-heningen
-vanlo-_i
-va~senho-fe
-velkho-fen
-velkho-ven
-ve-zel
-ve_ik
-ve_ingha-den
-zve-den
-zvi-ten
+fant ho~f
+fan _a-l
+fan _a-lten
+fan _a-lsen
+fan _ahat
+fan _a-ken
+fan _a-melongen
+fan _amstel
+fan _as
+fan _aspelen
+fan ba-len
+fan balnevelt
+fan basten
+fan be-k
+fan be-ls
+fan belhen
+fan be-he
+fan be-ningen
+fan be_i_elen
+fan bonmel
+fan bo~se
+fan bo-ven
+fan bo-fen
+fan ble-
+fan ble_i
+fan ble-kelen
+fan blkho-fen
+fan blkha_uzen
+fan blonkholst
+fan Bu-len
+fan Bulk
+fan Bul
+fan ba_uten
+fan bayuten
+fan kanpen
+fan da-n
+fan da-len
+fan dalsen
+fan dam
+fan danme
+fan de belf
+fan de blink
+fan de kanp
+fan de pol
+fan de Pu~te
+fan de fe-n
+fan de felde
+fan de felden
+fan de fen
+fan de val
+fan de ve-lt
+fan de-len
+fan de_ilen
+fan delden
+fan delft
+fan den belf
+fan den ble-ken
+fan den bo-ha-lt
+fan den bos
+fan den blink
+fan den bl~k
+fan den blk
+fan den _ende
+fan den f-vel
+fan den f~k
+fan den ho-henbant
+fan den ho-na-lt
+fan den pol
+fan den felde
+fan den felden
+fan den fondel
+fan del be_il
+fan del bl~hen
+fan del Bulf
+fan del denen
+fan del _elsken
+fan del _ent
+fan del ha-f
+fan del he-st
+fan del flas
+fan del f-s
+fan del fla-f
+fan del flinten
+fan del fln
+fan del ha-hen
+fan del he_iden
+fan del helst
+fan del f-fe
+fan del f-fen
+fan del holst
+fan del ho-fen
+fan del Hlst
+fan del klo-stel
+fan del kla-n
+fan del la-n
+fan del le-
+fan del le-den
+fan del le-_u
+fan del linden
+fan del lof
+fan del ma-ten
+fan del me-l
+fan del me-len
+fan del mo-len
+fan del ne-t
+fan del pla-t
+fan del pla-s
+fan del p-l
+fan del pol
+fan del Pu~t
+fan del sa-l
+fan del sla_us
+fan del spe~k
+fan del ste-n
+fan del stel
+fan del fa-lt
+fan del fe-n
+fan del felde
+fan del felden
+fan del fen
+fan del fle-ten
+fan del folst
+fan del va-ls
+fan del val
+fan del velf
+fan del vestha_uzen
+fan del vilihen
+fan del ze-
+fan de-dekom
+fan de-lsen
+fan de-lzen
+fan di-len
+fan de_ik
+fan de_iken
+fan dilen
+fan dnblf
+fan dngen
+fan d-ln
+fan dlt
+fan dli-l
+fan dl-nen
+fan dR-nen
+fan da_un
+fan de~k
+fan _e-stelen
+fan _e~fen
+fan _efmont
+fan _e_ik
+fan _emden
+fan _engel
+fan _engelen
+fan _elven
+fan _es
+fan _e~sen
+fan ha-len
+fan heldel
+fan he-melt
+fan helfen
+fan hestel
+fan go~ho
+fan ho-l
+fan ho-len
+fan flinsfen
+fan fl-ningen
+fan ha-llem
+fan ha-l
+fan ham
+fan ha-pelen
+fan he-mskelk
+fan he-mstla
+fan he-mel
+fan helk
+fan helpen
+fan he-ften
+fan he-men
+fan he_ifte
+fan fhalden
+fan f~k
+fan ho-hendlp
+fan ho-f
+fan ho-lne
+fan ha_ut
+fan ha_uten
+fan ha_u_elingen
+fan ha_us
+fan ha_uzen
+fan Hlst
+fan _inmelse-l
+fan kanmen
+fan kenpen
+fan ke~sel
+fan ke-len
+fan kilsdnk
+fan kla-felen
+fan ko-ten
+fan kle-felt
+fan kli-ken
+fan la-l
+fan le-l
+fan le-st
+fan le-ven
+fan le_iven
+fan le-venf~k
+fan lenne~p
+fan le_iden
+fan li-l
+fan li-sha_ut
+fan liftenbelf
+fan le_insho-ten
+fan l-nen
+fan lo-
+fan lo_u
+fan lo-n
+fan lo-_i
+fan lnsen
+fan linden
+fan ma-lsefe-n
+fan mali_on
+fan malve_ik
+fan mehelen
+fan me-fel
+fan mil
+fan mo-k
+fan na~sa_u
+fan nes
+fan ni-kelk
+fan no-lt
+fan _o_ilsho~t
+fan _o-lsho~t
+fan _onna
+fan _o-_i
+fan _o-lt
+fan _o-ltmel~sen
+fan _o-sten
+fan _o-stelze-
+fan _o-stelze_i
+fan _o-s
+fan _o~tello-
+fan pa-sen
+fan panha_us
+fan Pu~ten
+fan p~ten
+fan lamsela-l
+fan le-s
+fan lennes
+fan li-t
+fan le_in
+fan lo-_i_en
+fan lo_i
+fan shendel
+fan Se_indel
+fan slingelant
+fan s-st
+fan so-melen
+fan ste-nbelhen
+fan stla-ten
+fan stli-n
+fan te-lingen
+fan ti-nho-ven
+fan tnhelen
+fan falkenf~t
+fan fe-n
+fan fe-nen
+fan fe-nenda-l
+fan felsen
+fan feltho-fen
+fan flelken
+fan fli-t
+fan Fft
+fan va-heningen
+fan vanlo-_i
+fan va~senho-fe
+fan velkho-fen
+fan velkho-ven
+fan ve-zel
+fan ve_ik
+fan ve_ingha-den
+fan zve-den
+fan zvi-ten
 fanendelt
+fe-nenda-l
 fe-nstla
 feltman
 fening
@@ -17904,12 +17988,15 @@ fe-helen
 fink
 finke
 fi~Sel
+fi~sel
 fla-ndelen
 f~t
 fonk
 foldelman
+fos
 fle-sve_ik
 flins
+flinten
 flo-lek
 vahena-l
 vahatmans
@@ -17948,7 +18035,74 @@ zonnenbelf
 zonnefelt
 zvalt
 zvalx`.split(`
-`),Xl=`_abi-
+`),zi=`
+_askali-
+_adawi-
+_adi-b
+_ab- laban
+_anma-l
+_u-ta ba-Si-
+_u-da ba-Si-
+_uta_ibi-
+ga-midi-
+ka~ba-ni-
+kafta-ni-
+kafwaji-
+ganna-m
+klaSi-
+sa-_a-ti-
+sa-_ig
+sa-ni_u
+sa-b-nji-
+za_iya-t
+sa_uwa-s
+sa~ba-g
+zafla-ni-
+zahala-ni-
+sandakli-
+ja-bi-
+ja~la-f
+janma-l
+Sanmali-
+S-lbaji-
+Slbaji-
+jndi-
+stu-hi-
+sl-ji-
+da-ya
+da_usali-
+ta~ba-l
+tanta-wi-
+tu-tanji-
+tutanji-
+dula_imi-
+na~ja-l
+ha-Skji-
+ha-nji-
+ba_idas
+ha_iya-t
+ba_uwa-b
+bagda-di-
+basli-
+badawi-
+batakji-
+ha~Sa-S
+ha~da-d
+ha~la-k
+baf-l
+hali-li-
+balta-ji-
+baltaji-
+halbi-
+balbi-l
+halwa-ni-
+banda-k
+f-li-
+fa-f-li-
+ma~ki-
+mta_ili-
+la-_i-`.split(`
+`),yi=`_abi-
 _abige_il
 _e_ida
 _adela
@@ -18446,7 +18600,7 @@ _ivon
 _ivo-n
 zala
 zo-_i`.split(`
-`),Ql=`_a-da
+`),xi=`_a-da
 _ade-le
 _a-delha_it
 _adelina
@@ -18822,7 +18976,7 @@ vilhelmi-ne
 vilma
 vinfli-de
 ksaveli_a`.split(`
-`),Yl=`_adela_id
+`),ri=`_adela_id
 _ade-l
 _adli-nu
 _adli_ennu
@@ -19166,7 +19320,7 @@ _ivonnu
 zeli-
 zena_id
 zo_e`.split(`
-`),ai=`_a-da
+`),wi=`_a-da
 _adalji-za
 _a~dlola-ta
 _adela-_ide
@@ -19687,7 +19841,7 @@ vivi_a-na
 za_ila
 ji-ta
 zo-_e`.split(`
-`),li=`_abiga_il
+`),Ri=`_abiga_il
 _ablil
 _ada
 _adalina
@@ -20093,7 +20247,7 @@ jeseni_a
 je~seni_a
 jolanda
 sena_ida`.split(`
-`),ii=`_a-da
+`),Ni=`_a-da
 _adela
 _aga-ta
 _anne
@@ -20367,7 +20521,7 @@ vilgi-ni_a
 vivi
 _ilva
 _ivonne`.split(`
-`),ei=`_a-da
+`),Di=`_a-da
 _a-m
 _ada
 _a_iya
@@ -20755,7 +20909,7 @@ vilpi
 vilva
 vilve
 v_o~ko`.split(`
-`),ni=`_avd-cya
+`),Ki=`_avd-cya
 _aga-fiya
 _agli~pi-na
 _adeli-na
@@ -20895,7 +21049,7 @@ ya-na
 yana
 yani-na
 yalosla-va`.split(`
-`),oi=`_ade-la
+`),Bi=`_ade-la
 _adli_ana
 _aga-ta
 _albi-na
@@ -21110,7 +21264,7 @@ zlatuSka
 jofi_e
 zola
 zzana`.split(`
-`),_i=`_a-delhe_it
+`),Hi=`_a-delhe_it
 _afnes
 _albeltina
 _aldehonda
@@ -21465,7 +21619,311 @@ vilma
 ksandla
 _ifonne
 zo-_i`.split(`
-`),ki=`_a-lon
+`),Mi=`_a-_iSa
+_a-_ida
+_a-sima
+_a-tika
+_a-tifa
+_a-dila
+_a-bida
+_a-ma-l
+_a-mina
+_a-ya
+_a-ya-t
+_a-yat
+_a-la-
+_a-liya
+_aki-la
+_asa-la
+_azi-za
+_asi-la
+_azha-l
+_asma-
+_asla-l
+_asli-ya
+_a~za
+_adi-ba
+_ati-fa
+_ati-ya
+_adi-la
+_ana-n
+_ani-sa
+_abi-l
+_afa-f
+_afi-fa
+_afna-n
+_afya-
+_afla-
+_afla-f
+_afla-m
+_ahala-m
+_abla-l
+_ama-ni-
+_ama-n
+_amat
+_amal
+_ami-na
+_ami-la
+_amja-d
+_ali-j
+_ali-ya
+_al-b
+_alta-f
+_alma-s
+da_iyamond
+_alya-
+_alwa-
+_awa-tif
+_anbal
+_anwa-l
+_i-na-s
+_i-ma-n
+_i_utima-d
+_izdiha-l
+_isla-m
+_iba-
+_ibtisa-m
+_ifla-s
+_imtiya-z
+wijda-n
+wida-d
+_uta-lid
+_uma-ma
+_uma_ima
+_ul-d
+_ulfa
+_unm kls-m
+ga-da
+ka_ukab
+ka_usal
+gaza-la
+gazal
+kamal
+kami-la
+kali-ma
+gina-
+za-fila
+sa-la
+sa-liha
+sa-liya
+sa_adi-ya
+sa_i-da
+za_inab
+sa_usan
+saki-na
+zaki-ya
+sana-
+saba-
+saba-f
+saba-ha
+safa-
+safi-ya
+zafi-la
+zafla-
+zahala-
+samal
+sali-ma
+salma-
+salwa-
+ji-ha-n
+Si-li-n
+jiha-d
+Sifa-
+Sa-kila
+Sa-ziya
+Sa-jiya
+Sa-diya
+Sa-hida
+Sa_ima-
+Sa_uk
+ja_uhala
+Saza-
+jana-
+Sahi-la
+Safak
+Safi-ka
+jami-la
+Sams
+jala-
+Sali-fa
+jali-la
+janna
+j-li-
+S_ula
+j~lana-l
+Sfla
+jma-na
+Sl-k
+s_a-d
+zi-na
+si-li-n
+si~di-ka
+zka-
+sha-
+zba_ida
+zm~ld
+_emelald
+sla_iya-
+slta-na
+da-niya
+ta-la
+da-liya
+daliya
+da_ad
+tagli-d
+dala-l
+di-ma
+dijla
+du_a-
+du~la
+du~li-ya
+duha-
+dunya-
+na-diya
+na-dila
+na_i-ma
+naja-
+naja-f
+naja-ha
+najma
+najla-
+najwa-
+nada-
+nahala
+nabi-la
+naljis
+nisli-n
+nilmi-n
+nu-l _a-ya
+nu-lha-n
+nuj-m
+ha-jal
+ba-sima
+ba-sila
+ba-na
+ba-li_a
+ha_ifa-
+ha_ula
+haki-ma
+baSi-la
+basi-ma
+basma
+basma-
+badi-_a
+hadi-ja
+hadi-ya
+badli-ya
+badl
+hana-di-
+hana-n
+hani-fa
+bahi-ja
+habi-ba
+bahi-ya
+bahi-la
+hafsa
+bafja
+hami-da
+baya-n
+hala-
+bala-_a
+balaka
+hiba
+hibat
+hind
+fa-_ika
+fa-_iza
+fa-tina
+fa-tima
+fa-diya
+fa-dila
+fa-tin
+fa_il-z
+fa_uz
+fa_uzi-ya
+fajl
+fati-ma
+fadi-la
+fathi-ya
+fadwa-
+fanan
+fahi-ma
+fafli-ya
+falak
+falaf
+fali-za
+fali-da
+fali-ha
+falha
+falha-na
+fi~da
+filya-l
+bsa_ina
+bSla-
+f~li-ya
+bdu-l
+fla-t
+fwa_ida
+ma-jida
+ma_i_i
+ma_im-na
+ma_uza
+maji-da
+ma~ka
+madi-ha
+mana-l
+maha-
+mala-k
+malak
+malika
+malja-na
+malyam
+mali_a
+malwa
+minnat
+mna-
+mni-la
+mlja-na
+ya-k-t
+ya-sami-na
+ya-sami-n
+jasmin
+yusla-
+yumna-
+la-_ida
+la-niya
+la-bi_a
+la-ma-
+la_iha-na
+la_ila-
+la_uda
+lagad
+laza-n
+laSi-da
+laja-
+lati-fa
+lana-
+laba-b
+lahaf
+labi-_a
+lafi-_a
+lama-
+laya-n
+landa
+li-ma-s
+li-m
+li-n
+liha-b
+liha-m
+lwl_a
+lwlw
+lwa_ida
+wa_ad
+wajd
+wahi-da
+wafa-
+walda`.split(`
+`),Ti=`_a-lon
 _e_ibel
 _e_iblaham
 _e_iblam
@@ -21897,7 +22355,7 @@ wili_am
 winstn
 zakala_i_a
 zakali-`.split(`
-`),ti=`_a-bel
+`),Gi=`_a-bel
 _a-blaham
 _ahim
 _a-dalbelt
@@ -22269,7 +22727,7 @@ volf
 volfgang
 volflam
 ksa-va-`.split(`
-`),si=`_abel
+`),Ei=`_abel
 _aSil
 _adan
 _adn
@@ -22560,7 +23018,7 @@ yani~k
 _i-v
 _iv
 _ivon`.split(`
-`),mi=`_a~bondi_o
+`),Pi=`_a~bondi_o
 _abelald
 _abe-le
 _abla-mo
@@ -23198,7 +23656,7 @@ vi-t
 vi~t-le
 vi~t-li_o
 vi~tli_o`.split(`
-`),di=`_a-lon
+`),Vi=`_a-lon
 _abel
 _abelald
 _abla_an
@@ -23595,7 +24053,7 @@ bilhili_o
 bit
 wilfled
 sakali_as`.split(`
-`),bi=`_a-bel
+`),Ii=`_a-bel
 _ablaham
 _a-dam
 _adam
@@ -23881,7 +24339,7 @@ vili_am
 vilmal
 _iksel
 _ingve`.split(`
-`),fi=`_a-dlf
+`),Ai=`_a-dlf
 _a-peli
 _a-po
 _a-~po
@@ -24239,7 +24697,7 @@ yulelmi
 yulyana
 _ulyana
 yulyo`.split(`
-`),pi=`_afksenc-
+`),Oi=`_afksenc-
 _agafon
 _adam
 _adli_an
@@ -24441,7 +24899,7 @@ ya-kof
 yakof
 yaloslaf
 yalosla-f`.split(`
-`),vi=`_adalbelt
+`),Fi=`_adalbelt
 _adam
 _adlf
 _alan
@@ -24661,7 +25119,7 @@ zbiSek
 zjenek
 zdeNek
 zolta-n`.split(`
-`),ui=`_a-lt
+`),Ci=`_a-lt
 _a-be
 _a-blaham
 _adam
@@ -25053,5 +25511,496 @@ va_utel
 Vu~be
 ksandel
 yoli~k`.split(`
-`),hi={family:{en:Cl,de:Il,fr:Ol,it:Ll,es:Ul,sv:Zl,fi:Wl,ru:$l,cs:ql,nl:Jl},female:{en:Xl,de:Ql,fr:Yl,it:ai,es:li,sv:ii,fi:ei,ru:ni,cs:oi,nl:_i},male:{en:ki,de:ti,fr:si,it:mi,es:di,sv:bi,fi,ru:pi,cs:vi,nl:ui}};function bl(e,a,l){const i=e.slice();return i[14]=a[l],i}function fl(e,a,l){const i=e.slice();return i[17]=a[l],i[19]=l,i}function pl(e,a,l){const i=e.slice();return i[20]=a[l],i[21]=a,i[22]=l,i}function vl(e){let a,l,i,n=Wa[e[22]].toUpperCase()+"",o,_,d,v;function g(){e[9].call(l,e[21],e[22])}return{c(){a=S("label"),l=S("input"),i=N(),o=M(n),_=N(),this.h()},l(z){a=c(z,"LABEL",{class:!0,title:!0});var y=j(a);l=c(y,"INPUT",{type:!0}),i=D(y),o=G(y,n),_=D(y),y.forEach(f),this.h()},h(){h(l,"type","checkbox"),h(a,"class","lang"),h(a,"title",e[3][e[22]]+"語")},m(z,y){P(z,a,y),k(a,l),l.checked=e[20],k(a,i),k(a,o),k(a,_),d||(v=X(l,"change",g),d=!0)},p(z,y){e=z,y&2&&(l.checked=e[20])},d(z){z&&f(a),d=!1,v()}}}function ul(e){let a,l,i,n=e[17].capitalize()+"",o,_,d,v,g,z,y;function I(...t){return e[8](e[19],...t)}let R=e[1][e[19]],u=[];for(let t=0;t<R.length;t+=1)u[t]=vl(pl(e,R,t));return{c(){a=S("label"),l=S("input"),i=N(),o=M(n),_=N(),d=S("div");for(let t=0;t<u.length;t+=1)u[t].c();v=N(),g=S("hr"),this.h()},l(t){a=c(t,"LABEL",{class:!0});var r=j(a);l=c(r,"INPUT",{type:!0}),i=D(r),o=G(r,n),r.forEach(f),_=D(t),d=c(t,"DIV",{class:!0});var s=j(d);for(let p=0;p<u.length;p+=1)u[p].l(s);s.forEach(f),v=D(t),g=c(t,"HR",{}),this.h()},h(){h(l,"type","checkbox"),h(a,"class","typ"),h(d,"class","langs flex")},m(t,r){P(t,a,r),k(a,l),k(a,i),k(a,o),P(t,_,r),P(t,d,r);for(let s=0;s<u.length;s+=1)u[s].m(d,null);P(t,v,r),P(t,g,r),z||(y=X(l,"change",I),z=!0)},p(t,r){if(e=t,r&10){R=e[1][e[19]];let s;for(s=0;s<R.length;s+=1){const p=pl(e,R,s);u[s]?u[s].p(p,r):(u[s]=vl(p),u[s].c(),u[s].m(d,null))}for(;s<u.length;s+=1)u[s].d(1);u.length=R.length}},d(t){t&&f(a),t&&f(_),t&&f(d),Ua(u,t),t&&f(v),t&&f(g),z=!1,y()}}}function hl(e){let a,l=e[14].kana+"",i,n,o,_;function d(){return e[12](e[14])}return{c(){a=S("button"),i=M(l),n=N(),this.h()},l(v){a=c(v,"BUTTON",{class:!0});var g=j(a);i=G(g,l),n=D(g),g.forEach(f),this.h()},h(){h(a,"class","name svelte-1faupmf"),sl(a,"exist",e[14].exist)},m(v,g){P(v,a,g),k(a,i),k(a,n),o||(_=X(a,"click",d),o=!0)},p(v,g){e=v,g&4&&l!==(l=e[14].kana+"")&&Dl(i,l),g&4&&sl(a,"exist",e[14].exist)},d(v){v&&f(a),o=!1,_()}}}function gi(e){let a,l,i,n,o,_,d,v,g,z,y,I,R,u,t,r,s,p,K,Y,ja,za,V,O,ya,xa,aa,wa,ra,Ra,F,E,la,Na,Da,$,q,Ka,ia,Ba,Ha,ta,Ma,ea,Ga,Ta,Ea,qa,na=Za,B=[];for(let m=0;m<na.length;m+=1)B[m]=ul(fl(e,na,m));let oa=e[2],H=[];for(let m=0;m<oa.length;m+=1)H[m]=hl(bl(e,oa,m));return{c(){a=N(),l=S("header"),i=S("h1"),n=M("Name Generator"),o=N(),_=S("div"),d=S("a"),v=Fa("svg"),g=Fa("title"),z=M("GitHub"),y=Fa("path"),I=N(),R=S("main"),u=S("div"),t=S("h2"),r=M("Source controller"),s=N(),p=S("form");for(let m=0;m<B.length;m+=1)B[m].c();K=N(),Y=S("h2"),ja=M("About"),za=N(),V=S("div"),O=S("a"),ya=M("欧羅巴人名録"),xa=M("様のデータを分解して再構成することで、それっぽい名前を生成する。"),aa=S("span"),wa=M("青字"),ra=M("は元データにも存在する名前。"),Ra=N(),F=S("div"),E=S("div"),la=S("button"),Na=M("Reload"),Da=N(),$=S("label"),q=S("input"),Ka=N(),ia=S("span"),Ba=M("Exist"),Ha=N(),ta=S("div"),Ma=N(),ea=S("button"),Ga=M("Copy All"),Ta=N();for(let m=0;m<H.length;m+=1)H[m].c();this.h()},l(m){Rl("svelte-ykd9de",document.head).forEach(f),a=D(m),l=c(m,"HEADER",{class:!0});var b=j(l);i=c(b,"H1",{class:!0});var L=j(i);n=G(L,"Name Generator"),L.forEach(f),o=D(b),_=c(b,"DIV",{class:!0});var Ja=j(_);d=c(Ja,"A",{href:!0,target:!0,rel:!0});var Xa=j(d);v=Ca(Xa,"svg",{class:!0,role:!0,viewBox:!0,xmlns:!0});var Aa=j(v);g=Ca(Aa,"title",{});var Qa=j(g);z=G(Qa,"GitHub"),Qa.forEach(f),y=Ca(Aa,"path",{d:!0}),j(y).forEach(f),Aa.forEach(f),Xa.forEach(f),Ja.forEach(f),b.forEach(f),I=D(m),R=c(m,"MAIN",{class:!0});var fa=j(R);u=c(fa,"DIV",{class:!0});var U=j(u);t=c(U,"H2",{});var Ya=j(t);r=G(Ya,"Source controller"),Ya.forEach(f),s=D(U),p=c(U,"FORM",{class:!0});var al=j(p);for(let J=0;J<B.length;J+=1)B[J].l(al);al.forEach(f),K=D(U),Y=c(U,"H2",{});var ll=j(Y);ja=G(ll,"About"),ll.forEach(f),za=D(U),V=c(U,"DIV",{class:!0});var sa=j(V);O=c(sa,"A",{href:!0,target:!0,rel:!0});var il=j(O);ya=G(il,"欧羅巴人名録"),il.forEach(f),xa=G(sa,"様のデータを分解して再構成することで、それっぽい名前を生成する。"),aa=c(sa,"SPAN",{class:!0});var el=j(aa);wa=G(el,"青字"),el.forEach(f),ra=G(sa,"は元データにも存在する名前。"),sa.forEach(f),U.forEach(f),Ra=D(fa),F=c(fa,"DIV",{class:!0});var pa=j(F);E=c(pa,"DIV",{class:!0});var Z=j(E);la=c(Z,"BUTTON",{});var nl=j(la);Na=G(nl,"Reload"),nl.forEach(f),Da=D(Z),$=c(Z,"LABEL",{});var va=j($);q=c(va,"INPUT",{type:!0}),Ka=D(va),ia=c(va,"SPAN",{class:!0});var ol=j(ia);Ba=G(ol,"Exist"),ol.forEach(f),va.forEach(f),Ha=D(Z),ta=c(Z,"DIV",{class:!0}),j(ta).forEach(f),Ma=D(Z),ea=c(Z,"BUTTON",{});var _l=j(ea);Ga=G(_l,"Copy All"),_l.forEach(f),Z.forEach(f),Ta=D(pa);for(let J=0;J<H.length;J+=1)H[J].l(pa);pa.forEach(f),fa.forEach(f),this.h()},h(){document.title="Name Generator",h(i,"class","flex-auto"),h(y,"d","M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"),h(v,"class","s-icon svelte-1faupmf"),h(v,"role","img"),h(v,"viewBox","0 0 24 24"),h(v,"xmlns","http://www.w3.org/2000/svg"),h(d,"href","https://github.com/techa/name-generator"),h(d,"target","_blank"),h(d,"rel","noopener noreferrer"),h(_,"class","head-right svelte-1faupmf"),h(l,"class","flex"),h(p,"class","w-1/2 select-none svelte-1faupmf"),h(O,"href","https://www.worldsys.org/europe"),h(O,"target","_blank"),h(O,"rel","noopener noreferrer"),h(aa,"class","svelte-1faupmf"),h(V,"class","about"),h(u,"class","left svelte-1faupmf"),h(q,"type","checkbox"),h(ia,"class","svelte-1faupmf"),h(ta,"class","flex-auto"),h(E,"class","tool flex svelte-1faupmf"),h(F,"class","right w-1/2 svelte-1faupmf"),h(R,"class","flex")},m(m,A){P(m,a,A),P(m,l,A),k(l,i),k(i,n),k(l,o),k(l,_),k(_,d),k(d,v),k(v,g),k(g,z),k(v,y),P(m,I,A),P(m,R,A),k(R,u),k(u,t),k(t,r),k(u,s),k(u,p);for(let b=0;b<B.length;b+=1)B[b].m(p,null);k(u,K),k(u,Y),k(Y,ja),k(u,za),k(u,V),k(V,O),k(O,ya),k(V,xa),k(V,aa),k(aa,wa),k(V,ra),k(R,Ra),k(R,F),k(F,E),k(E,la),k(la,Na),k(E,Da),k(E,$),k($,q),q.checked=e[0],k($,Ka),k($,ia),k(ia,Ba),k(E,Ha),k(E,ta),k(E,Ma),k(E,ea),k(ea,Ga),k(F,Ta);for(let b=0;b<H.length;b+=1)H[b].m(F,null);Ea||(qa=[X(p,"change",e[6]),X(la,"click",e[5]),X(q,"change",e[10]),X(ea,"click",e[11])],Ea=!0)},p(m,[A]){if(A&26){na=Za;let b;for(b=0;b<na.length;b+=1){const L=fl(m,na,b);B[b]?B[b].p(L,A):(B[b]=ul(L),B[b].c(),B[b].m(p,null))}for(;b<B.length;b+=1)B[b].d(1);B.length=na.length}if(A&1&&(q.checked=m[0]),A&132){oa=m[2];let b;for(b=0;b<oa.length;b+=1){const L=bl(m,oa,b);H[b]?H[b].p(L,A):(H[b]=hl(L),H[b].c(),H[b].m(F,null))}for(;b<H.length;b+=1)H[b].d(1);H.length=oa.length}},i:tl,o:tl,d(m){m&&f(a),m&&f(l),m&&f(I),m&&f(R),Ua(B,m),Ua(H,m),Ea=!1,Nl(qa)}}}function Si(e,a,l){const i=["英","ドイツ","フランス","イタリア","スペイン","スウェーデン","フィンランド","ロシア","チェコ","オランダ"],n=[[!1,!1,!1,!1,!1,!1,!1,!1,!1,!1],[!0,!1,!1,!1,!1,!1,!1,!1,!1,!1],[!1,!1,!1,!1,!1,!1,!1,!1,!1,!1]];let o=[],_=!0;const d=new Vl;z();function v(s,p){l(1,n[p]=Array(Wa.length).fill(s.target.checked),n)}function g(){l(2,o=[]);const s=new Set;for(let p=0;p<30;p++)try{let K=d.create();for(;s.has(K.kana)||!_&&K.exist;)K=d.create();o.push(K)}catch{break}}function z(){d.clear();let s=!1;for(let p=0;p<n.length;p++)for(let K=0;K<n[p].length;K++)n[p][K]&&(d.add(hi[Za[p]][Wa[K]]),s=!0);s&&g()}function y(s=""){s||(s=o.reduce((p,K)=>p+`
-`+K.kana,"")),navigator.clipboard.writeText(s)}const I=(s,p)=>{v(p,s)};function R(s,p){s[p]=this.checked,l(1,n)}function u(){_=this.checked,l(0,_)}const t=()=>y(),r=s=>{y(s.kana)};return e.$$.update=()=>{e.$$.dirty&1&&g()},[_,n,o,i,v,g,z,y,I,R,u,t,r]}class zi extends xl{constructor(a){super(),wl(this,a,Si,gi,rl,{})}}export{zi as default};
+`),Ui=`_a-kil
+_a-si-
+_a-sim
+_a-zim
+_a-dam
+_a-tif
+_a-dil
+_a-bid
+_a-mil
+_a-lif
+_a-lim
+_a_iham
+_a_iman
+_a_iya-S
+_a_iyu-b
+_a_us
+_aklam
+_asad
+_aSlaf
+_as_ad
+_azi-z
+_asi-m
+_asi-l
+_azhal
+_ata-
+_a~za-m
+_a~ba-s
+_a~b-d
+_a~la-m
+_adi-b
+_adna-n
+_adham
+_adli-
+_anas
+_ab- bakl
+_afi-f
+_abd
+_abd _ali-
+_abd la~bihi
+_abdu-l
+_abduf
+_afmad
+_ami-d
+_ami-l
+_ami-n
+_aml
+_ala-
+_ali-
+_awad
+_antal
+_anbal
+_anma-l
+_anwal
+_i-sa-
+_i-ha-b
+_ikba-l
+_iklima
+_isa-m
+_isha-k
+_isma-_i-l
+_isla-m
+_i~za
+_i~zat
+_idli-s
+_ifsa-n
+_ifla-s
+_ibla-hi-m
+_ima-d
+_ima-m
+_imla-n
+_ilfa-n
+_ilya-s
+_in_a-m
+wisa-m
+_uka-b
+_usa-ma
+_usma-n
+_uta-lid
+_uda_i_i
+_uta_iba
+_utba
+_uba_id
+_uma_iya
+_umal
+ga-zi-
+ka-zim
+ka-sim
+ga-nim
+ka-b-s
+ka-mil
+ga-li-
+ga-lib
+ka-lim
+ka_is
+kasi-m
+gazwa-n
+kata-da
+gadanfal
+ga~sa-n
+gani-
+kama-l
+kami-l
+kalam
+gali-b
+kali-m
+ganna-m
+giya-s
+ksa_i_i
+kta_iba
+ktub
+kls-m
+za-_id
+sa-_ib
+sa-jid
+sa-dik
+za-hi-
+sa-bik
+sa-bit
+sa-hib
+sa-bil
+za-hil
+za-fil
+sa-mi-
+sa-mif
+sa-mil
+sa-li-
+sa-lif
+sa-lim
+sa-liya
+sa_ad
+sa_adu-n
+sa_i-d
+sa_i_id
+za_ida-n
+za_id
+sa_if
+za_in
+sa_u-d
+zakali-ya-
+zaki-
+sakl
+zagl-l
+zgl-l
+sa~ja-d
+sa~da-m
+sadi-k
+sadi-d
+saba-f
+sahal
+saf-f
+saf-ha
+zafal
+sabli-
+safl
+safwa
+safwa-n
+sama-f
+sami-f
+sami-l
+sala-f
+sala-ma
+salama
+zali-f
+sali-m
+salma-n
+salmad
+sawa-b
+jiha-d
+Siha-b
+Sa-kil
+ja-sim
+ja-da
+ja-d
+Sa-di-
+Sa-hi-n
+Sa-hid
+ja-bil
+Sa-hil
+Sa-mil
+Sa_aba-n
+ja_afal
+Sa_uki-
+Sak-l
+jad_a-n
+Sahi-d
+Safi-k
+jama-l
+jami-l
+Sams
+Salaf
+Sali-f
+Salf-b
+jawa-d
+j-d
+S_a_ib
+Skli-
+Sja-_u
+jm_a
+zi- yazan
+si~di-k
+sina-n
+ziya-d
+sila-j
+s_u-d
+snu_u
+sha_ib
+sha_il
+zba_il
+sbhi-
+sfya-n
+zla-la
+sla_ima-n
+sla_im
+sl-l
+slta-n
+swa_id
+swa_ilif
+swa_ilim
+ta-_i_u
+da-_u-d
+da-gil
+ta-ha-
+da-hi-
+ta-hil
+ta-mil
+ta-lik
+ta-lib
+ta_i_ib
+ta_isi-l
+da_if
+ta_im
+ta_ufi-k
+da_uwa-s
+da~ba-f
+tafsi-n
+tami-m
+tala-l
+tali-f
+dalwi-S
+talha
+tanma-m
+diya-
+diya-b
+dilga-m
+tufa_il
+dula_id
+tulki-
+na-_if
+na-_il
+na-ji-
+na-jif
+na-sif
+na-zim
+na-sil
+na-dil
+na-hid
+na-fi_u
+na_i-m
+na_ufal
+na_uwa-f
+naji-b
+najd
+najm
+nas-f
+nasi-f
+nasi-m
+nazi-l
+nazmi-
+nasli-
+nasl
+nada-
+nadi-m
+nabi-f
+nabi-l
+niza-m
+niza-l
+nida-l
+nu-f
+nu-l
+nu_a_ima-n
+nu_uma-n
+ba-kil
+ha-Sim
+ba-z
+ha-zim
+ba-sim
+ba-sil
+ha-zin
+ha-di-
+ha-ni-
+ha-ni_u
+ba-hi-
+ba-hil
+ha-fiz
+ha-mid
+ha-lis
+ha-lid
+ha-l-n
+ha_isam
+ha_idala
+ha_idal
+ha_ili-
+ha_il
+haki-m
+bakli-
+bakl
+hasana_in
+hasan
+baSi-l
+haz_al
+basi-m
+hazm
+batal
+ba~ka-l
+ba~sa-m
+ha~sa-n
+ha~ja-j
+ba~Sa-l
+ha~ta-b
+ba~du-l
+hadi-d
+badl
+hani-f
+baha-
+habi-b
+bafja
+hama-da
+hamad
+hami-s
+hami-d
+hamda-n
+hamdi-
+baya-n
+bala-
+bala-sim
+balaka-t
+halaf
+hali-fa
+hali-l
+halb
+bandal
+hanbal
+hiSa-m
+biSa-la
+bila-l
+hila-l
+f-d
+fa-lis
+fa-l-k
+fa_isal
+fajl
+fathi-
+fatf
+fahad
+fafli-
+falaj
+falha-t
+fila-s
+fsa-m
+fza_ifa
+fsa_in
+fsni-
+fla-t
+fla_id
+blha-n
+fwa_ilid
+ma-jid
+ma-lik
+ma_am-n
+ma_al-f
+ma_is-l
+ma_im-n
+ma_udu-d
+ma_ul-d
+maji-d
+maS_al
+majdi-
+majd
+mas_u-d
+masl-l
+matal
+ma~da-f
+mafdi-
+maff-z
+mafb-b
+mafm-d
+malik
+malz-k
+malwa-n
+mans-l
+mi-na-
+miS_al
+misba-f
+midhat
+m-sa-
+m_a-wiya
+m_a_iyad
+m_anmal
+m_uta~z
+m_unis
+m_umin
+msa-_id
+mza~fal
+mja-hid
+ms_ab
+mstafa-
+mslim
+mdal
+mtawa~li-
+mni-b
+mni-l
+mba-lak
+mha~lam
+mhannad
+mhanmad
+mfi-d
+mfsin
+mfta-l
+mflis
+mya~sal
+mla-d
+mlSid
+mltada-
+mwa~fak
+ya-k-t
+ya-si-n
+ya-sim
+jasmin
+ya-sil
+ya_ak-b
+ya-k-b
+ya_ala-
+ya_alb
+yaki-n
+yakza-n
+yazan
+yazi-d
+yafya-
+yahaya-
+yu-sif
+yu-sf
+yu-nis
+yu-nus
+yusli-
+la-_i-
+la-_id
+la-ka-n
+la-gib
+la-ji-
+la-Sid
+la-jif
+la-tib
+la-din
+la-bif
+la-mi-
+la-mi_u
+la-miz
+la_is
+la_iha-n
+la_il
+laSi-d
+lajab
+las-l
+lati-f
+labi-b
+lafi-_u
+lafi-k
+lamada-n
+lizk
+lida-
+lidwa-n
+liya-d
+liwa-
+l_a_i_i
+lkma-n
+lkn
+lSdi-
+ltuf
+wa-_il
+wa-kid
+wa-fil
+waki-l
+wajdi-
+wasi-m
+wa~ha-b
+wadi-_u
+walaka
+wali-
+wali-d`.split(`
+`),qi={family:{en:fi,de:bi,fr:ui,it:pi,es:hi,sv:vi,fi:gi,ru:Si,cs:ci,nl:ji,ar:zi},female:{en:yi,de:xi,fr:ri,it:wi,es:Ri,sv:Ni,fi:Di,ru:Ki,cs:Bi,nl:Hi,ar:Mi},male:{en:Ti,de:Gi,fr:Ei,it:Pi,es:Vi,sv:Ii,fi:Ai,ru:Oi,cs:Fi,nl:Ci,ar:Ui}};function gl(e,a,l){const i=e.slice();return i[18]=a[l],i}function Sl(e,a,l){const i=e.slice();return i[22]=a[l],i[23]=a,i[24]=l,i}function Ca(e){const a=e.slice(),l=ta.length;return a[21]=l,a}function cl(e,a,l){const i=e.slice();return i[25]=a[l],i[24]=l,i}function jl(e,a,l){const i=e.slice();return i[27]=a[l],i[28]=a,i[29]=l,i}function zl(e){let a,l,i,n=ka[e[29]].toUpperCase()+"",o,_,t,m;function u(){e[11].call(l,e[28],e[29])}return{c(){a=j("label"),l=j("input"),i=K(),o=G(n),_=K(),this.h()},l(f){a=z(f,"LABEL",{class:!0,title:!0});var s=w(a);l=z(s,"INPUT",{type:!0}),i=B(s),o=E(s,n),_=B(s),s.forEach(p),this.h()},h(){S(l,"type","checkbox"),S(a,"class","lang"),S(a,"title",di[e[29]]+"語")},m(f,s){T(f,a,s),d(a,l),l.checked=e[27],d(a,i),d(a,o),d(a,_),t||(m=P(l,"change",u),t=!0)},p(f,s){e=f,s&2&&(l.checked=e[27])},d(f){f&&p(a),t=!1,m()}}}function yl(e){let a,l,i,n=e[25].capitalize()+"",o,_,t,m,u,f,s;function v(...k){return e[10](e[24],...k)}let g=e[1][e[24]],b=[];for(let k=0;k<g.length;k+=1)b[k]=zl(jl(e,g,k));return{c(){a=j("label"),l=j("input"),i=K(),o=G(n),_=K(),t=j("div");for(let k=0;k<b.length;k+=1)b[k].c();m=K(),u=j("hr"),this.h()},l(k){a=z(k,"LABEL",{class:!0});var h=w(a);l=z(h,"INPUT",{type:!0}),i=B(h),o=E(h,n),h.forEach(p),_=B(k),t=z(k,"DIV",{class:!0});var x=w(t);for(let D=0;D<b.length;D+=1)b[D].l(x);x.forEach(p),m=B(k),u=z(k,"HR",{}),this.h()},h(){S(l,"type","checkbox"),S(a,"class","check_all"),S(t,"class","langs flex")},m(k,h){T(k,a,h),d(a,l),d(a,i),d(a,o),T(k,_,h),T(k,t,h);for(let x=0;x<b.length;x+=1)b[x].m(t,null);T(k,m,h),T(k,u,h),f||(s=P(l,"change",v),f=!0)},p(k,h){if(e=k,h&2){g=e[1][e[24]];let x;for(x=0;x<g.length;x+=1){const D=jl(e,g,x);b[x]?b[x].p(D,h):(b[x]=zl(D),b[x].c(),b[x].m(t,null))}for(;x<b.length;x+=1)b[x].d(1);b.length=g.length}},d(k){k&&p(a),k&&p(_),k&&p(t),wa(b,k),k&&p(m),k&&p(u),f=!1,s()}}}function xl(e){let a,l,i,n,o,_,t;function m(...s){return e[12](e[21],...s)}let u=e[3],f=[];for(let s=0;s<u.length;s+=1)f[s]=rl(Sl(e,u,s));return{c(){a=j("label"),l=j("input"),i=G(`
+					User`),n=K(),o=j("div");for(let s=0;s<f.length;s+=1)f[s].c();this.h()},l(s){a=z(s,"LABEL",{class:!0});var v=w(a);l=z(v,"INPUT",{type:!0}),i=E(v,`
+					User`),v.forEach(p),n=B(s),o=z(s,"DIV",{class:!0});var g=w(o);for(let b=0;b<f.length;b+=1)f[b].l(g);g.forEach(p),this.h()},h(){S(l,"type","checkbox"),S(a,"class","check_all"),S(o,"class","langs flex")},m(s,v){T(s,a,v),d(a,l),d(a,i),T(s,n,v),T(s,o,v);for(let g=0;g<f.length;g+=1)f[g].m(o,null);_||(t=P(l,"change",m),_=!0)},p(s,v){if(e=s,v&10){u=e[3];let g;for(g=0;g<u.length;g+=1){const b=Sl(e,u,g);f[g]?f[g].p(b,v):(f[g]=rl(b),f[g].c(),f[g].m(o,null))}for(;g<f.length;g+=1)f[g].d(1);f.length=u.length}},d(s){s&&p(a),s&&p(n),s&&p(o),wa(f,s),_=!1,t()}}}function rl(e){let a,l,i,n=e[22]+"",o,_,t,m;function u(){e[13].call(l,e[21],e[24])}return{c(){a=j("label"),l=j("input"),i=K(),o=G(n),_=K(),this.h()},l(f){a=z(f,"LABEL",{class:!0});var s=w(a);l=z(s,"INPUT",{type:!0}),i=B(s),o=E(s,n),_=B(s),s.forEach(p),this.h()},h(){S(l,"type","checkbox"),S(a,"class","lang")},m(f,s){T(f,a,s),d(a,l),l.checked=e[1][e[21]][e[24]],d(a,i),d(a,o),d(a,_),t||(m=P(l,"change",u),t=!0)},p(f,s){e=f,s&2&&(l.checked=e[1][e[21]][e[24]]),s&8&&n!==(n=e[22]+"")&&ha(o,n)},d(f){f&&p(a),t=!1,m()}}}function wl(e){let a,l=e[18].kana+"",i,n,o,_;function t(){return e[16](e[18])}return{c(){a=j("button"),i=G(l),n=K(),this.h()},l(m){a=z(m,"BUTTON",{class:!0});var u=w(a);i=E(u,l),n=B(u),u.forEach(p),this.h()},h(){S(a,"class","name svelte-zb68q1"),za(a,"exist",e[18].exist)},m(m,u){T(m,a,u),d(a,i),d(a,n),o||(_=P(a,"click",t),o=!0)},p(m,u){e=m,u&16&&l!==(l=e[18].kana+"")&&ha(i,l),u&16&&za(a,"exist",e[18].exist)},d(m){m&&p(a),o=!1,_()}}}function Li(e){let a,l,i,n,o,_,t,m,u,f,s,v,g,b,k,h,x,D,aa,sa,y,R,N,V,q,ma,Ka,X,Q,Ba,la,Ha,Ma,da,Ta,ia,Ga,Ea,va,Pa,Ja,ea=ta,I=[];for(let c=0;c<ea.length;c+=1)I[c]=yl(cl(e,ea,c));let A=e[3].length&&xl(Ca(e));y=new $l({props:{userResource:e[2]}}),y.$on("save",e[5]);let na=e[4],O=[];for(let c=0;c<na.length;c+=1)O[c]=wl(gl(e,na,c));return{c(){a=K(),l=j("main"),i=j("div"),n=j("div"),o=j("a"),_=G("欧羅巴人名録"),t=G("様、"),m=j("a"),u=G("アラブ人名・家名辞典"),f=G("様のデータを分解して再構成することで、それっぽい名前を生成する。"),s=j("span"),v=G("青字"),g=G("は元データにも存在する名前。"),b=K(),k=j("h2"),h=G("Source controller"),x=K(),D=j("form");for(let c=0;c<I.length;c+=1)I[c].c();aa=K(),A&&A.c(),sa=K(),Rl(y.$$.fragment),R=K(),N=j("div"),V=j("div"),q=j("button"),ma=G("Reload"),Ka=K(),X=j("label"),Q=j("input"),Ba=K(),la=j("span"),Ha=G("Exist"),Ma=K(),da=j("div"),Ta=K(),ia=j("button"),Ga=G("Copy All"),Ea=K();for(let c=0;c<O.length;c+=1)O[c].c();this.h()},l(c){Ol("svelte-ykd9de",document.head).forEach(p),a=B(c),l=z(c,"MAIN",{class:!0});var F=w(l);i=z(F,"DIV",{class:!0});var r=w(i);n=z(r,"DIV",{class:!0});var C=w(n);o=z(C,"A",{href:!0,rel:!0});var Xa=w(o);_=E(Xa,"欧羅巴人名録"),Xa.forEach(p),t=E(C,"様、"),m=z(C,"A",{href:!0,rel:!0});var Qa=w(m);u=E(Qa,"アラブ人名・家名辞典"),Qa.forEach(p),f=E(C,"様のデータを分解して再構成することで、それっぽい名前を生成する。"),s=z(C,"SPAN",{class:!0});var Ya=w(s);v=E(Ya,"青字"),Ya.forEach(p),g=E(C,"は元データにも存在する名前。"),C.forEach(p),b=B(r),k=z(r,"H2",{});var $a=w(k);h=E($a,"Source controller"),$a.forEach(p),x=B(r),D=z(r,"FORM",{class:!0});var ga=w(D);for(let Y=0;Y<I.length;Y+=1)I[Y].l(ga);aa=B(ga),A&&A.l(ga),ga.forEach(p),sa=B(r),Nl(y.$$.fragment,r),r.forEach(p),R=B(F),N=z(F,"DIV",{class:!0});var Sa=w(N);V=z(Sa,"DIV",{class:!0});var Z=w(V);q=z(Z,"BUTTON",{});var al=w(q);ma=E(al,"Reload"),al.forEach(p),Ka=B(Z),X=z(Z,"LABEL",{});var ca=w(X);Q=z(ca,"INPUT",{type:!0}),Ba=B(ca),la=z(ca,"SPAN",{class:!0});var ll=w(la);Ha=E(ll,"Exist"),ll.forEach(p),ca.forEach(p),Ma=B(Z),da=z(Z,"DIV",{class:!0}),w(da).forEach(p),Ta=B(Z),ia=z(Z,"BUTTON",{});var il=w(ia);Ga=E(il,"Copy All"),il.forEach(p),Z.forEach(p),Ea=B(Sa);for(let Y=0;Y<O.length;Y+=1)O[Y].l(Sa);Sa.forEach(p),F.forEach(p),this.h()},h(){document.title="Name Generator",S(o,"href","https://www.worldsys.org/europe"),S(o,"rel","noopener noreferrer"),S(m,"href","https://alarabiyah.sakura.ne.jp/category/words/name/"),S(m,"rel","noopener noreferrer"),S(s,"class","svelte-zb68q1"),S(n,"class","about"),S(D,"class","w-1/2 select-none svelte-zb68q1"),S(i,"class","left svelte-zb68q1"),S(Q,"type","checkbox"),S(la,"class","svelte-zb68q1"),S(da,"class","flex-auto"),S(V,"class","tool flex svelte-zb68q1"),S(N,"class","right w-1/2 svelte-zb68q1"),S(l,"class","flex")},m(c,L){T(c,a,L),T(c,l,L),d(l,i),d(i,n),d(n,o),d(o,_),d(n,t),d(n,m),d(m,u),d(n,f),d(n,s),d(s,v),d(n,g),d(i,b),d(i,k),d(k,h),d(i,x),d(i,D);for(let F=0;F<I.length;F+=1)I[F].m(D,null);d(D,aa),A&&A.m(D,null),d(i,sa),Dl(y,i,null),d(l,R),d(l,N),d(N,V),d(V,q),d(q,ma),d(V,Ka),d(V,X),d(X,Q),Q.checked=e[0],d(X,Ba),d(X,la),d(la,Ha),d(V,Ma),d(V,da),d(V,Ta),d(V,ia),d(ia,Ga),d(N,Ea);for(let F=0;F<O.length;F+=1)O[F].m(N,null);va=!0,Pa||(Ja=[P(D,"change",e[8]),P(q,"click",e[7]),P(Q,"change",e[14]),P(ia,"click",e[15])],Pa=!0)},p(c,[L]){if(L&66){ea=ta;let r;for(r=0;r<ea.length;r+=1){const C=cl(c,ea,r);I[r]?I[r].p(C,L):(I[r]=yl(C),I[r].c(),I[r].m(D,aa))}for(;r<I.length;r+=1)I[r].d(1);I.length=ea.length}c[3].length?A?A.p(Ca(c),L):(A=xl(Ca(c)),A.c(),A.m(D,null)):A&&(A.d(1),A=null);const F={};if(L&4&&(F.userResource=c[2]),y.$set(F),L&1&&(Q.checked=c[0]),L&528){na=c[4];let r;for(r=0;r<na.length;r+=1){const C=gl(c,na,r);O[r]?O[r].p(C,L):(O[r]=wl(C),O[r].c(),O[r].m(N,null))}for(;r<O.length;r+=1)O[r].d(1);O.length=na.length}},i(c){va||(ya(y.$$.fragment,c),va=!0)},o(c){xa(y.$$.fragment,c),va=!1},d(c){c&&p(a),c&&p(l),wa(I,c),A&&A.d(),Kl(y),wa(O,c),Pa=!1,Wa(Ja)}}}function Wi(e,a,l){let i=[Array(ka.length).fill(!1),Array(ka.length).fill(!1),Array(ka.length).fill(!1),[]];i[0][0]=!0;let n={},o=Object.keys(n),_=[],t=!0;const m=new si;Fl(()=>{const y=localStorage.getItem("UserResource");l(2,n=JSON.parse(y)||{}),l(3,o=Object.keys(n));const R=JSON.parse(localStorage.getItem("setting"));R&&l(1,i=R),v()});function u(y){const{title:R}=y.detail,N=o.indexOf(R);N>-1&&(o.splice(N,1),i[ta.length].splice(N,1));const V=Object.keys(n),q=V.findIndex(ma=>!o.includes(ma));l(3,o=V),q>-1&&i[ta.length].splice(q,0,!0),localStorage.setItem("UserResource",JSON.stringify(n)),localStorage.setItem("setting",JSON.stringify(i))}function f(y,R){l(1,i[R]=Array(ka.length).fill(y.currentTarget.checked),i)}function s(){l(4,_=[]);const y=new Set;for(let R=0;R<30;R++)try{let N=m.create();for(;y.has(N.kana)||!t&&N.exist;)N=m.create();y.add(N.kana),_.push(N)}catch{break}}function v(){localStorage==null||localStorage.setItem("setting",JSON.stringify(i)),m.clear();let y=!1;for(let R=0;R<i.length;R++)for(let N=0;N<i[R].length;N++)if(i[R][N]){const q=R===3?n[o[N]]:qi[ta[R]][ka[N]];q?(m.add(q,R>=3),y=!0):console.error(o[N])}y?s():l(4,_=[])}function g(y=""){y||(y=_.reduce((R,N)=>R+N.kana+`
+`,"")),navigator.clipboard.writeText(y)}const b=(y,R)=>{f(R,y)};function k(y,R){y[R]=this.checked,l(1,i)}const h=(y,R)=>{l(1,i[y]=Array(i[y].length).fill(R.currentTarget.checked),i)};function x(y,R){i[y][R]=this.checked,l(1,i)}function D(){t=this.checked,l(0,t)}const aa=()=>g(),sa=y=>{g(y.kana)};return e.$$.update=()=>{e.$$.dirty&1&&s()},[t,i,n,o,_,u,f,s,v,g,b,k,h,x,D,aa,sa]}class Xi extends Ua{constructor(a){super(),qa(this,a,Wi,Li,La,{})}}export{Xi as default};
