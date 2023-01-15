@@ -19,7 +19,19 @@ function save(data: Record<string, Pattern>, filename: string) {
 }
 
 const types = ['family', 'female', 'male'];
-const langs = ['en', 'de', 'fr', 'es', 'it', 'fi', 'sv', 'ru', 'cs', 'nl'];
+const langs = [
+	'en',
+	'de',
+	'fr',
+	'es',
+	'it',
+	'fi',
+	'sv',
+	'ru',
+	'cs',
+	'nl',
+	'ar',
+];
 
 interface Pattern {
 	count: number;

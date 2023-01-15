@@ -76,3 +76,4 @@ tag: first,suffix
 
 ## Credit
 * [欧羅巴人名録](https://www.worldsys.org/europe/)
+* [アラブ人名・家名辞典](https://alarabiyah.sakura.ne.jp/category/words/name/)

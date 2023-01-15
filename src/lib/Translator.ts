@@ -142,7 +142,12 @@ export class Translator implements TranslatorOptions {
 				}
 				continue;
 			}
-			result += fromKana[char];
+
+			if (fromKana[char]) {
+				result += fromKana[char];
+			} else {
+				console.error(`${kana}: "${char}" is invalid`);
+			}
 		}
 		return result;
 	}

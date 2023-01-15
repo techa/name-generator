@@ -1,7 +1,20 @@
+// node ./scripts/expToJs.js
 import { readFileSync, writeFileSync } from 'fs';
 
 const types = ['family', 'female', 'male'];
-const langs = ['en', 'de', 'fr', 'it', 'es', 'sv', 'fi', 'ru', 'cs', 'nl'];
+const langs = [
+	'en',
+	'de',
+	'fr',
+	'it',
+	'es',
+	'sv',
+	'fi',
+	'ru',
+	'cs',
+	'nl',
+	'ar',
+];
 
 let t =
 	"export const types = ['family', 'female', 'male'] as const;\n" +

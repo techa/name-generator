@@ -29,6 +29,9 @@ test(`fromKana`, (t) => {
 	t.is(trans1.fromKana('アイス'), '_a_is');
 	t.is(trans1.fromKana('アィス'), '_ais');
 
+	t.is(trans1.fromKana('コトロゥタディンギャ'), 'kotlowtadinGa');
+	t.is(trans1.fromKana('ウータ・バーシー'), '_u-taba-Si-');
+
 	const trans2 = new Translator({
 		longVowel: 'repeat',
 		longConsonantPosition: 'after',

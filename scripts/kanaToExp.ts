@@ -1,8 +1,22 @@
+// tsc | node ./.build/scripts/kanaToExp.js
 import { readFileSync, writeFileSync } from 'fs';
 import { Translator } from '../src/lib/Translator.js';
 
 const types = ['family', 'female', 'male'];
-const langs = ['en', 'de', 'fr', 'es', 'it', 'fi', 'sv', 'ru', 'cs', 'nl'];
+const langs = [
+	'en',
+	'de',
+	'fr',
+	'es',
+	'it',
+	'fi',
+	'sv',
+	'ru',
+	'cs',
+	'nl',
+	'ar',
+];
+
 const translator = new Translator();
 
 for (const type of types) {
@@ -12,6 +26,11 @@ for (const type of types) {
 			'utf-8',
 		)
 			.split('\n')
+			.reduce((acc, v) => {
+				// Avoid redundancy
+				if (!acc.includes(v)) acc.push(v);
+				return acc;
+			}, [])
 			.map((kana) => translator.fromKana(kana))
 			.join('\n');
 

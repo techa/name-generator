@@ -14,45 +14,13 @@
 		'ロシア',
 		'チェコ',
 		'オランダ',
+		'アラビア',
 	];
 
 	const setting: boolean[][] = [
-		[
-			false, // en
-			false, // de
-			false, // fr
-			false, // es
-			false, // it
-			false, // fi
-			false, // sv
-			false, // ru
-			false, // cs
-			false, // nl
-		],
-		[
-			true, // en
-			false, // de
-			false, // fr
-			false, // es
-			false, // it
-			false, // fi
-			false, // sv
-			false, // ru
-			false, // cs
-			false, // nl
-		],
-		[
-			false, // en
-			false, // de
-			false, // fr
-			false, // es
-			false, // it
-			false, // fi
-			false, // sv
-			false, // ru
-			false, // cs
-			false, // nl
-		],
+		Array(langs.length).fill(false), // family
+		Array(langs.length).fill(false), // female
+		Array(langs.length).fill(false), // male
 	];
 
 	let result: NameResult[] = [];
@@ -141,6 +109,9 @@
 		<div class="about">
 			<a href="https://www.worldsys.org/europe" rel="noopener noreferrer"
 				>欧羅巴人名録</a
+			>様、<a
+				href="https://alarabiyah.sakura.ne.jp/category/words/name/"
+				rel="noopener noreferrer">アラブ人名・家名辞典</a
 			>様のデータを分解して再構成することで、それっぽい名前を生成する。<span
 				>青字</span
 			>は元データにも存在する名前。

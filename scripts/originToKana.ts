@@ -1,7 +1,19 @@
 import { readFileSync, writeFileSync } from 'fs';
 
 const types = ['family', 'female', 'male'];
-const langs = ['en', 'de', 'fr', 'es', 'it', 'fi', 'sv', 'ru', 'cs', 'nl'];
+const langs = [
+	'en',
+	'de',
+	'fr',
+	'es',
+	'it',
+	'fi',
+	'sv',
+	'ru',
+	'cs',
+	'nl',
+	'ar',
+];
 
 for (const type of types) {
 	for (const lang of langs) {
