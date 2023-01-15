@@ -48,6 +48,7 @@
 				while (names.has(name.kana) || (!filter && name.exist)) {
 					name = ng.create();
 				}
+				names.add(name.kana);
 				result.push(name);
 			} catch (error) {
 				break;
