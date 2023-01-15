@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import AddSource from '../components/AddSource.svelte';
+
 	import { NameGenerator, type NameResult } from '$lib/NameGenerator.js';
 	import '../global/string/capitalize.js';
 	import { all, types, langs, lango } from '../constants/sources.js';
@@ -12,6 +14,8 @@
 	];
 	setting[0][0] = true;
 
+	let userResource: Record<string, string[]> = {};
+	let userKeys = Object.keys(userResource);
 	let result: NameResult[] = [];
 	let filter = true;
 	const ng = new NameGenerator();
@@ -22,6 +26,10 @@
 	}
 
 	onMount(() => {
+		const val = localStorage.getItem('UserResource');
+		userResource = JSON.parse(val) || {};
+		userKeys = Object.keys(userResource);
+
 		const _setting = JSON.parse(localStorage.getItem('setting'));
 		if (_setting) {
 			setting = _setting;
@@ -29,8 +37,32 @@
 		change();
 	});
 
-	function checkAll(e, index: number) {
-		setting[index] = Array(langs.length).fill(e.target.checked);
+	function save(e) {
+		const { title } = e.detail;
+		const deleteIndex = userKeys.indexOf(title);
+		if (deleteIndex > -1) {
+			// delete
+			userKeys.splice(deleteIndex, 1);
+			setting[types.length].splice(deleteIndex, 1);
+		}
+		const keys = Object.keys(userResource);
+		const add = keys.findIndex((v) => !userKeys.includes(v));
+		userKeys = keys;
+		if (add > -1) {
+			setting[types.length].splice(add, 0, true);
+		}
+
+		localStorage.setItem('UserResource', JSON.stringify(userResource));
+		localStorage.setItem('setting', JSON.stringify(setting));
+	}
+
+	function checkAll(
+		e: Event & {
+			currentTarget: EventTarget & HTMLInputElement;
+		},
+		index: number,
+	) {
+		setting[index] = Array(langs.length).fill(e.currentTarget.checked);
 	}
 	function reload() {
 		result = [];
@@ -61,8 +93,16 @@
 			for (let j = 0; j < setting[i].length; j++) {
 				const bool = setting[i][j];
 				if (bool) {
-					ng.add(all[types[i]][langs[j]]);
-					doReload = true;
+					const data =
+						i === 3
+							? userResource[userKeys[j]]
+							: all[types[i]][langs[j]];
+					if (data) {
+						ng.add(data, i >= 3);
+						doReload = true;
+					} else {
+						console.error(userKeys[j]);
+					}
 				}
 			}
 		}
@@ -98,7 +138,7 @@
 		<h2>Source controller</h2>
 		<form class="w-1/2 select-none" on:change={change}>
 			{#each types as type, i}
-				<label class="typ">
+				<label class="check_all">
 					<input
 						type="checkbox"
 						on:change={(e) => {
@@ -117,7 +157,35 @@
 				</div>
 				<hr />
 			{/each}
+
+			{#if userKeys.length}
+				{@const typel = types.length}
+				<label class="check_all">
+					<input
+						type="checkbox"
+						on:change={(e) => {
+							setting[typel] = Array(setting[typel].length).fill(
+								e.currentTarget.checked,
+							);
+						}}
+					/>
+					User
+				</label>
+				<div class="langs flex">
+					{#each userKeys as title, i}
+						<label class="lang">
+							<input
+								type="checkbox"
+								bind:checked={setting[typel][i]}
+							/>
+							{title}
+						</label>
+					{/each}
+				</div>
+			{/if}
 		</form>
+
+		<AddSource {userResource} on:save={save} />
 	</div>
 	<div class="right w-1/2">
 		<div class="tool flex">
@@ -153,7 +221,7 @@
 	}
 	.left {
 		margin-right: 2rem;
-		flex: 0 0 50%;
+		flex: 0 0 65%;
 	}
 	.right {
 		min-width: 12rem;
@@ -177,6 +245,6 @@
 		color: var(--primary-color);
 	}
 	.name:hover {
-		background: rgb(86, 86, 86);
+		background: var(--base-light);
 	}
 </style>

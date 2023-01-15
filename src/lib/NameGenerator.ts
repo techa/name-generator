@@ -56,9 +56,9 @@ export class NameGenerator {
 		this.names = new Set();
 	}
 
-	add(list: string[]) {
+	add(list: string[], kana = false) {
 		for (let i = 0; i < list.length; i++) {
-			const word = list[i];
+			const word = kana ? this.translator.fromKana(list[i]) : list[i];
 
 			if (!word) {
 				continue;
