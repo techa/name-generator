@@ -1,11 +1,16 @@
 import { consonants, vowels } from '../constants/char.js';
 
-export function isVowel(char: string): boolean {
-	return vowels.includes(char);
+/**
+ * `isVowel(char) && char==='-'`
+ *  ↓
+ * `isVowel(char, '-')`
+ */
+export function isVowel(char: string, ex = ''): boolean {
+	return (vowels + ex).includes(char);
 }
 
-export function isConsonant(char: string): boolean {
-	return consonants.includes(char);
+export function isConsonant(char: string, ex = ''): boolean {
+	return (consonants + ex).includes(char);
 }
 
 /**

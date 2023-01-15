@@ -19,7 +19,7 @@ export function syllable(word: string): string[] {
 			continue;
 		}
 
-		if (isVowel(char) || char === '-') {
+		if (isVowel(char, '-')) {
 			if (lastVowelIndex >= 0) {
 				const len = current.length;
 				if (i - lastVowelIndex === 1) {
