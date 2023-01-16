@@ -1,4 +1,4 @@
-import { Random } from '../utils/Random.js';
+import { random, type Random } from '../utils/random/Random.js';
 import { syllable } from '../utils/syllable.js';
 import { Translator } from './Translator.js';
 
@@ -25,7 +25,7 @@ interface NgData {
 }
 
 export interface CreateOptions {
-	seed: number | string;
+	random: Random;
 	// number of letters
 	count: number | [number, number];
 }
@@ -49,7 +49,7 @@ export class NameGenerator {
 
 	translator = new Translator();
 
-	random = new Random();
+	random = random;
 
 	clear() {
 		this.data = {};
@@ -94,13 +94,13 @@ export class NameGenerator {
 	}
 
 	create(opts: Partial<CreateOptions> = {}): NameResult {
-		if (opts.seed != null) {
-			this.random = new Random(opts.seed);
+		if (opts.random != null) {
+			this.random = opts.random;
 		}
 		let count =
 			typeof opts.count === 'number'
 				? opts.count
-				: this.random.integer(
+				: this.random.int(
 						...(opts.count || [this.minSyllable, this.maxSyllable]),
 				  );
 		let syllables = 0;
@@ -114,7 +114,7 @@ export class NameGenerator {
 			const total =
 				data.total -
 				((syllables < this.minSyllable && data.nexts.$) || 0);
-			const rate = total * this.random.floating(0, 1);
+			const rate = total * this.random.float(0, 1);
 			let border = 0;
 
 			// 長くなりすぎないように切りの良いところで切る
