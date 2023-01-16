@@ -124,7 +124,7 @@
 </svelte:head>
 
 <main class="flex">
-	<div class="left">
+	<section class="left">
 		<div class="about">
 			<a href="https://www.worldsys.org/europe" rel="noopener noreferrer"
 				>欧羅巴人名録</a
@@ -186,8 +186,8 @@
 		</form>
 
 		<AddSource {userResource} on:save={save} />
-	</div>
-	<div class="right w-1/2">
+	</section>
+	<section class="right w-1/2">
 		<div class="tool flex">
 			<button on:click={reload}>Reload</button>
 			<!-- <button on:click={() => (result = [])}>Clear</button> -->
@@ -211,7 +211,7 @@
 				{name.kana}
 			</button>
 		{/each}
-	</div>
+	</section>
 </main>
 
 <style>
