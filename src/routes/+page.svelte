@@ -20,14 +20,16 @@
 	let userResource: Record<string, string[]> = {};
 	let userKeys = Object.keys(userResource);
 	let result: NameResult[] = [];
-	let filter = true;
+	let existFilter = true;
+	let howmany = 30;
 	const ng = new NameGenerator();
 
 	let splitter = 1;
 
 	$: if (mount) {
 		ng.splitter = splitter;
-		filter;
+		existFilter;
+		howmany;
 		reload();
 	}
 
@@ -83,12 +85,12 @@
 		// 重複回避用。For avoid redundancy
 		const names: Set<string> = new Set();
 
-		for (let i = 0; i < 30; i++) {
+		for (let i = 0; i < howmany; i++) {
 			try {
 				// 重複回避。Avoid redundancy
 				let name = ng.create();
 				let j = 100;
-				while (names.has(name.kana) || (!filter && name.exist)) {
+				while (names.has(name.kana) || (!existFilter && name.exist)) {
 					name = ng.create();
 					if (!--j) {
 						console.log('name', name);
@@ -216,17 +218,19 @@
 		<AddSource {userResource} on:save={save} />
 	</section>
 	<section class="right w-1/2">
-		<div class="tool flex">
+		<form class="tool flex">
 			<button class="reload" on:click={reload}>Reload</button>
 			<!-- <button on:click={() => (result = [])}>Clear</button> -->
 			<label>
-				<input type="checkbox" bind:checked={filter} />
+				<input type="checkbox" bind:checked={existFilter} />
 				<span>Exist</span>
 			</label>
 
+			<input type="number" min="1" max="30" bind:value={howmany} />
+
 			<div class="flex-auto" />
 			<button on:click={() => copy()}>Copy All</button>
-		</div>
+		</form>
 
 		{#each result as name}
 			<button
@@ -257,6 +261,12 @@
 	}
 	.tool {
 		margin: 0.5rem 0;
+	}
+	.tool > label {
+		padding: 0.2rem;
+	}
+	.tool > input[type='number'] {
+		width: 3rem;
 	}
 	button.active {
 		background-color: var(--primary-color);
