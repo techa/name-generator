@@ -61,6 +61,11 @@
 			existFilter = _setting.existFilter;
 		}
 
+		// Delete old data
+		if (!val && !_setting) {
+			localStorage.clear();
+		}
+
 		change({}, false);
 
 		mount = true;
