@@ -35,8 +35,8 @@
 		if (val) {
 			userResource = JSON.parse(val);
 		} else {
-			const mt = await (await fetch('/data/other-mt.txt')).text();
-			const jw = await (await fetch('/data/other-jw.txt')).text();
+			const mt = await (await fetch('./data/other-mt.txt')).text();
+			const jw = await (await fetch('./data/other-jw.txt')).text();
 			userResource = {
 				Mt: mt.split('\n'),
 				Jewel: jw.split('\n'),
