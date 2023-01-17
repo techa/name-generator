@@ -29,7 +29,7 @@
 
 <div class="add_source flex">
 	<Dropdown class="user-list" let:close>
-		<div slot="trigger" class="btn-set flex">
+		<div slot="trigger" class="btn-set">
 			<input placeholder="DataTitle" required bind:value={title} />
 			<button>↓</button>
 		</div>
@@ -73,24 +73,6 @@
 	.name:hover {
 		font-weight: bold;
 		background-color: var(--base-color);
-	}
-	.btn-set :first-child {
-		border-top-left-radius: 4px;
-		border-bottom-left-radius: 4px;
-
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-
-		box-sizing: border-box;
-	}
-	.btn-set :last-child {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-
-		border-top-right-radius: 4px;
-		border-bottom-right-radius: 4px;
-
-		box-sizing: border-box;
 	}
 	:global(.user-list) {
 		position: absolute;
