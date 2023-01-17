@@ -144,8 +144,6 @@ export class Translator implements TranslatorOptions {
 					result += result.slice(-1);
 				}
 				continue;
-			} else if (char === '・') {
-				result += ' ';
 			}
 
 			if (fromKana[char]) {
