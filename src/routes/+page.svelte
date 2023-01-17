@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import AddSource from '../components/AddSource.svelte';
+	import { base } from '$app/paths';
 
 	import { NameGenerator, type NameResult } from '$lib/NameGenerator.js';
 	import '../global/string/capitalize.js';
@@ -35,8 +36,9 @@
 		if (val) {
 			userResource = JSON.parse(val);
 		} else {
-			const mt = await (await fetch('./data/other-mt.txt')).text();
-			const jw = await (await fetch('./data/other-jw.txt')).text();
+			// https://kit.svelte.dev/docs/modules#$app-paths
+			const mt = await (await fetch(`${base}/data/other-mt.txt`)).text();
+			const jw = await (await fetch(`${base}/data/other-jw.txt`)).text();
 			userResource = {
 				Mt: mt.split('\n'),
 				Jewel: jw.split('\n'),
