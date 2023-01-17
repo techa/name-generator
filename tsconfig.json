@@ -33,6 +33,6 @@
 		"allowJs": true,
 		"checkJs": true,
 		"outDir": ".build",
-		"typeRoots": ["./node_modules/@types", "./types"]
+		"typeRoots": ["./node_modules/@types", "./src/types"]
 	}
 }
