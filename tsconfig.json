@@ -32,15 +32,6 @@
 		"baseUrl": ".",
 		"allowJs": true,
 		"checkJs": true,
-		"paths": {
-			"$lib": [
-				"src/lib"
-			],
-			"$lib/*": [
-				"src/lib/*"
-			],
-			"utility-types":["./types/utility-types.d.js"]
-		},
 		"outDir": ".build",
 		"typeRoots": ["./node_modules/@types", "./types"]
 	},

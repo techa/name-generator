@@ -1,5 +1,3 @@
-import type { UnionToString } from 'utility-types';
-
 /**
  * 母音（vowel）
  */
