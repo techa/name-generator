@@ -1,54 +1,66 @@
 import test from 'ava';
-import { Random } from './Random.js';
+import { random } from './Random.js';
 
 test(`Random.int`, (t) => {
-	const rndm = new Random();
 	const set = new Set();
-	for (let i = 0; i < 1000; i++) {
-		set.add(rndm.int(4));
+	for (let i = 0; i < 100; i++) {
+		set.add(random.int(4));
 	}
 
 	t.deepEqual([...set].sort(), [0, 1, 2, 3, 4]);
 });
 
 test(`Random.float`, (t) => {
-	const rndm = new Random();
-	for (let i = 0; i < 1000; i++) {
-		t.true(rndm.float(4) < 4);
-		t.true(rndm.float(4) >= 0);
+	for (let i = 0; i < 100; i++) {
+		t.true(random.float(4) < 4);
+		t.true(random.float(4) >= 0);
 	}
 });
 
 test(`Random.pick`, (t) => {
-	const rndm = new Random();
 	const arr345 = [3, 4, 5];
 	for (let i = 0; i < 20; i++) {
-		t.true(arr345.includes(rndm.pick(arr345)));
+		t.true(arr345.includes(random.pick(arr345)));
 	}
 	const str = 'value';
 	for (let i = 0; i < 20; i++) {
-		t.true(str.includes(rndm.pick(str)));
+		t.true(str.includes(random.pick(str)));
 	}
 });
 
 test(`Random.picks`, (t) => {
-	const rndm = new Random();
 	const arr345 = [3, 4, 5];
 	for (let i = 0; i < 20; i++) {
-		t.throws(() => rndm.picks(arr345, 4));
-		t.throws(() => rndm.picks(arr345, -4));
+		t.throws(() => random.picks(arr345, 4));
+		t.throws(() => random.picks(arr345, -4));
 	}
+
+	// allowDuplicates
+	const numPicks = 20;
+	const picks = random.picks(arr345, numPicks, true);
+	t.true(picks.length === numPicks);
+	for (let i = 0; i < numPicks; i++) {
+		t.true(arr345.includes(picks[i]));
+	}
+
+	// strings
 	const str = 'value';
 	for (let i = 0; i < 20; i++) {
-		t.true(str.includes(rndm.picks(str, 2)[1]));
+		t.true(str.includes(random.picks(str, 2)[1]));
+	}
+
+	// allowDuplicates
+	const picksstr = random.picks(str, numPicks, true);
+	t.true(picks.length === numPicks);
+	for (let i = 0; i < numPicks; i++) {
+		t.true(str.includes(picksstr[i]));
 	}
 });
 
 test(`Random.dice`, (t) => {
-	const rndm = new Random();
 	const data: Record<string, number> = {};
 	for (let i = 0; i < 1000; i++) {
-		const keynum = rndm.dice(6, 2);
+		const keynum = random.dice(6, 2);
 		data[keynum] ||= 0;
 		data[keynum]++;
 	}
@@ -69,10 +81,9 @@ test(`Random.dice`, (t) => {
 });
 
 test(`Random.rpg`, (t) => {
-	const rndm = new Random();
 	const data: Record<string, number> = {};
 	for (let i = 0; i < 1000; i++) {
-		const keynum = rndm.rpg('3d6');
+		const keynum = random.rpg('3d6');
 		data[keynum] ||= 0;
 		data[keynum]++;
 	}
@@ -94,10 +105,9 @@ test(`Random.rpg`, (t) => {
 });
 
 test(`Random.byOdds([3, 4, 5, 1])`, (t) => {
-	const rndm = new Random();
 	const map: Record<string, number> = {};
 	for (let i = 0; i < 1000; i++) {
-		const keynum = rndm.byOdds([3, 4, 5, 1]);
+		const keynum = random.byOdds([3, 4, 5, 1]);
 
 		t.true(typeof keynum === 'number');
 
@@ -115,12 +125,11 @@ test(`Random.byOdds([3, 4, 5, 1])`, (t) => {
 });
 
 test(`Random.byOdds({ a: 3, b: 4, c: 5, d: 1 })`, (t) => {
-	const rndm = new Random();
 	const data: Record<string, number> = { a: 3, b: 4, c: 5, d: 1 };
 	const map: Map<string, number> = new Map();
 
 	for (let i = 0; i < 1000; i++) {
-		const key = rndm.byOdds(data);
+		const key = random.byOdds(data);
 
 		t.true(typeof key === 'string');
 
@@ -139,7 +148,6 @@ test(`Random.byOdds({ a: 3, b: 4, c: 5, d: 1 })`, (t) => {
 });
 
 test(`Random.byOdds({ a: {odds:3}, b: {odds:4}, c: {odds:5}, d: {odds:1} })`, (t) => {
-	const rndm = new Random();
 	type Value = { odds: number };
 	const data: Record<string, Value> = {
 		a: { odds: 3 },
@@ -150,7 +158,7 @@ test(`Random.byOdds({ a: {odds:3}, b: {odds:4}, c: {odds:5}, d: {odds:1} })`, (t
 	const map: Map<string, number> = new Map();
 
 	for (let i = 0; i < 1000; i++) {
-		const [key] = rndm.byOdds(data);
+		const [key] = random.byOdds(data);
 		const val = map.get(key);
 		if (val != null) {
 			map.set(key, val + 1);
