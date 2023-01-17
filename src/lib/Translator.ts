@@ -168,8 +168,18 @@ export class Translator implements Required<TranslatorOptions> {
 				}
 			}
 
-			if (fromKana[char]) {
-				result += fromKana[char];
+			const current = fromKana[char];
+
+			if (result === current[0]) {
+				result += /[td]/.test(result)
+					? 'o'
+					: /[cTKPGBNM]/.test(result)
+					? 'i'
+					: 'u';
+			}
+
+			if (current) {
+				result += current;
 			} else {
 				console.error(`${kana}: "${char}" is invalid`);
 			}

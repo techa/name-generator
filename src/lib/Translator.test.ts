@@ -40,6 +40,8 @@ test(`fromKana`, (t) => {
 
 	t.is(trans.fromKana('ウィット'), 'wi~t');
 	t.is(trans.fromKana('アウィット'), '_awi~t');
+
+	t.is(trans.fromKana('クケナン'), 'kukenan');
 });
 
 test(`fromKana 2`, (t) => {
