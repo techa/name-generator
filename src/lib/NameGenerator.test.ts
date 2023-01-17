@@ -2,12 +2,17 @@ import test from 'ava';
 import { NameGenerator } from './NameGenerator.js';
 import { MersenneTwister } from '../utils/random/MersenneTwister.js';
 
-import { readFileSync, writeFileSync } from 'fs';
-const list = readFileSync('./resource/exp/female-en.txt', 'utf-8').split('\n');
+import { readFile, writeFile } from 'fs/promises';
+const en = (await readFile('./resource/exp/female-en.txt', 'utf-8')).split(
+	'\n',
+);
+const fr = (await readFile('./resource/exp/female-fr.txt', 'utf-8')).split(
+	'\n',
+);
 
 test(`NameGenerator en`, (t) => {
 	const ng = new NameGenerator();
-	ng.add(list);
+	ng.add(en);
 
 	let s = 0;
 	function random() {
@@ -53,16 +58,13 @@ test(`NameGenerator en`, (t) => {
 			.map(({ kana }) => kana),
 	);
 
-	// writeFileSync(
-	// 	'./resource/syllable/female-en.json',
-	// 	JSON.stringify(ng.data, null, 4),
-	// );
+	writeFile('./resolver/female-en.json', JSON.stringify(ng.data, null, 4));
 });
 
 test(`NameGenerator en fr`, (t) => {
 	const ng = new NameGenerator();
-	ng.add(list);
-	ng.add(readFileSync('./resource/exp/female-fr.txt', 'utf-8').split('\n'));
+	ng.add(en);
+	ng.add(fr);
 
 	let s = 0;
 	function random() {
@@ -112,8 +114,5 @@ test(`NameGenerator en fr`, (t) => {
 			.map(({ kana }) => kana),
 	);
 
-	// writeFileSync(
-	// 	'./resource/syllable/female-en.json',
-	// 	JSON.stringify(ng.data, null, 4),
-	// );
+	writeFile('./resolver/female-en-fr.json', JSON.stringify(ng.data, null, 4));
 });
