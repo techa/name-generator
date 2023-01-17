@@ -56,13 +56,8 @@
 		localStorage.setItem('setting', JSON.stringify(setting));
 	}
 
-	function checkAll(
-		e: Event & {
-			currentTarget: EventTarget & HTMLInputElement;
-		},
-		index: number,
-	) {
-		setting[index] = Array(langs.length).fill(e.currentTarget.checked);
+	function checkAll(checked: boolean, index: number) {
+		setting[index] = Array(setting[index].length).fill(checked);
 	}
 	function reload() {
 		result = [];
@@ -142,7 +137,7 @@
 					<input
 						type="checkbox"
 						on:change={(e) => {
-							checkAll(e, i);
+							checkAll(e.currentTarget.checked, i);
 						}}
 					/>
 					{type.capitalize()}
@@ -164,9 +159,7 @@
 					<input
 						type="checkbox"
 						on:change={(e) => {
-							setting[typel] = Array(setting[typel].length).fill(
-								e.currentTarget.checked,
-							);
+							checkAll(e.currentTarget.checked, typel);
 						}}
 					/>
 					User
