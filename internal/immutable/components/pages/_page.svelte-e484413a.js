@@ -1,5 +1,5 @@
-var rl=Object.defineProperty;var wl=(n,a,l)=>a in n?rl(n,a,{enumerable:!0,configurable:!0,writable:!0,value:l}):n[a]=l;var C=(n,a,l)=>(wl(n,typeof a!="symbol"?a+"":a,l),l),Rl=(n,a,l)=>{if(!a.has(n))throw TypeError("Cannot "+l)};var Za=(n,a,l)=>{if(a.has(n))throw TypeError("Cannot add the same private member more than once");a instanceof WeakSet?a.add(n):a.set(n,l)};var Wa=(n,a,l)=>(Rl(n,a,"access private method"),l);import{S as Ma,i as Ta,s as Ga,C as Xa,k as z,a as K,l as y,m as r,h as p,c as B,n as j,K as Qa,L as _a,b as H,F as f,M as P,G as Ya,H as $a,I as al,f as Sa,t as ca,N as Ea,O as ll,P as il,Q as Nl,q as M,r as T,u as pa,w as cl,x as jl,y as zl,R as ja,z as yl,T as Dl,e as el,U as Kl,V as Bl,W as Hl,X as ua,o as Ml}from"../../chunks/index-c87ce3fe.js";import{b as nl}from"../../chunks/paths-b4419565.js";const Tl=n=>({close:n&1}),ol=n=>({close:n[8]}),Gl=n=>({close:n&1}),_l=n=>({close:n[8]});function El(n){let a,l;return{c(){a=z("button"),l=M(n[1])},l(e){a=y(e,"BUTTON",{});var i=r(a);l=T(i,n[1]),i.forEach(p)},m(e,i){H(e,a,i),f(a,l)},p(e,i){i&2&&pa(l,e[1])},d(e){e&&p(a)}}}function Pl(n){let a,l,e,i,o,_,t,s,m;const b=n[7].trigger,d=Xa(b,n,n[6],_l),h=d||El(n),S=n[7].default,u=Xa(S,n,n[6],ol);return{c(){a=z("div"),l=z("div"),h&&h.c(),e=K(),i=z("div"),u&&u.c(),this.h()},l(k){a=y(k,"DIV",{class:!0});var v=r(a);l=y(v,"DIV",{class:!0});var w=r(l);h&&h.l(w),w.forEach(p),e=B(v),i=y(v,"DIV",{class:!0,style:!0,role:!0});var D=r(i);u&&u.l(D),D.forEach(p),v.forEach(p),this.h()},h(){j(l,"class","label-wapper svelte-9y2yqk"),j(i,"class",o=Qa("dropdown "+(n[5].class||""))+" svelte-9y2yqk"),j(i,"style",_=n[5].style),j(i,"role","tooltip"),_a(i,"hidden",!n[0]),j(a,"class","dropdown-wapper svelte-9y2yqk")},m(k,v){H(k,a,v),f(a,l),h&&h.m(l,null),f(a,e),f(a,i),u&&u.m(i,null),n[9](i),t=!0,s||(m=[P(l,"focusin",n[3]),P(l,"focusout",n[4]),P(i,"focusin",n[3]),P(i,"focusout",n[4])],s=!0)},p(k,[v]){d?d.p&&(!t||v&65)&&Ya(d,b,k,k[6],t?al(b,k[6],v,Gl):$a(k[6]),_l):h&&h.p&&(!t||v&2)&&h.p(k,t?v:-1),u&&u.p&&(!t||v&65)&&Ya(u,S,k,k[6],t?al(S,k[6],v,Tl):$a(k[6]),ol),(!t||v&32&&o!==(o=Qa("dropdown "+(k[5].class||""))+" svelte-9y2yqk"))&&j(i,"class",o),(!t||v&32&&_!==(_=k[5].style))&&j(i,"style",_),(!t||v&33)&&_a(i,"hidden",!k[0])},i(k){t||(Sa(h,k),Sa(u,k),t=!0)},o(k){ca(h,k),ca(u,k),t=!1},d(k){k&&p(a),h&&h.d(k),u&&u.d(k),n[9](null),s=!1,Ea(m)}}}function Vl(n,a,l){let{$$slots:e={},$$scope:i}=a,o,{label:_=""}=a,{open:t=!1}=a,s=!1;const m=()=>(s=!0,setTimeout(()=>s=!1,500)),b=u=>{u.type==="focusin"&&!t&&m(),l(0,t=u.type==="click"&&!s?!t:!0)},d=()=>{setTimeout(()=>o.contains(document.activeElement)||l(0,t=!1),100)},h=()=>l(0,t=!1);function S(u){Nl[u?"unshift":"push"](()=>{o=u,l(2,o)})}return n.$$set=u=>{l(5,a=ll(ll({},a),il(u))),"label"in u&&l(1,_=u.label),"open"in u&&l(0,t=u.open),"$$scope"in u&&l(6,i=u.$$scope)},a=il(a),[t,_,o,b,d,a,i,e,h,S]}class Il extends Ma{constructor(a){super(),Ta(this,a,Vl,Pl,Ga,{label:1,open:0})}}function tl(n,a,l){const e=n.slice();return e[10]=a[l],e}function kl(n,a){let l,e=a[10]+"",i,o,_;function t(){return a[5](a[10],a[9])}return{key:n,first:null,c(){l=z("button"),i=M(e),this.h()},l(s){l=y(s,"BUTTON",{class:!0});var m=r(l);i=T(m,e),m.forEach(p),this.h()},h(){j(l,"class","name svelte-1cx7qsm"),this.first=l},m(s,m){H(s,l,m),f(l,i),o||(_=P(l,"click",t),o=!0)},p(s,m){a=s,m&1&&e!==(e=a[10]+"")&&pa(i,e)},d(s){s&&p(l),o=!1,_()}}}function Ol(n){let a=[],l=new Map,e,i=Object.keys(n[0]);const o=_=>_[10];for(let _=0;_<i.length;_+=1){let t=tl(n,i,_),s=o(t);l.set(s,a[_]=kl(s,t))}return{c(){for(let _=0;_<a.length;_+=1)a[_].c();e=el()},l(_){for(let t=0;t<a.length;t+=1)a[t].l(_);e=el()},m(_,t){for(let s=0;s<a.length;s+=1)a[s].m(_,t);H(_,e,t)},p(_,t){t&519&&(i=Object.keys(_[0]),a=Kl(a,t,o,1,_,i,l,e.parentNode,Bl,kl,e,tl))},d(_){for(let t=0;t<a.length;t+=1)a[t].d(_);_&&p(e)}}}function Al(n){let a,l,e,i,o,_,t;return{c(){a=z("div"),l=z("input"),e=K(),i=z("button"),o=M("↓"),this.h()},l(s){a=y(s,"DIV",{slot:!0,class:!0});var m=r(a);l=y(m,"INPUT",{placeholder:!0,class:!0}),e=B(m),i=y(m,"BUTTON",{});var b=r(i);o=T(b,"↓"),b.forEach(p),m.forEach(p),this.h()},h(){j(l,"placeholder","DataTitle"),l.required=!0,j(l,"class","svelte-1cx7qsm"),j(a,"slot","trigger"),j(a,"class","btn-set")},m(s,m){H(s,a,m),f(a,l),ja(l,n[1]),f(a,e),f(a,i),f(i,o),_||(t=P(l,"input",n[4]),_=!0)},p(s,m){m&2&&l.value!==s[1]&&ja(l,s[1])},d(s){s&&p(a),_=!1,t()}}}function Fl(n){let a,l,e,i,o=n[2]?n[0][n[1]]?"Save":"+ Add":"- Remove",_,t,s,m,b,d,h,S,u;return l=new Il({props:{class:"user-list",$$slots:{trigger:[Al,({close:k})=>({9:k}),({close:k})=>k?512:0],default:[Ol,({close:k})=>({9:k}),({close:k})=>k?512:0]},$$scope:{ctx:n}}}),{c(){a=z("div"),cl(l.$$.fragment),e=K(),i=z("button"),_=M(o),t=K(),s=z("button"),m=M("Clear"),b=K(),d=z("textarea"),this.h()},l(k){a=y(k,"DIV",{class:!0});var v=r(a);jl(l.$$.fragment,v),e=B(v),i=y(v,"BUTTON",{});var w=r(i);_=T(w,o),w.forEach(p),t=B(v),s=y(v,"BUTTON",{});var D=r(s);m=T(D,"Clear"),D.forEach(p),v.forEach(p),b=B(k),d=y(k,"TEXTAREA",{placeholder:!0,class:!0}),r(d).forEach(p),this.h()},h(){j(a,"class","add_source flex svelte-1cx7qsm"),j(d,"placeholder","カタカナを抽出してリスト化する"),j(d,"class","svelte-1cx7qsm")},m(k,v){H(k,a,v),zl(l,a,null),f(a,e),f(a,i),f(i,_),f(a,t),f(a,s),f(s,m),H(k,b,v),H(k,d,v),ja(d,n[2]),h=!0,S||(u=[P(i,"click",n[3]),P(s,"click",n[6]),P(d,"input",n[7])],S=!0)},p(k,[v]){const w={};v&8711&&(w.$$scope={dirty:v,ctx:k}),l.$set(w),(!h||v&7)&&o!==(o=k[2]?k[0][k[1]]?"Save":"+ Add":"- Remove")&&pa(_,o),v&4&&ja(d,k[2])},i(k){h||(Sa(l.$$.fragment,k),h=!0)},o(k){ca(l.$$.fragment,k),h=!1},d(k){k&&p(a),yl(l),k&&p(b),k&&p(d),S=!1,Ea(u)}}}function Ul(n,a,l){const e=Dl();let i="Title",o="",{userResource:_={}}=a;function t(){if(i){const h=o.split(/[^ァ-ー・＝]+/).filter(S=>S);h.length?l(0,_[i]=h,_):delete _[i],e("save",{title:i,data:h,text:o})}}function s(){i=this.value,l(1,i)}const m=(h,S)=>{l(1,i=h),l(2,o=_[i].join(`
-`)),S()},b=()=>l(2,o="");function d(){o=this.value,l(2,o)}return n.$$set=h=>{"userResource"in h&&l(0,_=h.userResource)},[_,i,o,t,s,m,b,d]}class Cl extends Ma{constructor(a){super(),Ta(this,a,Ul,Fl,Ga,{userResource:0})}}class Ll{next(){return Math.random()}int(a,l=0){return a<l&&([a,l]=[l,a]),Math.floor((a-l+1)*this.next()+l)}float(a=1,l=0){return a<l&&([a,l]=[l,a]),(a-l)*this.next()+l}bool(a=.5){return this.next()<=a}pick(a){return a[this.int(a.length-1)]}picks(a,l,e=!1){if(l<0)throw new Error("Invalid number of elements to pick, must pick a value 0 <= n");if(l===0)return[];if(l===a.length)return Array.from(a);if(e){const o=new Array(l);for(let _=0;_<l;_++)o[_]=this.pick(a);return o}if(l>a.length)throw new Error("Invalid number of elements to pick, must pick a value n <= length");const i=new Set;for(;i.size<l;)i.add(this.pick(a));return[...i]}shuffle(a){const l=a.slice(0);let e=null;for(let i=0;i<l.length-2;i++){const o=this.int(i,l.length-1);e=l[i],l[i]=l[o],l[o]=e}return l}dice(a,l=1){if(a<2||l<1)throw new Error("Invalid number, must sided a value 2 <= n, must times a value 1 <= n.");let e=0;for(;l--;)e+=this.int(1,a);return e}rpg(a){const[l,e]=a.split(/d/i).map(i=>+i||1);return this.dice(e,l)}byOdds(a,l="odds"){const e=Object.entries(a);let i=!0,o=0;for(const[s,m]of e)if(typeof m=="number")o+=m;else if(m&&typeof m[l]=="number")o+=m[l],i=!1;else throw new Error(`byOdds: obj[${s}][${l}]=${m} or ${m[l]}`);const _=o*this.float();let t=0;for(const[s,m]of e)if(t+=i?m:m[l],_<t)return i?Array.isArray(a)?+s:s:[s,m]}}const ql=new Ll,Jl="aiueo",Zl="_ywkstpfgzdbvKcSTPFGZjDBVhHxnNmMrlR";function Pa(n,a=""){return(Jl+a).includes(n)}function fa(n,a=""){return(Zl+a).includes(n)}function Wl(n){let a="";for(const l of n)a+=fa(l)?"C":Pa(l)?"V":l;return a}function Xl(n){const a=[];let l=-1,e="";for(let i=0;i<n.length;i++){const o=n[i];if(e+=o,o===" "){a.push(e),e="",l=-1;continue}if(Pa(o,"-AIUEO")){if(l>=0){const _=e.length;if(i-l===1){const t=o==="-"?_:_-1;a.push(e.substring(0,t)),e=e.substring(t,_)}else{const t=e.substring(0,_-2);t&&a.push(t),e=e.substring(_-2,_)}}l=i}}if(e.length>0){const i=Wl(e);if(i==="C")a[a.length-1]+=e;else if(/.CC$/.test(i)){const o=e.length;a.push(e.substring(0,o-2)),a.push(e.substring(o-2,o))}else a.push(e.trim())}return a}const J={"":""," ":"・",_:"",a:"ァ",i:"ィ",u:"ュ",e:"ェ",o:"ォ",A:"ア",I:"イ",U:"ウ",E:"エ",O:"オ",_a:"ア",_i:"イ",_u:"ウ",_e:"エ",_o:"オ",y:"ィ",ya:"ヤ",yi:"ユィ",yu:"ユ",ye:"イェ",yo:"ヨ",w:"ゥ",wa:"ワ",wi:"ウィ",wu:"ウ",we:"ウェ",wo:"ウォ",k:"ク",ka:"カ",ki:"キ",ku:"ク",ke:"ケ",ko:"コ",s:"ス",sa:"サ",si:"スィ",su:"ス",se:"セ",so:"ソ",t:"ト",ta:"タ",ti:"ティ",tu:"トゥ",te:"テ",to:"ト",p:"プ",pa:"パ",pi:"ピ",pu:"プ",pe:"ペ",po:"ポ",f:"フ",fa:"ファ",fi:"フィ",fu:"フ",fe:"フェ",fo:"フォ",g:"グ",ga:"ガ",gi:"ギ",gu:"グ",ge:"ゲ",go:"ゴ",z:"ズ",za:"ザ",zi:"ズィ",zu:"ズ",ze:"ゼ",zo:"ゾ",d:"ド",da:"ダ",di:"ディ",du:"ドゥ",de:"デ",do:"ド",b:"ブ",ba:"バ",bi:"ビ",bu:"ブ",be:"ベ",bo:"ボ",v:"ヴ",va:"ヴァ",vi:"ヴィ",vu:"ヴ",ve:"ヴェ",vo:"ヴォ",K:"クィ",Ka:"キャ",Ki:"クィ",Ku:"キュ",Ke:"キェ",Ko:"キョ",c:"チ",ca:"チャ",ci:"チ",cu:"チュ",ce:"チェ",co:"チョ",S:"シュ",Sa:"シャ",Si:"シ",Su:"スュ",Se:"シェ",So:"ショ",T:"トィ",Ta:"テャ",Ti:"トィ",Tu:"テュ",Te:"テェ",To:"テョ",P:"プィ",Pa:"ピャ",Pi:"プィ",Pu:"ピュ",Pe:"ピェ",Po:"ピョ",F:"フュ",Fa:"フャ",Fi:"フィ",Fu:"フュ",Fe:"フェ",Fo:"フョ",G:"グィ",Ga:"ギャ",Gi:"グィ",Gu:"ギュ",Ge:"ギェ",Go:"ギョ",j:"ジュ",ja:"ジャ",ji:"ジ",ju:"ジュ",je:"ジェ",jo:"ジョ",Z:"ジュ",Za:"ジャ",Zi:"ジ",Zu:"ジュ",Ze:"ジェ",Zo:"ジョ",D:"デュ",Da:"デャ",Di:"ディ",Du:"デュ",De:"デェ",Do:"デョ",B:"ブィ",Ba:"ビャ",Bi:"ブィ",Bu:"ビュ",Be:"ビェ",Bo:"ビョ",V:"ヴィ",Va:"ヴャ",Vi:"ヴィ",Vu:"ヴュ",Ve:"ヴェ",Vo:"ヴョ",h:"フ",ha:"ハ",hi:"ヒ",hu:"フ",he:"ヘ",ho:"ホ",H:"ヒュ",Ha:"ヒャ",Hi:"ヒィ",Hu:"ヒュ",He:"ヒェ",Ho:"ヒョ",x:"ツ",xa:"ツァ",xi:"ツィ",xu:"ツ",xe:"ツェ",xo:"ツォ",n:"ン",na:"ナ",ni:"ニ",nu:"ヌ",ne:"ネ",no:"ノ",N:"ヌィ",Na:"ニャ",Ni:"ヌィ",Nu:"ニュ",Ne:"ニェ",No:"ニョ",m:"ム",ma:"マ",mi:"ミ",mu:"ム",me:"メ",mo:"モ",M:"ムィ",Ma:"ミャ",Mi:"ムィ",Mu:"ミュ",Me:"ミェ",Mo:"ミョ",l:"ル",la:"ラ",li:"リ",lu:"ル",le:"レ",lo:"ロ",r:"ル",ra:"ラ",ri:"リ",ru:"ル",re:"レ",ro:"ロ",R:"リュ",Ra:"リャ",Ri:"ルィ",Ru:"リュ",Re:"リェ",Ro:"リョ"},da=Object.entries(J).reduce((n,a)=>{const[l,e]=a;return n[e]??(n[e]=l),n},{ヮ:"a",ドィ:"Di",ラュ:"Ru",マュ:"Mu",ダュ:"Du",ブュ:"Bu"});class Ql{constructor(a){C(this,"longVowel","-");C(this,"longConsonant","~");C(this,"longConsonantPosition","before");C(this,"consonantForVowels","_");C(this,"fromKanaMissings",new Set);this.setOptions(a)}setOptions(a={}){for(const l in a)this[l]=a[l]??this[l]}toKana(a){let l="",e="";for(let i=0;i<a.length;i++){const o=a[i],_=a[i+1];if(/[AIUEO]/.test(o))l+=J[o];else if(Pa(o))e&&J[e+o]?l+=J[e+o]:o===e?l+="ー":e==="~"&&a[i-2]?l+=J[a[i-2]+o]:/[AIUEO]/.test(e)?l+=J[o]:l+=J["_"+o];else if(fa(o))_?o!=="n"&&_===o?l+="ッ":(fa(_)||_==="-"||_==="~"&&a[i+2]&&fa(a[i+2]))&&(l+=J[o]):l+=J[o];else switch(o){case"-":l+="ー";break;case"~":!_&&e&&fa(e)&&(l+="ッ"),l+=_?"ッ":J[e];break;case" ":l+="・";break}e=o}return l}fromKana(a){let l="";for(let e=0;e<a.length;e++){let i=a[e];const o=a[e+1];if(/[ャュョァィゥェォヮ]/.test(o))da[i+o]?(i+=o,e++):this.fromKanaMissings.add(i+o);else if(i==="ッ"){if(this.longConsonant==="~")if(this.longConsonantPosition==="after"){const t=da[o];l+=t[0]+"~"+(t[1]||""),e++}else l+="~";else i=o,l+=da[i][0];continue}else if(i==="ー"){this.longVowel==="-"?l+="-":l+=l.slice(-1);continue}if(/[アイウエオ]/.test(i)&&i.length===1){const t=da[i].toLowerCase();switch(this.consonantForVowels){case"lower":l+=t;continue;case"_":l+="_"+t;continue}}const _=da[i];l===_[0]&&(l+=/[td]/.test(l)?"o":/[cTKPGBNM]/.test(l)?"i":"u"),_?l+=_:console.error(`${a}: "${i}" is invalid`)}return l}}var za,xl;class Yl{constructor(){Za(this,za);C(this,"minSyllable",2);C(this,"maxSyllable",8);C(this,"data",{});C(this,"splitter",1);C(this,"names",new Set);C(this,"translator",new Ql);C(this,"random",ql)}clear(){this.data={},this.names=new Set}add(a,l=!1){for(let e=0;e<a.length;e++){const i=l?this.translator.fromKana(a[e]):a[e];if(i)if(this.names.add(i),this.splitter===1){const o=Xl(i);this.set("^",o[0]);for(let _=0;_<o.length;_+=1){const t=o[_],s=o[_+1]||"$";t&&s&&this.set(t,s)}}else{this.set("^",i.slice(0,1));const o=this.splitter;for(let _=0;_<=i.length-o;_+=1){const t=_+o,s=i.slice(_,t),m=i.slice(t,t+o)||"$";s&&m&&this.set(s,m)}}}}set(a,l){var i;const e=this.data[a]||{nexts:{},total:0};(i=e.nexts)[l]||(i[l]=0),e.total+=1,e.nexts[l]+=1,this.data[a]=e}create(a={}){if(a.random!=null&&(this.random=a.random),this.splitter>1)return Wa(this,za,xl).call(this,a);let l=typeof a.count=="number"?a.count:this.random.int(...a.count||[this.minSyllable,this.maxSyllable]),e=0,i="",o="^";for(;l--;){const _=this.data[o],t=e<this.minSyllable&&_.nexts.$||0,s=(_.total-t)*this.random.float();let m=0;if(_.nexts.$&&e>4)break;for(const b in _.nexts)if(!(b==="$"&&t)&&s<=(m+=_.nexts[b])){o=b;break}if(!o||o==="$")break;o.endsWith(" ")&&l++,i!==o&&(i+=o,e++)}return{exp:i,kana:this.translator.toKana(i),syllables:e,exist:this.names.has(i)}}parseRule(a){}creaty(a){}}za=new WeakSet,xl=function(a={}){const l=typeof a.count=="number"?a.count:this.random.int(...a.count||[5,10]);let e="",i="^";const o=Object.keys(this.data);for(;e.length<l&&i!=="$";){const _=o.filter(h=>h.startsWith(i)),t=this.random.pick(_.length?_:o),s=this.data[t];if(!s)break;const m=e.length<3&&s.nexts.$||0,b=(s.total-m)*this.random.float();let d=0;for(const h in s.nexts){if(h==="$"&&m){i=this.random.pick(o);continue}if(b<=(d+=s.nexts[h])){e+=t==="^"?"":t,i=h;break}}}return{exp:e,kana:this.translator.toKana(e),syllables:0,exist:this.names.has(e)}};function $l(){if(!this||this.length===0)return"";const n=this.toLowerCase();return n[0].toUpperCase()+n.substring(1,n.length)}String.prototype.capitalize=$l;const oa=["family","female","male"],ba=["en","de","fr","it","es","sv","fi","ru","cs","nl","ar"],ai=["英","ドイツ","フランス","イタリア","スペイン","スウェーデン","フィンランド","ロシア","チェコ","オランダ","アラビア"],li=`_a-lon
+var Bl=Object.defineProperty;var Hl=(i,a,l)=>a in i?Bl(i,a,{enumerable:!0,configurable:!0,writable:!0,value:l}):i[a]=l;var q=(i,a,l)=>(Hl(i,typeof a!="symbol"?a+"":a,l),l),Ml=(i,a,l)=>{if(!a.has(i))throw TypeError("Cannot "+l)};var Xa=(i,a,l)=>{if(a.has(i))throw TypeError("Cannot add the same private member more than once");a instanceof WeakSet?a.add(i):a.set(i,l)};var Ya=(i,a,l)=>(Ml(i,a,"access private method"),l);import{S as Ga,i as Ea,s as Pa,C as Qa,k as j,a as K,l as z,m as x,h as v,c as B,n as S,K as $a,L as ma,b as M,F as u,M as E,G as al,H as ll,I as il,f as xa,t as ra,N as Va,O as el,P as nl,Q as Tl,q as T,r as G,u as ca,w as rl,x as wl,y as Rl,R as da,z as Nl,T as Gl,e as ol,U as El,V as Pl,W as Vl,X as Dl,Y as Sa,o as Il}from"../../chunks/index-387d914d.js";import{b as _l}from"../../chunks/paths-b4419565.js";const Ol=i=>({close:i&1}),tl=i=>({close:i[8]}),Al=i=>({close:i&1}),kl=i=>({close:i[8]});function Fl(i){let a,l;return{c(){a=j("button"),l=T(i[1])},l(e){a=z(e,"BUTTON",{});var n=x(a);l=G(n,i[1]),n.forEach(v)},m(e,n){M(e,a,n),u(a,l)},p(e,n){n&2&&ca(l,e[1])},d(e){e&&v(a)}}}function Ul(i){let a,l,e,n,_,o,t,k,d;const h=i[7].trigger,m=Qa(h,i,i[6],kl),f=m||Fl(i),r=i[7].default,p=Qa(r,i,i[6],tl);return{c(){a=j("div"),l=j("div"),f&&f.c(),e=K(),n=j("div"),p&&p.c(),this.h()},l(s){a=z(s,"DIV",{class:!0});var b=x(a);l=z(b,"DIV",{class:!0});var w=x(l);f&&f.l(w),w.forEach(v),e=B(b),n=z(b,"DIV",{class:!0,style:!0,role:!0});var y=x(n);p&&p.l(y),y.forEach(v),b.forEach(v),this.h()},h(){S(l,"class","label-wapper svelte-9y2yqk"),S(n,"class",_=$a("dropdown "+(i[5].class||""))+" svelte-9y2yqk"),S(n,"style",o=i[5].style),S(n,"role","tooltip"),ma(n,"hidden",!i[0]),S(a,"class","dropdown-wapper svelte-9y2yqk")},m(s,b){M(s,a,b),u(a,l),f&&f.m(l,null),u(a,e),u(a,n),p&&p.m(n,null),i[9](n),t=!0,k||(d=[E(l,"focusin",i[3]),E(l,"focusout",i[4]),E(n,"focusin",i[3]),E(n,"focusout",i[4])],k=!0)},p(s,[b]){m?m.p&&(!t||b&65)&&al(m,h,s,s[6],t?il(h,s[6],b,Al):ll(s[6]),kl):f&&f.p&&(!t||b&2)&&f.p(s,t?b:-1),p&&p.p&&(!t||b&65)&&al(p,r,s,s[6],t?il(r,s[6],b,Ol):ll(s[6]),tl),(!t||b&32&&_!==(_=$a("dropdown "+(s[5].class||""))+" svelte-9y2yqk"))&&S(n,"class",_),(!t||b&32&&o!==(o=s[5].style))&&S(n,"style",o),(!t||b&33)&&ma(n,"hidden",!s[0])},i(s){t||(xa(f,s),xa(p,s),t=!0)},o(s){ra(f,s),ra(p,s),t=!1},d(s){s&&v(a),f&&f.d(s),p&&p.d(s),i[9](null),k=!1,Va(d)}}}function Cl(i,a,l){let{$$slots:e={},$$scope:n}=a,_,{label:o=""}=a,{open:t=!1}=a,k=!1;const d=()=>(k=!0,setTimeout(()=>k=!1,500)),h=p=>{p.type==="focusin"&&!t&&d(),l(0,t=p.type==="click"&&!k?!t:!0)},m=()=>{setTimeout(()=>_.contains(document.activeElement)||l(0,t=!1),100)},f=()=>l(0,t=!1);function r(p){Tl[p?"unshift":"push"](()=>{_=p,l(2,_)})}return i.$$set=p=>{l(5,a=el(el({},a),nl(p))),"label"in p&&l(1,o=p.label),"open"in p&&l(0,t=p.open),"$$scope"in p&&l(6,n=p.$$scope)},a=nl(a),[t,o,_,h,m,a,n,e,f,r]}class Ll extends Ga{constructor(a){super(),Ea(this,a,Cl,Ul,Pa,{label:1,open:0})}}function sl(i,a,l){const e=i.slice();return e[10]=a[l],e}function ml(i,a){let l,e=a[10]+"",n,_,o;function t(){return a[5](a[10],a[9])}return{key:i,first:null,c(){l=j("button"),n=T(e),this.h()},l(k){l=z(k,"BUTTON",{class:!0});var d=x(l);n=G(d,e),d.forEach(v),this.h()},h(){S(l,"class","name svelte-1cx7qsm"),this.first=l},m(k,d){M(k,l,d),u(l,n),_||(o=E(l,"click",t),_=!0)},p(k,d){a=k,d&1&&e!==(e=a[10]+"")&&ca(n,e)},d(k){k&&v(l),_=!1,o()}}}function ql(i){let a=[],l=new Map,e,n=Object.keys(i[0]);const _=o=>o[10];for(let o=0;o<n.length;o+=1){let t=sl(i,n,o),k=_(t);l.set(k,a[o]=ml(k,t))}return{c(){for(let o=0;o<a.length;o+=1)a[o].c();e=ol()},l(o){for(let t=0;t<a.length;t+=1)a[t].l(o);e=ol()},m(o,t){for(let k=0;k<a.length;k+=1)a[k].m(o,t);M(o,e,t)},p(o,t){t&519&&(n=Object.keys(o[0]),a=El(a,t,_,1,o,n,l,e.parentNode,Pl,ml,e,sl))},d(o){for(let t=0;t<a.length;t+=1)a[t].d(o);o&&v(e)}}}function Zl(i){let a,l,e,n,_,o,t;return{c(){a=j("div"),l=j("input"),e=K(),n=j("button"),_=T("↓"),this.h()},l(k){a=z(k,"DIV",{slot:!0,class:!0});var d=x(a);l=z(d,"INPUT",{placeholder:!0,class:!0}),e=B(d),n=z(d,"BUTTON",{});var h=x(n);_=G(h,"↓"),h.forEach(v),d.forEach(v),this.h()},h(){S(l,"placeholder","DataTitle"),l.required=!0,S(l,"class","svelte-1cx7qsm"),S(a,"slot","trigger"),S(a,"class","btn-set")},m(k,d){M(k,a,d),u(a,l),da(l,i[1]),u(a,e),u(a,n),u(n,_),o||(t=E(l,"input",i[4]),o=!0)},p(k,d){d&2&&l.value!==k[1]&&da(l,k[1])},d(k){k&&v(a),o=!1,t()}}}function Jl(i){let a,l,e,n,_=i[2]?i[0][i[1]]?"Save":"+ Add":"- Remove",o,t,k,d,h,m,f,r,p;return l=new Ll({props:{class:"user-list",$$slots:{trigger:[Zl,({close:s})=>({9:s}),({close:s})=>s?512:0],default:[ql,({close:s})=>({9:s}),({close:s})=>s?512:0]},$$scope:{ctx:i}}}),{c(){a=j("div"),rl(l.$$.fragment),e=K(),n=j("button"),o=T(_),t=K(),k=j("button"),d=T("Clear"),h=K(),m=j("textarea"),this.h()},l(s){a=z(s,"DIV",{class:!0});var b=x(a);wl(l.$$.fragment,b),e=B(b),n=z(b,"BUTTON",{});var w=x(n);o=G(w,_),w.forEach(v),t=B(b),k=z(b,"BUTTON",{});var y=x(k);d=G(y,"Clear"),y.forEach(v),b.forEach(v),h=B(s),m=z(s,"TEXTAREA",{placeholder:!0,class:!0}),x(m).forEach(v),this.h()},h(){S(a,"class","add_source flex svelte-1cx7qsm"),S(m,"placeholder","カタカナを抽出してリスト化する"),S(m,"class","svelte-1cx7qsm")},m(s,b){M(s,a,b),Rl(l,a,null),u(a,e),u(a,n),u(n,o),u(a,t),u(a,k),u(k,d),M(s,h,b),M(s,m,b),da(m,i[2]),f=!0,r||(p=[E(n,"click",i[3]),E(k,"click",i[6]),E(m,"input",i[7])],r=!0)},p(s,[b]){const w={};b&8711&&(w.$$scope={dirty:b,ctx:s}),l.$set(w),(!f||b&7)&&_!==(_=s[2]?s[0][s[1]]?"Save":"+ Add":"- Remove")&&ca(o,_),b&4&&da(m,s[2])},i(s){f||(xa(l.$$.fragment,s),f=!0)},o(s){ra(l.$$.fragment,s),f=!1},d(s){s&&v(a),Nl(l),s&&v(h),s&&v(m),r=!1,Va(p)}}}function Wl(i,a,l){const e=Gl();let n="Title",_="",{userResource:o={}}=a;function t(){if(n){const f=_.split(/[^ァ-ー・＝]+/).filter(r=>r);f.length?l(0,o[n]=f,o):delete o[n],e("save",{title:n,data:f,text:_})}}function k(){n=this.value,l(1,n)}const d=(f,r)=>{l(1,n=f),l(2,_=o[n].join(`
+`)),r()},h=()=>l(2,_="");function m(){_=this.value,l(2,_)}return i.$$set=f=>{"userResource"in f&&l(0,o=f.userResource)},[o,n,_,t,k,d,h,m]}class Xl extends Ga{constructor(a){super(),Ea(this,a,Wl,Jl,Pa,{userResource:0})}}class Yl{next(){return Math.random()}int(a,l=0){return a<l&&([a,l]=[l,a]),Math.floor((a-l+1)*this.next()+l)}float(a=1,l=0){return a<l&&([a,l]=[l,a]),(a-l)*this.next()+l}bool(a=.5){return this.next()<=a}pick(a){return a[this.int(a.length-1)]}picks(a,l,e=!1){if(l<0)throw new Error("Invalid number of elements to pick, must pick a value 0 <= n");if(l===0)return[];if(l===a.length)return Array.from(a);if(e){const _=new Array(l);for(let o=0;o<l;o++)_[o]=this.pick(a);return _}if(l>a.length)throw new Error("Invalid number of elements to pick, must pick a value n <= length");const n=new Set;for(;n.size<l;)n.add(this.pick(a));return[...n]}shuffle(a){const l=a.slice(0);let e=null;for(let n=0;n<l.length-2;n++){const _=this.int(n,l.length-1);e=l[n],l[n]=l[_],l[_]=e}return l}dice(a,l=1){if(a<2||l<1)throw new Error("Invalid number, must sided a value 2 <= n, must times a value 1 <= n.");let e=0;for(;l--;)e+=this.int(1,a);return e}rpg(a){const[l,e]=a.split(/d/i).map(n=>+n||1);return this.dice(e,l)}byOdds(a,l="odds"){const e=Object.entries(a);let n=!0,_=0;for(const[k,d]of e)if(typeof d=="number")_+=d;else if(d&&typeof d[l]=="number")_+=d[l],n=!1;else throw new Error(`byOdds: obj[${k}][${l}]=${d} or ${d[l]}`);const o=_*this.float();let t=0;for(const[k,d]of e)if(t+=n?d:d[l],o<t)return n?Array.isArray(a)?+k:k:[k,d]}}const Ql=new Yl,$l="aiueo",ai="_ywkstpfgzdbvKcSTPFGZjDBVhHxnNmMrlR";function Ia(i,a=""){return($l+a).includes(i)}function va(i,a=""){return(ai+a).includes(i)}function li(i){let a="";for(const l of i)a+=va(l)?"C":Ia(l)?"V":l;return a}function ii(i){const a=[];let l=-1,e="";for(let n=0;n<i.length;n++){const _=i[n];if(e+=_,_===" "){a.push(e),e="",l=-1;continue}if(Ia(_,"-AIUEO")){if(l>=0){const o=e.length;if(n-l===1){const t=_==="-"?o:o-1;a.push(e.substring(0,t)),e=e.substring(t,o)}else{const t=e.substring(0,o-2);t&&a.push(t),e=e.substring(o-2,o)}}l=n}}if(e.length>0){const n=li(e);if(n==="C")a[a.length-1]+=e;else if(/.CC$/.test(n)){const _=e.length;a.push(e.substring(0,_-2)),a.push(e.substring(_-2,_))}else a.push(e.trim())}return a}const $={"":""," ":"・",_:"",a:"ァ",i:"ィ",u:"ュ",e:"ェ",o:"ォ",A:"ア",I:"イ",U:"ウ",E:"エ",O:"オ",_a:"ア",_i:"イ",_u:"ウ",_e:"エ",_o:"オ",y:"ィ",ya:"ヤ",yi:"ユィ",yu:"ユ",ye:"イェ",yo:"ヨ",w:"ゥ",wa:"ワ",wi:"ウィ",wu:"ウ",we:"ウェ",wo:"ウォ",k:"ク",ka:"カ",ki:"キ",ku:"ク",ke:"ケ",ko:"コ",s:"ス",sa:"サ",si:"スィ",su:"ス",se:"セ",so:"ソ",t:"ト",ta:"タ",ti:"ティ",tu:"トゥ",te:"テ",to:"ト",p:"プ",pa:"パ",pi:"ピ",pu:"プ",pe:"ペ",po:"ポ",f:"フ",fa:"ファ",fi:"フィ",fu:"フ",fe:"フェ",fo:"フォ",g:"グ",ga:"ガ",gi:"ギ",gu:"グ",ge:"ゲ",go:"ゴ",z:"ズ",za:"ザ",zi:"ズィ",zu:"ズ",ze:"ゼ",zo:"ゾ",d:"ド",da:"ダ",di:"ディ",du:"ドゥ",de:"デ",do:"ド",b:"ブ",ba:"バ",bi:"ビ",bu:"ブ",be:"ベ",bo:"ボ",v:"ヴ",va:"ヴァ",vi:"ヴィ",vu:"ヴ",ve:"ヴェ",vo:"ヴォ",K:"クィ",Ka:"キャ",Ki:"クィ",Ku:"キュ",Ke:"キェ",Ko:"キョ",c:"チ",ca:"チャ",ci:"チ",cu:"チュ",ce:"チェ",co:"チョ",S:"シュ",Sa:"シャ",Si:"シ",Su:"スュ",Se:"シェ",So:"ショ",T:"トィ",Ta:"テャ",Ti:"トィ",Tu:"テュ",Te:"テェ",To:"テョ",P:"プィ",Pa:"ピャ",Pi:"プィ",Pu:"ピュ",Pe:"ピェ",Po:"ピョ",F:"フュ",Fa:"フャ",Fi:"フィ",Fu:"フュ",Fe:"フェ",Fo:"フョ",G:"グィ",Ga:"ギャ",Gi:"グィ",Gu:"ギュ",Ge:"ギェ",Go:"ギョ",j:"ジュ",ja:"ジャ",ji:"ジ",ju:"ジュ",je:"ジェ",jo:"ジョ",Z:"ジュ",Za:"ジャ",Zi:"ジ",Zu:"ジュ",Ze:"ジェ",Zo:"ジョ",D:"デュ",Da:"デャ",Di:"ディ",Du:"デュ",De:"デェ",Do:"デョ",B:"ブィ",Ba:"ビャ",Bi:"ブィ",Bu:"ビュ",Be:"ビェ",Bo:"ビョ",V:"ヴィ",Va:"ヴャ",Vi:"ヴィ",Vu:"ヴュ",Ve:"ヴェ",Vo:"ヴョ",h:"フ",ha:"ハ",hi:"ヒ",hu:"フ",he:"ヘ",ho:"ホ",H:"ヒュ",Ha:"ヒャ",Hi:"ヒィ",Hu:"ヒュ",He:"ヒェ",Ho:"ヒョ",x:"ツ",xa:"ツァ",xi:"ツィ",xu:"ツ",xe:"ツェ",xo:"ツォ",n:"ン",na:"ナ",ni:"ニ",nu:"ヌ",ne:"ネ",no:"ノ",N:"ヌィ",Na:"ニャ",Ni:"ヌィ",Nu:"ニュ",Ne:"ニェ",No:"ニョ",m:"ム",ma:"マ",mi:"ミ",mu:"ム",me:"メ",mo:"モ",M:"ムィ",Ma:"ミャ",Mi:"ムィ",Mu:"ミュ",Me:"ミェ",Mo:"ミョ",l:"ル",la:"ラ",li:"リ",lu:"ル",le:"レ",lo:"ロ",r:"ル",ra:"ラ",ri:"リ",ru:"ル",re:"レ",ro:"ロ",R:"リュ",Ra:"リャ",Ri:"ルィ",Ru:"リュ",Re:"リェ",Ro:"リョ"},ha=Object.entries($).reduce((i,a)=>{const[l,e]=a;return i[e]??(i[e]=l),i},{ヮ:"a",ドィ:"Di",ラュ:"Ru",マュ:"Mu",ダュ:"Du",ブュ:"Bu"});class ei{constructor(a){q(this,"longVowel","-");q(this,"longConsonant","~");q(this,"longConsonantPosition","before");q(this,"consonantForVowels","_");q(this,"fromKanaMissings",new Set);this.setOptions(a)}setOptions(a={}){for(const l in a)this[l]=a[l]??this[l]}toKana(a){let l="",e="";for(let n=0;n<a.length;n++){const _=a[n],o=a[n+1];if(/[AIUEO]/.test(_))l+=$[_];else if(Ia(_))e&&$[e+_]?l+=$[e+_]:_===e?l+="ー":e==="~"&&a[n-2]?l+=$[a[n-2]+_]:/[AIUEO]/.test(e)?l+=$[_]:l+=$["_"+_];else if(va(_))o?_!=="n"&&o===_?l+="ッ":(va(o)||o==="-"||o==="~"&&a[n+2]&&va(a[n+2]))&&(l+=$[_]):l+=$[_];else switch(_){case"-":l+="ー";break;case"~":!o&&e&&va(e)&&(l+="ッ"),l+=o?"ッ":$[e];break;case" ":l+="・";break}e=_}return l}fromKana(a){let l="";for(let e=0;e<a.length;e++){let n=a[e];const _=a[e+1];if(/[ャュョァィゥェォヮ]/.test(_))ha[n+_]?(n+=_,e++):this.fromKanaMissings.add(n+_);else if(n==="ッ"){if(this.longConsonant==="~")if(this.longConsonantPosition==="after"){const t=ha[_];l+=t[0]+"~"+(t[1]||""),e++}else l+="~";else n=_,l+=ha[n][0];continue}else if(n==="ー"){this.longVowel==="-"?l+="-":l+=l.slice(-1);continue}if(/[アイウエオ]/.test(n)&&n.length===1){const t=ha[n].toLowerCase();switch(this.consonantForVowels){case"lower":l+=t;continue;case"_":l+="_"+t;continue}}const o=ha[n];l===o[0]&&(l+=/[td]/.test(l)?"o":/[cTKPGBNM]/.test(l)?"i":"u"),o?l+=o:console.error(`${a}: "${n}" is invalid`)}return l}}var wa,Kl;class ni{constructor(){Xa(this,wa);q(this,"minSyllable",2);q(this,"maxSyllable",8);q(this,"data",{});q(this,"splitter",1);q(this,"names",new Set);q(this,"translator",new ei);q(this,"random",Ql)}clear(){this.data={},this.names=new Set}add(a,l=!1){for(let e=0;e<a.length;e++){const n=l?this.translator.fromKana(a[e]):a[e];if(n)if(this.names.add(n),this.splitter===1){const _=ii(n);this.set("^",_[0]);for(let o=0;o<_.length;o+=1){const t=_[o],k=_[o+1]||"$";t&&k&&this.set(t,k)}}else{this.set("^",n.slice(0,1));const _=this.splitter;for(let o=0;o<=n.length-_;o+=1){const t=o+_,k=n.slice(o,t),d=n.slice(t,t+_)||"$";k&&d&&this.set(k,d)}}}}set(a,l){var n;const e=this.data[a]||{nexts:{},total:0};(n=e.nexts)[l]||(n[l]=0),e.total+=1,e.nexts[l]+=1,this.data[a]=e}create(a={}){if(a.random!=null&&(this.random=a.random),this.splitter>1)return Ya(this,wa,Kl).call(this,a);let l=typeof a.count=="number"?a.count:this.random.int(...a.count||[this.minSyllable,this.maxSyllable]),e=0,n="",_="^";for(;l--;){const o=this.data[_],t=e<this.minSyllable&&o.nexts.$||0,k=(o.total-t)*this.random.float();let d=0;if(o.nexts.$&&e>4)break;for(const h in o.nexts)if(!(h==="$"&&t)&&k<=(d+=o.nexts[h])){_=h;break}if(!_||_==="$")break;_.endsWith(" ")&&l++,n!==_&&(n+=_,e++)}return{exp:n,kana:this.translator.toKana(n),syllables:e,exist:this.names.has(n)}}parseRule(a){}creaty(a){}}wa=new WeakSet,Kl=function(a={}){const l=typeof a.count=="number"?a.count:this.random.int(...a.count||[5,10]);let e="",n="^";const _=Object.keys(this.data);for(;e.length<l&&n!=="$";){const o=_.filter(f=>f.startsWith(n)),t=this.random.pick(o.length?o:_),k=this.data[t];if(!k)break;const d=e.length<3&&k.nexts.$||0,h=(k.total-d)*this.random.float();let m=0;for(const f in k.nexts){if(f==="$"&&d){n=this.random.pick(_);continue}if(h<=(m+=k.nexts[f])){e+=t==="^"?"":t,n=f;break}}}return{exp:e,kana:this.translator.toKana(e),syllables:0,exist:this.names.has(e)}};function oi(){if(!this||this.length===0)return"";const i=this.toLowerCase();return i[0].toUpperCase()+i.substring(1,i.length)}String.prototype.capitalize=oi;const ea=["family","female","male"],ga=["en","de","fr","it","es","sv","fi","ru","cs","nl","ar"],_i=["英","ドイツ","フランス","イタリア","スペイン","スウェーデン","フィンランド","ロシア","チェコ","オランダ","アラビア"],ti=`_a-lon
 _abi-
 _abintn
 _abo~t
@@ -2473,7 +2473,7 @@ yo-k
 yang
 yanghazband
 jindel`.split(`
-`),ii=`_a-bel
+`),ki=`_a-bel
 _a-bele
 _a-bela_in
 _a-bentlo-t
@@ -4660,7 +4660,7 @@ x_a Mu-len
 xvanxiga-
 xva_ik
 xva_ikle`.split(`
-`),ei=`_abela-l
+`),si=`_abela-l
 _abla-m
 _aSa-l
 _aKa-l
@@ -6433,7 +6433,7 @@ Vu_iya-l
 vitn
 waloki_e
 wat-`.split(`
-`),ni=`_aba-te
+`),mi=`_aba-te
 _abati-no
 _a~bati-ni
 _a~bi_a-ti
@@ -9359,7 +9359,7 @@ z~ke~li
 z~ke-li
 z~ki
 z~ko-ni`.split(`
-`),oi=`_abaskal
+`),di=`_abaskal
 _abelald
 _abe_ita
 _ablego
@@ -10526,7 +10526,7 @@ s_aso
 sbisaleta
 sniga
 slbalan`.split(`
-`),_i=`_abeni_us
+`),fi=`_abeni_us
 _o-bali
 _o-belison
 _ablahamson
@@ -11492,7 +11492,7 @@ se~telbali
 se~telholm
 se~tellnd
 Si-de-n`.split(`
-`),ti=`_a-kla
+`),bi=`_a-kla
 _a-lt
 _a-ltnen
 _a-lila
@@ -13139,7 +13139,7 @@ yulili_est
 yo-nen
 yulostalo
 yulyana`.split(`
-`),ki=`_aba-_ef
+`),ui=`_aba-_ef
 _abakalof
 _abalkin
 _abduvali_ef
@@ -15040,7 +15040,7 @@ yaloSenko
 yasknof
 yastljemski-
 ya-Sin`.split(`
-`),si=`_abeska
+`),pi=`_abeska
 _abi-k
 _ablaha-m
 _ablahamc-k
@@ -17124,7 +17124,7 @@ zvejina
 zvola-nek
 zvonek
 zvoni-cek`.split(`
-`),mi=`_etho-ft
+`),hi=`_etho-ft
 _a-ldels
 _a-nst-t
 _a~kelman
@@ -18035,7 +18035,7 @@ zonnenbelf
 zonnefelt
 zvalt
 zvalx`.split(`
-`),di=`
+`),vi=`
 _askali-
 _adawi-
 _adi-b
@@ -18102,7 +18102,7 @@ fa-f-li-
 ma~ki-
 mta_ili-
 la-_i-`.split(`
-`),fi=`_abi-
+`),gi=`_abi-
 _abige_il
 _e_ida
 _adela
@@ -18600,7 +18600,7 @@ _ivon
 _ivo-n
 zala
 zo-_i`.split(`
-`),bi=`_a-da
+`),Si=`_a-da
 _ade-le
 _a-delha_it
 _adelina
@@ -18976,7 +18976,7 @@ vilhelmi-ne
 vilma
 vinfli-de
 ksaveli_a`.split(`
-`),ui=`_adela_id
+`),ci=`_adela_id
 _ade-l
 _adli-nu
 _adli_ennu
@@ -19320,7 +19320,7 @@ _ivonnu
 zeli-
 zena_id
 zo_e`.split(`
-`),pi=`_a-da
+`),ji=`_a-da
 _adalji-za
 _a~dlola-ta
 _adela-_ide
@@ -19841,7 +19841,7 @@ vivi_a-na
 za_ila
 ji-ta
 zo-_e`.split(`
-`),hi=`_abiga_il
+`),zi=`_abiga_il
 _ablil
 _ada
 _adalina
@@ -20247,7 +20247,7 @@ jeseni_a
 je~seni_a
 jolanda
 sena_ida`.split(`
-`),vi=`_a-da
+`),yi=`_a-da
 _adela
 _aga-ta
 _anne
@@ -20521,7 +20521,7 @@ vilgi-ni_a
 vivi
 _ilva
 _ivonne`.split(`
-`),gi=`_a-da
+`),xi=`_a-da
 _a-m
 _ada
 _a_iya
@@ -20909,7 +20909,7 @@ vilpi
 vilva
 vilve
 v_o~ko`.split(`
-`),Si=`_avd-cya
+`),ri=`_avd-cya
 _aga-fiya
 _agli~pi-na
 _adeli-na
@@ -21049,7 +21049,7 @@ ya-na
 yana
 yani-na
 yalosla-va`.split(`
-`),ci=`_ade-la
+`),wi=`_ade-la
 _adli_ana
 _aga-ta
 _albi-na
@@ -21264,7 +21264,7 @@ zlatuSka
 jofi_e
 zola
 zzana`.split(`
-`),ji=`_a-delhe_it
+`),Ri=`_a-delhe_it
 _afnes
 _albeltina
 _aldehonda
@@ -21619,7 +21619,7 @@ vilma
 ksandla
 _ifonne
 zo-_i`.split(`
-`),zi=`_a-_iSa
+`),Ni=`_a-_iSa
 _a-_ida
 _a-sima
 _a-tika
@@ -21923,7 +21923,7 @@ wajd
 wahi-da
 wafa-
 walda`.split(`
-`),yi=`_a-lon
+`),Di=`_a-lon
 _e_ibel
 _e_iblaham
 _e_iblam
@@ -22355,7 +22355,7 @@ wili_am
 winstn
 zakala_i_a
 zakali-`.split(`
-`),xi=`_a-bel
+`),Ki=`_a-bel
 _a-blaham
 _ahim
 _a-dalbelt
@@ -22727,7 +22727,7 @@ volf
 volfgang
 volflam
 ksa-va-`.split(`
-`),ri=`_abel
+`),Bi=`_abel
 _aSil
 _adan
 _adn
@@ -23018,7 +23018,7 @@ yani~k
 _i-v
 _iv
 _ivon`.split(`
-`),wi=`_a~bondi_o
+`),Hi=`_a~bondi_o
 _abelald
 _abe-le
 _abla-mo
@@ -23656,7 +23656,7 @@ vi-t
 vi~t-le
 vi~t-li_o
 vi~tli_o`.split(`
-`),Ri=`_a-lon
+`),Mi=`_a-lon
 _abel
 _abelald
 _abla_an
@@ -24053,7 +24053,7 @@ bilhili_o
 bit
 wilfled
 sakali_as`.split(`
-`),Ni=`_a-bel
+`),Ti=`_a-bel
 _ablaham
 _a-dam
 _adam
@@ -24339,7 +24339,7 @@ vili_am
 vilmal
 _iksel
 _ingve`.split(`
-`),Di=`_a-dlf
+`),Gi=`_a-dlf
 _a-peli
 _a-po
 _a-~po
@@ -24697,7 +24697,7 @@ yulelmi
 yulyana
 _ulyana
 yulyo`.split(`
-`),Ki=`_afksenc-
+`),Ei=`_afksenc-
 _agafon
 _adam
 _adli_an
@@ -24899,7 +24899,7 @@ ya-kof
 yakof
 yaloslaf
 yalosla-f`.split(`
-`),Bi=`_adalbelt
+`),Pi=`_adalbelt
 _adam
 _adlf
 _alan
@@ -25119,7 +25119,7 @@ zbiSek
 zjenek
 zdeNek
 zolta-n`.split(`
-`),Hi=`_a-lt
+`),Vi=`_a-lt
 _a-be
 _a-blaham
 _adam
@@ -25511,7 +25511,7 @@ va_utel
 Vu~be
 ksandel
 yoli~k`.split(`
-`),Mi=`_a-kil
+`),Ii=`_a-kil
 _a-si-
 _a-sim
 _a-zim
@@ -26000,9 +26000,9 @@ wadi-_u
 walaka
 wali-
 wali-d`.split(`
-`),Ti={family:{en:li,de:ii,fr:ei,it:ni,es:oi,sv:_i,fi:ti,ru:ki,cs:si,nl:mi,ar:di},female:{en:fi,de:bi,fr:ui,it:pi,es:hi,sv:vi,fi:gi,ru:Si,cs:ci,nl:ji,ar:zi},male:{en:yi,de:xi,fr:ri,it:wi,es:Ri,sv:Ni,fi:Di,ru:Ki,cs:Bi,nl:Hi,ar:Mi}};function sl(n,a,l){const e=n.slice();return e[21]=a[l],e}function ml(n,a,l){const e=n.slice();return e[25]=a[l],e[26]=a,e[27]=l,e}function Ha(n){const a=n.slice(),l=oa.length;return a[24]=l,a}function dl(n,a,l){const e=n.slice();return e[28]=a[l],e[27]=l,e}function fl(n,a,l){const e=n.slice();return e[30]=a[l],e[31]=a,e[32]=l,e}function bl(n,a,l){const e=n.slice();return e[33]=a[l],e[27]=l,e}function ul(n){let a,l,e,i;function o(){return n[12](n[27])}return{c(){a=z("button"),l=M(n[33]),this.h()},l(_){a=y(_,"BUTTON",{class:!0});var t=r(a);l=T(t,n[33]),t.forEach(p),this.h()},h(){j(a,"class","svelte-yx7uxv"),_a(a,"active",n[1]===n[27]+1)},m(_,t){H(_,a,t),f(a,l),e||(i=P(a,"click",o),e=!0)},p(_,t){n=_,t[0]&2&&_a(a,"active",n[1]===n[27]+1)},d(_){_&&p(a),e=!1,i()}}}function pl(n){let a,l,e,i=ba[n[32]].toUpperCase()+"",o,_,t,s;function m(){n[14].call(l,n[31],n[32])}return{c(){a=z("label"),l=z("input"),e=K(),o=M(i),_=K(),this.h()},l(b){a=y(b,"LABEL",{class:!0,title:!0});var d=r(a);l=y(d,"INPUT",{type:!0}),e=B(d),o=T(d,i),_=B(d),d.forEach(p),this.h()},h(){j(l,"type","checkbox"),j(a,"class","lang"),j(a,"title",ai[n[32]]+"語")},m(b,d){H(b,a,d),f(a,l),l.checked=n[30],f(a,e),f(a,o),f(a,_),t||(s=P(l,"change",m),t=!0)},p(b,d){n=b,d[0]&4&&(l.checked=n[30])},d(b){b&&p(a),t=!1,s()}}}function hl(n){let a,l,e,i=n[28].capitalize()+"",o,_,t,s,m,b,d;function h(...k){return n[13](n[27],...k)}let S=n[2][n[27]],u=[];for(let k=0;k<S.length;k+=1)u[k]=pl(fl(n,S,k));return{c(){a=z("label"),l=z("input"),e=K(),o=M(i),_=K(),t=z("div");for(let k=0;k<u.length;k+=1)u[k].c();s=K(),m=z("hr"),this.h()},l(k){a=y(k,"LABEL",{class:!0});var v=r(a);l=y(v,"INPUT",{type:!0}),e=B(v),o=T(v,i),v.forEach(p),_=B(k),t=y(k,"DIV",{class:!0});var w=r(t);for(let D=0;D<u.length;D+=1)u[D].l(w);w.forEach(p),s=B(k),m=y(k,"HR",{}),this.h()},h(){j(l,"type","checkbox"),j(a,"class","check_all"),j(t,"class","langs flex")},m(k,v){H(k,a,v),f(a,l),f(a,e),f(a,o),H(k,_,v),H(k,t,v);for(let w=0;w<u.length;w+=1)u[w].m(t,null);H(k,s,v),H(k,m,v),b||(d=P(l,"change",h),b=!0)},p(k,v){if(n=k,v[0]&4){S=n[2][n[27]];let w;for(w=0;w<S.length;w+=1){const D=fl(n,S,w);u[w]?u[w].p(D,v):(u[w]=pl(D),u[w].c(),u[w].m(t,null))}for(;w<u.length;w+=1)u[w].d(1);u.length=S.length}},d(k){k&&p(a),k&&p(_),k&&p(t),ua(u,k),k&&p(s),k&&p(m),b=!1,d()}}}function vl(n){let a,l,e,i,o,_,t;function s(...d){return n[15](n[24],...d)}let m=n[4],b=[];for(let d=0;d<m.length;d+=1)b[d]=gl(ml(n,m,d));return{c(){a=z("label"),l=z("input"),e=M(`
-					User`),i=K(),o=z("div");for(let d=0;d<b.length;d+=1)b[d].c();this.h()},l(d){a=y(d,"LABEL",{class:!0});var h=r(a);l=y(h,"INPUT",{type:!0}),e=T(h,`
-					User`),h.forEach(p),i=B(d),o=y(d,"DIV",{class:!0});var S=r(o);for(let u=0;u<b.length;u+=1)b[u].l(S);S.forEach(p),this.h()},h(){j(l,"type","checkbox"),j(a,"class","check_all"),j(o,"class","langs flex")},m(d,h){H(d,a,h),f(a,l),f(a,e),H(d,i,h),H(d,o,h);for(let S=0;S<b.length;S+=1)b[S].m(o,null);_||(t=P(l,"change",s),_=!0)},p(d,h){if(n=d,h[0]&20){m=n[4];let S;for(S=0;S<m.length;S+=1){const u=ml(n,m,S);b[S]?b[S].p(u,h):(b[S]=gl(u),b[S].c(),b[S].m(o,null))}for(;S<b.length;S+=1)b[S].d(1);b.length=m.length}},d(d){d&&p(a),d&&p(i),d&&p(o),ua(b,d),_=!1,t()}}}function gl(n){let a,l,e,i=n[25]+"",o,_,t,s;function m(){n[16].call(l,n[24],n[27])}return{c(){a=z("label"),l=z("input"),e=K(),o=M(i),_=K(),this.h()},l(b){a=y(b,"LABEL",{class:!0});var d=r(a);l=y(d,"INPUT",{type:!0}),e=B(d),o=T(d,i),_=B(d),d.forEach(p),this.h()},h(){j(l,"type","checkbox"),j(a,"class","lang")},m(b,d){H(b,a,d),f(a,l),l.checked=n[2][n[24]][n[27]],f(a,e),f(a,o),f(a,_),t||(s=P(l,"change",m),t=!0)},p(b,d){n=b,d[0]&4&&(l.checked=n[2][n[24]][n[27]]),d[0]&16&&i!==(i=n[25]+"")&&pa(o,i)},d(b){b&&p(a),t=!1,s()}}}function Sl(n){let a,l=n[21].kana+"",e,i,o,_;function t(){return n[19](n[21])}return{c(){a=z("button"),e=M(l),i=K(),this.h()},l(s){a=y(s,"BUTTON",{class:!0});var m=r(a);e=T(m,l),i=B(m),m.forEach(p),this.h()},h(){j(a,"class","name svelte-yx7uxv"),_a(a,"exist",n[21].exist)},m(s,m){H(s,a,m),f(a,e),f(a,i),o||(_=P(a,"click",t),o=!0)},p(s,m){n=s,m[0]&32&&l!==(l=n[21].kana+"")&&pa(e,l),m[0]&32&&_a(a,"exist",n[21].exist)},d(s){s&&p(a),o=!1,_()}}}function Gi(n){let a,l,e,i,o,_,t,s,m,b,d,h,S,u,k,v,w,D,W,Z,ta,$,ka,x,R,N,G,F,sa,ya,Q,Y,xa,aa,ra,wa,ma,Ra,la,Na,Da,ha,Ka,Va,Ba=["Syllable","2-Gram","3-Gram"],L=[];for(let g=0;g<3;g+=1)L[g]=ul(bl(n,Ba,g));let ia=oa,V=[];for(let g=0;g<ia.length;g+=1)V[g]=hl(dl(n,ia,g));let I=n[4].length&&vl(Ha(n));x=new Cl({props:{userResource:n[3]}}),x.$on("save",n[6]);let ea=n[5],O=[];for(let g=0;g<ea.length;g+=1)O[g]=Sl(sl(n,ea,g));return{c(){a=K(),l=z("main"),e=z("section"),i=z("div"),o=z("a"),_=M("欧羅巴人名録"),t=M("様、"),s=z("a"),m=M("アラブ人名・家名辞典"),b=M("様のデータを分解して再構成することで、それっぽい名前を生成する。"),d=z("span"),h=M("青字"),S=M("は元データにも存在する名前。"),u=K(),k=z("h2"),v=M("Source controller"),w=K(),D=z("form"),W=z("div"),Z=z("div");for(let g=0;g<3;g+=1)L[g].c();ta=K();for(let g=0;g<V.length;g+=1)V[g].c();$=K(),I&&I.c(),ka=K(),cl(x.$$.fragment),R=K(),N=z("section"),G=z("div"),F=z("button"),sa=M("Reload"),ya=K(),Q=z("label"),Y=z("input"),xa=K(),aa=z("span"),ra=M("Exist"),wa=K(),ma=z("div"),Ra=K(),la=z("button"),Na=M("Copy All"),Da=K();for(let g=0;g<O.length;g+=1)O[g].c();this.h()},l(g){Hl("svelte-ykd9de",document.head).forEach(p),a=B(g),l=y(g,"MAIN",{class:!0});var E=r(l);e=y(E,"SECTION",{class:!0});var c=r(e);i=y(c,"DIV",{class:!0});var A=r(i);o=y(A,"A",{href:!0,rel:!0});var Ia=r(o);_=T(Ia,"欧羅巴人名録"),Ia.forEach(p),t=T(A,"様、"),s=y(A,"A",{href:!0,rel:!0});var Oa=r(s);m=T(Oa,"アラブ人名・家名辞典"),Oa.forEach(p),b=T(A,"様のデータを分解して再構成することで、それっぽい名前を生成する。"),d=y(A,"SPAN",{class:!0});var Aa=r(d);h=T(Aa,"青字"),Aa.forEach(p),S=T(A,"は元データにも存在する名前。"),A.forEach(p),u=B(c),k=y(c,"H2",{});var Fa=r(k);v=T(Fa,"Source controller"),Fa.forEach(p),w=B(c),D=y(c,"FORM",{class:!0});var na=r(D);W=y(na,"DIV",{class:!0});var Ua=r(W);Z=y(Ua,"DIV",{class:!0});var Ca=r(Z);for(let q=0;q<3;q+=1)L[q].l(Ca);Ca.forEach(p),Ua.forEach(p),ta=B(na);for(let q=0;q<V.length;q+=1)V[q].l(na);$=B(na),I&&I.l(na),na.forEach(p),ka=B(c),jl(x.$$.fragment,c),c.forEach(p),R=B(E),N=y(E,"SECTION",{class:!0});var va=r(N);G=y(va,"DIV",{class:!0});var X=r(G);F=y(X,"BUTTON",{class:!0});var La=r(F);sa=T(La,"Reload"),La.forEach(p),ya=B(X),Q=y(X,"LABEL",{});var ga=r(Q);Y=y(ga,"INPUT",{type:!0}),xa=B(ga),aa=y(ga,"SPAN",{class:!0});var qa=r(aa);ra=T(qa,"Exist"),qa.forEach(p),ga.forEach(p),wa=B(X),ma=y(X,"DIV",{class:!0}),r(ma).forEach(p),Ra=B(X),la=y(X,"BUTTON",{});var Ja=r(la);Na=T(Ja,"Copy All"),Ja.forEach(p),X.forEach(p),Da=B(va);for(let q=0;q<O.length;q+=1)O[q].l(va);va.forEach(p),E.forEach(p),this.h()},h(){document.title="Name Generator",j(o,"href","https://www.worldsys.org/europe"),j(o,"rel","noopener noreferrer"),j(s,"href","https://alarabiyah.sakura.ne.jp/category/words/name/"),j(s,"rel","noopener noreferrer"),j(d,"class","svelte-yx7uxv"),j(i,"class","about"),j(Z,"class","btn-set"),j(W,"class","tool flex svelte-yx7uxv"),j(D,"class","w-1/2 select-none svelte-yx7uxv"),j(e,"class","left svelte-yx7uxv"),j(F,"class","reload svelte-yx7uxv"),j(Y,"type","checkbox"),j(aa,"class","svelte-yx7uxv"),j(ma,"class","flex-auto"),j(G,"class","tool flex svelte-yx7uxv"),j(N,"class","right w-1/2 svelte-yx7uxv"),j(l,"class","flex")},m(g,U){H(g,a,U),H(g,l,U),f(l,e),f(e,i),f(i,o),f(o,_),f(i,t),f(i,s),f(s,m),f(i,b),f(i,d),f(d,h),f(i,S),f(e,u),f(e,k),f(k,v),f(e,w),f(e,D),f(D,W),f(W,Z);for(let E=0;E<3;E+=1)L[E].m(Z,null);f(D,ta);for(let E=0;E<V.length;E+=1)V[E].m(D,null);f(D,$),I&&I.m(D,null),f(e,ka),zl(x,e,null),f(l,R),f(l,N),f(N,G),f(G,F),f(F,sa),f(G,ya),f(G,Q),f(Q,Y),Y.checked=n[0],f(Q,xa),f(Q,aa),f(aa,ra),f(G,wa),f(G,ma),f(G,Ra),f(G,la),f(la,Na),f(N,Da);for(let E=0;E<O.length;E+=1)O[E].m(N,null);ha=!0,Ka||(Va=[P(D,"change",n[9]),P(F,"click",n[8]),P(Y,"change",n[17]),P(la,"click",n[18])],Ka=!0)},p(g,U){if(U[0]&2){Ba=["Syllable","2-Gram","3-Gram"];let c;for(c=0;c<3;c+=1){const A=bl(g,Ba,c);L[c]?L[c].p(A,U):(L[c]=ul(A),L[c].c(),L[c].m(Z,null))}for(;c<3;c+=1)L[c].d(1)}if(U[0]&132){ia=oa;let c;for(c=0;c<ia.length;c+=1){const A=dl(g,ia,c);V[c]?V[c].p(A,U):(V[c]=hl(A),V[c].c(),V[c].m(D,$))}for(;c<V.length;c+=1)V[c].d(1);V.length=ia.length}g[4].length?I?I.p(Ha(g),U):(I=vl(Ha(g)),I.c(),I.m(D,null)):I&&(I.d(1),I=null);const E={};if(U[0]&8&&(E.userResource=g[3]),x.$set(E),U[0]&1&&(Y.checked=g[0]),U[0]&1056){ea=g[5];let c;for(c=0;c<ea.length;c+=1){const A=sl(g,ea,c);O[c]?O[c].p(A,U):(O[c]=Sl(A),O[c].c(),O[c].m(N,null))}for(;c<O.length;c+=1)O[c].d(1);O.length=ea.length}},i(g){ha||(Sa(x.$$.fragment,g),ha=!0)},o(g){ca(x.$$.fragment,g),ha=!1},d(g){g&&p(a),g&&p(l),ua(L,g),ua(V,g),I&&I.d(),yl(x),ua(O,g),Ka=!1,Ea(Va)}}}function Ei(n,a,l){let e=!1,i=[Array(ba.length).fill(!1),Array(ba.length).fill(!1),Array(ba.length).fill(!1),[]];i[0][0]=!0;let o={},_=Object.keys(o),t=[],s=!0;const m=new Yl;let b=1;Ml(async()=>{const x=localStorage.getItem("UserResource");if(x)l(3,o=JSON.parse(x));else{const N=await(await fetch(`${nl}/data/other-mt.txt`)).text(),G=await(await fetch(`${nl}/data/other-jw.txt`)).text();l(3,o={Mt:N.split(`
-`),Jewel:G.split(`
-`)}),console.log("Mt and Jewel data loaded.")}l(4,_=Object.keys(o));const R=JSON.parse(localStorage.getItem("setting"));R&&l(2,i=R),u(),l(11,e=!0)});function d(x){const{title:R}=x.detail,N=_.indexOf(R);N>-1&&(_.splice(N,1),i[oa.length].splice(N,1));const G=Object.keys(o),F=G.findIndex(sa=>!_.includes(sa));l(4,_=G),F>-1&&i[oa.length].splice(F,0,!0),localStorage.setItem("UserResource",JSON.stringify(o)),localStorage.setItem("setting",JSON.stringify(i))}function h(x,R){l(2,i[R]=Array(i[R].length).fill(x),i)}function S(){l(5,t=[]);const x=new Set;for(let R=0;R<30;R++)try{let N=m.create(),G=100;for(;x.has(N.kana)||!s&&N.exist;)if(N=m.create(),!--G){console.log("name",N);break}x.add(N.kana),t.push(N)}catch{break}}function u(){localStorage==null||localStorage.setItem("setting",JSON.stringify(i)),m.clear();let x=!1;for(let R=0;R<i.length;R++)for(let N=0;N<i[R].length;N++)if(i[R][N]){const F=R===3?o[_[N]]:Ti[oa[R]][ba[N]];F?(m.add(F,R>=3),x=!0):console.error(_[N])}x?S():l(5,t=[])}function k(x=""){x||(x=t.reduce((R,N)=>R+N.kana+`
-`,"")),navigator.clipboard.writeText(x)}const v=x=>l(1,b=x+1),w=(x,R)=>{h(R.currentTarget.checked,x)};function D(x,R){x[R]=this.checked,l(2,i)}const W=(x,R)=>{h(R.currentTarget.checked,x)};function Z(x,R){i[x][R]=this.checked,l(2,i)}function ta(){s=this.checked,l(0,s)}const $=()=>k(),ka=x=>{k(x.kana)};return n.$$.update=()=>{n.$$.dirty[0]&2051&&e&&(m.splitter=b,S())},[s,b,i,o,_,t,d,h,S,u,k,e,v,w,D,W,Z,ta,$,ka]}class Oi extends Ma{constructor(a){super(),Ta(this,a,Ei,Gi,Ga,{},null,[-1,-1])}}export{Oi as default};
+`),Oi={family:{en:ti,de:ki,fr:si,it:mi,es:di,sv:fi,fi:bi,ru:ui,cs:pi,nl:hi,ar:vi},female:{en:gi,de:Si,fr:ci,it:ji,es:zi,sv:yi,fi:xi,ru:ri,cs:wi,nl:Ri,ar:Ni},male:{en:Di,de:Ki,fr:Bi,it:Hi,es:Mi,sv:Ti,fi:Gi,ru:Ei,cs:Pi,nl:Vi,ar:Ii}};function dl(i,a,l){const e=i.slice();return e[26]=a[l],e}function fl(i,a,l){const e=i.slice();return e[30]=a[l],e[31]=a,e[32]=l,e}function Ta(i){const a=i.slice(),l=ea.length;return a[29]=l,a}function bl(i,a,l){const e=i.slice();return e[33]=a[l],e[32]=l,e}function ul(i,a,l){const e=i.slice();return e[35]=a[l],e[36]=a,e[37]=l,e}function pl(i,a,l){const e=i.slice();return e[38]=a[l],e[32]=l,e}function hl(i){let a,l,e,n;function _(){return i[14](i[32])}return{c(){a=j("button"),l=T(i[38]),this.h()},l(o){a=z(o,"BUTTON",{class:!0});var t=x(a);l=G(t,i[38]),t.forEach(v),this.h()},h(){S(a,"class","svelte-1av7a01"),ma(a,"active",i[2]===i[32]+1)},m(o,t){M(o,a,t),u(a,l),e||(n=E(a,"click",_),e=!0)},p(o,t){i=o,t[0]&4&&ma(a,"active",i[2]===i[32]+1)},d(o){o&&v(a),e=!1,n()}}}function vl(i){let a,l,e,n=ga[i[37]].toUpperCase()+"",_,o,t,k;function d(){i[16].call(l,i[36],i[37])}return{c(){a=j("label"),l=j("input"),e=K(),_=T(n),o=K(),this.h()},l(h){a=z(h,"LABEL",{class:!0,title:!0});var m=x(a);l=z(m,"INPUT",{type:!0}),e=B(m),_=G(m,n),o=B(m),m.forEach(v),this.h()},h(){S(l,"type","checkbox"),S(a,"class","lang"),S(a,"title",_i[i[37]]+"語")},m(h,m){M(h,a,m),u(a,l),l.checked=i[35],u(a,e),u(a,_),u(a,o),t||(k=E(l,"change",d),t=!0)},p(h,m){i=h,m[0]&8&&(l.checked=i[35])},d(h){h&&v(a),t=!1,k()}}}function gl(i){let a,l,e,n,_=i[33].capitalize()+"",o,t,k,d,h,m,f;function r(...b){return i[15](i[32],...b)}let p=i[3][i[32]],s=[];for(let b=0;b<p.length;b+=1)s[b]=vl(ul(i,p,b));return{c(){a=j("label"),l=j("input"),n=K(),o=T(_),t=K(),k=j("div");for(let b=0;b<s.length;b+=1)s[b].c();d=K(),h=j("hr"),this.h()},l(b){a=z(b,"LABEL",{class:!0});var w=x(a);l=z(w,"INPUT",{type:!0}),n=B(w),o=G(w,_),w.forEach(v),t=B(b),k=z(b,"DIV",{class:!0});var y=x(k);for(let V=0;V<s.length;V+=1)s[V].l(y);y.forEach(v),d=B(b),h=z(b,"HR",{}),this.h()},h(){S(l,"type","checkbox"),l.checked=e=i[3][i[32]].every(yl),S(a,"class","check_all"),S(k,"class","langs flex")},m(b,w){M(b,a,w),u(a,l),u(a,n),u(a,o),M(b,t,w),M(b,k,w);for(let y=0;y<s.length;y+=1)s[y].m(k,null);M(b,d,w),M(b,h,w),m||(f=E(l,"change",r),m=!0)},p(b,w){if(i=b,w[0]&8&&e!==(e=i[3][i[32]].every(yl))&&(l.checked=e),w[0]&8){p=i[3][i[32]];let y;for(y=0;y<p.length;y+=1){const V=ul(i,p,y);s[y]?s[y].p(V,w):(s[y]=vl(V),s[y].c(),s[y].m(k,null))}for(;y<s.length;y+=1)s[y].d(1);s.length=p.length}},d(b){b&&v(a),b&&v(t),b&&v(k),Sa(s,b),b&&v(d),b&&v(h),m=!1,f()}}}function Sl(i){let a,l,e,n,_,o,t,k;function d(...f){return i[17](i[29],...f)}let h=i[5],m=[];for(let f=0;f<h.length;f+=1)m[f]=cl(fl(i,h,f));return{c(){a=j("label"),l=j("input"),n=T(`
+					User`),_=K(),o=j("div");for(let f=0;f<m.length;f+=1)m[f].c();this.h()},l(f){a=z(f,"LABEL",{class:!0});var r=x(a);l=z(r,"INPUT",{type:!0}),n=G(r,`
+					User`),r.forEach(v),_=B(f),o=z(f,"DIV",{class:!0});var p=x(o);for(let s=0;s<m.length;s+=1)m[s].l(p);p.forEach(v),this.h()},h(){S(l,"type","checkbox"),l.checked=e=i[3][i[29]].every(xl),S(a,"class","check_all"),S(o,"class","langs flex")},m(f,r){M(f,a,r),u(a,l),u(a,n),M(f,_,r),M(f,o,r);for(let p=0;p<m.length;p+=1)m[p].m(o,null);t||(k=E(l,"change",d),t=!0)},p(f,r){if(i=f,r[0]&8&&e!==(e=i[3][i[29]].every(xl))&&(l.checked=e),r[0]&40){h=i[5];let p;for(p=0;p<h.length;p+=1){const s=fl(i,h,p);m[p]?m[p].p(s,r):(m[p]=cl(s),m[p].c(),m[p].m(o,null))}for(;p<m.length;p+=1)m[p].d(1);m.length=h.length}},d(f){f&&v(a),f&&v(_),f&&v(o),Sa(m,f),t=!1,k()}}}function cl(i){let a,l,e,n=i[30]+"",_,o,t,k;function d(){i[18].call(l,i[29],i[32])}return{c(){a=j("label"),l=j("input"),e=K(),_=T(n),o=K(),this.h()},l(h){a=z(h,"LABEL",{class:!0});var m=x(a);l=z(m,"INPUT",{type:!0}),e=B(m),_=G(m,n),o=B(m),m.forEach(v),this.h()},h(){S(l,"type","checkbox"),S(a,"class","lang")},m(h,m){M(h,a,m),u(a,l),l.checked=i[3][i[29]][i[32]],u(a,e),u(a,_),u(a,o),t||(k=E(l,"change",d),t=!0)},p(h,m){i=h,m[0]&8&&(l.checked=i[3][i[29]][i[32]]),m[0]&32&&n!==(n=i[30]+"")&&ca(_,n)},d(h){h&&v(a),t=!1,k()}}}function jl(i){let a,l=i[26].kana+"",e,n,_,o;function t(){return i[22](i[26])}return{c(){a=j("button"),e=T(l),n=K(),this.h()},l(k){a=z(k,"BUTTON",{class:!0});var d=x(a);e=G(d,l),n=B(d),d.forEach(v),this.h()},h(){S(a,"class","name svelte-1av7a01"),ma(a,"exist",i[26].exist)},m(k,d){M(k,a,d),u(a,e),u(a,n),_||(o=E(a,"click",t),_=!0)},p(k,d){i=k,d[0]&64&&l!==(l=i[26].kana+"")&&ca(e,l),d[0]&64&&ma(a,"exist",i[26].exist)},d(k){k&&v(a),_=!1,o()}}}function Ai(i){let a,l,e,n,_,o,t,k,d,h,m,f,r,p,s,b,w,y,V,aa,fa,na,ba,Z,ua,J,I,la,R,N,D,H,C,ia,oa,Ra,W,Na,pa,Da,_a,Ka,Ba,ja,Ha,Oa,Ma=["Syllable","2-Gram","3-Gram"],X=[];for(let g=0;g<3;g+=1)X[g]=hl(pl(i,Ma,g));let ta=ea,O=[];for(let g=0;g<ta.length;g+=1)O[g]=gl(bl(i,ta,g));let A=i[5].length&&Sl(Ta(i));Z=new Xl({props:{userResource:i[4]}}),Z.$on("save",i[8]);let ka=i[6],F=[];for(let g=0;g<ka.length;g+=1)F[g]=jl(dl(i,ka,g));return{c(){a=K(),l=j("main"),e=j("section"),n=j("div"),_=j("a"),o=T("欧羅巴人名録"),t=T("様、"),k=j("a"),d=T("アラブ人名・家名辞典"),h=T("様のデータを分解して再構成することで、それっぽい名前を生成する。"),m=j("span"),f=T("青字"),r=T("は元データにも存在する名前。"),p=K(),s=j("h2"),b=T("Source controller"),w=K(),y=j("form"),V=j("div"),aa=j("div");for(let g=0;g<3;g+=1)X[g].c();fa=K();for(let g=0;g<O.length;g+=1)O[g].c();na=K(),A&&A.c(),ba=K(),rl(Z.$$.fragment),ua=K(),J=j("section"),I=j("form"),la=j("button"),R=T("Reload"),N=K(),D=j("label"),H=j("input"),C=K(),ia=j("span"),oa=T("Exist"),Ra=K(),W=j("input"),Na=K(),pa=j("div"),Da=K(),_a=j("button"),Ka=T("Copy All"),Ba=K();for(let g=0;g<F.length;g+=1)F[g].c();this.h()},l(g){Vl("svelte-ykd9de",document.head).forEach(v),a=B(g),l=z(g,"MAIN",{class:!0});var P=x(l);e=z(P,"SECTION",{class:!0});var c=x(e);n=z(c,"DIV",{class:!0});var U=x(n);_=z(U,"A",{href:!0,rel:!0});var Aa=x(_);o=G(Aa,"欧羅巴人名録"),Aa.forEach(v),t=G(U,"様、"),k=z(U,"A",{href:!0,rel:!0});var Fa=x(k);d=G(Fa,"アラブ人名・家名辞典"),Fa.forEach(v),h=G(U,"様のデータを分解して再構成することで、それっぽい名前を生成する。"),m=z(U,"SPAN",{class:!0});var Ua=x(m);f=G(Ua,"青字"),Ua.forEach(v),r=G(U,"は元データにも存在する名前。"),U.forEach(v),p=B(c),s=z(c,"H2",{});var Ca=x(s);b=G(Ca,"Source controller"),Ca.forEach(v),w=B(c),y=z(c,"FORM",{class:!0});var sa=x(y);V=z(sa,"DIV",{class:!0});var La=x(V);aa=z(La,"DIV",{class:!0});var qa=x(aa);for(let Y=0;Y<3;Y+=1)X[Y].l(qa);qa.forEach(v),La.forEach(v),fa=B(sa);for(let Y=0;Y<O.length;Y+=1)O[Y].l(sa);na=B(sa),A&&A.l(sa),sa.forEach(v),ba=B(c),wl(Z.$$.fragment,c),c.forEach(v),ua=B(P),J=z(P,"SECTION",{class:!0});var za=x(J);I=z(za,"FORM",{class:!0});var Q=x(I);la=z(Q,"BUTTON",{class:!0});var Za=x(la);R=G(Za,"Reload"),Za.forEach(v),N=B(Q),D=z(Q,"LABEL",{class:!0});var ya=x(D);H=z(ya,"INPUT",{type:!0}),C=B(ya),ia=z(ya,"SPAN",{class:!0});var Ja=x(ia);oa=G(Ja,"Exist"),Ja.forEach(v),ya.forEach(v),Ra=B(Q),W=z(Q,"INPUT",{type:!0,min:!0,max:!0,class:!0}),Na=B(Q),pa=z(Q,"DIV",{class:!0}),x(pa).forEach(v),Da=B(Q),_a=z(Q,"BUTTON",{});var Wa=x(_a);Ka=G(Wa,"Copy All"),Wa.forEach(v),Q.forEach(v),Ba=B(za);for(let Y=0;Y<F.length;Y+=1)F[Y].l(za);za.forEach(v),P.forEach(v),this.h()},h(){document.title="Name Generator",S(_,"href","https://www.worldsys.org/europe"),S(_,"rel","noopener noreferrer"),S(k,"href","https://alarabiyah.sakura.ne.jp/category/words/name/"),S(k,"rel","noopener noreferrer"),S(m,"class","svelte-1av7a01"),S(n,"class","about"),S(aa,"class","btn-set"),S(V,"class","tool flex svelte-1av7a01"),S(y,"class","w-1/2 select-none svelte-1av7a01"),S(e,"class","left svelte-1av7a01"),S(la,"class","reload svelte-1av7a01"),S(H,"type","checkbox"),S(ia,"class","svelte-1av7a01"),S(D,"class","svelte-1av7a01"),S(W,"type","number"),S(W,"min","1"),S(W,"max","30"),S(W,"class","svelte-1av7a01"),S(pa,"class","flex-auto"),S(I,"class","tool flex svelte-1av7a01"),S(J,"class","right w-1/2 svelte-1av7a01"),S(l,"class","flex")},m(g,L){M(g,a,L),M(g,l,L),u(l,e),u(e,n),u(n,_),u(_,o),u(n,t),u(n,k),u(k,d),u(n,h),u(n,m),u(m,f),u(n,r),u(e,p),u(e,s),u(s,b),u(e,w),u(e,y),u(y,V),u(V,aa);for(let P=0;P<3;P+=1)X[P].m(aa,null);u(y,fa);for(let P=0;P<O.length;P+=1)O[P].m(y,null);u(y,na),A&&A.m(y,null),u(e,ba),Rl(Z,e,null),u(l,ua),u(l,J),u(J,I),u(I,la),u(la,R),u(I,N),u(I,D),u(D,H),H.checked=i[0],u(D,C),u(D,ia),u(ia,oa),u(I,Ra),u(I,W),da(W,i[1]),u(I,Na),u(I,pa),u(I,Da),u(I,_a),u(_a,Ka),u(J,Ba);for(let P=0;P<F.length;P+=1)F[P].m(J,null);ja=!0,Ha||(Oa=[E(y,"change",i[11]),E(la,"click",i[10]),E(H,"change",i[19]),E(W,"input",i[20]),E(_a,"click",i[21]),E(I,"change",i[7])],Ha=!0)},p(g,L){if(L[0]&4){Ma=["Syllable","2-Gram","3-Gram"];let c;for(c=0;c<3;c+=1){const U=pl(g,Ma,c);X[c]?X[c].p(U,L):(X[c]=hl(U),X[c].c(),X[c].m(aa,null))}for(;c<3;c+=1)X[c].d(1)}if(L[0]&520){ta=ea;let c;for(c=0;c<ta.length;c+=1){const U=bl(g,ta,c);O[c]?O[c].p(U,L):(O[c]=gl(U),O[c].c(),O[c].m(y,na))}for(;c<O.length;c+=1)O[c].d(1);O.length=ta.length}g[5].length?A?A.p(Ta(g),L):(A=Sl(Ta(g)),A.c(),A.m(y,null)):A&&(A.d(1),A=null);const P={};if(L[0]&16&&(P.userResource=g[4]),Z.$set(P),L[0]&1&&(H.checked=g[0]),L[0]&2&&Dl(W.value)!==g[1]&&da(W,g[1]),L[0]&4160){ka=g[6];let c;for(c=0;c<ka.length;c+=1){const U=dl(g,ka,c);F[c]?F[c].p(U,L):(F[c]=jl(U),F[c].c(),F[c].m(J,null))}for(;c<F.length;c+=1)F[c].d(1);F.length=ka.length}},i(g){ja||(xa(Z.$$.fragment,g),ja=!0)},o(g){ra(Z.$$.fragment,g),ja=!1},d(g){g&&v(a),g&&v(l),Sa(X,g),Sa(O,g),A&&A.d(),Nl(Z),Sa(F,g),Ha=!1,Va(Oa)}}}const zl="name-generator@0.0.1/",yl=i=>i,xl=i=>i;function Fi(i,a,l){const e=`${zl}UserResource`,n=`${zl}Settings`;let _=!1,o=[Array(ga.length).fill(!1),Array(ga.length).fill(!1),Array(ga.length).fill(!1),[]];o[0][0]=!0;let t={},k=Object.keys(t),d=[],h=!0,m=30;const f=new ni;let r=1;Il(async()=>{const R=localStorage.getItem(e);if(R)l(4,t=JSON.parse(R));else{const D=await(await fetch(`${_l}/data/other-mt.txt`)).text(),H=await(await fetch(`${_l}/data/other-jw.txt`)).text();l(4,t={Mt:D.split(`
+`),Jewel:H.split(`
+`)}),l(3,o[ea.length]=[!1,!1],o),console.log("Mt and Jewel data loaded.")}l(5,k=Object.keys(t));const N=JSON.parse(localStorage.getItem(n));N&&(l(3,o=N.checks),l(1,m=N.howmany),l(0,h=N.existFilter)),!R&&!N&&localStorage.clear(),y({},!1),l(13,_=!0)});function p(){localStorage.setItem(n,JSON.stringify({checks:o,howmany:m,existFilter:h}))}function s(R){const{title:N}=R.detail,D=k.indexOf(N);D>-1&&(k.splice(D,1),o[ea.length].splice(D,1));const H=Object.keys(t),C=H.findIndex(ia=>!k.includes(ia));l(5,k=H),C>-1&&o[ea.length].splice(C,0,!0),localStorage.setItem(e,JSON.stringify(t)),D+C!==-2&&p()}function b(R,N){l(3,o[N]=Array(o[N].length).fill(R),o)}function w(){l(6,d=[]);const R=new Set;for(let N=0;N<m;N++)try{let D=f.create(),H=100;for(;R.has(D.kana)||!h&&D.exist;)if(D=f.create(),!--H){console.log("name",D);break}R.add(D.kana),d.push(D)}catch{break}}function y(R,N=!0){N&&p(),f.clear();let D=!1;for(let H=0;H<o.length;H++)for(let C=0;C<o[H].length;C++)if(o[H][C]){const oa=H===3?t[k[C]]:Oi[ea[H]][ga[C]];oa?(f.add(oa,H>=3),D=!0):console.error(k[C])}D?w():l(6,d=[])}function V(R=""){R||(R=d.reduce((N,D)=>N+D.kana+`
+`,"")),navigator.clipboard.writeText(R)}const aa=R=>l(2,r=R+1),fa=(R,N)=>{b(N.currentTarget.checked,R)};function na(R,N){R[N]=this.checked,l(3,o)}const ba=(R,N)=>{b(N.currentTarget.checked,R)};function Z(R,N){o[R][N]=this.checked,l(3,o)}function ua(){h=this.checked,l(0,h)}function J(){m=Dl(this.value),l(1,m)}const I=()=>V(),la=R=>{V(R.kana)};return i.$$.update=()=>{i.$$.dirty[0]&8199&&_&&(f.splitter=r,w())},[h,m,r,o,t,k,d,p,s,b,w,y,V,_,aa,fa,na,ba,Z,ua,J,I,la]}class qi extends Ga{constructor(a){super(),Ea(this,a,Fi,Ai,Pa,{},null,[-1,-1])}}export{qi as default};
