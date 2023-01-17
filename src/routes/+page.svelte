@@ -7,15 +7,19 @@
 	import '../global/string/capitalize.js';
 	import { all, types, langs, lango } from '../constants/sources.js';
 
+	const STRG_KEY = 'name-generator@0.0.1/';
+	const USER = `${STRG_KEY}UserResource`;
+	const SETTINGS = `${STRG_KEY}Settings`;
+
 	let mount = false;
 
-	let setting: boolean[][] = [
+	let checks: boolean[][] = [
 		Array(langs.length).fill(false), // family
 		Array(langs.length).fill(false), // female
 		Array(langs.length).fill(false), // male
 		[], // userResource
 	];
-	setting[0][0] = true;
+	checks[0][0] = true;
 
 	let userResource: Record<string, string[]> = {};
 	let userKeys = Object.keys(userResource);
@@ -34,7 +38,7 @@
 	}
 
 	onMount(async () => {
-		const val = localStorage.getItem('UserResource');
+		const val = localStorage.getItem(USER);
 		if (val) {
 			userResource = JSON.parse(val);
 		} else {
@@ -49,14 +53,28 @@
 		}
 		userKeys = Object.keys(userResource);
 
-		const _setting = JSON.parse(localStorage.getItem('setting'));
+		const _setting = JSON.parse(localStorage.getItem(SETTINGS));
 		if (_setting) {
-			setting = _setting;
+			checks = _setting.checks;
+			howmany = _setting.howmany;
+			existFilter = _setting.existFilter;
 		}
-		change();
+
+		change({}, false);
 
 		mount = true;
 	});
+
+	function saveSettings() {
+		localStorage.setItem(
+			SETTINGS,
+			JSON.stringify({
+				checks,
+				howmany,
+				existFilter,
+			}),
+		);
+	}
 
 	function save(e) {
 		const { title } = e.detail;
@@ -64,21 +82,24 @@
 		if (deleteIndex > -1) {
 			// delete
 			userKeys.splice(deleteIndex, 1);
-			setting[types.length].splice(deleteIndex, 1);
+			checks[types.length].splice(deleteIndex, 1);
 		}
 		const keys = Object.keys(userResource);
 		const add = keys.findIndex((v) => !userKeys.includes(v));
 		userKeys = keys;
 		if (add > -1) {
-			setting[types.length].splice(add, 0, true);
+			checks[types.length].splice(add, 0, true);
 		}
 
-		localStorage.setItem('UserResource', JSON.stringify(userResource));
-		localStorage.setItem('setting', JSON.stringify(setting));
+		localStorage.setItem(USER, JSON.stringify(userResource));
+
+		if (deleteIndex + add !== -2) {
+			saveSettings();
+		}
 	}
 
 	function checkAll(checked: boolean, index: number) {
-		setting[index] = Array(setting[index].length).fill(checked);
+		checks[index] = Array(checks[index].length).fill(checked);
 	}
 	function reload() {
 		result = [];
@@ -104,15 +125,17 @@
 			}
 		}
 	}
-	function change() {
-		localStorage?.setItem('setting', JSON.stringify(setting));
+	function change(e, save = true) {
+		if (save) {
+			saveSettings();
+		}
 
 		ng.clear();
 		let doReload = false;
 
-		for (let i = 0; i < setting.length; i++) {
-			for (let j = 0; j < setting[i].length; j++) {
-				const bool = setting[i][j];
+		for (let i = 0; i < checks.length; i++) {
+			for (let j = 0; j < checks[i].length; j++) {
+				const bool = checks[i][j];
 				if (bool) {
 					const data =
 						i === 3
@@ -180,7 +203,7 @@
 					{type.capitalize()}
 				</label>
 				<div class="langs flex">
-					{#each setting[i] as bool, j}
+					{#each checks[i] as bool, j}
 						<label class="lang" title="{lango[j]}語">
 							<input type="checkbox" bind:checked={bool} />
 							{langs[j].toUpperCase()}
@@ -206,7 +229,7 @@
 						<label class="lang">
 							<input
 								type="checkbox"
-								bind:checked={setting[typel][i]}
+								bind:checked={checks[typel][i]}
 							/>
 							{title}
 						</label>
@@ -218,7 +241,7 @@
 		<AddSource {userResource} on:save={save} />
 	</section>
 	<section class="right w-1/2">
-		<form class="tool flex">
+		<form class="tool flex" on:change={saveSettings}>
 			<button class="reload" on:click={reload}>Reload</button>
 			<!-- <button on:click={() => (result = [])}>Clear</button> -->
 			<label>
