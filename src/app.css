@@ -4,6 +4,7 @@
 	--text-color: gainsboro;
 	--primary-color: rgb(101, 184, 235);
 	--secondy-color: palevioletred;
+	--attention-color: #e85303;
 }
 
 body {
@@ -23,6 +24,10 @@ a {
 
 a:visited {
 	color: var(--secondy-color);
+}
+
+button {
+	padding: 0.2rem;
 }
 
 .btn-set {

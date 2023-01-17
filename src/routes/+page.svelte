@@ -215,7 +215,7 @@
 	</section>
 	<section class="right w-1/2">
 		<div class="tool flex">
-			<button on:click={reload}>Reload</button>
+			<button class="reload" on:click={reload}>Reload</button>
 			<!-- <button on:click={() => (result = [])}>Clear</button> -->
 			<label>
 				<input type="checkbox" bind:checked={filter} />
@@ -269,6 +269,13 @@
 		border: none;
 		text-align: left;
 		width: 100%;
+	}
+	.reload {
+		background-color: var(--attention-color);
+		border-color: var(--attention-color);
+		border-radius: 4px;
+		color: #fff;
+		font-weight: bold;
 	}
 	span,
 	.name.exist {
