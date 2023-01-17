@@ -25,9 +25,19 @@
 		reload();
 	}
 
-	onMount(() => {
+	onMount(async () => {
 		const val = localStorage.getItem('UserResource');
-		userResource = JSON.parse(val) || {};
+		if (val) {
+			userResource = JSON.parse(val);
+		} else {
+			const mt = await (await fetch('/data/other-mt.txt')).text();
+			const jw = await (await fetch('/data/other-jw.txt')).text();
+			userResource = {
+				Mt: mt.split('\n'),
+				Jewel: jw.split('\n'),
+			};
+			console.log('Mt and Jewel data loaded.');
+		}
 		userKeys = Object.keys(userResource);
 
 		const _setting = JSON.parse(localStorage.getItem('setting'));
