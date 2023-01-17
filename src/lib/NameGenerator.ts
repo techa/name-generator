@@ -17,8 +17,7 @@ export interface Options {
 	nameLengthMax?: number;
 }
 
-interface NgData {
-	char: string;
+interface NextData {
 	nexts: Record<string, number>;
 	// next count total
 	total: number;
@@ -44,7 +43,7 @@ export interface NameResult {
 export class NameGenerator {
 	minSyllable = 2;
 	maxSyllable = 8;
-	data: Record<string, NgData> = {};
+	data: Record<string, NextData> = {};
 	names: Set<string> = new Set();
 
 	translator = new Translator();
@@ -81,7 +80,6 @@ export class NameGenerator {
 	}
 	set(char: string, next: string) {
 		const data = this.data[char] || {
-			char,
 			nexts: {},
 			total: 0,
 		};
