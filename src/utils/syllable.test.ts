@@ -15,4 +15,8 @@ test(`syllable`, (t) => {
 	t.deepEqual(syllable('an bli~t'), ['an ', 'bli~t']);
 
 	t.deepEqual(syllable('de layutel'), ['de ', 'la', 'yu', 'tel']);
+
+	t.deepEqual(syllable('AIs'), ['A', 'Is']);
+	t.deepEqual(syllable('Ais'), ['A', 'is']);
+	t.deepEqual(syllable('ais'), ['a', 'is']);
 });

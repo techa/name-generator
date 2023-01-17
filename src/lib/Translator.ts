@@ -2,41 +2,46 @@ import { toKana, fromKana } from '../constants/kana.js';
 import { isConsonant, isVowel } from '../utils/vc.js';
 
 interface TranslatorOptions {
-	// https://ja.wikipedia.org/長 (発音記号)
+	/**
+	 * - https://ja.wikipedia.org/長 (発音記号)
+	 */
 	longVowel?: 'repeat' | '-';
-	// https://ja.wikipedia.org/wiki/促音
-	// https://ja.wikipedia.org/wiki/長子音
-	// https://ja.wikipedia.org/wiki/っ
+	/**
+	 * - https://ja.wikipedia.org/wiki/促音
+	 * - https://ja.wikipedia.org/wiki/長子音
+	 * - https://ja.wikipedia.org/wiki/っ
+	 */
 	longConsonant?: 'repeat' | '~';
-	// アップルを a~pl とするか ap~l とするか。
-	// ルッカを l~ka とするか lk~a とするか。
-	// 日本語話者からすると前者が馴染み深いが国際音声記号では後者で表す
+
+	/**
+	 * - アップルを `a~pl` とするか `ap~l` とするか。
+	 * - ルッカを `l~ka` とするか `lk~a` とするか。
+	 *
+	 * 日本語話者からすると前者が馴染み深いが国際音声記号では後者で表す
+	 */
 	longConsonantPosition?: 'before' | 'after';
+
+	/**
+	 * 子音のないアイウエオを`A`とするか`_a`とするか`a`とするか
+	 */
+	consonantForVowels?: 'capital' | '_' | 'lower';
 }
 
-const optionsDefault: TranslatorOptions = {
-	longVowel: '-',
-	longConsonant: '~',
-	longConsonantPosition: 'before',
-};
-
-function setOptions(
-	target: TranslatorOptions,
-	options: TranslatorOptions = {},
-) {
-	for (const key in optionsDefault) {
-		target[key] = options[key] ?? optionsDefault[key];
-	}
-	return target;
-}
-
-export class Translator implements TranslatorOptions {
-	longVowel: 'repeat' | '-' = '-';
-	longConsonant: 'repeat' | '~' = '~';
-	longConsonantPosition: 'before' | 'after' = 'before';
+export class Translator implements Required<TranslatorOptions> {
+	longVowel: TranslatorOptions['longVowel'] = '-';
+	longConsonant: TranslatorOptions['longConsonant'] = '~';
+	longConsonantPosition: TranslatorOptions['longConsonantPosition'] =
+		'before';
+	consonantForVowels: TranslatorOptions['consonantForVowels'] = '_';
 
 	constructor(options?: TranslatorOptions) {
-		setOptions(this, options);
+		this.setOptions(options);
+	}
+
+	setOptions(options: TranslatorOptions = {}) {
+		for (const key in options) {
+			this[key] = options[key] ?? this[key];
+		}
 	}
 
 	/**
@@ -53,13 +58,17 @@ export class Translator implements TranslatorOptions {
 			const char = str[i];
 			const next = str[i + 1];
 
-			if (isVowel(char)) {
+			if (/[AIUEO]/.test(char)) {
+				kana += toKana[char];
+			} else if (isVowel(char)) {
 				if (prev && toKana[prev + char]) {
 					kana += toKana[prev + char];
 				} else if (char === prev) {
 					kana += 'ー';
 				} else if (prev === '~' && str[i - 2]) {
 					kana += toKana[str[i - 2] + char];
+				} else if (/[AIUEO]/.test(prev)) {
+					kana += toKana[char];
 				} else {
 					kana += toKana['_' + char];
 				}
@@ -144,6 +153,19 @@ export class Translator implements TranslatorOptions {
 					result += result.slice(-1);
 				}
 				continue;
+			}
+
+			if (/[アイウエオ]/.test(char) && char.length === 1) {
+				const res = fromKana[char].toLowerCase();
+				switch (this.consonantForVowels) {
+					case 'lower':
+						result += res;
+						continue;
+
+					case '_':
+						result += '_' + res;
+						continue;
+				}
 			}
 
 			if (fromKana[char]) {

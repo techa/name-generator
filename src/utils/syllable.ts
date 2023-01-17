@@ -19,11 +19,11 @@ export function syllable(word: string): string[] {
 			continue;
 		}
 
-		if (isVowel(char, '-')) {
+		if (isVowel(char, '-AIUEO')) {
 			if (lastVowelIndex >= 0) {
 				const len = current.length;
 				if (i - lastVowelIndex === 1) {
-					const end = len;
+					const end = char === '-' ? len : len - 1;
 					syllables.push(current.substring(0, end));
 					current = current.substring(end, len);
 				} else {

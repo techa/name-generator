@@ -2,6 +2,11 @@ import type { Consonants, Vowels } from './char.js';
 
 type KanaN =
 	| `${Consonants | ''}${Vowels | ''}`
+	| 'A'
+	| 'I'
+	| 'U'
+	| 'E'
+	| 'O'
 	| ' ';
 
 export const toKana: Record<KanaN, string> = {
@@ -13,11 +18,19 @@ export const toKana: Record<KanaN, string> = {
 	u: 'ュ',
 	e: 'ェ',
 	o: 'ォ',
+
+	A: 'ア',
+	I: 'イ',
+	U: 'ウ',
+	E: 'エ',
+	O: 'オ',
+
 	_a: 'ア',
 	_i: 'イ',
 	_u: 'ウ',
 	_e: 'エ',
 	_o: 'オ',
+
 	y: 'ィ',
 	ya: 'ヤ',
 	yi: 'ユィ',
