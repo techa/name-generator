@@ -3,6 +3,17 @@
 > Automatic generation of Europe-style names based on Japanese
 
 ## 概要
+カタカナの名前リストを分解して再構成する。
+
+### 生成手順
+* カタカナを発音表記に変換
+    * `アルバート` -> `_alba-t`
+* 発音記号を分解（デフォルトでは音節[Syllable]で分解）
+	* `_alba-t` -> `_al`、`ba-t`
+* 次に続くものをカウントする
+	* `_al`、`ba-t`の場合`_al`のデータに`ba-t`のカウントを＋１する`{_al: {ba-t: 1}}`
+	* `アルフォンス`を追加。`{_al: {ba-t: 1, fons: 1}}`
+* カウントに応じた確率で次の文字が選ばれる
 
 
 ## 名前表現（Name expression）
