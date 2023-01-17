@@ -6,6 +6,8 @@
 	import '../global/string/capitalize.js';
 	import { all, types, langs, lango } from '../constants/sources.js';
 
+	let mount = false;
+
 	let setting: boolean[][] = [
 		Array(langs.length).fill(false), // family
 		Array(langs.length).fill(false), // female
@@ -20,7 +22,10 @@
 	let filter = true;
 	const ng = new NameGenerator();
 
-	$: {
+	let splitter = 1;
+
+	$: if (mount) {
+		ng.splitter = splitter;
 		filter;
 		reload();
 	}
@@ -45,6 +50,8 @@
 			setting = _setting;
 		}
 		change();
+
+		mount = true;
 	});
 
 	function save(e) {
@@ -78,8 +85,13 @@
 			try {
 				// 重複回避。Avoid redundancy
 				let name = ng.create();
+				let j = 100;
 				while (names.has(name.kana) || (!filter && name.exist)) {
 					name = ng.create();
+					if (!--j) {
+						console.log('name', name);
+						break;
+					}
 				}
 				names.add(name.kana);
 				result.push(name);
@@ -142,6 +154,17 @@
 		</div>
 		<h2>Source controller</h2>
 		<form class="w-1/2 select-none" on:change={change}>
+			<div class="tool flex">
+				<div class="btn-set">
+					{#each ['Syllable', '2-Gram', '3-Gram'] as label, i}
+						<button
+							on:click={() => (splitter = i + 1)}
+							class:active={splitter === i + 1}>{label}</button
+						>
+					{/each}
+				</div>
+			</div>
+
 			{#each types as type, i}
 				<label class="check_all">
 					<input
@@ -232,6 +255,10 @@
 	}
 	.tool {
 		margin: 0.5rem 0;
+	}
+	button.active {
+		background-color: var(--primary-color);
+		border-color: var(--primary-color);
 	}
 	.name {
 		font-weight: bold;

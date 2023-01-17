@@ -44,6 +44,8 @@ export class NameGenerator {
 	minSyllable = 2;
 	maxSyllable = 8;
 	data: Record<string, NextData> = {};
+	// 1 = syllable, 2 <= N-gram
+	splitter = 1;
 	names: Set<string> = new Set();
 
 	translator = new Translator();
@@ -65,15 +67,31 @@ export class NameGenerator {
 
 			this.names.add(word);
 
-			const syllables = syllable(word);
+			if (this.splitter === 1) {
+				const syllables = syllable(word);
 
-			this.set('^', syllables[0]);
+				this.set('^', syllables[0]);
 
-			for (let j = 0; j < syllables.length; j += 1) {
-				const char = syllables[j];
-				const next = syllables[j + 1] || '$';
-				if (char && next) {
-					this.set(char, next);
+				for (let j = 0; j < syllables.length; j += 1) {
+					const char = syllables[j];
+					const next = syllables[j + 1] || '$';
+					if (char && next) {
+						this.set(char, next);
+					}
+				}
+			} else {
+				// n-gram
+				this.set('^', word.slice(0, 1));
+
+				const n = this.splitter;
+
+				for (let j = 0; j <= word.length - n; j += 1) {
+					const jn = j + n;
+					const char = word.slice(j, jn);
+					const next = word.slice(jn, jn + n) || '$';
+					if (char && next) {
+						this.set(char, next);
+					}
 				}
 			}
 		}
@@ -95,6 +113,11 @@ export class NameGenerator {
 		if (opts.random != null) {
 			this.random = opts.random;
 		}
+
+		if (this.splitter > 1) {
+			return this.#ngram(opts);
+		}
+
 		let count =
 			typeof opts.count === 'number'
 				? opts.count
@@ -109,10 +132,8 @@ export class NameGenerator {
 		while (count--) {
 			const data = this.data[prev];
 
-			const total =
-				data.total -
-				((syllables < this.minSyllable && data.nexts.$) || 0);
-			const rate = total * this.random.float(0, 1);
+			const dontEnd = (syllables < this.minSyllable && data.nexts.$) || 0;
+			const rate = (data.total - dontEnd) * this.random.float();
 			let border = 0;
 
 			// 長くなりすぎないように切りの良いところで切る
@@ -122,11 +143,7 @@ export class NameGenerator {
 			}
 
 			for (const key in data.nexts) {
-				if (
-					key === '$' &&
-					syllables < this.minSyllable &&
-					data.nexts.$
-				) {
+				if (key === '$' && dontEnd) {
 					continue;
 				}
 				if (rate <= (border += data.nexts[key])) {
@@ -160,6 +177,55 @@ export class NameGenerator {
 			exp: product,
 			kana: this.translator.toKana(product),
 			syllables,
+			exist: this.names.has(product),
+		};
+	}
+
+	#ngram(opts: Partial<CreateOptions> = {}): NameResult {
+		const wordCount =
+			typeof opts.count === 'number'
+				? opts.count
+				: this.random.int(...(opts.count || [5, 10]));
+
+		let product = '';
+		let next = '^';
+
+		const keys = Object.keys(this.data);
+
+		while (product.length < wordCount) {
+			if (next === '$') {
+				break;
+			}
+			const adds = keys.filter((v) => v.startsWith(next));
+			const add = this.random.pick(adds.length ? adds : keys);
+			const data = this.data[add];
+
+			if (!data) {
+				// console.log(add, data);
+				break;
+			}
+
+			const dontEnd = (product.length < 3 && data.nexts.$) || 0;
+			const rate = (data.total - dontEnd) * this.random.float();
+			let border = 0;
+
+			for (const key in data.nexts) {
+				if (key === '$' && dontEnd) {
+					next = this.random.pick(keys);
+					continue;
+				}
+				if (rate <= (border += data.nexts[key])) {
+					product += add === '^' ? '' : add;
+					next = key;
+					break;
+				}
+			}
+		}
+
+		return {
+			exp: product,
+			kana: this.translator.toKana(product),
+			syllables: 0,
 			exist: this.names.has(product),
 		};
 	}

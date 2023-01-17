@@ -6,6 +6,9 @@ import { readFile, writeFile } from 'fs/promises';
 const en = (await readFile('./resource/exp/female-en.txt', 'utf-8')).split(
 	'\n',
 );
+const kana_en = (
+	await readFile('./resource/kana/female-en.txt', 'utf-8')
+).split('\n');
 const fr = (await readFile('./resource/exp/female-fr.txt', 'utf-8')).split(
 	'\n',
 );
@@ -59,6 +62,35 @@ test(`NameGenerator en`, (t) => {
 	);
 
 	writeFile('./resolver/female-en.json', JSON.stringify(ng.data, null, 4));
+});
+
+test(`NameGenerator kana_en capital`, (t) => {
+	const ng = new NameGenerator();
+	ng.random = new MersenneTwister(1);
+	ng.translator.setOptions({
+		consonantForVowels: 'capital',
+	});
+	ng.add(kana_en, true);
+
+	t.deepEqual(ng.create(), {
+		exp: 'zad-li-n',
+		kana: 'ザドーリーン',
+		syllables: 3,
+		exist: false,
+	});
+
+	console.log(
+		`NameGenerator kana_en capital`,
+		[...Array(100)]
+			.map(() => ng.create())
+			.filter(({ exist }) => !exist)
+			.map(({ kana }) => kana),
+	);
+
+	writeFile(
+		'./resolver/female-kana_en-capital.json',
+		JSON.stringify(ng.data, null, 4),
+	);
 });
 
 test(`NameGenerator en fr`, (t) => {
@@ -115,4 +147,65 @@ test(`NameGenerator en fr`, (t) => {
 	);
 
 	writeFile('./resolver/female-en-fr.json', JSON.stringify(ng.data, null, 4));
+});
+
+test(`NameGenerator 2-gram`, (t) => {
+	const ng = new NameGenerator();
+	ng.random = new MersenneTwister(1);
+	ng.splitter = 2;
+	// ng.translator.setOptions({
+	// 	consonantForVowels: 'capital',
+	// });
+	// ng.add(kana_en, true);
+	ng.add(en);
+
+	t.deepEqual(ng.create(), {
+		exp: 'lvin',
+		kana: 'ルヴィン',
+		syllables: 0,
+		exist: false,
+	});
+
+	console.log(
+		`NameGenerator 2-gram`,
+		[...Array(100)]
+			.map(() => ng.create())
+			.filter(({ exist }) => !exist)
+			.map(({ kana }) => kana),
+	);
+
+	writeFile(
+		'./resolver/female-en-2-gram.json',
+		JSON.stringify(ng.data, null, 4),
+	);
+});
+
+test(`NameGenerator 3-gram`, (t) => {
+	const ng = new NameGenerator();
+	ng.random = new MersenneTwister(1);
+	ng.splitter = 3;
+	ng.translator.setOptions({
+		consonantForVowels: 'capital',
+	});
+	ng.add(kana_en, true);
+
+	t.deepEqual(ng.create(), {
+		exp: 'lomi-l',
+		kana: 'ロミール',
+		syllables: 0,
+		exist: false,
+	});
+
+	console.log(
+		'female-en-3-gram',
+		[...Array(100)]
+			.map(() => ng.create())
+			.filter(({ exist }) => !exist)
+			.map(({ kana }) => kana),
+	);
+
+	writeFile(
+		'./resolver/female-en-3-gram.json',
+		JSON.stringify(ng.data, null, 4),
+	);
 });
