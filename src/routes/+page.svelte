@@ -49,6 +49,7 @@
 				Mt: mt.split('\n'),
 				Jewel: jw.split('\n'),
 			};
+			checks[types.length] = [false, false];
 			console.log('Mt and Jewel data loaded.');
 		}
 		userKeys = Object.keys(userResource);
@@ -196,6 +197,7 @@
 				<label class="check_all">
 					<input
 						type="checkbox"
+						checked={checks[i].every((v) => v)}
 						on:change={(e) => {
 							checkAll(e.currentTarget.checked, i);
 						}}
@@ -218,6 +220,7 @@
 				<label class="check_all">
 					<input
 						type="checkbox"
+						checked={checks[typel].every((v) => v)}
 						on:change={(e) => {
 							checkAll(e.currentTarget.checked, typel);
 						}}
