@@ -1,4 +1,4 @@
-// node ./scripts/expToJs.js
+// tsc | node ./.build/scripts/kanaToExp.js | node ./scripts/expToJs.js
 import { readFileSync, writeFileSync } from 'fs';
 import { types, langs, lango } from './constants.js';
 
