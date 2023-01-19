@@ -42,15 +42,23 @@
 		if (val) {
 			userResource = JSON.parse(val);
 		} else {
-			// https://kit.svelte.dev/docs/modules#$app-paths
-			const mt = await (await fetch(`${base}/data/other-mt.txt`)).text();
-			const jw = await (await fetch(`${base}/data/other-jw.txt`)).text();
-			userResource = {
-				Mt: mt.split('\n'),
-				Jewel: jw.split('\n'),
-			};
-			checks[types.length] = [false, false];
-			console.log('Mt and Jewel data loaded.');
+			try {
+				// https://kit.svelte.dev/docs/modules#$app-paths
+				const mt = await (
+					await fetch(`${base}/data/other-mt.txt`)
+				).text();
+				const jw = await (
+					await fetch(`${base}/data/other-jw.txt`)
+				).text();
+				userResource = {
+					Mt: mt.split('\n'),
+					Jewel: jw.split('\n'),
+				};
+				checks[types.length] = [false, false];
+				console.log('Mt and Jewel data loaded.');
+			} catch (error) {
+				console.error('Bad fetch response');
+			}
 		}
 		userKeys = Object.keys(userResource);
 
