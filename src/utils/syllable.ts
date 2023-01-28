@@ -2,6 +2,12 @@ import { isVowel, transVC } from './vc.js';
 
 /**
  *  Word split into syllables
+ *
+ * 1. 母音 (V)
+ * 2. 子音＋母音 (CV)
+ * 3. 母音＋子音 (VC)
+ * 4. 子音＋母音＋子音 (CVC)
+ * @link https://ja.wikipedia.org/wiki/音節
  */
 export function syllable(word: string): string[] {
 	const syllables = [];
