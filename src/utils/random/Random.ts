@@ -25,7 +25,7 @@ export class Random {
 		numPicks: number,
 		allowDuplicates = false,
 	): T[] {
-		if (numPicks < 0) {
+		if (!Number.isFinite(numPicks) || numPicks < 0) {
 			throw new Error(
 				'Invalid number of elements to pick, must pick a value 0 <= n',
 			);
@@ -33,13 +33,12 @@ export class Random {
 		if (numPicks === 0) {
 			return [];
 		}
-		if (numPicks === array.length) {
-			return Array.from(array);
-		}
+
+		const result: T[] = [];
+
 		if (allowDuplicates) {
-			const result = new Array<T>(numPicks);
-			for (let i = 0; i < numPicks; i++) {
-				result[i] = this.pick(array);
+			while (result.length < numPicks) {
+				result.push(this.pick(array));
 			}
 			return result;
 		}
@@ -49,12 +48,14 @@ export class Random {
 				'Invalid number of elements to pick, must pick a value n <= length',
 			);
 		}
-		const set = new Set<T>();
-		while (set.size < numPicks) {
-			set.add(this.pick(array));
+
+		const temp = Array.from(array);
+		while (result.length < numPicks) {
+			const index = this.int(0, temp.length - 1);
+			result.push(temp.splice(index, 1)[0]);
 		}
 
-		return [...set];
+		return result;
 	}
 
 	shuffle<T>(array: Array<T>): Array<T> {
