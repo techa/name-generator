@@ -26,8 +26,10 @@ test(`toKana`, () => {
 	expect(trans.toKana('hais')).toBe('ハイス');
 });
 
-test(`fromKana`, () => {
-	const trans = new Phonation();
+test(`fromKana _`, () => {
+	const trans = new Phonation({
+		consonantForVowels: '_',
+	});
 	expect(trans.fromKana('アルバート')).toBe('_alba-t');
 	expect(trans.fromKana('スカーレット')).toBe('ska-le~t');
 	expect(trans.fromKana('パンナコッタ')).toBe('pannako~ta');
@@ -44,7 +46,7 @@ test(`fromKana`, () => {
 	expect(trans.fromKana('クケナン')).toBe('kukenan');
 });
 
-test(`fromKana 2`, () => {
+test(`fromKana repeat after capital`, () => {
 	const trans = new Phonation({
 		longVowel: 'repeat',
 		longConsonantPosition: 'after',
@@ -58,7 +60,7 @@ test(`fromKana 2`, () => {
 	expect(trans.fromKana('アィス')).toBe('Ais');
 });
 
-test(`fromKana lower`, () => {
+test(`fromKana repeat repeat lower`, () => {
 	const trans = new Phonation({
 		longVowel: 'repeat',
 		longConsonant: 'repeat',

@@ -36,7 +36,7 @@ export class Phonation implements Required<PhonationOptions> {
 	longVowel: PhonationOptions['longVowel'] = '-';
 	longConsonant: PhonationOptions['longConsonant'] = '~';
 	longConsonantPosition: PhonationOptions['longConsonantPosition'] = 'before';
-	consonantForVowels: PhonationOptions['consonantForVowels'] = '_';
+	consonantForVowels: PhonationOptions['consonantForVowels'] = 'capital';
 
 	constructor(options: PhonationOptions = {}) {
 		for (const key in options) {

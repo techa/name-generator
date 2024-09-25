@@ -153,17 +153,14 @@ test(`NameGenerator en fr`, () => {
 
 test(`NameGenerator 2-gram`, () => {
 	const ng = new NameGenerator({
+		splitter: 2,
 		random: new MersenneTwister(1),
-		// translator: {
-		// 	consonantForVowels: 'capital',
-		// },
 	});
-	ng.splitter = 2;
-	ng.add(en);
+	ng.add(kana_en, true);
 
 	expect(ng.create()).toStrictEqual({
-		exp: 'lvina_in',
-		kana: 'ルヴィナイン',
+		exp: 'lvinSi-t',
+		kana: 'ルヴィンシート',
 		syllables: 0,
 		exist: false,
 	});
@@ -186,9 +183,6 @@ test(`NameGenerator 3-gram`, () => {
 	const ng = new NameGenerator({
 		splitter: 3,
 		random: new MersenneTwister(1),
-		phonation: {
-			consonantForVowels: 'capital',
-		},
 	});
 	ng.add(kana_en, true);
 
