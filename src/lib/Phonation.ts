@@ -8,7 +8,7 @@ export interface PhonationOptions {
 	 * repeat: サーフィン→`saafin`
 	 * -: サーフィン→`sa-fin`
 	 */
-	longVowel?: 'repeat' | '-';
+	longVowel: 'repeat' | '-';
 	/**
 	 * - https://ja.wikipedia.org/wiki/促音
 	 * - https://ja.wikipedia.org/wiki/長子音
@@ -16,7 +16,7 @@ export interface PhonationOptions {
 	 *
 	 * repeat: アップル→`appl`、ルッカ→`lkka`
 	 */
-	longConsonant?: 'repeat' | '~';
+	longConsonant: 'repeat' | '~';
 
 	/**
 	 * - アップルを `a~pl` とするか `ap~l` とするか。
@@ -24,21 +24,21 @@ export interface PhonationOptions {
 	 *
 	 * 日本語話者からすると前者が馴染み深いが国際音声記号では後者で表す
 	 */
-	longConsonantPosition?: 'before' | 'after';
+	longConsonantPosition: 'before' | 'after';
 
 	/**
 	 * 子音のないアイウエオを`A`とするか`_a`とするか`a`とするか
 	 */
-	consonantForVowels?: 'capital' | '_' | 'lower';
+	consonantForVowels: 'capital' | '_' | 'lower';
 }
 
-export class Phonation implements Required<PhonationOptions> {
+export class Phonation implements PhonationOptions {
 	longVowel: PhonationOptions['longVowel'] = '-';
 	longConsonant: PhonationOptions['longConsonant'] = '~';
 	longConsonantPosition: PhonationOptions['longConsonantPosition'] = 'before';
 	consonantForVowels: PhonationOptions['consonantForVowels'] = 'capital';
 
-	constructor(options: PhonationOptions = {}) {
+	constructor(options: Partial<PhonationOptions> = {}) {
 		for (const key in options) {
 			this[key] = options[key] ?? this[key];
 		}
