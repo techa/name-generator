@@ -1,10 +1,10 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import { consonants } from '../constants/char.js';
 import { NameExp } from './NameExp.js';
 
-test(`?el`, (t) => {
+test(`?el`, () => {
 	const nameexp = new NameExp('?el');
-	t.deepEqual(nameexp.datas, [
+	expect(nameexp.datas).toStrictEqual([
 		{
 			index: 0,
 			source: '?',
@@ -22,9 +22,9 @@ test(`?el`, (t) => {
 		},
 	]);
 
-	t.true(nameexp.test('vel'));
-	t.false(nameexp.test('ven'));
-	t.deepEqual(nameexp.spreadAll(), [
+	expect(nameexp.test('vel')).toBeTruthy();
+	expect(nameexp.test('ven')).toBeFalsy();
+	expect(nameexp.spreadAll()).toStrictEqual([
 		'_el',
 		'yel',
 		'wel',
@@ -63,9 +63,9 @@ test(`?el`, (t) => {
 	]);
 });
 
-test(`[?-l]el[nmvf][ae]`, (t) => {
+test(`[?-l]el[nmvf][ae]`, () => {
 	const nameexp = new NameExp('[?-l]el[nmvf][ae]');
-	t.deepEqual(nameexp.datas, [
+	expect(nameexp.datas).toStrictEqual([
 		{
 			index: 0,
 			source: '[?-l]',
@@ -93,29 +93,29 @@ test(`[?-l]el[nmvf][ae]`, (t) => {
 		},
 	]);
 
-	t.true(nameexp.test('felva'));
-	t.false(nameexp.test('midna'));
-	t.false(nameexp.test('lelve'));
+	expect(nameexp.test('felva')).toBeTruthy();
+	expect(nameexp.test('midna')).toBeFalsy();
+	expect(nameexp.test('lelve')).toBeFalsy();
 
-	t.is(nameexp.spreadAll().length, 272);
+	expect(nameexp.spreadAll().length).toBe(272);
 	// console.log('nameexp', nameexp.spreadAll());
 	// console.log('nameexp', [...new Set(nameexp.spreadAll())]);
 });
 
-test(`combine`, (t) => {
+test(`combine`, () => {
 	const nameexp = new NameExp('tel');
-	t.is(nameexp.combine('til'), 't[ei]l');
-	t.is(nameexp.combine('dil'), undefined);
-	t.is(nameexp.combine('dis'), undefined);
-	t.is(new NameExp('t[ei]l').combine('tal'), 't[aei]l');
-	t.is(new NameExp('t[ei]l').combine('til'), 't[ei]l');
-	t.is(new NameExp('t[ei]l').combine('tis'), undefined);
-	t.is(new NameExp('[bhm]ali').combine('[S_dk]ali'), '[S_bdhkm]ali');
+	expect(nameexp.combine('til')).toBe('t[ei]l');
+	expect(nameexp.combine('dil')).toBe(undefined);
+	expect(nameexp.combine('dis')).toBe(undefined);
+	expect(new NameExp('t[ei]l').combine('tal')).toBe('t[aei]l');
+	expect(new NameExp('t[ei]l').combine('til')).toBe('t[ei]l');
+	expect(new NameExp('t[ei]l').combine('tis')).toBe(undefined);
+	expect(new NameExp('[bhm]ali').combine('[S_dk]ali')).toBe('[S_bdhkm]ali');
 
-	t.is(new NameExp('t[ei][ls]').combine('til'), 't[ei][ls]');
+	expect(new NameExp('t[ei][ls]').combine('til')).toBe('t[ei][ls]');
 });
 
-test(`isMultiple`, (t) => {
-	t.is(new NameExp('tel').isMultiple(), false);
-	t.is(new NameExp('t[ei]l').isMultiple(), true);
+test(`isMultiple`, () => {
+	expect(new NameExp('tel').isMultiple()).toBe(false);
+	expect(new NameExp('t[ei]l').isMultiple()).toBe(true);
 });

@@ -1,66 +1,66 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import { Random, word } from './Random.js';
 
-test(`word`, (t) => {
+test((`word`), () => {
 	for (let i = 0; i < 100; i++) {
-		t.true(word().length >= 4);
-		t.true(word().length <= 6);
+		expect(word().length >= 4).toBeTruthy();
+		expect(word().length <= 6).toBeTruthy();
 		console.log(word());
 	}
 });
 
-test(`seed number`, (t) => {
+test((`seed number`), () => {
 	const random1 = new Random(12);
 	const random2 = new Random(12);
-	t.is(random1.next(), random2.next());
+	expect(random1.next()).toBe(random2.next());
 });
 
-test(`seed string`, (t) => {
+test((`seed string`), () => {
 	const random1 = new Random('hi');
 	const random2 = new Random('hi');
-	t.is(random1.seed, 'hi');
+	expect(random1.seed).toBe('hi');
 
-	t.is(random1.next(), random2.next());
+	expect(random1.next()).toBe(random2.next());
 });
 
-test(`1`, (t) => {
+test((`1`), () => {
 	const random = new Random(19650218);
-	t.is(random.seed, 19650218);
-	t.is(random.nextInt(), 2325592414);
+	expect(random.seed).toBe(19650218);
+	expect(random.nextInt()).toBe(2325592414);
 });
 
-test(`1000`, (t) => {
+test((`1000`), () => {
 	const random = new Random(19650218);
 	for (let i = 0; i < 999; i++) {
 		random.nextInt();
 	}
-	t.is(random.nextInt(), 1746987133);
-	// t.is(random.index, 1000);
+	expect(random.nextInt()).toBe(1746987133);
+	// expect(random.index).toBe(1000);
 
 	// const random2 = new Random(19650218, 1000);
-	// t.is(random.nextInt(), random2.nextInt());
+	// expect(random.nextInt()).toBe(random2.nextInt());
 });
 
-test(`dice`, (t) => {
+test((`dice`), () => {
 	const random = new Random(19650218);
-	t.is(random.dice(6), 4);
+	expect(random.dice(6)).toBe(4);
 
 	let check = true;
 	for (let i = 0; i < 1000; i++) {
 		const val = random.dice(6, 2);
 		check = 2 <= val && val <= 12;
 	}
-	t.true(check);
+	expect(check).toBeTruthy();
 });
 
-test(`rpg`, (t) => {
+test((`rpg`), () => {
 	const random = new Random(19650218);
-	t.is(random.rpg('2d100'), 67);
+	expect(random.rpg('2d100')).toBe(67);
 
 	let check = true;
 	for (let i = 0; i < 1000; i++) {
 		const val = random.rpg('2d100');
 		check = 2 <= val && val <= 200;
 	}
-	t.true(check);
+	expect(check).toBeTruthy();
 });

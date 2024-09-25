@@ -1,13 +1,13 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import './parseInt.js';
 import './parseFloat.js';
 
-test(`parseInt`, (t) => {
-	t.is('0.9t'.parseInt(), 0);
-	t.is('-0.9t'.parseInt(), -0);
+test(`parseInt`, () => {
+	expect('0.9t'.parseInt()).toBe(0);
+	expect('-0.9t'.parseInt()).toBe(-0);
 });
 
-test(`parseFloat`, (t) => {
-	t.is('0.9t'.parseFloat(), 0.9);
-	t.is('-0.9t'.parseFloat(), -0.9);
+test(`parseFloat`, () => {
+	expect('0.9t'.parseFloat()).toBe(0.9);
+	expect('-0.9t'.parseFloat()).toBe(-0.9);
 });

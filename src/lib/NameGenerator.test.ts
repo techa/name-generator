@@ -1,4 +1,4 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import { NameGenerator } from './NameGenerator.js';
 import { MersenneTwister } from '../utils/random/MersenneTwister.js';
 
@@ -13,7 +13,7 @@ const fr = (await readFile('./resource/exp/female-fr.txt', 'utf-8')).split(
 	'\n',
 );
 
-test(`NameGenerator en`, (t) => {
+test(`NameGenerator en`, () => {
 	const ng = new NameGenerator();
 	ng.add(en);
 
@@ -21,33 +21,33 @@ test(`NameGenerator en`, (t) => {
 	function random() {
 		return new MersenneTwister(++s);
 	}
-
-	t.deepEqual(ng.create({ random: random() }), {
+	expect(ng.create({ random: random() })).toStrictEqual({
 		exp: 'zad-li-n',
 		kana: 'ザドーリーン',
 		syllables: 3,
 		exist: false,
 	});
 
-	t.deepEqual(ng.create({ random: random() }), {
+	expect(ng.create({ random: random() })).toStrictEqual({
 		exp: 'be~ki-li-',
 		kana: 'ベッキーリー',
 		syllables: 3,
 		exist: false,
 	});
 
-	t.is(ng.create({ random: random() }).kana, 'エミ'); // エミランダ
-	t.is(ng.create({ random: random() }).kana, 'サラ');
-	t.is(ng.create({ random: random() }).kana, 'アニー');
-	t.is(ng.create({ random: random() }).kana, 'シルヴィアナ');
-	t.is(ng.create({ random: random() }).kana, 'キャサ'); // キャサリー
-	t.is(ng.create({ random: random() }).kana, 'アリー'); // アリーナタリ
-	t.is(ng.create({ random: random() }).kana, 'ディア');
-	t.is(ng.create({ random: random() }).kana, 'シンディー');
-	t.is(ng.create({ random: random() }).kana, 'エイゼル');
-	t.is(ng.create({ random: random() }).kana, 'フローレジー');
-	t.is(ng.create({ random: random() }).kana, 'カトリー');
-	t.deepEqual(ng.create({ random: new MersenneTwister(22) }), {
+	expect(ng.create({ random: random() }).kana).toBe('エミ'); // エミランダ
+	expect(ng.create({ random: random() }).kana).toBe('サラ');
+	expect(ng.create({ random: random() }).kana).toBe('アニー');
+	expect(ng.create({ random: random() }).kana).toBe('シルヴィアナ');
+	expect(ng.create({ random: random() }).kana).toBe('キャサ'); // キャサリー
+	expect(ng.create({ random: random() }).kana).toBe('アリー'); // アリーナタリ
+	expect(ng.create({ random: random() }).kana).toBe('ディア');
+	expect(ng.create({ random: random() }).kana).toBe('シンディー');
+	expect(ng.create({ random: random() }).kana).toBe('エイゼル');
+	expect(ng.create({ random: random() }).kana).toBe('フローレジー');
+	expect(ng.create({ random: random() }).kana).toBe('カトリー');
+
+	expect(ng.create({ random: new MersenneTwister(22) })).toStrictEqual({
 		exp: 'l-Sanon',
 		kana: 'ルーシャノン',
 		syllables: 3,
@@ -64,7 +64,7 @@ test(`NameGenerator en`, (t) => {
 	writeFile('./resolver/female-en.json', JSON.stringify(ng.data, null, 4));
 });
 
-test(`NameGenerator kana_en capital`, (t) => {
+test(`NameGenerator kana_en capital`, () => {
 	const ng = new NameGenerator();
 	ng.random = new MersenneTwister(1);
 	ng.translator.setOptions({
@@ -72,7 +72,7 @@ test(`NameGenerator kana_en capital`, (t) => {
 	});
 	ng.add(kana_en, true);
 
-	t.deepEqual(ng.create(), {
+	expect(ng.create()).toStrictEqual({
 		exp: 'zad-li-n',
 		kana: 'ザドーリーン',
 		syllables: 3,
@@ -93,7 +93,7 @@ test(`NameGenerator kana_en capital`, (t) => {
 	);
 });
 
-test(`NameGenerator en fr`, (t) => {
+test(`NameGenerator en fr`, () => {
 	const ng = new NameGenerator();
 	ng.add(en);
 	ng.add(fr);
@@ -103,36 +103,37 @@ test(`NameGenerator en fr`, (t) => {
 		return new MersenneTwister(++s);
 	}
 
-	t.deepEqual(ng.create({ random: random() }), {
+	expect(ng.create({ random: random() })).toStrictEqual({
 		exp: 'zeli-nu',
 		kana: 'ゼリーヌ',
 		syllables: 3,
 		exist: false,
 	});
 
-	t.deepEqual(ng.create({ random: random() }), {
+	expect(ng.create({ random: random() })).toStrictEqual({
 		exp: 'bli_aga~t',
 		kana: 'ブリアガット',
 		syllables: 3,
 		exist: false,
 	});
 
-	t.is(ng.create({ random: random() }).kana, 'エマニュエル');
-	t.is(ng.create({ random: random() }).kana, 'ウィレリレーヌ');
-	t.is(ng.create({ random: random() }).kana, 'アギャット');
-	t.is(ng.create({ random: random() }).kana, 'ガブリアナスター');
-	t.is(ng.create({ random: random() }).kana, 'セレス');
-	t.is(ng.create({ random: random() }).kana, 'アサ');
-	t.is(ng.create({ random: random() }).kana, 'イザ');
-	t.is(ng.create({ random: random() }).kana, 'コーデビーナ');
-	t.is(ng.create({ random: random() }).kana, 'エイリス');
-	t.is(ng.create({ random: random() }).kana, 'グレタビ');
-	t.is(ng.create({ random: random() }).kana, 'ルイザンド');
-	t.is(ng.create({ random: random() }).kana, 'クロティファビアト');
-	t.is(ng.create({ random: random() }).kana, 'サリー');
-	t.is(ng.create({ random: random() }).kana, 'ディアガ');
-	t.is(ng.create({ random: random() }).kana, 'ブレンダニア');
-	t.deepEqual(ng.create({ random: new MersenneTwister(22) }), {
+	expect(ng.create({ random: random() }).kana).toBe('エマニュエル');
+	expect(ng.create({ random: random() }).kana).toBe('ウィレリレーヌ');
+	expect(ng.create({ random: random() }).kana).toBe('アギャット');
+	expect(ng.create({ random: random() }).kana).toBe('ガブリアナスター');
+	expect(ng.create({ random: random() }).kana).toBe('セレス');
+	expect(ng.create({ random: random() }).kana).toBe('アサ');
+	expect(ng.create({ random: random() }).kana).toBe('イザ');
+	expect(ng.create({ random: random() }).kana).toBe('コーデビーナ');
+	expect(ng.create({ random: random() }).kana).toBe('エイリス');
+	expect(ng.create({ random: random() }).kana).toBe('グレタビ');
+	expect(ng.create({ random: random() }).kana).toBe('ルイザンド');
+	expect(ng.create({ random: random() }).kana).toBe('クロティファビアト');
+	expect(ng.create({ random: random() }).kana).toBe('サリー');
+	expect(ng.create({ random: random() }).kana).toBe('ディアガ');
+	expect(ng.create({ random: random() }).kana).toBe('ブレンダニア');
+
+	expect(ng.create({ random: new MersenneTwister(22) })).toStrictEqual({
 		exp: 'mili-nu',
 		kana: 'ミリーヌ',
 		syllables: 3,
@@ -149,7 +150,7 @@ test(`NameGenerator en fr`, (t) => {
 	writeFile('./resolver/female-en-fr.json', JSON.stringify(ng.data, null, 4));
 });
 
-test(`NameGenerator 2-gram`, (t) => {
+test(`NameGenerator 2-gram`, () => {
 	const ng = new NameGenerator();
 	ng.random = new MersenneTwister(1);
 	ng.splitter = 2;
@@ -159,7 +160,7 @@ test(`NameGenerator 2-gram`, (t) => {
 	// ng.add(kana_en, true);
 	ng.add(en);
 
-	t.deepEqual(ng.create(), {
+	expect(ng.create()).toStrictEqual({
 		exp: 'lvin',
 		kana: 'ルヴィン',
 		syllables: 0,
@@ -180,7 +181,7 @@ test(`NameGenerator 2-gram`, (t) => {
 	);
 });
 
-test(`NameGenerator 3-gram`, (t) => {
+test(`NameGenerator 3-gram`, () => {
 	const ng = new NameGenerator();
 	ng.random = new MersenneTwister(1);
 	ng.splitter = 3;
@@ -189,7 +190,7 @@ test(`NameGenerator 3-gram`, (t) => {
 	});
 	ng.add(kana_en, true);
 
-	t.deepEqual(ng.create(), {
+	expect(ng.create()).toStrictEqual({
 		exp: 'lomi-l',
 		kana: 'ロミール',
 		syllables: 0,

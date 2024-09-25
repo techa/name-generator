@@ -1,73 +1,73 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import { Translator } from './Translator.js';
 
-test(`toKana`, (t) => {
+test(`toKana`, () => {
 	const trans = new Translator();
-	t.is(trans.toKana('albaat'), 'アルバート');
-	t.is(trans.toKana('_alba-t'), 'アルバート');
-	t.is(trans.toKana('skaalett'), 'スカーレット');
-	t.is(trans.toKana('skaale~t'), 'スカーレット');
-	t.is(trans.toKana('skaalet~'), 'スカーレット');
-	t.is(trans.toKana('pannakotta'), 'パンナコッタ');
-	t.is(trans.toKana('pannako~ta'), 'パンナコッタ');
-	t.is(trans.toKana('pannakot~a'), 'パンナコッタ');
-	t.is(trans.toKana('tntn'), 'トントン');
-	t.is(trans.toKana('kottn'), 'コットン');
-	t.is(trans.toKana('ko~tn'), 'コットン');
-	t.is(trans.toKana('kot~on'), 'コットン');
-	t.is(trans.toKana('kot~n'), 'コトッン');
+	expect(trans.toKana('albaat')).toBe('アルバート');
+	expect(trans.toKana('_alba-t')).toBe('アルバート');
+	expect(trans.toKana('skaalett')).toBe('スカーレット');
+	expect(trans.toKana('skaale~t')).toBe('スカーレット');
+	expect(trans.toKana('skaalet~')).toBe('スカーレット');
+	expect(trans.toKana('pannakotta')).toBe('パンナコッタ');
+	expect(trans.toKana('pannako~ta')).toBe('パンナコッタ');
+	expect(trans.toKana('pannakot~a')).toBe('パンナコッタ');
+	expect(trans.toKana('tntn')).toBe('トントン');
+	expect(trans.toKana('kottn')).toBe('コットン');
+	expect(trans.toKana('ko~tn')).toBe('コットン');
+	expect(trans.toKana('kot~on')).toBe('コットン');
+	expect(trans.toKana('kot~n')).toBe('コトッン');
 
-	t.is(trans.toKana('l-Sa'), 'ルーシャ');
+	expect(trans.toKana('l-Sa')).toBe('ルーシャ');
 
-	t.is(trans.toKana('Albaat'), 'アルバート');
-	t.is(trans.toKana('AIs'), 'アイス');
-	t.is(trans.toKana('Ais'), 'アィス');
-	t.is(trans.toKana('ais'), 'アイス');
-	t.is(trans.toKana('hais'), 'ハイス');
+	expect(trans.toKana('Albaat')).toBe('アルバート');
+	expect(trans.toKana('AIs')).toBe('アイス');
+	expect(trans.toKana('Ais')).toBe('アィス');
+	expect(trans.toKana('ais')).toBe('アイス');
+	expect(trans.toKana('hais')).toBe('ハイス');
 });
 
-test(`fromKana`, (t) => {
+test(`fromKana`, () => {
 	const trans = new Translator();
-	t.is(trans.fromKana('アルバート'), '_alba-t');
-	t.is(trans.fromKana('スカーレット'), 'ska-le~t');
-	t.is(trans.fromKana('パンナコッタ'), 'pannako~ta');
-	t.is(trans.fromKana('アダーシェク'), '_ada-Sek');
-	t.is(trans.fromKana('アイス'), '_a_is');
-	t.is(trans.fromKana('アィス'), '_ais');
+	expect(trans.fromKana('アルバート')).toBe('_alba-t');
+	expect(trans.fromKana('スカーレット')).toBe('ska-le~t');
+	expect(trans.fromKana('パンナコッタ')).toBe('pannako~ta');
+	expect(trans.fromKana('アダーシェク')).toBe('_ada-Sek');
+	expect(trans.fromKana('アイス')).toBe('_a_is');
+	expect(trans.fromKana('アィス')).toBe('_ais');
 
-	t.is(trans.fromKana('コトロゥタディンギャ'), 'kotlowtadinGa');
-	t.is(trans.fromKana('ウータ・バーシー'), '_u-ta ba-Si-');
+	expect(trans.fromKana('コトロゥタディンギャ')).toBe('kotlowtadinGa');
+	expect(trans.fromKana('ウータ・バーシー')).toBe('_u-ta ba-Si-');
 
-	t.is(trans.fromKana('ウィット'), 'wi~t');
-	t.is(trans.fromKana('アウィット'), '_awi~t');
+	expect(trans.fromKana('ウィット')).toBe('wi~t');
+	expect(trans.fromKana('アウィット')).toBe('_awi~t');
 
-	t.is(trans.fromKana('クケナン'), 'kukenan');
+	expect(trans.fromKana('クケナン')).toBe('kukenan');
 });
 
-test(`fromKana 2`, (t) => {
+test(`fromKana 2`, () => {
 	const trans = new Translator({
 		longVowel: 'repeat',
 		longConsonantPosition: 'after',
 		consonantForVowels: 'capital',
 	});
-	t.is(trans.fromKana('スカーレット'), 'skaalet~');
-	t.is(trans.fromKana('パンナコッタ'), 'pannakot~a');
+	expect(trans.fromKana('スカーレット')).toBe('skaalet~');
+	expect(trans.fromKana('パンナコッタ')).toBe('pannakot~a');
 
-	t.is(trans.fromKana('アルバート'), 'Albaat');
-	t.is(trans.fromKana('アイス'), 'AIs');
-	t.is(trans.fromKana('アィス'), 'Ais');
+	expect(trans.fromKana('アルバート')).toBe('Albaat');
+	expect(trans.fromKana('アイス')).toBe('AIs');
+	expect(trans.fromKana('アィス')).toBe('Ais');
 });
 
-test(`fromKana lower`, (t) => {
+test(`fromKana lower`, () => {
 	const trans = new Translator({
 		longVowel: 'repeat',
 		longConsonant: 'repeat',
 		consonantForVowels: 'lower',
 	});
-	t.is(trans.fromKana('スカーレット'), 'skaalett');
-	t.is(trans.fromKana('パンナコッタ'), 'pannakotta');
+	expect(trans.fromKana('スカーレット')).toBe('skaalett');
+	expect(trans.fromKana('パンナコッタ')).toBe('pannakotta');
 
-	t.is(trans.fromKana('アルバート'), 'albaat');
-	t.is(trans.fromKana('アイス'), 'ais');
-	t.is(trans.fromKana('アィス'), 'ais');
+	expect(trans.fromKana('アルバート')).toBe('albaat');
+	expect(trans.fromKana('アイス')).toBe('ais');
+	expect(trans.fromKana('アィス')).toBe('ais');
 });

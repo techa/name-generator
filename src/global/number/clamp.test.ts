@@ -1,14 +1,14 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import './clamp.js';
 
-test(`Number.clamp`, (t) => {
-	t.is((12).clamp(10), 10);
-	t.is((-12).clamp(10), 0);
+test((`Number.clamp`), () => {
+	expect((12).clamp(10)).toBe(10);
+	expect((-12).clamp(10)).toBe(0);
 
-	t.is((0).clamp(10, 2), 2);
-	t.is((0).clamp(2, 10), 2);
-	t.is((2).clamp(2, 10), 2);
+	expect((0).clamp(10, 2)).toBe(2);
+	expect((0).clamp(2, 10)).toBe(2);
+	expect((2).clamp(2, 10)).toBe(2);
 
-	t.is((2).clamp(-2, -10), -2);
-	t.is((-16).clamp(-2, -10), -10);
+	expect((2).clamp(-2, -10)).toBe(-2);
+	expect((-16).clamp(-2, -10)).toBe(-10);
 });

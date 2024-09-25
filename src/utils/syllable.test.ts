@@ -1,22 +1,27 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import { syllable } from './syllable.js';
 
-test(`syllable`, (t) => {
-	t.deepEqual(syllable('ni-dl'), ['ni-', 'dl']);
-	t.deepEqual(syllable('unico-n'), ['u', 'ni', 'co-n']);
-	t.deepEqual(syllable('abeska'), ['a', 'bes', 'ka']);
-	t.deepEqual(syllable('nidl'), ['ni', 'dl']);
+test(`syllable`, () => {
+	expect(syllable('ni-dl')).toStrictEqual(['ni-', 'dl']);
+	expect(syllable('unico-n')).toStrictEqual(['u', 'ni', 'co-n']);
+	expect(syllable('abeska')).toStrictEqual(['a', 'bes', 'ka']);
+	expect(syllable('nidl')).toStrictEqual(['ni', 'dl']);
 
-	t.deepEqual(syllable('zo-_i'), ['zo-', '_i']);
+	expect(syllable('zo-_i')).toStrictEqual(['zo-', '_i']);
 
-	t.deepEqual(syllable('_u-ta ba-Si-'), ['_u-', 'ta ', 'ba-', 'Si-']);
+	expect(syllable('_u-ta ba-Si-')).toStrictEqual([
+		'_u-',
+		'ta ',
+		'ba-',
+		'Si-',
+	]);
 
-	t.deepEqual(syllable('anbli~t'), ['anb', 'li~t']);
-	t.deepEqual(syllable('an bli~t'), ['an ', 'bli~t']);
+	expect(syllable('anbli~t')).toStrictEqual(['anb', 'li~t']);
+	expect(syllable('an bli~t')).toStrictEqual(['an ', 'bli~t']);
 
-	t.deepEqual(syllable('de layutel'), ['de ', 'la', 'yu', 'tel']);
+	expect(syllable('de layutel')).toStrictEqual(['de ', 'la', 'yu', 'tel']);
 
-	t.deepEqual(syllable('AIs'), ['A', 'Is']);
-	t.deepEqual(syllable('Ais'), ['A', 'is']);
-	t.deepEqual(syllable('ais'), ['a', 'is']);
+	expect(syllable('AIs')).toStrictEqual(['A', 'Is']);
+	expect(syllable('Ais')).toStrictEqual(['A', 'is']);
+	expect(syllable('ais')).toStrictEqual(['a', 'is']);
 });

@@ -1,33 +1,29 @@
-import test from 'ava';
+/* eslint-disable no-sparse-arrays */
+import { expect, test } from 'vitest';
 import { Array2d } from './Array2d.js';
 
-test(`Array2d(1, 2)`, (t) => {
+test(`Array2d(1, 2)`, () => {
 	const arr = new Array2d(1, 2);
-	t.is(arr.columns, 1);
-	t.is(arr.rows, 2);
-	t.is(arr.length, 2);
-	t.deepEqual(arr.values, []);
-	t.deepEqual(arr.get2d(), [[], []]);
+	expect(arr.columns).toBe(1);
+	expect(arr.rows).toBe(2);
+	expect(arr.length).toBe(2);
+	expect(arr.values).toStrictEqual([]);
+	expect(arr.get2d()).toStrictEqual([[], []]);
 });
 
-test(`Array2d(3, 4)`, (t) => {
+test(`Array2d(3, 4)`, () => {
 	const arr = new Array2d(3, 4);
-	t.is(arr.columns, 3);
-	t.is(arr.rows, 4);
-	t.is(arr.length, 12);
+	expect(arr.columns).toBe(3);
+	expect(arr.rows).toBe(4);
+	expect(arr.length).toBe(12);
 	arr.setValue({ x: 1, y: 1 }, 0);
-	t.deepEqual(arr.values, [undefined, undefined, undefined, undefined, 0]);
-	t.deepEqual(arr.get2d(), [
-		[undefined, undefined, undefined],
-		[undefined, 0],
-		[],
-		[],
-	]);
+	expect(arr.values).toStrictEqual([, , , , 0]);
+	expect(arr.get2d()).toStrictEqual([[, , ,], [, 0], [], []]);
 
 	arr.each((_, { i }) => i);
-	t.deepEqual(arr.values, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+	expect(arr.values).toStrictEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
 	arr.setValue({ x: 1, y: 1 }, 0);
-	t.deepEqual(arr.get2d(), [
+	expect(arr.get2d()).toStrictEqual([
 		[0, 1, 2],
 		[3, 0, 5],
 		[6, 7, 8],
@@ -35,23 +31,27 @@ test(`Array2d(3, 4)`, (t) => {
 	]);
 });
 
-test(`Array2d(3, 4).each`, (t) => {
+test(`Array2d(3, 4).each`, () => {
 	const arr = new Array2d<number>(3, 4);
 
 	arr.each((_, { i }) => i).each((arg) => arg * 2);
-	t.deepEqual(arr.values, [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]);
+	expect(arr.values).toStrictEqual([
+		0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22,
+	]);
 });
 
-test(`Array2d(3, 4).map`, (t) => {
+test(`Array2d(3, 4).map`, () => {
 	const arr1 = new Array2d<number>(3, 4).each((_, { i }) => i);
 	const arr2 = arr1.map((arg) => arg * 2);
-	t.deepEqual(arr1.values, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
-	t.deepEqual(arr2.values, [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]);
+	expect(arr1.values).toStrictEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+	expect(arr2.values).toStrictEqual([
+		0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22,
+	]);
 });
 
-// test(`Array2d(3, 4).{unshiftRows,shiftRows}`, (t) => {
+// test((`Array2d(3, 4).{unshiftRows,shiftRows}`), () => {
 // 	const arr = new Array2d<number>(3, 4).each((_, { i }) => i);
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -59,7 +59,7 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 
 // 	arr.unshiftRows();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[undefined, undefined, undefined],
 // 		[0, 1, 2],
 // 		[3, 4, 5],
@@ -67,12 +67,12 @@ test(`Array2d(3, 4).map`, (t) => {
 // 		[9, 10, 11],
 // 	]);
 
-// 	t.is(arr.columns, 3);
-// 	t.is(arr.rows, 5);
-// 	t.is(arr.length, 15);
+// 	expect(arr.columns).toBe(3);
+// 	expect(arr.rows).toBe(5);
+// 	expect(arr.length).toBe(15);
 
 // 	arr.shiftRows();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -80,9 +80,9 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 // });
 
-// test(`Array2d(3, 4).{pushRows,popRows}`, (t) => {
+// test((`Array2d(3, 4).{pushRows,popRows}`), () => {
 // 	const arr = new Array2d<number>(3, 4).each((_, { i }) => i);
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -90,7 +90,7 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 
 // 	arr.pushRows();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -99,7 +99,7 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 
 // 	arr.popRows();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -107,9 +107,9 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 // });
 
-// test(`Array2d(3, 4).{unshiftColumns,shiftColumns}`, (t) => {
+// test((`Array2d(3, 4).{unshiftColumns,shiftColumns}`), () => {
 // 	const arr = new Array2d<number>(3, 4).each((_, { i }) => i);
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -117,7 +117,7 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 
 // 	arr.shiftColumns();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[1, 2],
 // 		[4, 5],
 // 		[7, 8],
@@ -125,7 +125,7 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 
 // 	arr.unshiftColumns();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[undefined, 1, 2],
 // 		[undefined, 4, 5],
 // 		[undefined, 7, 8],
@@ -133,9 +133,9 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 // });
 
-// test(`Array2d(3, 4).{pushColumns,popColumns}`, (t) => {
+// test((`Array2d(3, 4).{pushColumns,popColumns}`), () => {
 // 	const arr = new Array2d<number>(3, 4).each((_, { i }) => i);
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -143,7 +143,7 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 
 // 	arr.pushColumns();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2, undefined],
 // 		[3, 4, 5, undefined],
 // 		[6, 7, 8, undefined],
@@ -151,7 +151,7 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 
 // 	arr.popColumns();
-// 	t.deepEqual(arr.get2d(), [
+// 	expect(arr.get2d()).toStrictEqual([
 // 		[0, 1, 2],
 // 		[3, 4, 5],
 // 		[6, 7, 8],
@@ -159,16 +159,15 @@ test(`Array2d(3, 4).map`, (t) => {
 // 	]);
 // });
 
-test(`Array2d().addColumns`, (t) => {
+test(`Array2d().addColumns`, () => {
 	const arr = new Array2d<number>(2, 2, -1).each((_, { i }) => i);
-	t.deepEqual(arr.get2d(), [
+	expect(arr.get2d()).toStrictEqual([
 		[0, 1],
 		[2, 3],
 	]);
 
 	arr.addColumns(0);
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[-1, 0, 1],
 			[-1, 2, 3],
@@ -176,10 +175,9 @@ test(`Array2d().addColumns`, (t) => {
 	);
 });
 
-test(`Array2d(3, 4).{addColumns,removeColumns}`, (t) => {
+test(`Array2d(3, 4).{addColumns,removeColumns}`, () => {
 	const arr = new Array2d<number>(3, 4, -1).each((_, { i }) => i);
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, 1, 2],
 			[3, 4, 5],
@@ -189,8 +187,7 @@ test(`Array2d(3, 4).{addColumns,removeColumns}`, (t) => {
 	);
 
 	arr.addColumns();
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, 1, 2, -1],
 			[3, 4, 5, -1],
@@ -200,8 +197,7 @@ test(`Array2d(3, 4).{addColumns,removeColumns}`, (t) => {
 	);
 
 	arr.addColumns(1);
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, -1, 1, 2, -1],
 			[3, -1, 4, 5, -1],
@@ -211,8 +207,7 @@ test(`Array2d(3, 4).{addColumns,removeColumns}`, (t) => {
 	);
 
 	arr.removeColumns(1);
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, 1, 2, -1],
 			[3, 4, 5, -1],
@@ -222,8 +217,7 @@ test(`Array2d(3, 4).{addColumns,removeColumns}`, (t) => {
 	);
 
 	arr.removeColumns();
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, 1, 2],
 			[3, 4, 5],
@@ -233,10 +227,9 @@ test(`Array2d(3, 4).{addColumns,removeColumns}`, (t) => {
 	);
 });
 
-test(`Array2d(3, 4).{addRows,removeRows}`, (t) => {
+test(`Array2d(3, 4).{addRows,removeRows}`, () => {
 	const arr = new Array2d<number>(3, 4, -1).each((_, { i }) => i);
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, 1, 2],
 			[3, 4, 5],
@@ -246,8 +239,7 @@ test(`Array2d(3, 4).{addRows,removeRows}`, (t) => {
 	);
 
 	arr.addRows();
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, 1, 2],
 			[3, 4, 5],
@@ -258,8 +250,7 @@ test(`Array2d(3, 4).{addRows,removeRows}`, (t) => {
 	);
 
 	arr.addRows(0);
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[-1, -1, -1],
 			[0, 1, 2],
@@ -271,8 +262,7 @@ test(`Array2d(3, 4).{addRows,removeRows}`, (t) => {
 	);
 
 	arr.removeRows();
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[-1, -1, -1],
 			[0, 1, 2],
@@ -283,8 +273,7 @@ test(`Array2d(3, 4).{addRows,removeRows}`, (t) => {
 	);
 
 	arr.removeRows(0);
-	t.deepEqual(
-		arr.values,
+	expect(arr.values).toStrictEqual(
 		[
 			[0, 1, 2],
 			[3, 4, 5],
@@ -294,9 +283,9 @@ test(`Array2d(3, 4).{addRows,removeRows}`, (t) => {
 	);
 });
 
-test(`Array2d(3, 4).spiral`, (t) => {
+test(`Array2d(3, 4).spiral`, () => {
 	const arr = new Array2d<number>(3, 4).each((_, { i }) => i);
-	t.deepEqual(arr.get2d(), [
+	expect(arr.get2d()).toStrictEqual([
 		[0, 1, 2],
 		[3, 4, 5],
 		[6, 7, 8],
@@ -307,15 +296,15 @@ test(`Array2d(3, 4).spiral`, (t) => {
 	arr.spiral((v) => {
 		spiral.push(v);
 	});
-	t.deepEqual(spiral, [4, 5, 8, 7, 6, 3, 0, 1, 2, 11, 10, 9]);
+	expect(spiral).toStrictEqual([4, 5, 8, 7, 6, 3, 0, 1, 2, 11, 10, 9]);
 });
 
-test(`Array2d(5, 6).near`, (t) => {
+test(`Array2d(5, 6).near`, () => {
 	const arr = new Array2d<number>(5, 6).each((_, { i }) => i);
 	// prettier-ignore
-	t.deepEqual(arr.get2d(), [
-		[ 0,  1,  2,  3,  4],
-		[ 5,  6,  7,  8,  9],
+	expect(arr.get2d()).toStrictEqual([
+		[0, 1, 2, 3, 4],
+		[5, 6, 7, 8, 9],
 		[10, 11, 12, 13, 14],
 		[15, 16, 17, 18, 19],
 		[20, 21, 22, 23, 24],
@@ -327,20 +316,17 @@ test(`Array2d(5, 6).near`, (t) => {
 		near.push(v);
 	});
 
-	t.deepEqual(
-		near,
-		[
-			12, 7, 11, 13, 17, 6, 8, 16, 18, 2, 10, 14, 22, 1, 3, 5, 9, 15, 19,
-			21, 23, 0, 4, 20, 24, 27, 26, 28, 25, 29,
-		],
-	);
+	expect(near).toStrictEqual([
+		12, 7, 11, 13, 17, 6, 8, 16, 18, 2, 10, 14, 22, 1, 3, 5, 9, 15, 19, 21,
+		23, 0, 4, 20, 24, 27, 26, 28, 25, 29,
+	]);
 });
 
-test(`Array2d(10, 8).near`, (t) => {
+test(`Array2d(10, 8).near`, () => {
 	const arr = new Array2d<number>(10, 8).each((_, { i }) => i);
 	// prettier-ignore
-	t.deepEqual(arr.get2d(), [
-		[ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9],
+	expect(arr.get2d()).toStrictEqual([
+		[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 		[10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
 		[20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
 		[30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
@@ -355,19 +341,16 @@ test(`Array2d(10, 8).near`, (t) => {
 		near.push(v);
 	}, 0);
 
-	t.deepEqual(
-		near,
-		[
-			0, 1, 10, 11, 2, 20, 12, 21, 22, 3, 30, 13, 31, 23, 32, 4, 40, 14,
-			41, 33, 24, 42, 34, 43, 5, 50, 15, 51, 25, 52, 44, 35, 53, 6, 60,
-			16, 61, 26, 62, 45, 54, 36, 63, 7, 70, 55, 17, 71, 46, 64, 27, 72,
-			37, 73, 56, 65, 8, 47, 74, 18, 28, 66, 38, 57, 75, 48, 9, 19, 67,
-			76, 29, 58, 39, 49, 77, 68, 59, 78, 69, 79,
-		],
-	);
+	expect(near).toStrictEqual([
+		0, 1, 10, 11, 2, 20, 12, 21, 22, 3, 30, 13, 31, 23, 32, 4, 40, 14, 41,
+		33, 24, 42, 34, 43, 5, 50, 15, 51, 25, 52, 44, 35, 53, 6, 60, 16, 61,
+		26, 62, 45, 54, 36, 63, 7, 70, 55, 17, 71, 46, 64, 27, 72, 37, 73, 56,
+		65, 8, 47, 74, 18, 28, 66, 38, 57, 75, 48, 9, 19, 67, 76, 29, 58, 39,
+		49, 77, 68, 59, 78, 69, 79,
+	]);
 });
 
-test(`Array2d().fillPaint`, (t) => {
+test(`Array2d().fillPaint`, () => {
 	const arr = new Array2d([
 		[0, 0, 0, 0, 0, 0, 0, 0],
 		[0, 1, 0, 0, 0, 0, 0, 0],
@@ -377,7 +360,7 @@ test(`Array2d().fillPaint`, (t) => {
 		[0, 0, 0, 0, 0, 0, 0, 0],
 	]);
 
-	t.deepEqual(arr.fillPaint({ x: 2, y: 2 }, () => 5).get2d(), [
+	expect(arr.fillPaint({ x: 2, y: 2 }, () => 5).get2d()).toStrictEqual([
 		[0, 0, 0, 0, 0, 0, 0, 0],
 		[0, 1, 0, 0, 0, 0, 0, 0],
 		[0, 0, 5, 0, 2, 2, 0, 0],
@@ -385,7 +368,7 @@ test(`Array2d().fillPaint`, (t) => {
 		[0, 0, 5, 5, 0, 0, 0, 0],
 		[0, 0, 0, 0, 0, 0, 0, 0],
 	]);
-	t.deepEqual(arr.fillPaint({ x: 5, y: 3 }, () => 5).get2d(), [
+	expect(arr.fillPaint({ x: 5, y: 3 }, () => 5).get2d()).toStrictEqual([
 		[0, 0, 0, 0, 0, 0, 0, 0],
 		[0, 1, 0, 0, 0, 0, 0, 0],
 		[0, 0, 5, 0, 5, 5, 0, 0],

@@ -1,10 +1,10 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import './trade.js';
 
-test(`String.trade`, (t) => {
-	t.is('true'.trade(1), 'true');
-	t.is('true'.trade(1, 1), 'tue');
-	t.is('true'.trade(1, 1, 'l'), 'tlue');
-	t.is('true'.trade(1, 0), 'true');
-	t.is('true'.trade(1, 0, 'l'), 'tlrue');
+test(`String.trade`, () => {
+	expect('true'.trade(1)).toBe('true');
+	expect('true'.trade(1, 1)).toBe('tue');
+	expect('true'.trade(1, 1, 'l')).toBe('tlue');
+	expect('true'.trade(1, 0)).toBe('true');
+	expect('true'.trade(1, 0, 'l')).toBe('tlrue');
 });

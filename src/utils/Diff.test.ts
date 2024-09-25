@@ -1,22 +1,22 @@
-import test from 'ava';
+import { expect, test } from 'vitest';
 import { Diff, diff } from './Diff.js';
 
-test(`diff('', '')`, (t) => {
+test(`diff('', '')`, () => {
 	const diff = new Diff();
-	t.deepEqual(diff.diff('', ''), [{ count: 0, value: '' }]);
+	expect(diff.diff('', '')).toStrictEqual([{ count: 0, value: '' }]);
 });
 
-test(`diff('restaurant', 'aura')`, (t) => {
+test(`diff('restaurant', 'aura')`, () => {
 	const diff = new Diff();
-	t.deepEqual(diff.diff('restaurant', 'aura'), [
+	expect(diff.diff('restaurant', 'aura')).toStrictEqual([
 		{ count: 4, value: 'rest', added: false, removed: true },
 		{ count: 4, value: 'aura' },
 		{ count: 2, value: 'nt', added: false, removed: true },
 	]);
 });
 
-test(`diff('Kaula', 'Gaura')`, (t) => {
-	t.deepEqual(diff('Kaula', 'Gaura'), [
+test(`diff('Kaula', 'Gaura')`, () => {
+	expect(diff('Kaula', 'Gaura')).toStrictEqual([
 		{ count: 1, value: 'K', added: false, removed: true },
 		{ count: 1, value: 'G', added: true, removed: false },
 		{ count: 2, value: 'au' },
