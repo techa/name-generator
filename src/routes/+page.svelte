@@ -32,7 +32,9 @@
 
 	$: if (mount) {
 		ng.splitter = splitter;
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 		existFilter;
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 		howmany;
 		reload();
 	}
@@ -57,7 +59,7 @@
 				checks[types.length] = [false, false];
 				console.log('Mt and Jewel data loaded.');
 			} catch (error) {
-				console.error('Bad fetch response');
+				console.error(`Bad fetch response. ${error}`);
 			}
 		}
 		userKeys = Object.keys(userResource);
@@ -134,7 +136,7 @@
 				}
 				names.add(name.kana);
 				result.push(name);
-			} catch (error) {
+			} catch {
 				break;
 			}
 		}
@@ -184,12 +186,7 @@
 <main class="flex">
 	<section class="left">
 		<div class="about">
-			<a href="https://www.worldsys.org/europe" rel="noopener noreferrer"
-				>欧羅巴人名録</a
-			>様、<a
-				href="https://alarabiyah.sakura.ne.jp/category/words/name/"
-				rel="noopener noreferrer">アラブ人名・家名辞典</a
-			>様のデータを分解して再構成することで、それっぽい名前を生成する。<span
+			カタカナのリストを分解して再構成することで、それっぽい名前を生成する。<span
 				>青字</span
 			>は元データにも存在する名前。
 		</div>
@@ -255,6 +252,27 @@
 		</form>
 
 		<AddSource {userResource} on:save={save} />
+
+		<h2>Source Credits</h2>
+		<ul>
+			<li>
+				<a
+					href="https://www.worldsys.org/europe"
+					rel="noopener noreferrer"
+				>
+					欧羅巴人名録
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://alarabiyah.sakura.ne.jp/category/words/name/"
+					rel="noopener noreferrer"
+				>
+					アラブ人名・家名辞典
+				</a>
+			</li>
+		</ul>
+		、
 	</section>
 	<section class="right w-1/2">
 		<form class="tool flex" on:change={saveSettings}>
