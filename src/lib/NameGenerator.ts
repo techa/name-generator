@@ -1,6 +1,6 @@
 import { random, type Random } from '../utils/random/Random.js';
 import { syllable } from '../utils/syllable.js';
-import { Translator, type TranslatorOptions } from './Translator.js';
+import { Phonation, type PhonationOptions } from './Phonation.js';
 
 export interface NamePart {
 	nameExp: string;
@@ -22,7 +22,7 @@ export interface Options {
 	nameLengthMin?: number;
 	nameLengthMax?: number;
 	random?: Random;
-	translator?: TranslatorOptions;
+	phonation?: PhonationOptions;
 	splitter?: Splitter;
 }
 
@@ -57,14 +57,14 @@ export class NameGenerator {
 	data: Record<string, NextData> = {};
 	names: Set<string> = new Set();
 
-	protected translator: Translator;
+	protected phonation: Phonation;
 
 	protected random: Random;
 
 	constructor(options: Options = {}) {
 		this.splitter = options.splitter ?? Splitter.Syllable;
 
-		this.translator = new Translator(options.translator);
+		this.phonation = new Phonation(options.phonation);
 		this.random = options.random ?? random;
 	}
 
@@ -75,7 +75,7 @@ export class NameGenerator {
 
 	add(list: string[], kana = false) {
 		for (let i = 0; i < list.length; i++) {
-			const word = kana ? this.translator.fromKana(list[i]) : list[i];
+			const word = kana ? this.phonation.fromKana(list[i]) : list[i];
 
 			if (!word) {
 				continue;
@@ -191,7 +191,7 @@ export class NameGenerator {
 
 		return {
 			exp: product,
-			kana: this.translator.toKana(product),
+			kana: this.phonation.toKana(product),
 			syllables,
 			exist: this.names.has(product),
 		};
@@ -240,7 +240,7 @@ export class NameGenerator {
 
 		return {
 			exp: product,
-			kana: this.translator.toKana(product),
+			kana: this.phonation.toKana(product),
 			syllables: 0,
 			exist: this.names.has(product),
 		};

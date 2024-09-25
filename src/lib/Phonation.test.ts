@@ -1,8 +1,8 @@
 import { expect, test } from 'vitest';
-import { Translator } from './Translator.js';
+import { Phonation } from './Phonation.js';
 
 test(`toKana`, () => {
-	const trans = new Translator();
+	const trans = new Phonation();
 	expect(trans.toKana('albaat')).toBe('アルバート');
 	expect(trans.toKana('_alba-t')).toBe('アルバート');
 	expect(trans.toKana('skaalett')).toBe('スカーレット');
@@ -27,7 +27,7 @@ test(`toKana`, () => {
 });
 
 test(`fromKana`, () => {
-	const trans = new Translator();
+	const trans = new Phonation();
 	expect(trans.fromKana('アルバート')).toBe('_alba-t');
 	expect(trans.fromKana('スカーレット')).toBe('ska-le~t');
 	expect(trans.fromKana('パンナコッタ')).toBe('pannako~ta');
@@ -45,7 +45,7 @@ test(`fromKana`, () => {
 });
 
 test(`fromKana 2`, () => {
-	const trans = new Translator({
+	const trans = new Phonation({
 		longVowel: 'repeat',
 		longConsonantPosition: 'after',
 		consonantForVowels: 'capital',
@@ -59,7 +59,7 @@ test(`fromKana 2`, () => {
 });
 
 test(`fromKana lower`, () => {
-	const trans = new Translator({
+	const trans = new Phonation({
 		longVowel: 'repeat',
 		longConsonant: 'repeat',
 		consonantForVowels: 'lower',

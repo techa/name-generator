@@ -67,7 +67,7 @@ test(`NameGenerator en`, () => {
 test(`NameGenerator kana_en capital`, () => {
 	const ng = new NameGenerator({
 		random: new MersenneTwister(1),
-		translator: {
+		phonation: {
 			consonantForVowels: 'capital',
 		},
 	});
@@ -186,7 +186,7 @@ test(`NameGenerator 3-gram`, () => {
 	const ng = new NameGenerator({
 		splitter: 3,
 		random: new MersenneTwister(1),
-		translator: {
+		phonation: {
 			consonantForVowels: 'capital',
 		},
 	});

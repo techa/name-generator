@@ -1,7 +1,7 @@
 import { toKana, fromKana } from '../constants/kana.js';
 import { isConsonant, isVowel } from '../utils/vc.js';
 
-export interface TranslatorOptions {
+export interface PhonationOptions {
 	/**
 	 * - https://ja.wikipedia.org/長 (発音記号)
 	 *
@@ -32,14 +32,13 @@ export interface TranslatorOptions {
 	consonantForVowels?: 'capital' | '_' | 'lower';
 }
 
-export class Translator implements Required<TranslatorOptions> {
-	longVowel: TranslatorOptions['longVowel'] = '-';
-	longConsonant: TranslatorOptions['longConsonant'] = '~';
-	longConsonantPosition: TranslatorOptions['longConsonantPosition'] =
-		'before';
-	consonantForVowels: TranslatorOptions['consonantForVowels'] = '_';
+export class Phonation implements Required<PhonationOptions> {
+	longVowel: PhonationOptions['longVowel'] = '-';
+	longConsonant: PhonationOptions['longConsonant'] = '~';
+	longConsonantPosition: PhonationOptions['longConsonantPosition'] = 'before';
+	consonantForVowels: PhonationOptions['consonantForVowels'] = '_';
 
-	constructor(options: TranslatorOptions = {}) {
+	constructor(options: PhonationOptions = {}) {
 		for (const key in options) {
 			this[key] = options[key] ?? this[key];
 		}
