@@ -65,10 +65,11 @@ test(`NameGenerator en`, () => {
 });
 
 test(`NameGenerator kana_en capital`, () => {
-	const ng = new NameGenerator();
-	ng.random = new MersenneTwister(1);
-	ng.translator.setOptions({
-		consonantForVowels: 'capital',
+	const ng = new NameGenerator({
+		random: new MersenneTwister(1),
+		translator: {
+			consonantForVowels: 'capital',
+		},
 	});
 	ng.add(kana_en, true);
 
@@ -151,18 +152,18 @@ test(`NameGenerator en fr`, () => {
 });
 
 test(`NameGenerator 2-gram`, () => {
-	const ng = new NameGenerator();
-	ng.random = new MersenneTwister(1);
+	const ng = new NameGenerator({
+		random: new MersenneTwister(1),
+		// translator: {
+		// 	consonantForVowels: 'capital',
+		// },
+	});
 	ng.splitter = 2;
-	// ng.translator.setOptions({
-	// 	consonantForVowels: 'capital',
-	// });
-	// ng.add(kana_en, true);
 	ng.add(en);
 
 	expect(ng.create()).toStrictEqual({
-		exp: 'lvin',
-		kana: 'ルヴィン',
+		exp: 'lvina_in',
+		kana: 'ルヴィナイン',
 		syllables: 0,
 		exist: false,
 	});
@@ -182,17 +183,18 @@ test(`NameGenerator 2-gram`, () => {
 });
 
 test(`NameGenerator 3-gram`, () => {
-	const ng = new NameGenerator();
-	ng.random = new MersenneTwister(1);
-	ng.splitter = 3;
-	ng.translator.setOptions({
-		consonantForVowels: 'capital',
+	const ng = new NameGenerator({
+		splitter: 3,
+		random: new MersenneTwister(1),
+		translator: {
+			consonantForVowels: 'capital',
+		},
 	});
 	ng.add(kana_en, true);
 
 	expect(ng.create()).toStrictEqual({
-		exp: 'lomi-l',
-		kana: 'ロミール',
+		exp: 'lomi-liAm',
+		kana: 'ロミーリアム',
 		syllables: 0,
 		exist: false,
 	});

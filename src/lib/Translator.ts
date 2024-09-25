@@ -1,15 +1,20 @@
 import { toKana, fromKana } from '../constants/kana.js';
 import { isConsonant, isVowel } from '../utils/vc.js';
 
-interface TranslatorOptions {
+export interface TranslatorOptions {
 	/**
 	 * - https://ja.wikipedia.org/長 (発音記号)
+	 *
+	 * repeat: サーフィン→`saafin`
+	 * -: サーフィン→`sa-fin`
 	 */
 	longVowel?: 'repeat' | '-';
 	/**
 	 * - https://ja.wikipedia.org/wiki/促音
 	 * - https://ja.wikipedia.org/wiki/長子音
 	 * - https://ja.wikipedia.org/wiki/っ
+	 *
+	 * repeat: アップル→`appl`、ルッカ→`lkka`
 	 */
 	longConsonant?: 'repeat' | '~';
 
@@ -34,11 +39,7 @@ export class Translator implements Required<TranslatorOptions> {
 		'before';
 	consonantForVowels: TranslatorOptions['consonantForVowels'] = '_';
 
-	constructor(options?: TranslatorOptions) {
-		this.setOptions(options);
-	}
-
-	setOptions(options: TranslatorOptions = {}) {
+	constructor(options: TranslatorOptions = {}) {
 		for (const key in options) {
 			this[key] = options[key] ?? this[key];
 		}

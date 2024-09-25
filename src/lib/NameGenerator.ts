@@ -1,6 +1,6 @@
 import { random, type Random } from '../utils/random/Random.js';
 import { syllable } from '../utils/syllable.js';
-import { Translator } from './Translator.js';
+import { Translator, type TranslatorOptions } from './Translator.js';
 
 export interface NamePart {
 	nameExp: string;
@@ -10,11 +10,20 @@ export interface NamePart {
 	suffix: boolean;
 }
 
+export const enum Splitter {
+	Syllable = 1,
+	Ngram2,
+	Ngram3,
+}
+
 export interface Options {
-	resource?: string | string[];
+	source?: string | string[];
 	nameLength?: number;
 	nameLengthMin?: number;
 	nameLengthMax?: number;
+	random?: Random;
+	translator?: TranslatorOptions;
+	splitter?: Splitter;
 }
 
 interface NextData {
@@ -43,14 +52,21 @@ export interface NameResult {
 export class NameGenerator {
 	minSyllable = 2;
 	maxSyllable = 8;
+	splitter: Splitter;
+
 	data: Record<string, NextData> = {};
-	// 1 = syllable, 2 <= N-gram
-	splitter = 1;
 	names: Set<string> = new Set();
 
-	translator = new Translator();
+	protected translator: Translator;
 
-	random = random;
+	protected random: Random;
+
+	constructor(options: Options = {}) {
+		this.splitter = options.splitter ?? Splitter.Syllable;
+
+		this.translator = new Translator(options.translator);
+		this.random = options.random ?? random;
+	}
 
 	clear() {
 		this.data = {};
@@ -236,14 +252,14 @@ export class NameGenerator {
 	 * [?-l]e(l)[nm]a
 	 * @param rule
 	 */
-	parseRule(rule: string) {
+	parseRule(/* rule: string */) {
 		//
 	}
 	/**
 	 *
 	 * @param rule
 	 */
-	creaty(rule: string) {
+	creaty(/* rule: string */) {
 		//
 	}
 }
