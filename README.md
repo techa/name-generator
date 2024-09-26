@@ -1,9 +1,6 @@
 # Name Generator
-> 日本語ベースで西洋風の名前を自動生成する
-> Automatic generation of Europe-style names based on Japanese
-
-## 概要
-カタカナの名前リストを分解して再構成する。
+> カタカナの名前リストから名前を自動生成する
+> Automatic generation of names based on Japanese-Katakana
 
 ### 生成手順
 * カタカナを発音表記に変換
@@ -16,21 +13,22 @@
 * カウントに応じた確率で次の文字が選ばれる
 
 
-## 名前表現（Name expression）
-
+## 発音表記：名前表現（Name expression）
 * `^`：先頭。語頭。（正規表現と同様）
 * `$`：最後。語尾。（正規表現と同様）
 * `-`：[長母音（ー）](https://ja.wikipedia.org/wiki/長母音)（long vowel）
+	* または`aa`のように母音を連続させる
 * `~`：[長子音（ッ）](https://ja.wikipedia.org/wiki/長子音)（long consonant）
+	* または`kk`のように子音を連続させる
 * `_`：母音を表す子音（Consonant for vowels）
+	* または`A`のように母音を大文字にする
+* 大文字子音：「`Ka`→キャ」「`Sa`→シャ」
 
 ### 未実装
 * `?`：母音を表す子音を含む任意の子音（Any consonant）
 * `!`：母音を表す子音を含まない任意の子音（Any consonant without _）
 * `'`：無声音子音（kstpfKSTPF）
 * `"`：有声音子音（gzdbvGZDBV）
-* `%`：男性用子音
-* `&`：女性用子音
 
 * `[ntdcTKPGBNM]`：非ウ段子音：子音のみで発音したときウ段にならない子音
 	* `n`：ン
