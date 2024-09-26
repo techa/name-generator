@@ -4,23 +4,33 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/name-generator/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/name-generator/internal/immutable/start-0f52e15b.js">
-		<link rel="modulepreload" href="/name-generator/internal/immutable/chunks/index-387d914d.js">
-		<link rel="modulepreload" href="/name-generator/internal/immutable/chunks/singletons-d5e36263.js">
-		<link rel="modulepreload" href="/name-generator/internal/immutable/chunks/paths-b4419565.js">
+		
+		<link rel="modulepreload" href="/name-generator/internal/immutable/entry/start.ib17fo_R.js">
+		<link rel="modulepreload" href="/name-generator/internal/immutable/chunks/entry.C_cPNeZy.js">
+		<link rel="modulepreload" href="/name-generator/internal/immutable/chunks/scheduler.BunnylMl.js">
+		<link rel="modulepreload" href="/name-generator/internal/immutable/chunks/paths.CzP8utq5.js">
+		<link rel="modulepreload" href="/name-generator/internal/immutable/entry/app.D--SjpCi.js">
+		<link rel="modulepreload" href="/name-generator/internal/immutable/chunks/index.BaT2lY0j.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "/name-generator/internal/immutable/start-0f52e15b.js";
+			<script>
+				{
+					__sveltekit_xcrvjz = {
+						base: "/name-generator",
+						assets: "/name-generator"
+					};
 
-			start({
-				env: {},
-				paths: {"base":"/name-generator","assets":"/name-generator"},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				version: "1727243283608"
-			});
-		</script></div>
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/name-generator/internal/immutable/entry/start.ib17fo_R.js"),
+						import("/name-generator/internal/immutable/entry/app.D--SjpCi.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>
