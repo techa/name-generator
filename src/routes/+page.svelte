@@ -272,7 +272,6 @@
 				</a>
 			</li>
 		</ul>
-		、
 	</section>
 	<section class="right w-1/2">
 		<form class="tool flex" on:change={saveSettings}>
